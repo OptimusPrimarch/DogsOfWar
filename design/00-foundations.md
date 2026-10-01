@@ -1,4 +1,4 @@
-# Dogs of War — Infinity N5 Mercenary Game Mode (v0.10 draft)
+# Dogs of War — Infinity N5 Mercenary Game Mode (v0.11 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -39,9 +39,9 @@ Status tags:
 | 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
 | 16 | Deployment (Tactical) | New skill; every reinforcing model has it | **LOCKED** |
 | 17 | Calldowns | Orbital and aerial, with Speedballs as the baseline | **LOCKED** |
-| 18 | Replacement TAG | Stock lineup costed in Command Tokens; called in by a pilot | **LOCKED** |
+| 18 | Replacement TAG | Stock lineup costed in Command Tokens; called in by a pilot. The lineup is universal (the same for every company) and reference-only: it is never bought in the list. | **LOCKED** |
 | 19 | Pilots | Fully custom. Mount and dismount use N4's rules, made free with any movement skill. Eject uses N5's Transmutation (Escape System). Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
-| 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. | **LOCKED** |
+| 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. Launch scope: up to 2 chassis each for S6 and S7, and 1 for S8 (Infinity has only one S8 TAG today), so 5 in total. | **LOCKED** |
 | 21 | Signature slot | Every TAG gets one slot for its "special cool thing." Not called an ultimate; most options have no prerequisites. | **LOCKED** |
 | 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
 | 23 | Board | 36"×36", very dense | **LOCKED** |

@@ -1,4 +1,4 @@
-# Dogs of War — New Recruit Catalogue Structure (v0.1 draft)
+# Dogs of War — New Recruit Catalogue Structure (v0.2 draft)
 
 A blueprint for building the Dogs of War list builder in the **New Recruit (NR) Data Editor**. Game rules live in `00-foundations.md`. This document covers how to represent them as catalogue data.
 
@@ -97,7 +97,7 @@ There are two kinds, kept separate on purpose.
 | Category | Contains |
 |---|---|
 | **Company** | Briefing, Expanded Contract |
-| **Pilot Phase** | Chassis + pilot entries, second pilot |
+| **Pilot Phase** | The pilot, the TAG chassis, the second pilot |
 | **Elite Phase** | Elites |
 | **Trooper Phase** | Troopers |
 
@@ -106,6 +106,7 @@ There are two kinds, kept separate on purpose.
 | Category | Counted by |
 |---|---|
 | **Custom TAG** | Exactly 1 per company |
+| **Primary Pilot** | Exactly 1 per company. The pilot of the custom TAG. |
 | **Elite** | The Elite cap. The second pilot is in the Pilot Phase category *and* the Elite category, so it acts in the Pilot phase but counts toward the Elite cap. |
 | **Lieutenant** | Exactly 1 |
 | **NCO** | Price only, for now |
@@ -116,28 +117,34 @@ This split is the key idea of the whole layout: **where a unit acts** (phase) an
 
 ---
 
-## 6. Entry tree — PROPOSED
+## 6. Entry tree — LOCKED (pilot and TAG are separate entries)
 
 ```
 Mercenary Company  (force entry)
 │
 ├── Company Briefing            [Company]           auto-added (min 1); reference only, 0 cost
 │     └── rules: phase order, Deployment (Tactical), Jockey, Mount/Dismount (N4 port),
-│         stock TAG lineup with Command Token prices
+│         stock TAG lineup (universal, reference only) with Command Token prices
 │
 ├── Expanded Contract (+1 Elite) [Company]          costs Command Tokens; repeatable
 │
-├── <Chassis name> (S6 / S7 / S8)   [Pilot Phase, Custom TAG]   one entry per chassis
-│     ├── TAG profile (includes its Capacity limit), Chassis Trait rule
-│     ├── Hardpoint: <mount name> (Light|Medium|Heavy)   group, max 1   ← one group per mount
-│     │     └── links to the shared weapon groups this size may take
-│     ├── Systems                    group, max N        → links to shared Systems
-│     ├── Signature                  group, exactly 1    → links to shared Signature options
-│     └── Pilot                      link to shared Pilot, exactly 1
+├── Pilot                        [Pilot Phase, Primary Pilot]          exactly 1
+│     └── link to shared Pilot build
+│           ├── Trooper profile (the pilot on foot)
 │           ├── Skills               group
 │           ├── Sidearm              group, exactly 1
 │           ├── Gear                 group, 1–2
 │           └── Lieutenant / NCO     upgrades (credits)
+│
+├── <Chassis name> (S6 / S7 / S8)   [Pilot Phase, Custom TAG]          exactly 1 across all chassis
+│     ├── TAG profile (includes its Capacity limit), Chassis Trait rule
+│     ├── Hardpoint: <mount name> (Light|Medium|Heavy)   group, max 1   ← one group per mount
+│     │     └── links to the shared weapon groups this size may take
+│     ├── Systems                    group, max N        → links to shared Systems
+│     └── Signature                  group, exactly 1    → links to shared Signature options
+│
+├── Second Pilot                 [Pilot Phase, Elite, Deployed]        optional
+│     └── link to the same shared Pilot build
 │
 ├── <Elite name>                 [Elite Phase, Elite, Deployed (+Specialist)]
 │     ├── Trooper profile, fixed weapons and skills
@@ -145,18 +152,22 @@ Mercenary Company  (force entry)
 │     ├── Lieutenant                 upgrade, only on Elites allowed to be Lieutenant
 │     └── Start in Reserve           upgrade, 0 cost → removes the Deployed category
 │
-├── Second Pilot                 [Pilot Phase, Elite, Deployed]
-│     └── link to shared Pilot (same options as the TAG pilot)
-│
 └── Trooper — <template>         [Trooper Phase, Deployed (+Specialist)]   one entry per template
       └── info link to the shared Trooper profile; template weapons
 ```
 
-Why these choices:
-- **The pilot sits inside the chassis.** The pilot and TAG activate together and print as one unit card. A chassis can't be left without a pilot.
+### Why the pilot and TAG are separate
+- **It matches the table.** The pilot becomes its own model whenever they dismount, jockey an enemy TAG, or eject (Transmutation turns the TAG into the pilot's profile). Separate entries mean separate cards, one per physical model.
+- **Each card stays readable.** The pilot card holds skills and gear. The TAG card holds hardpoints, systems, and Signature. Nesting them made one very long card.
+- **Validation loses nothing.** There's exactly one Primary Pilot and exactly one custom TAG per company, so which pilot drives which TAG is never ambiguous, and nothing has to link them. The second pilot never gets a custom TAG, only stock TAGs called in during the game.
+- **Both share the Phase category,** so they sit next to each other at the top of the roster.
+
+### Why the rest is built this way
 - **There's one entry per chassis,** not one generic "TAG" entry, because each chassis has its own hardpoint layout and Capacity. Every chassis links to the same shared weapon and system libraries, so nothing is duplicated.
+- **Launch scope is 5 chassis:** up to 2 at S6, up to 2 at S7, and 1 at S8.
 - **Each Trooper template is its own entry.** The roster then reads "Trooper — Gunner" instead of a generic Trooper with an option ticked. All templates share one profile through an info link, so a stat change is made once.
-- **The shared Pilot is defined once.** The TAG pilot and the second pilot both link to it.
+- **The shared Pilot build is defined once.** The Pilot and the Second Pilot both link to it.
+- **Stock TAGs are reference only,** in the Briefing. They're universal, and they're bought with Command Tokens during the game, not in the list.
 
 ---
 
@@ -166,6 +177,7 @@ Why these choices:
 |---|---|
 | Allocation of 60 or 100 credits | Credits roster limit, set when creating the list |
 | Exactly 1 custom TAG | Custom TAG category: `exactly 1`, scope force |
+| Exactly 1 pilot for it | Primary Pilot category: `exactly 1`, scope force |
 | Exactly 1 Lieutenant | Lieutenant category: `exactly 1`, scope force |
 | Up to 5 Elites, including reserves | Elite category: `max 5`, scope force. A modifier adds +1 to that max for each Expanded Contract in the force (a repeat). |
 | Up to 10 infantry at the start | Deployed category: `max 10`, scope force. "Start in Reserve" triggers a modifier on its Elite that removes the Deployed category. |
@@ -190,7 +202,8 @@ Why these choices:
 | **Systems** | TAG system components |
 | **Signature options** | Signature-slot abilities |
 | **Elite Kit** | The kit pool Elites choose 1 from |
-| **Pilot** | The full pilot build (skills, sidearm, gear, Lieutenant / NCO) |
+| **Pilot build** | The full pilot build (profile, skills, sidearm, gear, Lieutenant / NCO). Linked by both the Pilot and the Second Pilot. |
+| **Stock TAG lineup** | Profiles for the universal stock TAGs. Shown in the Briefing, never selectable. |
 | **Trooper profile** | The one shared Trooper stat line |
 | **Rules: N5 references** | Skills and equipment by name, plus publication and page, with no rules text copied |
 | **Rules: Dogs of War** | Our own rules, in our own words: Deployment (Tactical), Jockey, phase order, and N4 ports (each marked as an N4 port) |
@@ -241,16 +254,15 @@ Build this throwaway test before anything else. It checks the one rule that depe
 3. **Library basics:** N5 rule references, the Trooper profile, a handful of weapons in the size groups.
 4. **Troopers.** They're the simplest: 0 credits, no options.
 5. **Elites:** kit, Lieutenant, Start in Reserve.
-6. **One chassis end to end,** including the pilot and Signature.
-7. **The remaining chassis,** which are mostly copies of the first with different hardpoints.
-8. **Briefing and Expanded Contract.**
-9. **Playtest lists.** Later, generate cards from the `.gst` and `.cat` files.
+6. **The Pilot build** and the Pilot and Second Pilot entries that link to it.
+7. **One chassis end to end:** hardpoints, systems, Signature, Capacity.
+8. **The remaining chassis** (5 at launch), which are mostly copies of the first with different hardpoints.
+9. **Briefing** (with the stock TAG lineup) **and Expanded Contract.**
+10. **Playtest lists.** Later, generate cards from the `.gst` and `.cat` files.
 
 ---
 
 ## 12. Open questions
 
 1. **Trooper reinforcements:** can an arriving Trooper take any template, or only templates from your starting lineup? If only the starting lineup, the roster needs nothing more. If any template, the Briefing should list them all.
-2. **Stock TAG lineup:** reference only (in the Briefing), or selectable in the list so players can pre-plan a reserve TAG?
-3. **Allocation size:** does 60 vs 100 change anything besides credits, such as the Elite cap or the Command Token pool? If so, `limit::Credits` can drive it.
-4. **Launch scope:** how many chassis per silhouette (S6, S7, S8) for the first playable version?
+2. **Allocation size:** does 60 vs 100 change anything besides credits, such as the Elite cap or the Command Token pool? If so, `limit::Credits` can drive it.
