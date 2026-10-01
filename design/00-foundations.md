@@ -1,4 +1,4 @@
-# Dogs of War — Infinity N5 Mercenary Game Mode (v0.9 draft)
+# Dogs of War — Infinity N5 Mercenary Game Mode (v0.10 draft)
 
 A **non-commercial, fan-made game mode for Infinity N5**, intended as a love letter to Corvus Belli.
 
@@ -20,7 +20,7 @@ Status tags:
 
 | # | Topic | Decision | Status |
 |---|---|---|---|
-| 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states | **LOCKED** |
+| 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states. Specific N4 rules are brought back where N5 dropped something we need (§6.1). | **LOCKED** |
 | 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
 | 3 | Rounds | 3 | **LOCKED** |
 | 4 | Turn structure | Phases: Pilot → Elite → Trooper → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
@@ -40,7 +40,7 @@ Status tags:
 | 16 | Deployment (Tactical) | New skill; every reinforcing model has it | **LOCKED** |
 | 17 | Calldowns | Orbital and aerial, with Speedballs as the baseline | **LOCKED** |
 | 18 | Replacement TAG | Stock lineup costed in Command Tokens; called in by a pilot | **LOCKED** |
-| 19 | Pilots | Fully custom. Free mount/dismount. Eject test. Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
+| 19 | Pilots | Fully custom. Mount and dismount use N4's rules, made free with any movement skill. Eject uses N5's Transmutation (Escape System). Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
 | 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. | **LOCKED** |
 | 21 | Signature slot | Every TAG gets one slot for its "special cool thing." Not called an ultimate; most options have no prerequisites. | **LOCKED** |
 | 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
@@ -163,8 +163,8 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 | Rule | Detail |
 |---|---|
-| **Mount / dismount** | Free with any movement skill |
-| **Eject** | Test when the TAG is destroyed. **OPEN:** an existing N5 TAG already has an eject-style skill; reuse it (you're looking it up). |
+| **Mount / dismount** | N4's rules (ported, §6.1), with our change: free with any movement skill |
+| **Eject** | N5's **Transmutation (Escape System)** (called Escape System in N4). The profile the TAG turns into is the company's custom pilot. |
 | **Jockey** | Pilots only. End any movement in base contact with an enemy TAG, then roll WIP vs WIP face-to-face. |
 | **Unmanned TAGs** | A pilot can climb into an enemy TAG whose pilot has dismounted, and take it |
 
@@ -180,6 +180,14 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 - When dismounted, the pilot fights as an infantry model.
 
 ---
+
+### 6.1 Rules ported from N4 — LOCKED
+
+N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 dropped a rule we need, we bring the N4 version back and list it here. Each entry names the rule, why we need it, and anything we change about it.
+
+| N4 rule | Why we need it | Our changes |
+|---|---|---|
+| Pilot mount/dismount (manned TAGs) | N5 removed it, and pilots getting in and out is core to this mode | Mounting and dismounting is free with any movement skill. Pilots may also mount enemy TAGs (jockeying and stealing unmanned TAGs, see above). |
 
 ## 7. Elites and Troopers — LOCKED (lists PROPOSED)
 
@@ -247,8 +255,7 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 ## 10. Open questions
 
-1. **Eject:** which existing N5 TAG skill do we reuse? (You're looking it up.)
-2. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
+1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
 
 ## 11. Numbers to set during balancing
 
