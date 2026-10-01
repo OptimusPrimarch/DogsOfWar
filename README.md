@@ -24,7 +24,7 @@ You need the Infinity N5 rules to play. This mode documents only what it changes
 
 | Path | Contents |
 |---|---|
-| `design/` | Design documents. Start with `00-foundations.md`. |
+| `design/` | Design documents. Start with `00-foundations.md`; the list-builder blueprint is `01-catalogue-structure.md`. |
 | `*.gst`, `*.cat` | New Recruit catalogue (coming soon). These must stay at the repo root. |
 
 ## Using the list builder

@@ -221,6 +221,8 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 **Why not choose:** cards made by hand alongside the catalogue would mean two copies of the same data to keep in sync. Instead, the catalogue files (.gst / .cat) are structured data, so a script can read them and lay out unit, weapon, and component cards once balance settles. Cards become a generated output, never a second copy.
 
+The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-structure.md).
+
 ### How New Recruit shapes the design
 - **Write rules as data constraints wherever possible:** slot counts, min/max limits, cost limits. Prose exceptions are hard to enforce in a builder.
 - **Cost types:** Credits, and Command Tokens (for pre-game spends like Elite cap expansion). Capacity could be a third cost type limited per TAG. **Prototype this early** to confirm the editor can cap a cost within one unit.
