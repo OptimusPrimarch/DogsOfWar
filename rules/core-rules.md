@@ -40,9 +40,9 @@ Our own content never uses faction or unit names. Dogs of War shares Infinity's 
 |---|---|
 | **Allocation** | 60 or 100 Requisition |
 | **Pilot and TAG** | Exactly one pilot, fully custom, and one custom TAG. The TAG is built from a chassis (S6, S7 or S8), components, and one Signature slot. |
-| **Elites** | Up to 5, including any held in reserve. Each is a fixed profile plus one kit item. Command Tokens can raise the limit. A second pilot is an expensive Elite option. |
-| **Troopers** | Free (0 Requisition) and Irregular. They share one profile, and templates change only their equipment. |
-| **Lieutenant** | Required, and costs Requisition. The pilot and some Elites can take it. NCO costs more than Lieutenant. |
+| **Elite Guns** | Up to 5, including any held in reserve. Each is a fixed profile plus one kit item. Command Tokens can raise the limit. A second pilot is an expensive Elite Gun option. |
+| **Hired Guns** | Free (0 Requisition) and Irregular. They share one profile, and templates change only their equipment. |
+| **Lieutenant** | Required, and costs Requisition. The pilot and some Elite Guns can take it. NCO costs more than Lieutenant. |
 | **On the table** | At most 1 TAG or pilot, plus 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
 
 The catalogue enforces these limits. Prices are *to be written*.
@@ -53,18 +53,18 @@ A game lasts **3 rounds**. Each round runs through these phases in order. Each p
 
 1. **Impetuous:** Impetuous troops.
 2. **Pilot:** pilots and the TAG they're in, including a second pilot.
-3. **Elite:** Elites.
-4. **Trooper:** Troopers.
+3. **Elite Guns.**
+4. **Hired Guns.**
 5. **Reinforcement:** new arrivals deploy, then act with their own Orders. Arriving isn't an action.
 
 The player with initiative goes first in every phase. The Lieutenant Order can be spent in any phase.
 
 ## 4. Orders
 
-- Your pilot and each Elite give a Regular Order to a shared pool. Any model eligible in the current phase can spend from it.
-- Troopers are Irregular. Each Trooper's own Order is spent only on itself, in the Trooper phase.
+- Your pilot and each Elite Gun gives a Regular Order to a shared pool. Any model eligible in the current phase can spend from it.
+- Hired Guns are Irregular. Each Hired Gun's own Order is spent only on itself, in the Hired Guns phase.
 - A pilot's Tactical Awareness Order is spent in the Pilot phase.
-- Pool Orders left unspent carry on into later phases, and Troopers can use them in the Trooper phase.
+- Pool Orders left unspent carry on into later phases, and Hired Guns can use them in the Hired Guns phase.
 
 **Tracking the pool with tokens:**
 1. At the start of the round, take one Order token for each of your Regular models.
@@ -73,7 +73,7 @@ The player with initiative goes first in every phase. The Lieutenant Order can b
 
 ## 5. Command
 
-- **Command Tokens:** the N5 starting pool, slightly enlarged (number *to be written*). They are never regained. On top of everything N5 allows, they pay for drop pods, replacement TAGs, extra Elite slots and calldowns.
+- **Command Tokens:** the N5 starting pool, slightly enlarged (number *to be written*). They are never regained. On top of everything N5 allows, they pay for drop pods, replacement TAGs, extra Elite Gun slots and calldowns.
 - **Suppressive Fire** works exactly as in N5.
 
 ## 6. Reinforcements and calldowns
@@ -86,7 +86,7 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 > **Deployment (Tactical)** — *Dogs of War skill.* Every reinforcing model has it. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy.
 
-- Elite reserves are chosen before the game. Trooper reserves are unlimited. The only limit on arrivals is the 10-infantry cap.
+- Elite Gun reserves are chosen before the game. Hired Gun reserves are unlimited. The only limit on arrivals is the 10-infantry cap.
 - **Replacement TAGs:** during the Pilot phase, a pilot can call in a TAG from the stock lineup, which is the same for every company. It costs Command Tokens, roughly most of the pool. Prices *to be written*.
 - **Calldowns:** orbital and aerial support, built on N5's [Speedballs](https://infinitythewiki.com/Request_Speedball). The list is *to be written*.
 

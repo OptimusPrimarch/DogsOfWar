@@ -1,6 +1,5 @@
 {
   "_about": "Everything a player picks when building a company. tools/build.py turns this into 'Mercenary Company.cat'. Stat lines and prices marked \"status\": \"prototype\" are carried over from the first New Recruit attempt and are placeholders until designed.",
-
   "_howto": {
     "cost": "{\"Requisition\": 5, \"Capacity\": 2, \"Command Tokens\": 1}; null or a missing cost type means none yet.",
     "skills / equipment": "Names as a unit profile would print them: \"Dodge (PH=11)\". Each links to its rule; the bracketed part is shown after the name.",
@@ -9,7 +8,6 @@
     "groups": "Option lists only this unit has. Each option is a weapon from the armory with a price, and optional stat changes (\"mods\": {\"PS\": \"-1\"} lowers PS by 1, {\"PS\": \"=6\"} sets it to 6).",
     "upgrades": "Names from \"upgrades\" below."
   },
-
   "lists": {
     "Pilot Sidearms": {
       "max": 1,
@@ -36,21 +34,18 @@
       ]
     }
   },
-
   "upgrades": {
     "Lieutenant": {"category": "Lieutenant", "rules": ["Lieutenant"], "cost": {"Requisition": null}},
     "NCO": {"rules": ["NCO"], "cost": {"Requisition": null}},
     "Start in Reserve": {"removesCategory": "Deployed", "rules": ["Reinforcements"]}
   },
-
   "profiles": {
-    "Trooper": {
+    "Hired Gun": {
       "type": "Trooper",
       "status": "prototype",
       "stats": {"MOV": "?", "CC": "?", "BS": "?", "PH": "?", "WIP": "?", "ARM": "?", "BTS": "?", "VITA": "?", "S": "2", "Orders": "Irregular"}
     }
   },
-
   "units": [
     {
       "name": "Company Briefing",
@@ -58,17 +53,21 @@
       "type": "upgrade",
       "min": 1,
       "max": 1,
-      "rules": ["Round Structure", "Order Pool", "Command Tokens", "Reinforcements", "Deployment (Tactical)",
-                "Replacement TAGs", "Mount and Dismount", "Jockey", "Unmanned TAGs", "Pilotless State", "Eject"]
+      "rules": [
+        "Round Structure",
+        "Order Pool",
+        "Command Tokens",
+        "Reinforcements",
+        "Deployment (Tactical)",
+        "Replacement TAGs",
+        "Mount and Dismount",
+        "Jockey",
+        "Unmanned TAGs",
+        "Pilotless State",
+        "Eject"
+      ]
     },
-    {
-      "name": "Expanded Contract",
-      "category": "Company",
-      "type": "upgrade",
-      "note": "Each one adds 1 to the Elite limit.",
-      "cost": {"Command Tokens": null}
-    },
-
+    {"name": "Expanded Contract", "category": "Company", "type": "upgrade", "note": "Each one adds 1 to the Elite Guns limit.", "cost": {"Command Tokens": null}},
     {
       "name": "Rookie Pilot",
       "category": "Pilot",
@@ -108,7 +107,6 @@
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
-
     {
       "name": "Light TAG",
       "category": "TAG",
@@ -132,13 +130,13 @@
       "equipment": ["ECM: Guided (-6)"],
       "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
       "groups": [
-        {"name": "Ranged Hardpoint", "max": 1, "options": [
-          {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}
-        ]},
-        {"name": "CQC Hardpoints", "max": 2, "default": "CC Weapon", "options": [
-          {"weapon": "CC Weapon", "mods": {"PS": "=6"}},
-          {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}, "mods": {"PS": "=6"}}
-        ]}
+        {"name": "Ranged Hardpoint", "max": 1, "options": [{"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}]},
+        {
+          "name": "CQC Hardpoints",
+          "max": 2,
+          "default": "CC Weapon",
+          "options": [{"weapon": "CC Weapon", "mods": {"PS": "=6"}}, {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}, "mods": {"PS": "=6"}}]
+        }
       ]
     },
     {
@@ -153,38 +151,48 @@
       "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
       "groups": []
     },
-
     {
       "name": "Combat Engineer",
-      "category": "Elite",
+      "category": "Elite Guns",
       "also": ["Deployed", "Specialist"],
       "status": "prototype",
       "cost": {"Requisition": 4},
       "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "14", "BS": "12", "PH": "12", "WIP": "13", "ARM": "3", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
       "skills": ["Engineer"],
       "equipment": ["GizmoKit (+1B)"],
-      "groups": [
-        {"name": "Weapon", "max": 1, "options": [
-          {"weapon": "MULTI Rifle", "cost": {"Requisition": 1}},
-          {"weapon": "Chain Rifle"}
-        ]}
-      ],
+      "groups": [{"name": "Weapon", "max": 1, "options": [{"weapon": "MULTI Rifle", "cost": {"Requisition": 1}}, {"weapon": "Chain Rifle"}]}],
       "upgrades": ["Start in Reserve"]
     },
-
-    {"name": "Trooper — Rifleman", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
-     "sharedProfile": "Trooper", "weapons": ["Combi Rifle"]},
-    {"name": "Trooper — Gunner", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
-     "sharedProfile": "Trooper", "weapons": ["Spitfire"]},
-    {"name": "Trooper — Grenadier", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
-     "sharedProfile": "Trooper", "weapons": ["Grenade Launcher"]},
-    {"name": "Trooper — AT Gunner", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
-     "sharedProfile": "Trooper", "weapons": ["Panzerfaust"]},
-    {"name": "Trooper — Corpsman", "category": "Trooper", "also": ["Deployed", "Specialist"], "status": "prototype",
-     "sharedProfile": "Trooper", "skills": ["Paramedic"], "weapons": ["Submachine Gun"],
-     "note": "Foundations: Paramedic + a lighter weapon. The SMG is a stand-in."},
-    {"name": "Trooper — Spotter", "category": "Trooper", "also": ["Deployed", "Specialist"], "status": "prototype",
-     "sharedProfile": "Trooper", "skills": ["Forward Observer"], "weapons": ["Submachine Gun"],
-     "note": "Foundations: Forward Observer + a lighter weapon. The SMG is a stand-in."}
+    {"name": "Hired Gun — Rifleman", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Combi Rifle"]},
+    {"name": "Hired Gun — Gunner", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Spitfire"]},
+    {
+      "name": "Hired Gun — Grenadier",
+      "category": "Hired Guns",
+      "also": ["Deployed"],
+      "status": "prototype",
+      "sharedProfile": "Hired Gun",
+      "weapons": ["Grenade Launcher"]
+    },
+    {"name": "Hired Gun — AT Gunner", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Panzerfaust"]},
+    {
+      "name": "Hired Gun — Corpsman",
+      "category": "Hired Guns",
+      "also": ["Deployed", "Specialist"],
+      "status": "prototype",
+      "sharedProfile": "Hired Gun",
+      "skills": ["Paramedic"],
+      "weapons": ["Submachine Gun"],
+      "note": "Foundations: Paramedic + a lighter weapon. The SMG is a stand-in."
+    },
+    {
+      "name": "Hired Gun — Spotter",
+      "category": "Hired Guns",
+      "also": ["Deployed", "Specialist"],
+      "status": "prototype",
+      "sharedProfile": "Hired Gun",
+      "skills": ["Forward Observer"],
+      "weapons": ["Submachine Gun"],
+      "note": "Foundations: Forward Observer + a lighter weapon. The SMG is a stand-in."
+    }
   ]
 }

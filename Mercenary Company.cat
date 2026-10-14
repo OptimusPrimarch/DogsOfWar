@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="15" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="15" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="17" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="17" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -452,7 +452,7 @@
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="2031-e0a9-930a-a095" name="Elite" hidden="false" targetId="acbf-f945-7e91-b604" primary="true" />
+        <categoryLink id="b08e-d4ca-502d-3bf9" name="Elite Guns" hidden="false" targetId="1c22-5a4a-5e7a-30d1" primary="true" />
         <categoryLink id="7c86-055f-0866-2933" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
         <categoryLink id="e357-4502-fba8-fcb0" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
       </categoryLinks>
@@ -485,76 +485,76 @@
         <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="6f78-0545-1c10-8c4c" name="Trooper — Rifleman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="0012-815f-e075-3e98" name="Hired Gun — Rifleman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="6ed9-b1c0-cb62-a378" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="94d3-1c2d-c383-f1a9" name="Combi Rifle" hidden="false" targetId="79d8-80b0-c30c-1238" type="profile" />
-        <infoLink id="c25d-edea-634c-d4fd" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="0483-9a31-3f4c-cdeb" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="4c25-765a-f74f-60b4" name="Combi Rifle" hidden="false" targetId="79d8-80b0-c30c-1238" type="profile" />
+        <infoLink id="1761-ac1d-74c9-cffa" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="8dab-747a-0b51-a4b3" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="7052-8cf4-eeeb-16a0" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="59dd-0ff8-951e-b920" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="d838-2678-99cc-3664" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry id="c724-0d98-eb94-f29a" name="Trooper — Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="cccf-0107-c16a-c223" name="Hired Gun — Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="6c5e-f741-7ed9-4dd4" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="7ca0-913b-984e-00ca" name="Spitfire" hidden="false" targetId="9abb-588f-671c-0596" type="profile" />
-        <infoLink id="d4f9-8d9f-29e0-24d2" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="52c1-e177-6b98-14e4" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="81f3-8f9c-21df-84ce" name="Spitfire" hidden="false" targetId="9abb-588f-671c-0596" type="profile" />
+        <infoLink id="97df-23b9-9060-4241" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6c43-eba9-bdb1-97c2" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="f02e-d142-4390-b95b" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="8495-6ac8-f6d3-e10a" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="1bfa-1868-093e-5d15" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry id="bba3-4c57-ef5e-73ef" name="Trooper — Grenadier" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="4eb0-678c-587b-3750" name="Hired Gun — Grenadier" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="4ea2-7bbc-25f6-2b1d" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="f8b8-f9e1-1d8c-335a" name="Grenade Launcher" hidden="false" targetId="dd79-f402-c653-fc6d" type="profile" />
-        <infoLink id="f47d-db4e-59b6-8463" name="Impact Template" hidden="false" targetId="d515-904e-7f49-17b1" type="rule" />
-        <infoLink id="1700-01b9-5390-82aa" name="Speculative Attack" hidden="false" targetId="16d3-83ad-2f43-af1e" type="rule" />
+        <infoLink id="bf79-b6b6-769e-0f2a" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="01ea-f98d-80c8-50fc" name="Grenade Launcher" hidden="false" targetId="dd79-f402-c653-fc6d" type="profile" />
+        <infoLink id="d460-79c0-90db-fe96" name="Impact Template" hidden="false" targetId="d515-904e-7f49-17b1" type="rule" />
+        <infoLink id="fffe-b2c9-5715-cf57" name="Speculative Attack" hidden="false" targetId="16d3-83ad-2f43-af1e" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="256a-2298-9bd0-4145" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="9941-bb18-ad49-859f" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="e0f8-ff12-22bc-2675" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="9068-c498-2fb0-a44b" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry id="1c26-e716-30b7-a02e" name="Trooper — AT Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="64e9-1395-d6ad-dea5" name="Hired Gun — AT Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="750d-0f2a-a5c7-52f0" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="e516-e2ef-45b1-33f5" name="Panzerfaust" hidden="false" targetId="3996-c9e2-a9bd-8b1a" type="profile" />
-        <infoLink id="907f-f812-5c82-3ead" name="Anti-materiel" hidden="false" targetId="e196-fa3f-b53c-73ee" type="rule" />
-        <infoLink id="42aa-610e-1656-bae6" name="Disposable (X)" hidden="false" targetId="8b2d-eeb9-e446-9928" type="rule" />
+        <infoLink id="3c7f-67de-1a0f-80f6" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="5cfc-ff3c-c78d-ad4d" name="Panzerfaust" hidden="false" targetId="3996-c9e2-a9bd-8b1a" type="profile" />
+        <infoLink id="7119-0dd9-50aa-8c39" name="Anti-materiel" hidden="false" targetId="e196-fa3f-b53c-73ee" type="rule" />
+        <infoLink id="e179-f184-fba9-1306" name="Disposable (X)" hidden="false" targetId="8b2d-eeb9-e446-9928" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4056-d134-a300-b555" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="ebbe-ea99-91e7-b675" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="74f0-b98d-6d03-2568" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="a855-e937-ef5c-a395" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry id="fe2f-1c17-7804-6ef0" name="Trooper — Corpsman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="a29d-caad-7f33-9a81" name="Hired Gun — Corpsman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="c223-b2e4-4f5d-ccc7" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="48d3-b583-dcf0-0af3" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
-        <infoLink id="43da-0184-c053-3f57" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
-        <infoLink id="340f-5194-d2bb-94bd" name="Paramedic" hidden="false" targetId="1319-c1b0-c288-0d3e" type="rule" />
+        <infoLink id="ca79-15bf-b4b7-d5df" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="a328-6a3a-7a32-c52b" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
+        <infoLink id="abeb-0b87-3126-c444" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="14c6-cca1-4a7a-fd15" name="Paramedic" hidden="false" targetId="1319-c1b0-c288-0d3e" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="ac4a-98b7-eb0c-1bca" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="e800-6dd4-2665-7c23" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
-        <categoryLink id="380a-fdb1-13ef-e912" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
+        <categoryLink id="4734-a903-40a4-d6a0" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="ec65-01f6-2e5c-3076" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="6bc9-1a28-7498-1be3" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry id="a440-ec82-d291-70b8" name="Trooper — Spotter" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="df66-a44e-b946-84ac" name="Hired Gun — Spotter" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="a663-6d8b-7cb1-6a5f" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
-        <infoLink id="e2a9-eca1-6155-3241" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
-        <infoLink id="bcd5-1612-19f3-846f" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
-        <infoLink id="2b46-87c0-3891-7aaa" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
+        <infoLink id="5854-a164-a7cd-4daa" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
+        <infoLink id="2957-cbf7-9db2-9126" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
+        <infoLink id="79f4-0c5b-c6fa-1797" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="b0d5-fb39-6d7d-be07" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="6dae-18a3-1251-33a4" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
-        <categoryLink id="f042-de7c-3845-5712" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
-        <categoryLink id="0a52-3573-2d56-e1e6" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
+        <categoryLink id="9a06-ea1a-4db4-a713" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
+        <categoryLink id="5f30-8478-0378-d058" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="95cf-ef47-3b7f-3b12" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
@@ -622,7 +622,7 @@
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedProfiles>
-    <profile id="12b0-e8c0-dc8f-e89a" name="Trooper" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+    <profile id="edc1-3583-6dff-d318" name="Hired Gun" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
       <characteristics>
         <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">?</characteristic>
         <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">?</characteristic>

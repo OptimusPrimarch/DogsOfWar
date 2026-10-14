@@ -25,17 +25,17 @@ Status tags:
 | 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states. Specific N4 rules are brought back where N5 dropped something we need (§6.1). | **LOCKED** |
 | 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
 | 3 | Rounds | 3 | **LOCKED** |
-| 4 | Turn structure | Phases: Pilot → Elite → Trooper → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
-| 5 | Order economy | Option C: the Regular pool is recounted at the start of each player's turn within a phase, minus Orders already spent this round. Tracked with tokens. Troopers are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
+| 4 | Turn structure | Phases: Pilot → Elite Guns → Hired Guns → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
+| 5 | Order economy | Option C: the Regular pool is recounted at the start of each player's turn within a phase, minus Orders already spent this round. Tracked with tokens. Hired Guns are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
 | 5a | Initiative | The initiative player goes first in every phase. Scenarios scored at the end of the round or game, plus AROs, offset the advantage (as in N5). | **LOCKED** |
 | 5b | Impetuous | First in the round, before the Pilot phase | **LOCKED** |
 | 6 | Lieutenant | Costs Requisition on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged, including how long it lasts (believed to be until the model next activates; check the N5 text) | **LOCKED** |
-| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
+| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite Gun) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
 | 10 | Allocation | 60–100 Requisition | **LOCKED** |
-| 11 | Elites | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite option. | **LOCKED** |
-| 12 | Troopers | 0 Requisition; Irregular; shared profile; equipment templates. Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
+| 11 | Elite Guns | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite Gun option. | **LOCKED** |
+| 12 | Hired Guns | 0 Requisition; Irregular; shared profile; equipment templates. Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
 | 13 | Fireteams | Dropped: N5's Fireteam rules aren't used. The word "fireteam" may still appear loosely in descriptions. | **LOCKED** (clarified 2026-10-14) |
 | 14 | Reinforcement | Arrive in the Reinforcement phase and act with their own Orders. Arriving isn't an action. | **LOCKED** (leaning) |
 | 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
@@ -53,9 +53,10 @@ Status tags:
 | 27 | Scope of the setting | Infinity-coded: it should read as Infinity to anyone who has played it, through its weapons, skills, equipment and mechanics. But it isn't limited to what exists in Infinity. We add our own when it meets a specific need. | **LOCKED** (2026-10-14) |
 | 28 | Names | No faction or unit names in our own content. Infinity's shared skills, equipment and weapons keep their own names, including **Exrah** and **Shasvastii**, which stay in so an alien-coded mercenary company can be an option. | **LOCKED** (2026-10-14, revised) |
 | 29 | Armory | Everything in N5's armory is imported from the official wiki into the catalogue by `tools/`. That covers every weapon, deployed item, skill, piece of equipment, hacking program and device, Martial Arts level, ammunition type, trait, label and state. Each comes with a one-line summary in our own words and a link to the official rule. `tools/check_coverage.py` confirms nothing is missed. Readable reference: `rules/armory.md`. Index of every N5 rules page: `rules/n5-index.md`. Player-facing rules: `rules/core-rules.md`. | **LOCKED** (2026-10-14) |
-| 30 | Currency and categories | The list currency is **Requisition** (it replaces "credits"). Units are categorized **TAG, Pilot, Elite, Trooper**, and the phases match those categories. | **LOCKED** (2026-10-14) |
+| 30 | Currency and categories | The list currency is **Requisition** (it replaces "credits"). Units are categorized **TAG, Pilot, Elite Guns, Hired Guns**, and the phases match those categories. | **LOCKED** (2026-10-14) |
 | 31 | Catalogue build | The catalogue is generated, not hand-edited. `tools/build.py` turns the data files in `data/`, the imported N5 armory and our rule summaries into `Dogs of War.gst` and `Mercenary Company.cat`, in the BattleScribe 2.03 XML that New Recruit reads, validated against the official schema. The New Recruit Editor is for viewing and testing; changes go into `data/`. Replaces the first JSON attempt. | **LOCKED** (2026-10-14) |
 | 32 | Empty TAGs and mounting | While its pilot is out, a TAG becomes the pilot's **Peripheral (Synchronized)**: it must stay in coherency with the pilot, or it goes Disconnected. While its pilot is in a Null state, the TAG gains **Pilotless**, a new state that is *not* Null: it can't generate or spend Orders, can still ARO, and gains Total Reaction for a Command Token, until Pilotless ends. Pilotless is cancelled when a pilot climbs in or its own pilot leaves the Null state. This replaces N4, where an empty TAG couldn't act and was removed when its pilot died. A pilot climbs in by ending a Movement skill in base contact with the TAG (at the end of that Order), the same trigger as Jockey. A dismounting pilot starts its movement anywhere in base contact with the TAG. | **LOCKED** (2026-10-14) |
+| 33 | Category names | **Trooper** becomes **Hired Guns** and **Elite** becomes **Elite Guns**, along with their phases and entries ("Hired Gun — Rifleman"). N5 uses "trooper" for any model and "Elite" as a trooper classification, so the old names collided with rules text. The stat-line layout keeps N5's name, Trooper. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -64,8 +65,8 @@ Status tags:
 **What the mode adds to Infinity:** a mercenary company you build to your heart's content.
 - A **custom TAG**, assembled from chassis, components, and a Signature slot.
 - A **custom pilot**.
-- A pool of **Elite specialists**, modeled on the specialists in standard Infinity armies.
-- **Troopers** as standard issue.
+- A pool of **Elite Gun specialists**, modeled on the specialists in standard Infinity armies.
+- **Hired Guns** as standard issue.
 
 How it differs from *Infinity Deathmatch: TAG Raid*, Corvus Belli's official TAG-centered free-for-all:
 
@@ -87,33 +88,33 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 |---|---|---|---|
 | 0 | **Start of round** | Nobody | Initiative |
 | 1 | **Impetuous** | Impetuous troops | First in the round, regardless of phase |
-| 2 | **Pilot** | Pilots and the TAG they're in | Includes a second pilot taken as an Elite |
-| 3 | **Elite** | Elites | |
-| 4 | **Trooper** | Troopers | The standard N5 turn. Renamed from "Tactical" so it isn't confused with N5's Tactical Phase, the start-of-turn bookkeeping step. |
+| 2 | **Pilot** | Pilots and the TAG they're in | Includes a second pilot taken as an Elite Gun |
+| 3 | **Elite Guns** | Elite Guns | |
+| 4 | **Hired Guns** | Hired Guns | The standard N5 turn. Renamed from "Tactical" so it isn't confused with N5's Tactical Phase, the start-of-turn bookkeeping step. |
 | 5 | **Reinforcement** | New arrivals | Arrivals deploy, then act with their own Orders. Arriving isn't an action. |
 
-### 2.1 Order economy — LOCKED: Option C, with Troopers Irregular
+### 2.1 Order economy — LOCKED: Option C, with Hired Guns Irregular
 
 | Source | Type | Spent by | When |
 |---|---|---|---|
 | Pilot | Regular (pool) | Whoever is eligible in the current phase | Any phase |
-| Each Elite | Regular (pool) | Whoever is eligible in the current phase | Any phase |
+| Each Elite Gun | Regular (pool) | Whoever is eligible in the current phase | Any phase |
 | Pilot's Tactical Awareness | Irregular | The pilot (and their TAG) | Pilot phase |
 | Lieutenant Order | Special | The Lieutenant (N5) | **Any phase** (the exception) |
-| Each Trooper | Irregular | That Trooper only | Trooper phase |
+| Each Hired Gun | Irregular | That Hired Gun only | Hired Guns phase |
 
-**Available pool at the start of each phase** = Regular Orders from your surviving Pilot and Elites − Regular Orders you've already spent this round. It can't go below 0.
+**Available pool at the start of each phase** = Regular Orders from your surviving Pilot and Elite Guns − Regular Orders you've already spent this round. It can't go below 0.
 
-- Leftover pool Orders carry down to the Trooper phase. N5 lets Irregular troopers receive Regular Orders from the pool.
-- The TAG's ceiling in the Pilot phase is: the pool (pilot + Elites) + Tactical Awareness, + the Lieutenant Order if the pilot is the Lieutenant. With 5 Elites that's up to 7–8 Orders. Every one of them leaves an Elite standing idle.
-- Bookkeeping stays small: the pool is at most about 6 Orders, because Troopers track their own.
+- Leftover pool Orders carry down to the Hired Guns phase. N5 lets Irregular troopers receive Regular Orders from the pool.
+- The TAG's ceiling in the Pilot phase is: the pool (pilot + Elite Guns) + Tactical Awareness, + the Lieutenant Order if the pilot is the Lieutenant. With 5 Elite Guns that's up to 7–8 Orders. Every one of them leaves an Elite Gun standing idle.
+- Bookkeeping stays small: the pool is at most about 6 Orders, because Hired Guns track their own.
 
 **LOCKED: token method (same result, no arithmetic)**
 1. At the start of the round, take one Order token for each Regular model.
 2. Discard a token whenever you spend a Regular Order.
 3. At the start of **each of your turns** within a phase, discard one unspent token for each Regular model you lost since your previous turn. If you have no tokens left, you lose nothing more.
 
-**LOCKED: each player counts at the start of their own turn within a phase,** as in N5. A first-player TAG that kills Elites also costs the opponent those Orders. AROs and scenario design keep this in check. *(We considered and rejected a simultaneous count for both players.)*
+**LOCKED: each player counts at the start of their own turn within a phase,** as in N5. A first-player TAG that kills Elite Guns also costs the opponent those Orders. AROs and scenario design keep this in check. *(We considered and rejected a simultaneous count for both players.)*
 
 **LOCKED: the initiative player goes first in every phase.** As in N5, scenarios scored at the end of the round or game offset the first-mover advantage.
 
@@ -123,9 +124,9 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 | Rule | Detail |
 |---|---|
-| **Lieutenant** | Required. Costs Requisition. The pilot and some Elites can take it. Using the Lieutenant Order reveals the Lieutenant (N5). |
+| **Lieutenant** | Required. Costs Requisition. The pilot and some Elite Guns can take it. Using the Lieutenant Order reveals the Lieutenant (N5). |
 | **NCO** | Costs more Requisition than Lieutenant |
-| **Command Tokens** | The N5 pool, slightly enlarged. They are not regained. Uses: everything N5 allows, plus drop pods, replacement TAGs, expanding the Elite cap, and calldowns. |
+| **Command Tokens** | The N5 pool, slightly enlarged. They are not regained. Uses: everything N5 allows, plus drop pods, replacement TAGs, expanding the Elite Guns cap, and calldowns. |
 
 ---
 
@@ -135,12 +136,12 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 |---|---|
 | **Allocation** | 60 or 100 Requisition |
 | **Pilot + TAG** | One. Pilot fully custom. TAG = chassis + components + Signature. |
-| **Elites** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
-| **Second pilot** | An expensive Elite option. They can spend **most of your Command Tokens** to call in a reserve TAG from the stock lineup, as early as the first Pilot phase. This allows two TAGs on the table. Intended; both players have the option. |
-| **Troopers** | 0 Requisition. Fill the remaining infantry slots. |
+| **Elite Guns** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
+| **Second pilot** | An expensive Elite Gun option. They can spend **most of your Command Tokens** to call in a reserve TAG from the stock lineup, as early as the first Pilot phase. This allows two TAGs on the table. Intended; both players have the option. |
+| **Hired Guns** | 0 Requisition. Fill the remaining infantry slots. |
 | **On-table cap** | 1 TAG or pilot + 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
 
-**PROPOSED:** seed Elite and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
+**PROPOSED:** seed Elite Gun and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
 
 ---
 
@@ -155,8 +156,8 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 3. **Deployment zone:** only if neither of the above is possible.
 
 **Reserves:**
-- **Elites** come only from reserves built before the game.
-- **Trooper** reserves are unlimited.
+- **Elite Guns** come only from reserves built before the game.
+- **Hired Gun** reserves are unlimited.
 
 **Replacement TAG:**
 - Choose from a stock lineup, each TAG costed in Command Tokens. Price them so a TAG takes **most of the pool**.
@@ -200,11 +201,11 @@ N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 
 
 **Empty TAGs (decision 32):** the TAG becomes its pilot's Peripheral while the pilot is out, and goes Pilotless while the pilot is in a Null state. The Peripheral is Synchronized.
 
-## 7. Elites and Troopers — LOCKED (lists PROPOSED)
+## 7. Elite Guns and Hired Guns — LOCKED (lists PROPOSED)
 
-**Elite pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, an Officer who can be Lieutenant, Heavy Infantry, and a **second pilot**.
+**Elite Gun pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, an Officer who can be Lieutenant, Heavy Infantry, and a **second pilot**.
 
-**Troopers:** one shared profile. Templates change equipment only.
+**Hired Guns:** one shared profile. Templates change equipment only.
 
 | Template | Equipment | Specialist? |
 |---|---|---|
@@ -224,7 +225,7 @@ Build the **New Recruit catalogue as the single source of truth**. Generate prin
 
 | | New Recruit catalogue | Hand-built cards |
 |---|---|---|
-| Rule enforcement | The builder enforces the Allocation, Elite cap, slots, and Capacity | Players check legality by hand |
+| Rule enforcement | The builder enforces the Allocation, Elite Guns cap, slots, and Capacity | Players check legality by hand |
 | Changing a price | Edit once; every list updates | Reprint every affected card |
 | Sharing | Players load it from a GitHub repo, on web or mobile | Print-and-play files |
 | At the table | Text roster, less tactile | Tactile, and you physically "assemble" the TAG |
@@ -236,8 +237,8 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 
 ### How New Recruit shapes the design
 - **Write rules as data constraints wherever possible:** slot counts, min/max limits, cost limits. Prose exceptions are hard to enforce in a builder.
-- **Cost types:** Requisition, and Command Tokens (for pre-game spends like Elite cap expansion). Capacity could be a third cost type limited per TAG. **Prototype this early** to confirm the editor can cap a cost within one unit.
-- **Expanding the Elite cap:** an option that costs Command Tokens and raises the Elite limit. The editor's modifiers should handle this.
+- **Cost types:** Requisition, and Command Tokens (for pre-game spends like Elite Guns cap expansion). Capacity could be a third cost type limited per TAG. **Prototype this early** to confirm the editor can cap a cost within one unit.
+- **Expanding the Elite Guns cap:** an option that costs Command Tokens and raises the Elite Guns limit. The editor's modifiers should handle this.
 - **Profile layouts:** set up N5-style unit attributes and weapon profiles once, and reuse them everywhere.
 
 ### Hosting
@@ -261,8 +262,9 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 | "Rally" reinforcement | Replaced by Deployment (Tactical) |
 | Fireteams | Simplicity |
 | Free Lieutenant on the pilot | The Lieutenant now costs Requisition |
-| Order economy options A and B | Chose C, with Troopers Irregular |
+| Order economy options A and B | Chose C, with Hired Guns Irregular |
 | The names "Grunt" and "Tactical" (phase) | Clash with an existing Infinity unit and with N5's Tactical Phase |
+| The category names "Trooper" and "Elite" | Clash with N5's general use of "trooper" and its Elite classification; now Hired Guns and Elite Guns (#33) |
 
 ---
 
@@ -274,6 +276,6 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 ## 11. Numbers to set during balancing
 
 - Command Token starting pool (the N5 pool, slightly enlarged).
-- Command Token prices: drop pod, each stock TAG ("most of the pool"), Elite cap expansion.
-- Requisition prices for pilots, Elites, kit, Lieutenant, NCO, chassis, components, and Signature options.
+- Command Token prices: drop pod, each stock TAG ("most of the pool"), Elite Guns cap expansion.
+- Requisition prices for pilots, Elite Guns, kit, Lieutenant, NCO, chassis, components, and Signature options.
 - Capacity per chassis (S6, S7, S8).

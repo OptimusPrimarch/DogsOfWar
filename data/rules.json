@@ -2,19 +2,19 @@
   "_about": "Dogs of War's own rules as they appear in the catalogue: a short summary and the section of rules/core-rules.md that holds the full text. Rules ported from N4 are marked \"n4\": true and get '(N4)' after their name. Keep each summary in step with core-rules.md.",
   "Round Structure": {
     "section": "3-round-structure",
-    "summary": "Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite, Trooper, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase."
+    "summary": "Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase."
   },
   "Order Pool": {
     "section": "4-orders",
-    "summary": "Pilots and Elites give Regular Orders to one pool, spent by whoever acts in the current phase. Troopers are Irregular and act on their own Orders in the Trooper phase. Track the pool with tokens: one per Regular model at the start of the round, discard one per Order spent, and at the start of each of your turns discard one per Regular model lost since your last turn."
+    "summary": "Pilots and Elite Guns give Regular Orders to one pool, spent by whoever acts in the current phase. Hired Guns are Irregular and act on their own Orders in the Hired Guns phase. Track the pool with tokens: one per Regular model at the start of the round, discard one per Order spent, and at the start of each of your turns discard one per Regular model lost since your last turn."
   },
   "Command Tokens": {
     "section": "5-command",
-    "summary": "The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite slots and calldowns."
+    "summary": "The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite Gun slots and calldowns."
   },
   "Reinforcements": {
     "section": "6-reinforcements-and-calldowns",
-    "summary": "Arrivals come in the Reinforcement phase, by the first method possible: a drop pod (1 Command Token) anywhere on the table, Deployment (Tactical), or your deployment zone. Elite reserves are chosen before the game; Trooper reserves are unlimited. The 10-infantry cap is the only limit."
+    "summary": "Arrivals come in the Reinforcement phase, by the first method possible: a drop pod (1 Command Token) anywhere on the table, Deployment (Tactical), or your deployment zone. Elite Gun reserves are chosen before the game; Hired Gun reserves are unlimited. The 10-infantry cap is the only limit."
   },
   "Deployment (Tactical)": {
     "section": "6-reinforcements-and-calldowns",
@@ -33,16 +33,10 @@
     "section": "7-pilots-and-tags",
     "summary": "Pilots only. A pilot that ends any movement in base contact with an enemy TAG makes a face-to-face WIP roll against it. Results to be written."
   },
-  "Unmanned TAGs": {
-    "section": "7-pilots-and-tags",
-    "summary": "A pilot can climb into an enemy TAG whose pilot has dismounted, and take it over."
-  },
+  "Unmanned TAGs": {"section": "7-pilots-and-tags", "summary": "A pilot can climb into an enemy TAG whose pilot has dismounted, and take it over."},
   "Pilotless State": {
     "section": "pilotless-state",
     "summary": "A TAG becomes Pilotless when its pilot enters a Null state (Unconscious, Dead…). It isn't a Null state itself: the TAG stays in play, counts for scoring and can be targeted. It can't generate or spend Orders, but it can still declare AROs, and its player can spend a Command Token to give it Total Reaction until Pilotless ends. Cancelled when a pilot climbs in, or when its own pilot leaves the Null state."
   },
-  "Eject": {
-    "section": "7-pilots-and-tags",
-    "summary": "A TAG ejects its pilot through N5's Transmutation (Escape System). The profile the TAG turns into is the company's pilot."
-  }
+  "Eject": {"section": "7-pilots-and-tags", "summary": "A TAG ejects its pilot through N5's Transmutation (Escape System). The profile the TAG turns into is the company's pilot."}
 }

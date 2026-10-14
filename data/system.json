@@ -1,6 +1,5 @@
 {
   "_about": "The game system's skeleton: currencies, categories and their limits, the force, and the stat-line layouts. tools/build.py turns this, data/company.json, data/rules.json and the imported N5 armory into 'Dogs of War.gst' and 'Mercenary Company.cat'. Edit these files, not the .gst/.cat: those are rebuilt from scratch every time.",
-
   "gameSystem": {
     "name": "Dogs of War",
     "id": "sys-0ba1-943f-1bdf-3200",
@@ -8,35 +7,30 @@
     "authorUrl": "https://github.com/OptimusPrimarch/DogsOfWar",
     "readme": "Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md"
   },
-  "catalogue": {
-    "name": "Mercenary Company",
-    "file": "Mercenary Company.cat"
-  },
-
+  "catalogue": {"name": "Mercenary Company", "file": "Mercenary Company.cat"},
   "costTypes": [
     {"name": "Requisition", "defaultCostLimit": 100, "_note": "The Allocation: 100, or 60 for a smaller game (set when creating the list)."},
     {"name": "Command Tokens", "defaultCostLimit": -1, "_note": "Pre-game spends only. The limit becomes the starting pool once it's set."},
     {"name": "Capacity", "defaultCostLimit": -1, "_note": "TAG components. Each chassis caps its own Capacity."}
   ],
-
   "categories": [
     {"name": "TAG", "primary": true, "description": "The company's custom TAG. Acts in the Pilot phase, with its pilot.", "min": 1, "max": 1},
-    {"name": "Pilot", "primary": true, "description": "Acts in the Pilot phase. A second pilot also counts toward the Elite limit.", "min": 1, "max": 2},
-    {"name": "Elite", "primary": true, "description": "Acts in the Elite phase.", "max": 5,
-     "raiseMaxPer": ["Expanded Contract"],
-     "lowerMaxWhen": [{"category": "Pilot", "atLeast": 2}]},
-    {"name": "Trooper", "primary": true, "description": "Acts in the Trooper phase."},
+    {"name": "Pilot", "primary": true, "description": "Acts in the Pilot phase. A second pilot also counts toward the Elite Guns limit.", "min": 1, "max": 2},
+    {
+      "name": "Elite Guns",
+      "primary": true,
+      "description": "Acts in the Elite Guns phase.",
+      "max": 5,
+      "raiseMaxPer": ["Expanded Contract"],
+      "lowerMaxWhen": [{"category": "Pilot", "atLeast": 2}]
+    },
+    {"name": "Hired Guns", "primary": true, "description": "Acts in the Hired Guns phase."},
     {"name": "Company", "primary": true, "description": "Company-wide items: the briefing and contract extras. Not units."},
     {"name": "Lieutenant", "description": "Exactly one per company.", "min": 1, "max": 1},
     {"name": "Specialist", "description": "Counts as a Specialist for scenarios."},
-    {"name": "Deployed", "description": "Infantry on the table at the start of the game: 10 at most. Elites starting in reserve don't count.", "max": 10}
+    {"name": "Deployed", "description": "Infantry on the table at the start of the game: 10 at most. Elite Guns starting in reserve don't count.", "max": 10}
   ],
-
-  "force": {
-    "name": "Mercenary Company",
-    "rules": ["Round Structure", "Order Pool"]
-  },
-
+  "force": {"name": "Mercenary Company", "rules": ["Round Structure", "Order Pool"]},
   "profileTypes": {
     "Trooper": ["MOV", "CC", "BS", "PH", "WIP", "ARM", "BTS", "VITA", "S", "Orders"],
     "TAG": ["MOV", "CC", "BS", "PH", "WIP", "ARM", "BTS", "STR", "S", "Capacity"],

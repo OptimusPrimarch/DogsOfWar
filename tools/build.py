@@ -90,6 +90,12 @@ UNIT_RULE_FAMILIES = {"Common Skill", "Special Skill", "Equipment", "Hacking", "
 ALIASES = {"escape system": ("Transmutation", "(Escape System)")}
 
 
+def md_link(text: str, url: str) -> str:
+    """A Markdown link New Recruit can open. Brackets in the URL are encoded
+    so a page like Normal_(N)_Ammunition doesn't end the link early."""
+    return f"[{text}]({url.replace('(', '%28').replace(')', '%29')})"
+
+
 def bsid(*parts: str) -> str:
     """A stable BattleScribe-style id, so rebuilds don't churn the files."""
     h = hashlib.sha1(("dogs-of-war:" + ":".join(parts)).encode()).hexdigest()
@@ -317,7 +323,8 @@ class Armory:
         for r in self.n5_rules:
             name = clean_name(r["name"])
             head = " · ".join(x for x in (r["family"], r["type"], r["labels"]) if x)
-            text = "\n".join(p for p in (head, summaries.get(r["name"]), f"Full rule: {r['url']}") if p)
+            text = "\n".join(p for p in (head, summaries.get(r["name"]),
+                                          md_link("Full rule on the Infinity wiki", r["url"])) if p)
             self._add_rule(bsid("rule", r["name"]), name, text, self.n5_pub)
             if r["family"] in UNIT_RULE_FAMILIES:
                 self.unit_rule_names[name.lower()] = name
@@ -326,7 +333,7 @@ class Armory:
                 continue
             name = f"{key} (N4)" if r.get("n4") else key
             text = f"Dogs of War{' · N4 rule' if r.get('n4') else ''}\n{r['summary']}\n" \
-                   f"Full rule: {CORE_RULES_URL}#{r['section']}"
+                   + md_link("Full rule in the Dogs of War core rules", f"{CORE_RULES_URL}#{r['section']}")
             self._add_rule(bsid("rule", "dow", key), name, text, self.dow_pub)
             self.rule_ids[key] = self.rule_ids[name]
             self.names[key] = name
@@ -878,7 +885,7 @@ def armory_page(armory: Armory, n5: dict, summaries: dict, dow_rules: dict) -> s
         lines += [f"## {FAMILY_TITLES[family]}", ""]
         for r in sorted(by_family.get(family, []), key=lambda r: r["name"].lower()):
             tags = " · ".join(x for x in (r["type"], r["labels"]) if x)
-            lines.append(f"- **[{clean_name(r['name'])}]({r['url']})**" + (f" *({tags})*" if tags else "")
+            lines.append(f"- **{md_link(clean_name(r['name']), r['url'])}**" + (f" *({tags})*" if tags else "")
                          + f": {summaries.get(r['name'], '')}")
         lines.append("")
     return "\n".join(lines)

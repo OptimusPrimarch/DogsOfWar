@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="15" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="17" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
@@ -110,21 +110,21 @@
     <categoryEntry id="87f9-8f57-f1d0-ce32" name="Pilot" hidden="false">
       <rules>
         <rule id="f145-3c0b-1663-dcda" name="Pilot" hidden="false">
-          <description>Acts in the Pilot phase. A second pilot also counts toward the Elite limit.</description>
+          <description>Acts in the Pilot phase. A second pilot also counts toward the Elite Guns limit.</description>
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry id="acbf-f945-7e91-b604" name="Elite" hidden="false">
+    <categoryEntry id="1c22-5a4a-5e7a-30d1" name="Elite Guns" hidden="false">
       <rules>
-        <rule id="92d3-723b-52fd-8162" name="Elite" hidden="false">
-          <description>Acts in the Elite phase.</description>
+        <rule id="796a-2409-04e7-b16d" name="Elite Guns" hidden="false">
+          <description>Acts in the Elite Guns phase.</description>
         </rule>
       </rules>
     </categoryEntry>
-    <categoryEntry id="2577-fd16-96b1-2450" name="Trooper" hidden="false">
+    <categoryEntry id="e036-febd-6292-761f" name="Hired Guns" hidden="false">
       <rules>
-        <rule id="2903-2935-3eef-9fa0" name="Trooper" hidden="false">
-          <description>Acts in the Trooper phase.</description>
+        <rule id="6a22-10ff-c15d-870d" name="Hired Guns" hidden="false">
+          <description>Acts in the Hired Guns phase.</description>
         </rule>
       </rules>
     </categoryEntry>
@@ -152,7 +152,7 @@
     <categoryEntry id="1654-8554-b1ff-a897" name="Deployed" hidden="false">
       <rules>
         <rule id="b2db-3164-77e5-bcb0" name="Deployed" hidden="false">
-          <description>Infantry on the table at the start of the game: 10 at most. Elites starting in reserve don't count.</description>
+          <description>Infantry on the table at the start of the game: 10 at most. Elite Guns starting in reserve don't count.</description>
         </rule>
       </rules>
     </categoryEntry>
@@ -176,24 +176,24 @@
             <constraint id="12e6-82e6-c922-942e" type="max" value="2" field="selections" scope="parent" shared="true" includeChildSelections="true" />
           </constraints>
         </categoryLink>
-        <categoryLink id="5bfd-9360-0ff3-f4d3" name="Elite" hidden="false" targetId="acbf-f945-7e91-b604" primary="false">
+        <categoryLink id="be0c-a5b1-b008-a105" name="Elite Guns" hidden="false" targetId="1c22-5a4a-5e7a-30d1" primary="false">
           <modifiers>
-            <modifier type="increment" field="8119-5e7c-0dcc-9304" value="1">
+            <modifier type="increment" field="f976-6f7d-6c30-8abb" value="1">
               <repeats>
                 <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="5aad-527f-ebd4-3213" repeats="1" roundUp="false" />
               </repeats>
             </modifier>
-            <modifier type="decrement" field="8119-5e7c-0dcc-9304" value="1">
+            <modifier type="decrement" field="f976-6f7d-6c30-8abb" value="1">
               <conditions>
                 <condition type="atLeast" value="2" field="selections" scope="force" childId="87f9-8f57-f1d0-ce32" shared="true" includeChildSelections="true" />
               </conditions>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint id="8119-5e7c-0dcc-9304" type="max" value="5" field="selections" scope="parent" shared="true" includeChildSelections="true" />
+            <constraint id="f976-6f7d-6c30-8abb" type="max" value="5" field="selections" scope="parent" shared="true" includeChildSelections="true" />
           </constraints>
         </categoryLink>
-        <categoryLink id="2844-3310-b3ef-b443" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="false" />
+        <categoryLink id="6f67-19e3-eef9-b292" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="false" />
         <categoryLink id="9f67-50bb-33e7-a4bd" name="Company" hidden="false" targetId="0978-343d-4afd-0b44" primary="false" />
         <categoryLink id="0c98-5937-1bf0-c137" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false">
           <constraints>
@@ -2278,1277 +2278,1277 @@
     <rule id="bd30-bb1d-0678-e057" name="Alert" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Automatic Skill · Optional, No Roll
 If the trooper or an ally in its ZoC is attacked and it hasn't acted that Order, it may turn to face any direction at the end of the Order. No roll, no AROs.
-Full rule: https://infinitythewiki.com/Alert</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Alert)</description>
     </rule>
     <rule id="c2d7-2fa0-42fa-f2f4" name="BS Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · Attack
 Shoot with a ranged weapon, skill or equipment using BS (or whichever attribute the weapon names). LoF is needed unless the weapon says otherwise, and Burst can be split between targets.
-Full rule: https://infinitythewiki.com/BS_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/BS_Attack)</description>
     </rule>
     <rule id="d21d-619c-5175-eb2b" name="Cautious Movement" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · Movement, No Roll
 Move up to your first MOV value without drawing AROs, provided you start and finish outside every enemy's LoF and ZoC, and outside enemy hacking areas if you're Hackable.
-Full rule: https://infinitythewiki.com/Cautious_Movement</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Cautious_Movement)</description>
     </rule>
     <rule id="7923-a6c9-2fd3-7746" name="CC Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · Attack
 Fight an enemy in base contact with a CC-trait weapon, rolling CC. Each success forces a saving roll.
-Full rule: https://infinitythewiki.com/CC_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/CC_Attack)</description>
     </rule>
     <rule id="8cc0-ebf8-afac-d704" name="Climb" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · Movement, No LoF, No Roll
 Move up or across a vertical surface, up to your first MOV value plus 2 inches. No roll.
-Full rule: https://infinitythewiki.com/Climb</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Climb)</description>
     </rule>
     <rule id="0ee9-4f17-1e21-b8e5" name="Discover" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Basic Short Skill / ARO
 Reveal an enemy marker by passing a WIP roll modified as if you were shooting it. A trooper that fails can't try the same marker again that turn.
-Full rule: https://infinitythewiki.com/Discover</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Discover)</description>
     </rule>
     <rule id="7304-3420-e690-7b7d" name="Dodge" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · Movement
 Roll PH, face to face against the attacker, to avoid every attack in the Order (not comms attacks). Success lets you move up to 2 inches.
-Full rule: https://infinitythewiki.com/Dodge</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Dodge)</description>
     </rule>
     <rule id="34e3-48f4-0ec8-b6f0" name="Idle" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Basic Short Skill · No Roll
 Do nothing. It still counts as activating, so it can draw AROs, and it's what happens when a declared skill turns out to be illegal.
-Full rule: https://infinitythewiki.com/Idle</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Idle)</description>
     </rule>
     <rule id="0a8c-fb46-4327-bc5d" name="Intuitive Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · BS Attack
 With an Intuitive Attack weapon, pass an unmodified WIP roll to take a single shot at a target you can't see because of zero visibility or a marker state.
-Full rule: https://infinitythewiki.com/Intuitive_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Intuitive_Attack)</description>
     </rule>
     <rule id="468c-3020-c548-2f36" name="Jump" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · Movement, No LoF, No Roll
 Leap in any direction, including an arc, up to your first MOV value plus 2 inches, landing somewhere at least as big as your base. No roll.
-Full rule: https://infinitythewiki.com/Jump</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Jump)</description>
     </rule>
     <rule id="3e5b-af0a-98f1-5745" name="Look Out" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · ARO · No Roll
 An ARO for a trooper that sees an enemy act: every other trooper on your side may turn to face, by passing a Dodge roll at PH-3.
-Full rule: https://infinitythewiki.com/Look_Out</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Look_Out)</description>
     </rule>
     <rule id="b448-9a77-e462-1aa3" name="Move" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Basic Short Skill · Movement, No LoF, No Roll
 Move up to your first MOV value. Declaring Move again in the same Order adds the second value.
-Full rule: https://infinitythewiki.com/Move</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Move)</description>
     </rule>
     <rule id="0e9d-d55b-9890-5a76" name="Place Deployable" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · Attack
 Put a deployable weapon, piece of equipment or ancillary peripheral on the table in base contact, or anywhere along your path in the Active Turn. No roll.
-Full rule: https://infinitythewiki.com/Place_Deployable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Place_Deployable)</description>
     </rule>
     <rule id="f7d1-0f9b-b50b-14ca" name="Reload" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · Attack
 While in the ZoC of an ally carrying Baggage, clear your Unloaded state or restore every spent use of your Disposable kit. One trooper per Order.
-Full rule: https://infinitythewiki.com/Reload</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Reload)</description>
     </rule>
     <rule id="39ac-12a5-10c9-f2d0" name="Request Speedball" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Automatic Skill · Optional
 Spend two Speedball tokens to drop two supply pods onto the table using the Combat Jump procedure (PH 15). Each pod carries a Speedball Chart item: one chosen, one rolled.
-Full rule: https://infinitythewiki.com/Request_Speedball</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Request_Speedball)</description>
     </rule>
     <rule id="6e1a-e3d0-d9b1-bb33" name="Reset" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Short Skill / ARO · No LoF
 Roll WIP, face to face against the attacker's WIP, to shrug off every comms attack and Guided attack in the Order.
-Full rule: https://infinitythewiki.com/Reset</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Reset)</description>
     </rule>
     <rule id="16d3-83ad-2f43-af1e" name="Speculative Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · BS Attack
 With a Speculative Attack weapon, lob a single shot at a target out of LoF along a possible trajectory. A circular template can land off-centre as long as it still covers the target.
-Full rule: https://infinitythewiki.com/Speculative_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Speculative_Attack)</description>
     </rule>
     <rule id="c533-59cf-f1ac-89c2" name="Suppressive Fire" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Common Skill · Long Skill · Attack
 Pick a weapon with the Suppressive Fire trait and enter the Suppressive Fire state with it.
-Full rule: https://infinitythewiki.com/Suppressive_Fire</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Suppressive_Fire)</description>
     </rule>
     <rule id="06b9-2522-893d-bc4d" name="Aerial" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper is airborne. It can't go Prone or be Engaged, never counts as touching models, objectives or scenery, can't use Cautious Movement, and doesn't set off Boost weapons.
-Full rule: https://infinitythewiki.com/Aerial</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Aerial)</description>
     </rule>
     <rule id="6746-134a-bf71-c1ab" name="Berserk" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Long Skill · Attack, CC Attack, CC Special Skill, Movement, Optional
 One Long Skill: charge up to both MOV values combined into base contact with a target in LoF, then attack in close combat, adding any bonus in brackets. If the charge can't reach, the trooper Idles.
-Full rule: https://infinitythewiki.com/Berserk</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Berserk)</description>
     </rule>
     <rule id="4264-05d3-22b8-2254" name="Bioimmunity" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Optional
 When making a saving roll against ARM or BTS, the trooper may use whichever of the two values is better. The attack's other effects still apply. Not against Comms Attacks.
-Full rule: https://infinitythewiki.com/Bioimmunity</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Bioimmunity)</description>
     </rule>
     <rule id="17fa-cb8e-be11-e63a" name="Booty" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 When the trooper is placed on the table, roll on the Booty Chart for a bonus item on top of its normal gear.
-Full rule: https://infinitythewiki.com/Booty</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Booty)</description>
     </rule>
     <rule id="2614-ace4-5b0b-e684" name="Camouflage" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper can deploy as a Camouflage marker, and can go back into the Camouflaged state during the game.
-Full rule: https://infinitythewiki.com/Camouflage</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Camouflage)</description>
     </rule>
     <rule id="e55f-7015-cb7b-446a" name="Chain of Command" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional, Private Information
 If your Lieutenant is Isolated or in a Null state when Loss of Lieutenant is checked, this trooper takes over as Lieutenant on the spot and the check counts as passed.
-Full rule: https://infinitythewiki.com/Chain_of_Command</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Chain_of_Command)</description>
     </rule>
     <rule id="6c6c-f365-d24e-ce98" name="Climbing Plus" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Movement, Optional
 Climb becomes a Short Skill when it's the first one declared in an Order, and Move or Dodge can carry the trooper up and across walls as if they were floors.
-Full rule: https://infinitythewiki.com/Climbing_Plus</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Climbing_Plus)</description>
     </rule>
     <rule id="5ddf-db35-c1f9-6384" name="Combat Instinct" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 Enemy Surprise Attack penalties don't apply to this trooper.
-Full rule: https://infinitythewiki.com/Combat_Instinct</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Combat_Instinct)</description>
     </rule>
     <rule id="1631-6f66-d6f4-21e0" name="Combat Jump" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Long Skill · Airborne Deployment (AD), Private Information, Optional
 Airborne Deployment: the trooper waits off the table, then on its own Order is placed on any open horizontal surface and rolls PH. On a pass it lands there; on a fail it arrives at its own table edge as a model.
-Full rule: https://infinitythewiki.com/Combat_Jump</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Combat_Jump)</description>
     </rule>
     <rule id="cc56-c937-9613-6bad" name="Commlink" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Obligatory
 Lets the army keep a Reinforcements Section and call it in with Request Reinforcements, even after the Commlink trooper falls. A bracketed bonus raises the army's trooper limit. One per army.
-Full rule: https://infinitythewiki.com/Infinity_Reinforcements#Commlink</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Infinity_Reinforcements#Commlink)</description>
     </rule>
     <rule id="6355-ad79-d8af-7f8c" name="Counterintelligence" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional, Private Information
 Blunts the enemy's strategic use of Command Tokens: they cancel only one of your Orders, or your Command Token allowance rises to two.
-Full rule: https://infinitythewiki.com/Counterintelligence</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Counterintelligence)</description>
     </rule>
     <rule id="a4f3-2bbc-8877-c2f3" name="Courage" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper may pass any Guts roll automatically and ignores Retreat!, though Loss of Lieutenant still affects it.
-Full rule: https://infinitythewiki.com/Courage</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Courage)</description>
     </rule>
     <rule id="7e2a-f2e8-0da5-80b9" name="Cyberplug" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper can take Cyberplug Peripherals.
-Full rule: https://infinitythewiki.com/Cyberplug</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Cyberplug)</description>
     </rule>
     <rule id="c7cb-ef30-95b3-68ba" name="Decoy" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 The trooper can deploy in the Decoy state.
-Full rule: https://infinitythewiki.com/Decoy</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Decoy)</description>
     </rule>
     <rule id="c410-f367-2544-e324" name="Doctor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Short Skill · Optional
 In base contact with an Unconscious trooper that has VITA, pass a WIP roll to heal one wound and bring it round. A failed roll kills the patient.
-Full rule: https://infinitythewiki.com/Doctor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Doctor)</description>
     </rule>
     <rule id="2434-8a72-9517-e2e4" name="Dogged" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 When it falls Unconscious, the trooper can keep fighting as if unhurt for the rest of that Player Turn, then dies in the States Phase. Any further wound kills it at once, and it can't be healed.
-Full rule: https://infinitythewiki.com/Dogged</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Dogged)</description>
     </rule>
     <rule id="3632-0eb5-13ce-4301" name="Engineer" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Short Skill · Optional
 In base contact with a target that has STR, pass a WIP roll to repair one wound, repeating as often as needed. A failed roll adds a wound instead.
-Full rule: https://infinitythewiki.com/Engineer</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Engineer)</description>
     </rule>
     <rule id="d923-8a32-a7c9-53ee" name="Explode" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Attack, Obligatory
 When knocked Unconscious, the trooper detonates at the end of the Order: a circular template centred on it, Shock ammunition at PS 7. Then it's removed as Dead.
-Full rule: https://infinitythewiki.com/Explode</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Explode)</description>
     </rule>
     <rule id="0420-ee04-627a-4f1b" name="Exrah" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper can't survive being knocked down: the moment it falls Unconscious it dies outright, with no extra wound, so nothing can heal it. Works even while it's in a Null state.
-Full rule: https://infinitythewiki.com/Exrah</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Exrah)</description>
     </rule>
     <rule id="25a7-2d08-54c1-3090" name="Forward Deployment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Superior Deployment, Optional
 The trooper can deploy up to the bracketed distance beyond your Deployment Zone.
-Full rule: https://infinitythewiki.com/Forward_Deployment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Forward_Deployment)</description>
     </rule>
     <rule id="b426-170c-1b9a-1b14" name="Forward Observer" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Short Skill / ARO · BS Attack, Optional
 A ranged attack rolled with WIP that leaves its target Targeted instead of forcing a saving roll.
-Full rule: https://infinitythewiki.com/Forward_Observer</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Forward_Observer)</description>
     </rule>
     <rule id="a6c5-0147-dc2b-b295" name="Frenzy" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory, States Phase
 Once the trooper wounds or kills an enemy, it gains Impetuous and Limited Cover for the rest of the game, and drops out of any marker state.
-Full rule: https://infinitythewiki.com/Frenzy</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Frenzy)</description>
     </rule>
     <rule id="cb4f-a5bb-3883-2d14" name="FT Master" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 While the trooper is in a Fireteam, every member counts as Regular. If they already were, the Team Leader's coherency range grows by 2 inches.
-Full rule: https://infinitythewiki.com/FT_Master</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/FT_Master)</description>
     </rule>
     <rule id="945e-f91d-6cf2-5adc" name="G: Jumper" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper fields two or three Proxy bodies that share one Order and count as one trooper. Only the active Proxy acts, and control can jump to another Proxy when one goes down.
-Full rule: https://infinitythewiki.com/G:_Jumper</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/G:_Jumper)</description>
     </rule>
     <rule id="a07e-4882-0d29-868a" name="Guard" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper can make CC Attacks against an enemy in its LoF and ZoC without reaching base contact, and both sides use their contact-based close combat skills as normal.
-Full rule: https://infinitythewiki.com/Guard</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Guard)</description>
     </rule>
     <rule id="80c0-d4ce-49d4-0fb2" name="Hacker" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper can carry a Hacking Device and run the programs it grants, run some programs without one, and take Upgrade Programs. Works even while the trooper is in a Null state.
-Full rule: https://infinitythewiki.com/Hacker</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacker)</description>
     </rule>
     <rule id="4ba4-ab4c-e9a0-ed47" name="Hidden Deployment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional, Private Information
 The trooper can deploy in the Hidden Deployment state, with its position kept secret.
-Full rule: https://infinitythewiki.com/Hidden_Deployment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hidden_Deployment)</description>
     </rule>
     <rule id="f7d0-643b-a5e3-6351" name="Immunity" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper ignores the special effects of whatever is in brackets, such as an ammunition type or a trait, treating that ammunition as Normal. Wider versions cover every ARM-based or BTS-based attack.
-Full rule: https://infinitythewiki.com/Immunity</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Immunity)</description>
     </rule>
     <rule id="f5f4-d101-4734-1c33" name="Impersonation" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional, NFB, Superior Deployment
 Deploy disguised as an Impersonation marker anywhere outside the enemy Deployment Zone, or inside it by passing a WIP roll. A failed roll puts the trooper at its own table edge as a model.
-Full rule: https://infinitythewiki.com/Impersonation</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Impersonation)</description>
     </rule>
     <rule id="9747-fd1c-3a9c-c7d7" name="Impetuous" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Impetuous Phase, Obligatory
 The trooper gets a free activation in the Impetuous Phase, limited to a set menu of actions and forced to rush the nearest enemy or the enemy Deployment Zone.
-Full rule: https://infinitythewiki.com/Impetuous</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Impetuous)</description>
     </rule>
     <rule id="af9a-d1fb-e6dc-c981" name="Infiltration" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Superior Deployment, Optional
 Deploy anywhere in your own half, or in the enemy half (outside their Deployment Zone) by passing a PH-3 roll. A failed roll puts the trooper at its own table edge as a model.
-Full rule: https://infinitythewiki.com/Infiltration</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Infiltration)</description>
     </rule>
     <rule id="9354-698a-aa20-cfdd" name="Infinity Spec-Ops" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 A customisable trooper: at list building, add two options from the Spec-Ops Chart. In play it can switch to its Enhanced Profile by collecting a SpecBall. One per army.
-Full rule: https://infinitythewiki.com/Infinity_Spec-Ops</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Infinity_Spec-Ops)</description>
     </rule>
     <rule id="5f36-5a33-f4be-c2ef" name="Inspiring Leadership" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 Improves Fireteam coherency. While its owner is the Lieutenant and on the table, every Order-giving trooper is Regular with Courage, Coordinated Orders cost only the Lieutenant Order, and the army ignores Retreat!.
-Full rule: https://infinitythewiki.com/Inspiring_Leadership</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Inspiring_Leadership)</description>
     </rule>
     <rule id="4726-c1d8-4a83-c525" name="Journalist" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 Allies in the trooper's ZoC get +3 to Guts rolls. Enemies in its ZoC get -3.
-Full rule: https://infinitythewiki.com/Journalist</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Journalist)</description>
     </rule>
     <rule id="4712-ebc4-302f-f676" name="Lieutenant" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Private Information, Obligatory
 The army's commander, with a Special Lieutenant Order. If it is Isolated, in a Null state or off the table at the Tactical Phase, Loss of Lieutenant applies. Some profiles add extras such as +1 Command Token or +1 Order.
-Full rule: https://infinitythewiki.com/Lieutenant</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Lieutenant)</description>
     </rule>
     <rule id="0948-1d19-12b3-1607" name="Limited Cover" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 Attacks against this trooper ignore the -3 penalty for Partial Cover.
-Full rule: https://infinitythewiki.com/Limited_Cover</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Limited_Cover)</description>
     </rule>
     <rule id="bc0f-db4c-495e-8761" name="Marksmanship" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 When the trooper makes a BS Attack, it ignores the penalties from Partial Cover and Nanoscreen.
-Full rule: https://infinitythewiki.com/Marksmanship</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Marksmanship)</description>
     </rule>
     <rule id="49a5-4d8e-6a3a-a91d" name="Martial Arts" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · CC Special Skill, Optional
 Gives the close combat bonuses for the level listed on the profile, as set out in the Martial Arts Chart.
-Full rule: https://infinitythewiki.com/Martial_Arts</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Martial_Arts)</description>
     </rule>
     <rule id="a63b-c001-e7a8-4d2d" name="MetaChemistry" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 When the trooper is placed on the table, roll once on the MetaChemistry Table for a bonus MOD or extra skill.
-Full rule: https://infinitythewiki.com/MetaChemistry</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/MetaChemistry)</description>
     </rule>
     <rule id="4c40-b00d-f36a-80f1" name="Mimetism" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · NFB, Obligatory
 Enemies shooting at the trooper with LoF, or trying to Discover it, take the bracketed penalty, such as -3 or -6. It doesn't apply in close combat.
-Full rule: https://infinitythewiki.com/Mimetism</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Mimetism)</description>
     </rule>
     <rule id="c53f-617c-b059-48b7" name="Minelayer" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 When the trooper deploys, it can also place a deployable weapon or piece of equipment (or the bracketed number of them) in its ZoC, provided no enemy or camouflage marker is in the trigger area.
-Full rule: https://infinitythewiki.com/Minelayer</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Minelayer)</description>
     </rule>
     <rule id="14b1-290e-755a-d73d" name="Mnemonica" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 When the trooper enters a Null state, its WIP, this skill and any Lieutenant role pass to an ally on the table that has a Cube or is a Remote. The original is then removed as Dead.
-Full rule: https://infinitythewiki.com/Mnemonica</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Mnemonica)</description>
     </rule>
     <rule id="5483-54e0-f773-e4a7" name="Morpho-Scan" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Short Skill · Comms Attack, No Roll, Optional, Zone of Control
 No roll needed: the trooper copies the MOV, CC, BS and PH of an enemy with VITA in its ZoC. It counts as a Comms Attack, and a target that tries to Reset takes -9.
-Full rule: https://infinitythewiki.com/Morpho-Scan</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Morpho-Scan)</description>
     </rule>
     <rule id="7e64-ed23-499c-3563" name="Natural Born Warrior" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · CC Special Skill
 When the trooper is attacked in close combat and fights back, it ignores all the negative MODs its opponent would impose.
-Full rule: https://infinitythewiki.com/Natural_Born_Warrior</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Natural_Born_Warrior)</description>
     </rule>
     <rule id="0ac3-5945-f078-e120" name="NCO" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper can turn Special Lieutenant Orders into Tactical Orders and use them, from any Combat Group. As a Fireteam leader, it can activate the team with them.
-Full rule: https://infinitythewiki.com/NCO</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/NCO)</description>
     </rule>
     <rule id="6302-fddd-4106-ca95" name="Neurocinetics" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 In its Active Turn, all the trooper's ranged weapons fire at Burst 1. In the Reactive Turn, it can fire its full Burst at a single target.
-Full rule: https://infinitythewiki.com/Neurocinetics</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Neurocinetics)</description>
     </rule>
     <rule id="df89-82a8-7cd0-b3f1" name="No Cover" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper never benefits from Partial Cover.
-Full rule: https://infinitythewiki.com/No_Cover</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/No_Cover)</description>
     </rule>
     <rule id="69b5-bde7-1e79-acda" name="No Wound Incapacitation" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 When it falls Unconscious, the trooper carries on as if unhurt. One more wound kills it, though it can still be healed back to normal.
-Full rule: https://infinitythewiki.com/No_Wound_Incapacitation</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/No_Wound_Incapacitation)</description>
     </rule>
     <rule id="ef0f-5abc-9f7a-ac25" name="Non-Hackable" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 Hacking programs that target specific troop types (HI, REM, TAG and so on) can't target this trooper, even while it is in a Null state.
-Full rule: https://infinitythewiki.com/Non-Hackable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Non-Hackable)</description>
     </rule>
     <rule id="20d0-09ec-10f2-40ec" name="Number 2" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 If the Fireteam Leader is Isolated or in a Null state, this trooper can take over as leader immediately.
-Full rule: https://infinitythewiki.com/Number_2</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Number_2)</description>
     </rule>
     <rule id="6052-c15c-e8c5-303c" name="Parachutist" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Long Skill · Airborne Deployment (AD), Optional, Private Information
 Airborne Deployment: the trooper waits off the table, then on its own Order enters at any table edge outside the enemy Deployment Zone, with no Partial Cover that Order. The (Deployment Zone) version can also enter inside it.
-Full rule: https://infinitythewiki.com/Parachutist</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Parachutist)</description>
     </rule>
     <rule id="1319-c1b0-c288-0d3e" name="Paramedic" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper carries a MediKit for reviving Unconscious allies.
-Full rule: https://infinitythewiki.com/Paramedic</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Paramedic)</description>
     </rule>
     <rule id="b11b-3bb2-9ac7-ff7b" name="Peripheral" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 Covers a Controller and its Peripherals (secondary models): they count as one trooper, deploy together and act on the same Order, though each can pick its own target.
-Full rule: https://infinitythewiki.com/Peripheral</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Peripheral)</description>
     </rule>
     <rule id="ad99-ea86-fb64-926f" name="Protheion" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · CC Special Skill, Optional
 In close combat, each wound the trooper inflicts on a target with VITA heals one of its own. If it's unhurt, its VITA rises instead, up to a limit.
-Full rule: https://infinitythewiki.com/Protheion</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Protheion)</description>
     </rule>
     <rule id="01d9-2e78-bee8-6e35" name="Regeneration" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · States Phase, Optional
 In the States Phase, roll PH. A pass heals one wound and can end Unconscious; a fail adds one.
-Full rule: https://infinitythewiki.com/Regeneration</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Regeneration)</description>
     </rule>
     <rule id="f1fe-3164-b1df-63ff" name="Religious Troop" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper passes Guts rolls automatically and holds its ground, though it may roll WIP to fall back as if it had failed. It ignores Retreat!, but Loss of Lieutenant still applies.
-Full rule: https://infinitythewiki.com/Religious_Troop</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Religious_Troop)</description>
     </rule>
     <rule id="a8d2-9929-5ff9-e7ce" name="Remdriver" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 On deployment, tag one Remote already on the table. That Remote gains the bonuses listed on this trooper's profile until this trooper enters a Null state.
-Full rule: https://infinitythewiki.com/Remdriver</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Remdriver)</description>
     </rule>
     <rule id="25d8-4e0e-645f-2955" name="Remote Presence" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 A trooper with STR gets two levels of Unconscious, so it dies one wound later than usual. A single Engineer or GizmoKit success clears all the wounds keeping it down.
-Full rule: https://infinitythewiki.com/Remote_Presence</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Remote_Presence)</description>
     </rule>
     <rule id="5d98-e8e0-464c-6da4" name="Request Reinforcements" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Obligatory
 With a Commlink trooper, keep a Reinforcement Section off the table and bring it in after taking casualties or in the final round, through an extra Request Reinforcements step in the turn.
-Full rule: https://infinitythewiki.com/Infinity_Reinforcements</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Infinity_Reinforcements)</description>
     </rule>
     <rule id="6c56-e468-2b55-8d32" name="Sapper" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill / Long Skill · Optional
 The trooper can deploy in the Foxhole state, or dig into it later as a Long Skill, as long as there's room for its template.
-Full rule: https://infinitythewiki.com/Sapper</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Sapper)</description>
     </rule>
     <rule id="1a74-4676-263a-ddc4" name="Sensor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Short Skill · Attack, Optional, Zone of Control
 A WIP+6 roll that reveals every hidden or camouflaged enemy in the trooper's ZoC at once, without needing LoF. Enemies can't re-camouflage there, and Discover rolls against camouflage markers get +6.
-Full rule: https://infinitythewiki.com/Sensor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Sensor)</description>
     </rule>
     <rule id="13a5-e03b-507b-e198" name="Shasvastii" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 When the trooper falls Unconscious it becomes an embryo instead. It still counts for Retreat! and scenario conditions during the game, but not at final scoring, and Shock ammunition kills it outright.
-Full rule: https://infinitythewiki.com/Shasvastii</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Shasvastii)</description>
     </rule>
     <rule id="3cf6-7205-1a36-37d4" name="Sixth Sense" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper can react to attacks from outside its LoF as if it saw all around, ignores the -6 for shooting through zero visibility, and takes no penalties to Dodge or Reset except those from Immobilized and Isolated.
-Full rule: https://infinitythewiki.com/Sixth_Sense</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Sixth_Sense)</description>
     </rule>
     <rule id="4e85-2481-9162-7597" name="Specialist Operative" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper counts as a Specialist for mission and scenario rules.
-Full rule: https://infinitythewiki.com/Specialist_Operative</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Specialist_Operative)</description>
     </rule>
     <rule id="84da-ce41-fb04-cc69" name="Stealth" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 In its Active Turn, the trooper can use Cautious Movement inside enemy ZoC and hacking areas, and its movement only draws AROs from enemies who can see it.
-Full rule: https://infinitythewiki.com/Stealth</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Stealth)</description>
     </rule>
     <rule id="c4f3-8b3a-6d8a-cfba" name="Strategic Deployment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Deployment Skill · Optional
 As a Fireteam's leader, the trooper deploys first and brings the whole team forward as if it had Forward Deployment (+4 inches).
-Full rule: https://infinitythewiki.com/Strategic_Deployment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Strategic_Deployment)</description>
     </rule>
     <rule id="b1ea-3c65-6f8a-5999" name="Strategos" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 As Lieutenant, hold back two troopers to deploy after your opponent instead of one, and convert Special Lieutenant Orders into Regular Orders.
-Full rule: https://infinitythewiki.com/Strategos</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Strategos)</description>
     </rule>
     <rule id="1c3b-0a2a-1d08-f947" name="Super-Jump" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Movement, Optional
 Jump becomes a Short Skill when declared first in an Order, so the trooper can jump and shoot in one Order. A Jump taken as a Long Skill covers the first MOV value plus 4 inches. No Partial Cover while jumping.
-Full rule: https://infinitythewiki.com/Super-Jump</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Super-Jump)</description>
     </rule>
     <rule id="8d0e-3eb9-18e7-35eb" name="Surprise Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 Attacking from marker form or Hidden Deployment in its Active Turn, the trooper imposes the bracketed penalty on its targets. It must return to marker form before it can do so again.
-Full rule: https://infinitythewiki.com/Surprise_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Surprise_Attack)</description>
     </rule>
     <rule id="d4e9-8b47-8f37-84cc" name="Tactical Awareness" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper generates an extra Tactical Order, for its own use only, on top of its usual Order.
-Full rule: https://infinitythewiki.com/Tactical_Awareness</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Tactical_Awareness)</description>
     </rule>
     <rule id="23a7-3c5e-5fd4-4c5d" name="TAGCom" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 While on the table and not in a Null state, the trooper gives every TAG in its Combat Group the bonuses listed on its profile.
-Full rule: https://infinitythewiki.com/TAGCom</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/TAGCom)</description>
     </rule>
     <rule id="abbb-b794-29e5-3aa2" name="Tech-Recovery" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 When hit by an allied GizmoKit, pass a PH roll to clear every state an Engineer could fix, such as Immobilized or Isolated. It doesn't cover Unconscious.
-Full rule: https://infinitythewiki.com/Tech-Recovery</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Tech-Recovery)</description>
     </rule>
     <rule id="f3bd-6218-95fe-b386" name="Technorganic" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 Doctor, Engineer, MediKit or GizmoKit can each revive this trooper from Unconscious, whatever its wound attribute.
-Full rule: https://infinitythewiki.com/Technorganic</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Technorganic)</description>
     </rule>
     <rule id="1711-c9cd-43b7-6d20" name="Terrain" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 In terrain of the listed type, the trooper gets +1 inch on its first MOV value and ignores that terrain's movement restrictions.
-Full rule: https://infinitythewiki.com/Terrain</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Terrain)</description>
     </rule>
     <rule id="4875-3ee6-96cd-d4de" name="Total Reaction" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper can shoot AROs with its weapon's full Burst.
-Full rule: https://infinitythewiki.com/Total_Reaction</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Total_Reaction)</description>
     </rule>
     <rule id="0032-2249-623a-c113" name="Transmutation" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill
 The trooper has a second profile and switches to it when the bracketed condition is met, such as taking a set number of wounds. Wounds and states carry over. Escape System is the version for bailing out of a vehicle.
-Full rule: https://infinitythewiki.com/Transmutation</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Transmutation)</description>
     </rule>
     <rule id="51d0-4833-4878-fa27" name="Triangulated Fire" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Long Skill · Attack, Optional
 A BS Attack against a target in LoF that ignores every MOD to the roll (range, cover, Mimetism and so on). Only Burst MODs still apply.
-Full rule: https://infinitythewiki.com/Triangulated_Fire</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Triangulated_Fire)</description>
     </rule>
     <rule id="fe6d-4f69-5803-f8d5" name="Vulnerability" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Obligatory
 The trooper is vulnerable to the bracketed attack, weapon or ammunition, and its Immunity doesn't apply against it.
-Full rule: https://infinitythewiki.com/Vulnerability</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Vulnerability)</description>
     </rule>
     <rule id="68e6-d06f-7887-e349" name="Warhorse" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Special Skill · Automatic Skill · Optional
 The trooper ignores Loss of Lieutenant and Retreat!, staying Regular throughout, and can never become Isolated.
-Full rule: https://infinitythewiki.com/Warhorse</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Warhorse)</description>
     </rule>
     <rule id="9910-bb40-f0a8-a5a9" name="360° Visor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Gives the trooper all-round vision: a 360° LoF arc instead of the usual 180°.
-Full rule: https://infinitythewiki.com/360%C2%BA_Visor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/360%C2%BA_Visor)</description>
     </rule>
     <rule id="68bf-a1a4-62b5-1fe6" name="AI Motorcycle" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment
 The trooper has mounted and dismounted profiles and switches between them by getting on or off its AI-driven bike. While mounted, it follows the Motorcycle rules.
-Full rule: https://infinitythewiki.com/AI_Motorcycle</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/AI_Motorcycle)</description>
     </rule>
     <rule id="f255-29d8-8b45-5254" name="Albedo" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory, NFB
 Enemies with a Multispectral Visor or Marksmanship who shoot at the trooper with LoF, or try to Discover it, take the bracketed penalty. It doesn't apply in close combat.
-Full rule: https://infinitythewiki.com/Albedo</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Albedo)</description>
     </rule>
     <rule id="d5ea-b330-f4e2-8d38" name="Baggage" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory, No Roll
 Allies in the bearer's ZoC can Reload, and they automatically recover spent Disposable uses (or clear Unloaded) in the States Phase.
-Full rule: https://infinitythewiki.com/Baggage</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Baggage)</description>
     </rule>
     <rule id="3ca4-45e6-bf05-0166" name="Bangbomb" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Optional
 The trooper adds the bracketed bonus to Dodge rolls against attackers in its LoF or ZoC. Not against template weapons.
-Full rule: https://infinitythewiki.com/Bangbomb</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Bangbomb)</description>
     </rule>
     <rule id="de40-eec4-a4fb-8bd8" name="Biometric Visor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Sees through Impersonation: ignores its WIP-3 penalty, reveals the disguised trooper on a successful Discover, and blocks Surprise Attack penalties from impersonators and holoechoes.
-Full rule: https://infinitythewiki.com/Biometric_Visor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Biometric_Visor)</description>
     </rule>
     <rule id="261d-84b1-b4fc-721a" name="Cube" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment
 A backup of the trooper's mind. When a Doctor tries to save it, you can spend Command Tokens to re-roll a failed WIP roll.
-Full rule: https://infinitythewiki.com/Cube</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Cube)</description>
     </rule>
     <rule id="eb4c-dc80-2996-bd63" name="Dazer" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Deployable, Disposable (3), Zone of Control
 A deployable device that turns its ZoC into Difficult Terrain of unlimited height until destroyed. Troopers with Terrain (Total) ignore it.
-Full rule: https://infinitythewiki.com/Dazer</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Dazer)</description>
     </rule>
     <rule id="32d7-b534-9381-b2a5" name="Deactivator" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Short Skill · Attack
 Pass a WIP roll to shut down an enemy deployable weapon or piece of equipment in your LoF or ZoC, such as a mine, FastPanda or turret. Not camouflage markers.
-Full rule: https://infinitythewiki.com/Deactivator</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Deactivator)</description>
     </rule>
     <rule id="3494-fbe8-dfbe-9583" name="Deployable Cover" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Deployable, Disposable (2), Indiscriminate, Perimeter
 Place a Silhouette 3 cover piece anywhere in your ZoC. It provides Partial Cover until a Deactivator removes it.
-Full rule: https://infinitythewiki.com/Deployable_Cover</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Deployable_Cover)</description>
     </rule>
     <rule id="86a4-dcb9-fa97-a970" name="Deployable Repeater" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Equipment · Comms Equipment, Deployable, Disposable (3), Indiscriminate, Zone of Control
 Place a token that works as a Repeater for your Hackers.
-Full rule: https://infinitythewiki.com/Deployable_Repeater</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Deployable_Repeater)</description>
     </rule>
     <rule id="ef04-02c6-e2f1-ae4e" name="ECM" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment
 Electronic countermeasures: enemies attacking the trooper with the attack type in brackets take the listed penalty.
-Full rule: https://infinitythewiki.com/ECM</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/ECM)</description>
     </rule>
     <rule id="7c08-5614-a336-8bde" name="EVO Hacking Device" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment
 A support device that runs the Supportware programs: Assisted Fire, Controlled Jump, Enhanced Reaction and Fairy Dust.
-Full rule: https://infinitythewiki.com/Hacking_Device#EVO_Hacking_Device</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacking_Device#EVO_Hacking_Device)</description>
     </rule>
     <rule id="d106-8035-7411-471f" name="FastPanda" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment
 A deployable Repeater that can be placed anywhere in the trooper's ZoC rather than in base contact. It stays until destroyed.
-Full rule: https://infinitythewiki.com/FastPanda</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/FastPanda)</description>
     </rule>
     <rule id="c743-149e-0d8b-b92d" name="Firewall" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Enemies making Comms Attacks against the trooper take the bracketed penalty, and the trooper gets +3 to saving rolls against Comms Attacks. Only one Firewall applies at a time.
-Full rule: https://infinitythewiki.com/Firewall</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Firewall)</description>
     </rule>
     <rule id="81a3-173c-745e-b37d" name="GizmoKit" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Short Skill
 Repairs allies with STR, either by shooting a remote hit (Non-Lethal) or in base contact. The target then rolls PH to recover.
-Full rule: https://infinitythewiki.com/GizmoKit</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/GizmoKit)</description>
     </rule>
     <rule id="df33-f1d8-5267-b20b" name="Hacking Device" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment
 Comms equipment that lets a Hacker run Hacking Programs. The basic device carries Carbonite, Oblivion, Spotlight and Total Control; other devices add more.
-Full rule: https://infinitythewiki.com/Hacking_Device</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacking_Device)</description>
     </rule>
     <rule id="2080-5f00-90e3-474b" name="Hacking Device Plus" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment
 A Hacking Device that runs Carbonite, Cybermask, Oblivion, Spotlight, Total Control and White Noise.
-Full rule: https://infinitythewiki.com/Hacking_Device#Hacking_Device_Plus</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacking_Device#Hacking_Device_Plus)</description>
     </rule>
     <rule id="780f-1e58-e0ec-c930" name="HoloMask" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Optional
 The trooper can deploy in, or later switch to, the HoloMask state.
-Full rule: https://infinitythewiki.com/HoloMask</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/HoloMask)</description>
     </rule>
     <rule id="3bf6-ced2-9117-bc03" name="Holoprojector" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Optional, NFB
 The trooper can deploy in, or later switch to, the Holoecho state.
-Full rule: https://infinitythewiki.com/Holoprojector</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Holoprojector)</description>
     </rule>
     <rule id="3d95-6eaa-02c5-0811" name="Killer Hacking Device" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment
 A hunter's device that runs Cybermask and Trinity, for taking down enemy Hackers.
-Full rule: https://infinitythewiki.com/Hacking_Device#Killer_Hacking_Device</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacking_Device#Killer_Hacking_Device)</description>
     </rule>
     <rule id="e4bc-5900-c716-cbb5" name="MediKit" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Short Skill
 Revives Unconscious allies with VITA, either by shooting a remote hit (Non-Lethal) or in base contact. The patient then rolls PH to recover.
-Full rule: https://infinitythewiki.com/MediKit</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/MediKit)</description>
     </rule>
     <rule id="2a28-ed87-412f-2111" name="Motorcycle" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment
 A mounted trooper can't go Prone, Climb, use Cautious Movement, or Jump upward. It can only Jump across or down.
-Full rule: https://infinitythewiki.com/Motorcycle</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Motorcycle)</description>
     </rule>
     <rule id="06a4-9e4a-a963-55d8" name="Multispectral Visor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Cuts through camouflage and poor visibility: reduces Mimetism and visibility penalties, lets the trooper see through zero-visibility zones at -6, and makes it immune to Smoke.
-Full rule: https://infinitythewiki.com/Multispectral_Visor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Multispectral_Visor)</description>
     </rule>
     <rule id="6244-7f4b-7965-5069" name="Nanoscreen" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Ranged attacks against the trooper take -3, and it gets +3 to saving rolls against them. Doesn't apply to Comms Attacks.
-Full rule: https://infinitythewiki.com/Nanoscreen</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Nanoscreen)</description>
     </rule>
     <rule id="f01e-d699-2b1a-dc98" name="Repeater" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment, Obligatory, Zone of Control
 Extends the hacking area of every Hacker in your army. Enemy Hackers inside its ZoC can use it against your Hackers, at a -3 Firewall penalty.
-Full rule: https://infinitythewiki.com/Repeater</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Repeater)</description>
     </rule>
     <rule id="98fd-2c0c-65dd-ae8a" name="SymbioMate" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Assignable (Transmutation), Obligatory
 When the trooper must make a saving roll, it uses ARM and BTS 9 with Immunity (Enhanced), and this also works against Comms Attacks.
-Full rule: https://infinitythewiki.com/SymbioMate</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/SymbioMate)</description>
     </rule>
     <rule id="54d4-b4f8-d461-3fb3" name="TinBot" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Comms Equipment, Prior Deployment
 A drone companion token that gives its owner the MOD, skill or equipment listed on the profile, as long as the owner isn't Isolated or in a Null state.
-Full rule: https://infinitythewiki.com/TinBot</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/TinBot)</description>
     </rule>
     <rule id="039a-ca2c-44ee-4967" name="X-Visor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Automatic Equipment · Obligatory
 Improves the trooper's range penalties: -3 becomes 0 and -6 becomes -3, for weapons and for ranged skills such as Discover.
-Full rule: https://infinitythewiki.com/X-Visor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/X-Visor)</description>
     </rule>
     <rule id="dd7c-6890-300f-d707" name="Hacking Area" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking
 Where Hacking Programs reach: the Hacker's own ZoC plus the ZoC of every friendly Repeater. A Hacker inside an enemy Repeater's ZoC can reach the whole table, but only enemy Hackers can be targeted that way.
-Full rule: https://infinitythewiki.com/Hacking_Area</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hacking_Area)</description>
     </rule>
     <rule id="fa48-c592-c940-ca9c" name="Carbonite" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal
 A Burst 2 Comms Attack on enemy Hackable troopers or Hackers. Each hit forces two BTS saves at PS 7, and a failure leaves the target Immobilized-B.
-Full rule: https://infinitythewiki.com/Carbonite</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Carbonite)</description>
     </rule>
     <rule id="0ad9-aa2e-b1d7-d83b" name="Cybermask" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Long Skill · NFB, No Roll
 No roll: while out of enemy LoF, the Hacker disguises itself as an IMP-2 marker until it reveals itself.
-Full rule: https://infinitythewiki.com/Cybermask</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Cybermask)</description>
     </rule>
     <rule id="2b85-5bbb-76d8-13b0" name="Oblivion" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal
 A Burst 2 Comms Attack on enemy Hackable troopers or Hackers. Each hit forces a save at half BTS, PS 4, and a failure leaves the target Isolated.
-Full rule: https://infinitythewiki.com/Oblivion</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Oblivion)</description>
     </rule>
     <rule id="a6ef-dd80-be82-b35f" name="Spotlight" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal
 A Burst 2 Comms Attack. Each hit forces a save at half BTS, PS 5, and a failure leaves the target Targeted.
-Full rule: https://infinitythewiki.com/Spotlight</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Spotlight)</description>
     </rule>
     <rule id="ded0-2afe-5722-3925" name="Total Control" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal
 A Burst 1 Comms Attack on an enemy TAG. Each hit forces two BTS saves at PS 4, and a failure takes the TAG over (Possessed). Used on a Possessed TAG, it frees it instead.
-Full rule: https://infinitythewiki.com/Total_Control</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Total_Control)</description>
     </rule>
     <rule id="b0e2-e5a9-7000-7919" name="Trinity" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skills / ARO · Comms Attack
 A Burst 3 Comms Attack on enemy Hackers, at +3 WIP. Each hit forces a BTS save at PS 6, and each failure is a wound.
-Full rule: https://infinitythewiki.com/Trinity</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Trinity)</description>
     </rule>
     <rule id="7b63-67e7-a3a6-43e0" name="White Noise" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill · NFB
 On a WIP roll, place a circular White Noise zone of unlimited height inside your Hacking Area until the States Phase. It's Reflective, so it affects troopers with Multispectral Visors or Marksmanship.
-Full rule: https://infinitythewiki.com/White_Noise</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/White_Noise)</description>
     </rule>
     <rule id="c669-1340-97e1-f22c" name="Zero Pain" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal
 A defensive program: roll WIP twice, face to face, to evade every Comms Attack in the Order, with -3 to the attackers. Burst 2 in ARO.
-Full rule: https://infinitythewiki.com/Zero_Pain</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Zero_Pain)</description>
     </rule>
     <rule id="101c-f0d7-056c-8aa3" name="Assisted Fire" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Supportware · Long Skill · Supportware, No Roll
 Supportware, no roll: an allied Remote in your Hacking Area gains Marksmanship. Once it's running, it reaches across the whole table.
-Full rule: https://infinitythewiki.com/Assisted_Fire</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Assisted_Fire)</description>
     </rule>
     <rule id="6290-6631-cd10-866f" name="Controlled Jump" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Supportware · Short Skill / ARO · Supportware, No Roll
 Supportware, no roll: shifts the PH rolls for Combat Jumps, +3 for your jumpers and -3 for the enemy's.
-Full rule: https://infinitythewiki.com/Controlled_Jump</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Controlled_Jump)</description>
     </rule>
     <rule id="4dd2-9e24-a424-6532" name="Enhanced Reaction" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Supportware · Long Skill · Supportware, No Roll
 Supportware, no roll: an allied Remote in your Hacking Area gets Burst 2 in ARO. Once it's running, it reaches across the whole table.
-Full rule: https://infinitythewiki.com/Enhanced_Reaction</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Enhanced_Reaction)</description>
     </rule>
     <rule id="1f3d-d9b2-f10b-a54d" name="Fairy Dust" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Supportware · Long Skill · Supportware, No Roll
 Supportware, no roll: pick one troop type (HI, REM, TAG or VH). All of your troopers of that type get Firewall (-3) against Comms Attacks.
-Full rule: https://infinitythewiki.com/Fairy_Dust</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Fairy_Dust)</description>
     </rule>
     <rule id="e196-fa3f-b53c-73ee" name="Anti-materiel" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon's special ammunition can damage scenery and structures.
-Full rule: https://infinitythewiki.com/Traits#Anti-materiel</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Anti-materiel)</description>
     </rule>
     <rule id="ebaf-19d5-300d-6896" name="ARM = 0" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The target saves with ARM 0 against this weapon.
-Full rule: https://infinitythewiki.com/Traits#ARM_.3D_0</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#ARM_.3D_0)</description>
     </rule>
     <rule id="8338-0790-5c2f-97cd" name="ARO" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon or equipment can only be used as an ARO.
-Full rule: https://infinitythewiki.com/Traits#ARO</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#ARO)</description>
     </rule>
     <rule id="857d-68c2-aa74-da8f" name="BioWeapon" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 Against targets with VITA, the weapon hits with DA and Shock ammunition combined.
-Full rule: https://infinitythewiki.com/Traits#BioWeapon</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#BioWeapon)</description>
     </rule>
     <rule id="eeb9-4096-995a-55d4" name="Boost" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon activates when an enemy model declares or carries out an Order or ARO in its ZoC.
-Full rule: https://infinitythewiki.com/Traits#Boost</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Boost)</description>
     </rule>
     <rule id="e484-20cb-65f9-bd30" name="BS Weapon (PH)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 A ranged weapon rolled on PH instead of BS. Anything that would change the user's BS changes its PH instead.
-Full rule: https://infinitythewiki.com/Traits#BS_Weapon_.28PH.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#BS_Weapon_.28PH.29)</description>
     </rule>
     <rule id="64df-5f16-6f83-af68" name="BS Weapon (WIP)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 A ranged weapon rolled on WIP instead of BS. Anything that would change the user's BS changes its WIP instead.
-Full rule: https://infinitythewiki.com/Traits#BS_Weapon_.28WIP.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#BS_Weapon_.28WIP.29)</description>
     </rule>
     <rule id="9726-f9c9-0fd6-ad17" name="BTS = 0" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The target saves with BTS 0 against this weapon.
-Full rule: https://infinitythewiki.com/Traits#BTS_.3D_0</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#BTS_.3D_0)</description>
     </rule>
     <rule id="2fd3-ebad-cd8f-a1f8" name="Burst (B)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 How many dice the weapon rolls.
-Full rule: https://infinitythewiki.com/Traits#Burst_.28B.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Burst_.28B.29)</description>
     </rule>
     <rule id="7145-42b2-218a-314e" name="Burst: Single Target" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 All of the weapon's shots must go at one target.
-Full rule: https://infinitythewiki.com/Traits#Burst:_Single_Target</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Burst:_Single_Target)</description>
     </rule>
     <rule id="9297-b5bd-8bc3-59b1" name="CC" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon can be used for CC Attacks.
-Full rule: https://infinitythewiki.com/Traits#CC</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#CC)</description>
     </rule>
     <rule id="fd9a-f945-a26b-9789" name="Concealed" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item sits on the table hidden as a Silhouette 2 Camouflage marker, using the Camouflaged rules.
-Full rule: https://infinitythewiki.com/Traits#Concealed</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Concealed)</description>
     </rule>
     <rule id="88e9-ae8b-2910-5ad7" name="Continuous Damage" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 Each failed saving roll causes a wound and forces another roll, until the target passes or dies.
-Full rule: https://infinitythewiki.com/Traits#Continuous_Damage</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Continuous_Damage)</description>
     </rule>
     <rule id="357f-b859-148b-1db0" name="Deployable" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item is placed on the table and becomes its own target, with its own profile. If it goes Unconscious, it's removed as Dead.
-Full rule: https://infinitythewiki.com/Traits#Deployable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Deployable)</description>
     </rule>
     <rule id="4577-cc2e-4bd4-74e1" name="Direct Template" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon fires the template named in brackets straight from the user.
-Full rule: https://infinitythewiki.com/Traits#Direct_Template</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Direct_Template)</description>
     </rule>
     <rule id="8b2d-eeb9-e446-9928" name="Disposable (X)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item has X uses, and declaring it spends one whether or not it works.
-Full rule: https://infinitythewiki.com/Traits#Disposable_.28X.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Disposable_.28X.29)</description>
     </rule>
     <rule id="de00-dbcc-e17d-a405" name="Double Shot" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 In the Active Turn, the weapon can add +1 Burst. With Disposable (2), this spends both uses and leaves the trooper Unloaded.
-Full rule: https://infinitythewiki.com/Traits#Double_Shot</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Double_Shot)</description>
     </rule>
     <rule id="d515-904e-7f49-17b1" name="Impact Template" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon places the template named in brackets at the point of impact.
-Full rule: https://infinitythewiki.com/Traits#Impact_Template</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Impact_Template)</description>
     </rule>
     <rule id="891d-1dc5-3836-2d6f" name="Improvised" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item isn't made for this use, so its user rolls at -6.
-Full rule: https://infinitythewiki.com/Traits#Improvised</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Improvised)</description>
     </rule>
     <rule id="e908-d9c8-0558-d806" name="Indiscriminate" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item can be used or deployed even with camouflage markers in its area, or with no valid target nearby.
-Full rule: https://infinitythewiki.com/Traits#Indiscriminate</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Indiscriminate)</description>
     </rule>
     <rule id="5583-38f0-d3ae-fac6" name="Intuitive Attack (Trait)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon can be used for Intuitive Attacks.
-Full rule: https://infinitythewiki.com/Traits#Intuitive_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Intuitive_Attack)</description>
     </rule>
     <rule id="d803-d330-3780-823e" name="Non-Lethal" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon never causes wounds or saving rolls, whatever ammunition it uses. Only its other effects apply.
-Full rule: https://infinitythewiki.com/Traits#Non-Lethal</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Non-Lethal)</description>
     </rule>
     <rule id="6534-e972-15b2-6d5c" name="Non-Reloadable" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 Spent uses of this Disposable item can never be recovered.
-Full rule: https://infinitythewiki.com/Traits#Non-Reloadable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Non-Reloadable)</description>
     </rule>
     <rule id="1a45-8ac4-80d6-5b7e" name="Perimeter" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item is placed anywhere in the user's ZoC instead of in base contact.
-Full rule: https://infinitythewiki.com/Traits#Perimeter</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Perimeter)</description>
     </rule>
     <rule id="9184-e8be-e313-bf53" name="Prior Deployment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item must be placed on the table during the Deployment Phase.
-Full rule: https://infinitythewiki.com/Traits#Prior_Deployment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Prior_Deployment)</description>
     </rule>
     <rule id="a5c2-9e7d-b60b-fa4b" name="Reflective" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The effect also works on troopers with Marksmanship, a Multispectral Visor, or similar.
-Full rule: https://infinitythewiki.com/Traits#Reflective</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Reflective)</description>
     </rule>
     <rule id="8107-bbbe-ba62-8ded" name="Silent (X)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 Attacking from inside the target's ZoC but outside its LoF gives the target the bracketed penalty to Dodge.
-Full rule: https://infinitythewiki.com/Traits#Silent_.28X.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Silent_.28X.29)</description>
     </rule>
     <rule id="8b9b-9a45-e031-f9d2" name="Speculative Attack (Trait)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon can be used for Speculative Attacks.
-Full rule: https://infinitythewiki.com/Traits#Speculative_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Speculative_Attack)</description>
     </rule>
     <rule id="a15e-7481-0da9-5e08" name="State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon puts its target into the game state named on its profile.
-Full rule: https://infinitythewiki.com/Traits#State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#State)</description>
     </rule>
     <rule id="5f14-9dd9-f80b-6451" name="Suppressive Fire (Trait)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon can enter the Suppressive Fire state, swapping to the Suppressive Fire Mode profile.
-Full rule: https://infinitythewiki.com/Traits#Suppressive_Fire_.28SF.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Suppressive_Fire_.28SF.29)</description>
     </rule>
     <rule id="dde6-0d19-eea0-be11" name="Target (Attribute)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon only affects targets with the bracketed attribute (VITA or STR). Others ignore it.
-Full rule: https://infinitythewiki.com/Traits#Target_.28Attribute.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Target_.28Attribute.29)</description>
     </rule>
     <rule id="956f-7124-cea8-5050" name="Targetless" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The weapon can be fired without targeting an enemy. As an ARO, it still needs LoF to the active trooper.
-Full rule: https://infinitythewiki.com/Traits#Targetless</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Targetless)</description>
     </rule>
     <rule id="c109-1d75-0a8d-9b35" name="Zone of Control (ZoC)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weapon Trait
 The item's range is the user's Zone of Control (8 inches).
-Full rule: https://infinitythewiki.com/Traits#Zone_of_Control_.28ZoC.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Traits#Zone_of_Control_.28ZoC.29)</description>
     </rule>
     <rule id="e35a-bc8f-d118-568b" name="Airborne Deployment (AD)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Groups the skills for airborne troops, so a rule that mentions Airborne Deployment covers all of them.
-Full rule: https://infinitythewiki.com/Labels#Airborne_Deployment_.28AD.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Airborne_Deployment_.28AD.29)</description>
     </rule>
     <rule id="3d71-5cc5-abd4-d46d" name="Assignable (Transmutation)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 At deployment only, the item can be handed to a trooper with Transmutation that's on the table as a model. It stays in base contact with that trooper and moves with it.
-Full rule: https://infinitythewiki.com/Labels#Assignable_.28Transmutation.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Assignable_.28Transmutation.29)</description>
     </rule>
     <rule id="5830-338e-da7a-f3fe" name="Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Using it counts as an Attack, and Attacks can't target allies or neutral elements.
-Full rule: https://infinitythewiki.com/Labels#Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Attack)</description>
     </rule>
     <rule id="3723-cbec-ac6f-a7c0" name="BS Attack (Label)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Using it counts as a BS Attack.
-Full rule: https://infinitythewiki.com/Labels#BS_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#BS_Attack)</description>
     </rule>
     <rule id="304b-9d1f-519c-090f" name="CC Attack (Label)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Using it counts as a CC Attack.
-Full rule: https://infinitythewiki.com/Labels#CC_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#CC_Attack)</description>
     </rule>
     <rule id="63f7-0388-5f92-b1d5" name="CC Special Skill" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Works only in base contact with the target. Its MODs stack with other CC Special Skills, in both the Active and Reactive Turn.
-Full rule: https://infinitythewiki.com/Labels#CC_Special_Skill</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#CC_Special_Skill)</description>
     </rule>
     <rule id="4899-55d1-2017-b7ca" name="Comms Attack" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 An attack you avoid with Reset, not Dodge. Partial Cover doesn't help against it.
-Full rule: https://infinitythewiki.com/Labels#Comms_Attack</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Comms_Attack)</description>
     </rule>
     <rule id="36b0-1f74-eace-57bc" name="Comms Equipment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Equipment that certain Hacking Programs and ammunition can affect.
-Full rule: https://infinitythewiki.com/Labels#Comms_Equipment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Comms_Equipment)</description>
     </rule>
     <rule id="5204-f121-97ae-0681" name="Hackable" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Allies and enemies can target it with certain Hacking Programs.
-Full rule: https://infinitythewiki.com/Labels#Hackable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Hackable)</description>
     </rule>
     <rule id="8ef7-15f7-a803-01f0" name="Hostile" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 A game element outside every army list, with its own attributes. Every player treats it as an enemy, and it can attack and be attacked.
-Full rule: https://infinitythewiki.com/Labels#Hostile</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Hostile)</description>
     </rule>
     <rule id="85a2-a189-815f-ec59" name="Marker" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Can be shown on the table as a marker instead of a model or token.
-Full rule: https://infinitythewiki.com/Labels#Marker</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Marker)</description>
     </rule>
     <rule id="e7de-09fd-1c02-65b8" name="Movement" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Using it counts as Movement.
-Full rule: https://infinitythewiki.com/Labels#Movement</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Movement)</description>
     </rule>
     <rule id="781f-3be4-4eb7-f206" name="Negative Feedback (NFB)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Only one NFB skill, item or program can be active at a time. Switching one on switches off any other.
-Full rule: https://infinitythewiki.com/Labels#Negative_Feedback_.28NFB.29</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Negative_Feedback_.28NFB.29)</description>
     </rule>
     <rule id="cd08-a6c9-521f-ea33" name="No LoF" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Doesn't need LoF to the target.
-Full rule: https://infinitythewiki.com/Labels#No_LoF</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#No_LoF)</description>
     </rule>
     <rule id="47a4-10ec-d338-8f86" name="No Roll" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Works automatically, without a roll. Any fixed result is shown in brackets.
-Full rule: https://infinitythewiki.com/Labels#No_Roll</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#No_Roll)</description>
     </rule>
     <rule id="ad61-ed14-9b53-fa09" name="Non-Reloadable (Label)" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Spent uses can never be recovered, and Unloaded can't be cleared.
-Full rule: https://infinitythewiki.com/Labels#Non-Reloadable</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Non-Reloadable)</description>
     </rule>
     <rule id="70ee-127b-9a17-a96a" name="Null" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 A state that stops the trooper giving an Order or counting for scoring: Dead, Disconnected, Possessed, Sepsitorized and Unconscious.
-Full rule: https://infinitythewiki.com/Labels#Null</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Null)</description>
     </rule>
     <rule id="9bee-d639-78fc-e47b" name="Obligatory" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Its use is mandatory.
-Full rule: https://infinitythewiki.com/Labels#Obligatory</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Obligatory)</description>
     </rule>
     <rule id="5b59-6bdb-3b22-3ee3" name="Optional" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Its use is optional.
-Full rule: https://infinitythewiki.com/Labels#Optional</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Optional)</description>
     </rule>
     <rule id="d2ee-d518-68ff-c360" name="Private Information" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 You don't have to reveal it until it's used or the game ends.
-Full rule: https://infinitythewiki.com/Labels#Private_Information</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Private_Information)</description>
     </rule>
     <rule id="73ee-62a7-8188-fc31" name="States Phase" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Used only in the States Phase, unless stated otherwise.
-Full rule: https://infinitythewiki.com/Labels#States_Phase</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#States_Phase)</description>
     </rule>
     <rule id="ddd8-9177-8a1d-7920" name="Superior Deployment" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Groups the skills that let troopers deploy outside their Deployment Zone, so a rule that mentions Superior Deployment covers all of them.
-Full rule: https://infinitythewiki.com/Labels#Superior_Deployment</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Superior_Deployment)</description>
     </rule>
     <rule id="1635-0212-9657-e379" name="Supportware" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Label
 Hacking Programs that support allied troopers or hinder enemies rather than attacking directly.
-Full rule: https://infinitythewiki.com/Labels#Supportware</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Labels#Supportware)</description>
     </rule>
     <rule id="2ac2-f449-3f7a-1b55" name="Armor Piercing (AP) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Halves the target's ARM or BTS (rounding up) for its saving rolls. Each failure is a wound.
-Full rule: https://infinitythewiki.com/Armor_Piercing_(AP)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Armor_Piercing_%28AP%29_Ammunition)</description>
     </rule>
     <rule id="a39d-d03c-7ffe-826c" name="Combined Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Ammunition written with a plus sign (such as AP+DA) applies all its parts' effects at once.
-Full rule: https://infinitythewiki.com/Combined_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Combined_Ammunition)</description>
     </rule>
     <rule id="30dc-566e-e55e-3203" name="Combined Saving Roll" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Some weapons force saving rolls against more than one attribute (ARM and BTS, for example). A critical hit adds one more roll against ARM.
-Full rule: https://infinitythewiki.com/Combined_Saving_Roll</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Combined_Saving_Roll)</description>
     </rule>
     <rule id="21dc-e91b-9e96-4177" name="Double Action (DA) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Two saving rolls per hit, both mandatory. Each failure is a wound.
-Full rule: https://infinitythewiki.com/Double_Action_(DA)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Double_Action_%28DA%29_Ammunition)</description>
     </rule>
     <rule id="be3e-e602-2b41-46d6" name="Eclipse Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Smoke that also blinds Multispectral Visors: a zero-visibility zone no visor can see through.
-Full rule: https://infinitythewiki.com/Eclipse_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Eclipse_Ammunition)</description>
     </rule>
     <rule id="7ffd-7d13-7405-caaf" name="Electromagnetic (E/M) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Two saving rolls per hit against half BTS. A failure leaves the target Isolated, unable to take Orders from the pool.
-Full rule: https://infinitythewiki.com/Electromagnetic_(E/M)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Electromagnetic_%28E/M%29_Ammunition)</description>
     </rule>
     <rule id="76d1-fa53-e7ab-9899" name="Explosive (EXP) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Three saving rolls per hit, all mandatory. Each failure is a wound.
-Full rule: https://infinitythewiki.com/Explosive_(EXP)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Explosive_%28EXP%29_Ammunition)</description>
     </rule>
     <rule id="61e7-ed5e-a7bb-7504" name="Normal (N) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 One saving roll per hit. Each failure is a wound, and a critical hit adds a saving roll.
-Full rule: https://infinitythewiki.com/Normal_(N)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Normal_%28N%29_Ammunition)</description>
     </rule>
     <rule id="6ef5-4d6c-d207-598c" name="Paralysis (PARA) Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 One PH-6 roll per hit. A failure leaves the target Immobilized-A. No effect on targets without PH.
-Full rule: https://infinitythewiki.com/Paralysis_(PARA)_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Paralysis_%28PARA%29_Ammunition)</description>
     </rule>
     <rule id="9c2d-e96a-8cbd-8996" name="Shock Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 One saving roll per hit. Against a target with VITA 1, a failure kills outright instead of leaving it Unconscious.
-Full rule: https://infinitythewiki.com/Shock_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Shock_Ammunition)</description>
     </rule>
     <rule id="19e3-0813-c2c7-874d" name="Smoke Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 Lays a circular zero-visibility zone of unlimited height until the States Phase. It needs no target, and lets the user oppose attacks whose LoF passes through it.
-Full rule: https://infinitythewiki.com/Smoke_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Smoke_Ammunition)</description>
     </rule>
     <rule id="c21d-88aa-e901-8c0a" name="Stun Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 One saving roll per hit. A failure leaves the target Stunned and fails its Guts roll automatically.
-Full rule: https://infinitythewiki.com/Stun_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Stun_Ammunition)</description>
     </rule>
     <rule id="877b-3861-b22a-7f24" name="T2 Ammunition" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Ammunition
 One saving roll per hit, and each failure causes two wounds.
-Full rule: https://infinitythewiki.com/T2_Ammunition</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/T2_Ammunition)</description>
     </rule>
     <rule id="51d7-b0a5-20f0-1934" name="Armed Turret" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 A deployable gun placed in the trooper's ZoC that automatically shoots or strikes enemy models acting in its view or in contact.
-Full rule: https://infinitythewiki.com/Armed_Turret</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Armed_Turret)</description>
     </rule>
     <rule id="22f6-8099-655c-c066" name="Chest Mines" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 A body-worn charge used as a direct template in ranged mode, or in close combat to blast every enemy in contact. Two uses in total.
-Full rule: https://infinitythewiki.com/Chest_Mines</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Chest_Mines)</description>
     </rule>
     <rule id="3628-28eb-21ac-bbd5" name="D-Charges" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Demolition charges: plant one on a structure or a downed enemy and it detonates without a roll, or use it as a close combat weapon. Three uses in total.
-Full rule: https://infinitythewiki.com/D-Charges</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/D-Charges)</description>
     </rule>
     <rule id="5150-d604-a883-1168" name="Disco Baller" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry · Short Skill · Attack
 Throw a Disco Ball to any spot with a BS roll. It projects an Eclipse smoke template until the States Phase and can be reactivated later.
-Full rule: https://infinitythewiki.com/Disco_Baller</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Disco_Baller)</description>
     </rule>
     <rule id="df3c-1c46-be9f-1d23" name="Drop Bears" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Throwable mines: lay one like a normal mine, or throw it to any spot with a BS roll, where it becomes a mine.
-Full rule: https://infinitythewiki.com/Drop_Bears</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Drop_Bears)</description>
     </rule>
     <rule id="0fb2-12d0-889c-5b96" name="Mine Dispenser" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Throws mines to any spot like a thrown Drop Bear. The mine type is listed in brackets.
-Full rule: https://infinitythewiki.com/Mine_Dispenser</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Mine_Dispenser)</description>
     </rule>
     <rule id="40b0-7bdb-3b3c-2148" name="Mines" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Placed as Camouflage markers with Mimetism (-3) and a 360° view. They trigger as a small teardrop template.
-Full rule: https://infinitythewiki.com/Mines</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Mines)</description>
     </rule>
     <rule id="4c56-e5ad-a1f0-7281" name="Mixed Weapons" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Weapons with both a ranged mode and a close combat mode. Each mode counts as that kind of weapon and uses the matching attribute.
-Full rule: https://infinitythewiki.com/Mixed_Weapons</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Mixed_Weapons)</description>
     </rule>
     <rule id="1a8b-af12-d471-a081" name="Perimeter Weapons" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Deployable weapons placed anywhere in the trooper's ZoC rather than in base contact.
-Full rule: https://infinitythewiki.com/Perimeter_Weapons</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Perimeter_Weapons)</description>
     </rule>
     <rule id="ec5c-9818-175e-0b8c" name="Pitcher" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 Fires a Deployable Repeater onto the table at the point of impact.
-Full rule: https://infinitythewiki.com/Pitcher</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Pitcher)</description>
     </rule>
     <rule id="6ade-2a78-32c1-9e2f" name="Sepsitor" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry · Attack
 A direct template that only works on targets with a Cube. A failed saving roll leaves the target Sepsitorized, turned against its own side.
-Full rule: https://infinitythewiki.com/Sepsitor</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Sepsitor)</description>
     </rule>
     <rule id="f606-381b-f6b7-fbce" name="SymbioBomb" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry · Assignable (Transmutation), Comms Attack, Optional
 A one-use symbiotic charge that lets the trooper run one Pheroware Tactic (Endgame, Eraser or Mirrorball), with a -3 penalty on the target for Endgame and Eraser.
-Full rule: https://infinitythewiki.com/SymbioBomb</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/SymbioBomb)</description>
     </rule>
     <rule id="d549-7f58-d394-c53b" name="WildParrot" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Weaponry
 A deployable E/M mine placed anywhere in the trooper's ZoC as a visible token rather than a camouflage marker.
-Full rule: https://infinitythewiki.com/WildParrot</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/WildParrot)</description>
     </rule>
     <rule id="157e-9430-cbd3-75a8" name="Camouflaged State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Marker
 The trooper is on the table as a Camouflage marker, showing its Mimetism value if it has one. Enemies can't move into contact with it or attack it until it's revealed. Re-entering the state takes a Long Skill out of enemy LoF.
-Full rule: https://infinitythewiki.com/Camouflaged_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Camouflaged_State)</description>
     </rule>
     <rule id="4bbb-f9a5-e18f-1905" name="Dead State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Null
 The trooper took more wounds than it can survive. It's removed from the table, gives no more Orders and counts for nothing at scoring.
-Full rule: https://infinitythewiki.com/Dead_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Dead_State)</description>
     </rule>
     <rule id="1f32-e815-6fce-f39e" name="Decoy State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Marker
 When the trooper deploys, it also places the bracketed number of Decoy markers (one or two) within coherency, so the opponent can't tell which is real.
-Full rule: https://infinitythewiki.com/Decoy_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Decoy_State)</description>
     </rule>
     <rule id="4e9f-0738-7f21-1dbb" name="Disconnected State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Null
 A Peripheral cut off from its Controller (the Controller is Isolated or down, a coherency check failed, or an attack caused it). It can't act or ARO, its automatic skills stop working, and it scores nothing.
-Full rule: https://infinitythewiki.com/Disconnected_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Disconnected_State)</description>
     </rule>
     <rule id="4db4-856e-af87-4593" name="Engaged State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 Models in base contact with an enemy are locked in close combat. They can only Berserk, CC Attack, Dodge, Idle, Reset or use close combat skills, and can't see outside the fight. Shooting into a close combat follows special rules.
-Full rule: https://infinitythewiki.com/Engaged_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Engaged_State)</description>
     </rule>
     <rule id="22cc-8242-115d-c703" name="Foxhole State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper is dug in: at least Silhouette 3, Partial Cover from every direction, Mimetism (-3) and Courage, but it can't move while it stays in the foxhole.
-Full rule: https://infinitythewiki.com/Foxhole_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Foxhole_State)</description>
     </rule>
     <rule id="3d53-aae5-954c-190a" name="Hidden Deployment State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper deploys with no model or marker on the table. Its position is written down secretly, and until it's revealed it doesn't count as being on the table.
-Full rule: https://infinitythewiki.com/Hidden_Deployment_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Hidden_Deployment_State)</description>
     </rule>
     <rule id="8648-0c17-e5b1-19fd" name="Holoecho State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Marker
 The trooper is shown as up to three Holoecho markers, only one of them real. It can re-enter the state in the States Phase, or with a Long Skill, while out of enemy LoF.
-Full rule: https://infinitythewiki.com/Holoecho_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Holoecho_State)</description>
     </rule>
     <rule id="2d40-ae4a-0121-dfdf" name="HoloMask State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper is shown as a different model of the same Silhouette, disguising what it really is while it plays with its own profile.
-Full rule: https://infinitythewiki.com/HoloMask_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/HoloMask_State)</description>
     </rule>
     <rule id="92d0-fd93-3458-e1a5" name="Immobilized-A State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper can't act or ARO except to Dodge at PH-6, though it still provides its Order. It can be cleared by the means the full rule lists.
-Full rule: https://infinitythewiki.com/Immobilized-A_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Immobilized-A_State)</description>
     </rule>
     <rule id="7e54-dbab-8645-2573" name="Immobilized-B State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper can't act or ARO except to Reset at WIP-3, though it still provides its Order.
-Full rule: https://infinitythewiki.com/Immobilized-B_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Immobilized-B_State)</description>
     </rule>
     <rule id="172e-2d11-3b10-551a" name="Impersonation State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Marker
 The trooper is disguised as an Impersonation marker. Enemies can't move into contact with it, and can't attack it at all while it's at IMP-1, until it's revealed.
-Full rule: https://infinitythewiki.com/Impersonation_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Impersonation_State)</description>
     </rule>
     <rule id="5664-fa14-012c-9bd5" name="Isolated State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper is cut off from command: it can't receive Orders from the pool, becomes Irregular if it stays Isolated, and can't join a Fireteam.
-Full rule: https://infinitythewiki.com/Isolated_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Isolated_State)</description>
     </rule>
     <rule id="44c9-94d6-584b-59f9" name="Normal State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The default state: the trooper provides its Order and counts for scoring. A trooper returns to it once every Null state is cleared.
-Full rule: https://infinitythewiki.com/Normal_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Normal_State)</description>
     </rule>
     <rule id="9cb1-a85a-ead7-2b6f" name="Possessed State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Null
 The trooper has been taken over. Its owner can't activate it, it gives no Order, and it counts as an enemy to its own side and an ally to whoever possessed it.
-Full rule: https://infinitythewiki.com/Possessed_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Possessed_State)</description>
     </rule>
     <rule id="3fbf-031d-aab9-854f" name="Prone State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper is lying down. It can go prone or stand at the start or end of a movement skill (not Jump), which changes its Silhouette and how far it moves. Unconscious troopers go prone automatically, except TAGs, vehicles and riders.
-Full rule: https://infinitythewiki.com/Prone_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Prone_State)</description>
     </rule>
     <rule id="1c34-51a1-7e47-c181" name="Retreat! State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 Once the army is in Retreat!, each surviving trooper can only use Basic Short Skills, Cautious Movement, Dodge or Reset, and drops out of any marker state.
-Full rule: https://infinitythewiki.com/Retreat_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Retreat_State)</description>
     </rule>
     <rule id="fb97-1ec4-e3a4-96a4" name="Sepsitorized State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Null
 The trooper's mind has been taken over: it leaves its Combat Group, can't receive Orders, and counts as an enemy to its own side.
-Full rule: https://infinitythewiki.com/Sepsitorized_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Sepsitorized_State)</description>
     </rule>
     <rule id="8ffa-6d42-5f8c-5e77" name="Stunned State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper can't attack and takes -3 to every roll except saving rolls.
-Full rule: https://infinitythewiki.com/Stunned_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Stunned_State)</description>
     </rule>
     <rule id="d000-60a5-705a-f299" name="Suppressive Fire State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper covers an area with its weapon's SF Mode profile. Enemies within 24 inches take -3 in face-to-face rolls against it, and it can ARO with the full Burst 3 at a single target.
-Full rule: https://infinitythewiki.com/Suppressive_Fire_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Suppressive_Fire_State)</description>
     </rule>
     <rule id="6715-ce0a-94c8-8d7c" name="Targeted State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper has been painted for strikes. Ranged attacks, Comms Attacks and Discover against it get +3, it takes -3 to Reset, and it loses Cautious Movement and Stealth.
-Full rule: https://infinitythewiki.com/Targeted_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Targeted_State)</description>
     </rule>
     <rule id="b6fd-9a4b-f299-d590" name="Unconscious State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State · Null
 The trooper has taken as many wounds as its VITA or STR. It can't act or ARO, gives no Order, its automatic skills stop working, it goes Prone, and it scores nothing until it's healed.
-Full rule: https://infinitythewiki.com/Unconscious_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Unconscious_State)</description>
     </rule>
     <rule id="aab4-86e8-b833-f08a" name="Unloaded State" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>State
 The trooper has used up a Disposable item and can't use it again until it Reloads, or recovers in the States Phase, next to an ally with Baggage.
-Full rule: https://infinitythewiki.com/Unloaded_State</description>
+[Full rule on the Infinity wiki](https://infinitythewiki.com/Unloaded_State)</description>
     </rule>
     <rule id="40e0-a1b9-eb7e-ac6e" name="Round Structure" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite, Trooper, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#3-round-structure</description>
+Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#3-round-structure)</description>
     </rule>
     <rule id="243e-b87f-aa0a-cc0d" name="Order Pool" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-Pilots and Elites give Regular Orders to one pool, spent by whoever acts in the current phase. Troopers are Irregular and act on their own Orders in the Trooper phase. Track the pool with tokens: one per Regular model at the start of the round, discard one per Order spent, and at the start of each of your turns discard one per Regular model lost since your last turn.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#4-orders</description>
+Pilots and Elite Guns give Regular Orders to one pool, spent by whoever acts in the current phase. Hired Guns are Irregular and act on their own Orders in the Hired Guns phase. Track the pool with tokens: one per Regular model at the start of the round, discard one per Order spent, and at the start of each of your turns discard one per Regular model lost since your last turn.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#4-orders)</description>
     </rule>
     <rule id="4b1a-a6ff-0ec8-3dfd" name="Command Tokens" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite slots and calldowns.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#5-command</description>
+The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite Gun slots and calldowns.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#5-command)</description>
     </rule>
     <rule id="b3ea-8b45-a666-1699" name="Reinforcements" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-Arrivals come in the Reinforcement phase, by the first method possible: a drop pod (1 Command Token) anywhere on the table, Deployment (Tactical), or your deployment zone. Elite reserves are chosen before the game; Trooper reserves are unlimited. The 10-infantry cap is the only limit.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns</description>
+Arrivals come in the Reinforcement phase, by the first method possible: a drop pod (1 Command Token) anywhere on the table, Deployment (Tactical), or your deployment zone. Elite Gun reserves are chosen before the game; Hired Gun reserves are unlimited. The 10-infantry cap is the only limit.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns)</description>
     </rule>
     <rule id="c1d9-fa17-1341-02f7" name="Deployment (Tactical)" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 Every reinforcing model has this skill. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns)</description>
     </rule>
     <rule id="854f-48f0-28b2-06b7" name="Replacement TAGs" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 During the Pilot phase a pilot can call in a TAG from the stock lineup, the same for every company, paid with Command Tokens (roughly most of the pool). Lineup and prices to be written.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns)</description>
     </rule>
     <rule id="9be1-1acb-7ccf-06d3" name="Mount and Dismount (N4)" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War · N4 rule
 N5 dropped this; Dogs of War brings back N4's version. Getting in: a pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. Getting out: at the start of an Order, right after declaring its first skill with the Movement label, the pilot starts that movement anywhere in base contact with the TAG, using its own profile for the whole Order. Neither costs anything extra. Not while Engaged or Immobilized, and never through Cautious Movement from a TAG. Getting in or out cancels Hidden Deployment and marker states. Game states carry across, except Unconscious and Possessed; a Possessed TAG's pilot can't get in or out. A pilot can still leave an Unconscious TAG. While its pilot is out, the TAG acts as the pilot's Peripheral (Synchronized), staying in coherency with it or going Disconnected; while the pilot is in a Null state, the TAG is Pilotless instead. While aboard, the pilot can't be hacked or hit by E/M. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#mount-and-dismount-n4</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#mount-and-dismount-n4)</description>
     </rule>
     <rule id="22e3-0707-4bd8-3acb" name="Jockey" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 Pilots only. A pilot that ends any movement in base contact with an enemy TAG makes a face-to-face WIP roll against it. Results to be written.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags)</description>
     </rule>
     <rule id="104b-90c4-6e9d-1575" name="Unmanned TAGs" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 A pilot can climb into an enemy TAG whose pilot has dismounted, and take it over.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags)</description>
     </rule>
     <rule id="3813-63d4-4b21-2ad8" name="Pilotless State" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 A TAG becomes Pilotless when its pilot enters a Null state (Unconscious, Dead…). It isn't a Null state itself: the TAG stays in play, counts for scoring and can be targeted. It can't generate or spend Orders, but it can still declare AROs, and its player can spend a Command Token to give it Total Reaction until Pilotless ends. Cancelled when a pilot climbs in, or when its own pilot leaves the Null state.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#pilotless-state</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#pilotless-state)</description>
     </rule>
     <rule id="a13e-0cf9-2fdb-667c" name="Eject" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
 A TAG ejects its pilot through N5's Transmutation (Escape System). The profile the TAG turns into is the company's pilot.
-Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags</description>
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags)</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

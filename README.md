@@ -8,10 +8,10 @@ Not affiliated with or endorsed by Corvus Belli S.L. *Infinity* and all related 
 
 Players command mercenary companies. Each company has:
 - **One custom TAG**, assembled from a chassis (S6, S7, or S8), components, and a Signature slot, plus a fully custom **pilot**.
-- Up to **5 Elite** specialists.
-- **Troopers** as free standard issue. Up to 10 infantry can be on the table at once.
+- Up to **5 Elite Guns**: specialists.
+- **Hired Guns** as free standard issue. Up to 10 infantry can be on the table at once.
 
-Each round runs in phases: **Impetuous → Pilot → Elite → Trooper → Reinforcement**.
+Each round runs in phases: **Impetuous → Pilot → Elite Guns → Hired Guns → Reinforcement**.
 
 Unique systems:
 - Reinforcements and Speedball drop pods.
@@ -25,7 +25,7 @@ You need the Infinity N5 rules to play. They're free on the official [Infinity w
 | Path | Contents |
 |---|---|
 | `Dogs of War.gst` | The New Recruit game system: currencies, categories and limits, the force, company-wide items, every rule, and the full N5 armory. **Generated**; must stay at the repo root. |
-| `Mercenary Company.cat` | The company catalogue: pilots, TAG chassis, Elites and Troopers. **Generated**; must stay at the repo root. |
+| `Mercenary Company.cat` | The company catalogue: pilots, TAG chassis, Elite Guns and Hired Guns. **Generated**; must stay at the repo root. |
 | `data/` | **The source of the catalogue.** `system.json` (currencies, categories, limits, stat layouts), `company.json` (units and their options), `rules.json` (our own rules as they appear in-app). |
 | `rules/core-rules.md` | The rules: how Dogs of War changes and adds to N5, with links to every N5 chapter. |
 | `rules/armory.md` | Every weapon, skill, piece of equipment and hacking program, plus our own rules, with short summaries and links. Generated. |
@@ -63,7 +63,7 @@ Close the New Recruit Editor before building, because it saves its in-memory cop
 - fixed weapons;
 - option lists. A price goes on each option, not on the weapon, so the same weapon can cost different amounts in different places. An option can also change the weapon's stats there (`"mods": {"PS": "-1"}`).
 
-Upgrades can add a category (Lieutenant) or remove one (Start in Reserve takes an Elite out of the Deployed limit). A TAG chassis with a `capacity` caps the Capacity of everything mounted on it. The `_howto` block at the top of the file sums this up.
+Upgrades can add a category (Lieutenant) or remove one (Start in Reserve takes an Elite Gun out of the Deployed limit). A TAG chassis with a `capacity` caps the Capacity of everything mounted on it. The `_howto` block at the top of the file sums this up.
 
 **Updating the N5 armory** (after new errata):
 
@@ -91,4 +91,4 @@ mklink /J "%USERPROFILE%\Documents\NewRecruit\data\Dogs of War" "C:\path\to\Dogs
 
 ## Status
 
-Early design. Nothing is balanced yet. The units in `data/company.json` are placeholders carried over from the first attempt, until the chassis, pilots, Elites and Troopers are designed.
+Early design. Nothing is balanced yet. The units in `data/company.json` are placeholders carried over from the first attempt, until the chassis, pilots, Elite Guns and Hired Guns are designed.
