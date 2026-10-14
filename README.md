@@ -9,13 +9,13 @@ Not affiliated with or endorsed by Corvus Belli S.L. *Infinity* and all related 
 Players command mercenary companies. Each company has:
 - **One custom TAG**, assembled from a chassis (S6, S7, or S8), components, and a Signature slot, plus a fully custom **pilot**.
 - Up to **5 Elite Guns**: specialists.
-- **Hired Guns** as free standard issue. Up to 10 infantry can be on the table at once.
+- **Hired Guns** as free standard issue. Up to 5 infantry can be on the table at once.
 
 Each round runs in phases: **Impetuous → Pilot → Elite Guns → Hired Guns → Reinforcement**.
 
 Unique systems:
 - Reinforcements and Speedball drop pods.
-- Replacement TAGs.
+- TAGs called in by their pilots, and shared reserve TAGs.
 - Pilots who can dismount, and jockey enemy TAGs. This deliberately brings back N4's Pilot rule, which N5 dropped.
 
 You need the Infinity N5 rules to play. They're free on the official [Infinity wiki](https://infinitythewiki.com). This mode documents only what it changes or adds: start with [`rules/core-rules.md`](rules/core-rules.md).

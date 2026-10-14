@@ -73,7 +73,7 @@ DogsOfWar/
 | **Command Tokens** | Yes | The starting pool (TBD) | Pre-game spends only, such as expanding the Elite Guns cap. The roster shows what's left to start the game with. |
 | **Capacity** | Yes | None | TAG components. There's one custom TAG per list, so the list total equals that TAG's Capacity used, which gives a free running total. |
 
-Command Tokens spent during the game (drop pods, replacement TAGs, calldowns) aren't tracked by the list builder.
+Command Tokens spent during the game (drop pods, reserve TAGs, calldowns) aren't tracked by the list builder.
 
 ---
 
@@ -184,7 +184,7 @@ Mercenary Company  (force entry)
 | 1 pilot for it, plus an optional second pilot | Pilot category: `min 1`, `max 2`, scope force |
 | Exactly 1 Lieutenant | Lieutenant category: `exactly 1`, scope force |
 | Up to 5 Elite Guns, including reserves | Elite Guns category: `max 5`, scope force. A modifier adds +1 to that max for each Expanded Contract in the force (a repeat). |
-| Up to 10 infantry at the start | Deployed category: `max 10`, scope force. "Start in Reserve" triggers a modifier on its Elite Gun that removes the Deployed category. |
+| Up to 5 infantry at the start | Deployed category: `max 5`, scope force. "Start in Reserve" triggers a modifier on its Elite Gun that removes the Deployed category. |
 | Pre-game Command Token spends | Command Tokens roster limit = starting pool; Expanded Contract costs Command Tokens |
 | One weapon per mount | Each hardpoint group: `max 1` |
 | Mount size (a mount takes its size or smaller) | Which shared size groups the hardpoint links to. A Medium mount links to Light and Medium. |

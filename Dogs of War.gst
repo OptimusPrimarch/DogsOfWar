@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="18" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="19" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
@@ -152,7 +152,7 @@
     <categoryEntry id="1654-8554-b1ff-a897" name="Deployed" hidden="false">
       <rules>
         <rule id="b2db-3164-77e5-bcb0" name="Deployed" hidden="false">
-          <description>Infantry on the table at the start of the game: 10 at most. Elite Guns starting in reserve don't count.</description>
+          <description>Infantry on the table at the start of the game: 5 at most (TAGs and pilots don't count). Elite Guns starting in reserve don't count.</description>
         </rule>
       </rules>
     </categoryEntry>
@@ -204,7 +204,7 @@
         <categoryLink id="d986-19ca-2578-9316" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
         <categoryLink id="5130-ee5d-3a83-3f4b" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false">
           <constraints>
-            <constraint id="ee3a-de10-fdf9-7625" type="max" value="10" field="selections" scope="parent" shared="true" includeChildSelections="true" />
+            <constraint id="ee3a-de10-fdf9-7625" type="max" value="5" field="selections" scope="parent" shared="true" includeChildSelections="true" />
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -222,7 +222,8 @@
         <infoLink id="c701-4cca-1e8f-356b" name="Command Tokens" hidden="false" targetId="4b1a-a6ff-0ec8-3dfd" type="rule" />
         <infoLink id="a5d8-8fa2-6431-999c" name="Reinforcements" hidden="false" targetId="b3ea-8b45-a666-1699" type="rule" />
         <infoLink id="7481-a41d-aea7-96e2" name="Deployment (Tactical)" hidden="false" targetId="c1d9-fa17-1341-02f7" type="rule" />
-        <infoLink id="7772-56cb-a6c4-128f" name="Replacement TAGs" hidden="false" targetId="854f-48f0-28b2-06b7" type="rule" />
+        <infoLink id="afcf-5827-cb41-c53c" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
+        <infoLink id="855b-40dd-e5d6-3e23" name="Reserve TAGs" hidden="false" targetId="93aa-3478-35e8-8e93" type="rule" />
         <infoLink id="3e70-61ee-715d-34d6" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
         <infoLink id="937b-98d3-631a-64b5" name="Jockey" hidden="false" targetId="22e3-0707-4bd8-3acb" type="rule" />
         <infoLink id="f83f-27c7-3441-a1b5" name="Unmanned TAGs" hidden="false" targetId="104b-90c4-6e9d-1575" type="rule" />
@@ -3497,7 +3498,7 @@ The trooper has used up a Disposable item and can't use it again until it Reload
     </rule>
     <rule id="40e0-a1b9-eb7e-ac6e" name="Round Structure" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase.
+Six rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase.
 [Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#3-round-structure)</description>
     </rule>
     <rule id="243e-b87f-aa0a-cc0d" name="Order Pool" publicationId="991d-8065-dcd4-a396" hidden="false">
@@ -3507,7 +3508,7 @@ Pilots and Elite Guns give Regular Orders to one pool, spent by whoever acts in 
     </rule>
     <rule id="4b1a-a6ff-0ec8-3dfd" name="Command Tokens" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite Gun slots and calldowns.
+The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, reserve TAGs (1 each), extra Elite Gun slots and calldowns.
 [Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#5-command)</description>
     </rule>
     <rule id="b3ea-8b45-a666-1699" name="Reinforcements" publicationId="991d-8065-dcd4-a396" hidden="false">
@@ -3520,10 +3521,15 @@ Arrivals come in the Reinforcement phase, by the first method possible: a drop p
 Every reinforcing model has this skill. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy.
 [Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns)</description>
     </rule>
-    <rule id="854f-48f0-28b2-06b7" name="Replacement TAGs" publicationId="991d-8065-dcd4-a396" hidden="false">
+    <rule id="6924-acd7-89c8-8015" name="Call In TAG" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-During the Pilot phase a pilot can call in a TAG from the stock lineup, the same for every company, paid with Command Tokens (roughly most of the pool). Lineup and prices to be written.
-[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#6-reinforcements-and-calldowns)</description>
+TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. Where and how the TAG lands is to be written.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#call-in-tag)</description>
+    </rule>
+    <rule id="93aa-3478-35e8-8e93" name="Reserve TAGs" publicationId="991d-8065-dcd4-a396" hidden="false">
+      <description>Dogs of War
+A reserve TAG is a generic, fixed profile from a stock lineup that every company shares. It is never bought in the list and can't be customized. A pilot calls one in for 1 Command Token. Lineup to be written.
+[Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#call-in-tag)</description>
     </rule>
     <rule id="9be1-1acb-7ccf-06d3" name="Mount and Dismount (N4)" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War · N4 rule

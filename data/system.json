@@ -28,7 +28,11 @@
     {"name": "Company", "primary": true, "description": "Company-wide items: the briefing and contract extras. Not units."},
     {"name": "Lieutenant", "description": "Exactly one per company.", "min": 1, "max": 1},
     {"name": "Specialist", "description": "Counts as a Specialist for scenarios."},
-    {"name": "Deployed", "description": "Infantry on the table at the start of the game: 10 at most. Elite Guns starting in reserve don't count.", "max": 10}
+    {
+      "name": "Deployed",
+      "description": "Infantry on the table at the start of the game: 5 at most (TAGs and pilots don't count). Elite Guns starting in reserve don't count.",
+      "max": 5
+    }
   ],
   "force": {"name": "Mercenary Company", "rules": ["Round Structure", "Order Pool"]},
   "profileTypes": {

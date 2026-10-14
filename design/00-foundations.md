@@ -24,7 +24,7 @@ Status tags:
 |---|---|---|---|
 | 1 | Baseline | Infinity N5: dice, attributes, weapons, range bands, AROs, armor, states. Specific N4 rules are brought back where N5 dropped something we need (§6.1). | **LOCKED** |
 | 2 | Identity | Mercenary-company game mode in the Infinity universe. Non-commercial. No satire unless the setting supports it. | **LOCKED** |
-| 3 | Rounds | 3 | **LOCKED** |
+| 3 | Rounds | ~~3~~ Superseded by #41: 6 rounds. | **REPLACED** |
 | 4 | Turn structure | Phases: Pilot → Elite Guns → Hired Guns → Reinforcement. In each phase, one player takes a standard active turn, then the other. Only models of that phase's type spend Orders. | **LOCKED** |
 | 5 | Order economy | Option C: the Regular pool is recounted at the start of each player's turn within a phase, minus Orders already spent this round. Tracked with tokens. Hired Guns are Irregular. The Lieutenant Order can be spent in any phase. | **LOCKED** (§2.1) |
 | 5a | Initiative | The initiative player goes first in every phase. Scenarios scored at the end of the round or game, plus AROs, offset the advantage (as in N5). | **LOCKED** |
@@ -32,7 +32,7 @@ Status tags:
 | 6 | Lieutenant | Costs Requisition on any eligible model, the pilot included. NCO costs more. Using the Lieutenant Order reveals who the Lieutenant is, which is the counterweight. | **LOCKED** |
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged, including how long it lasts (believed to be until the model next activates; check the N5 text) | **LOCKED** |
-| 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite Gun) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
+| 9 | Force cap | ~~1 TAG or pilot + 10 infantry on the table.~~ Superseded by #41 (5 infantry; TAGs and pilots outside the cap) and #42 (reserve TAGs for 1 Command Token). | **REPLACED** |
 | 10 | Allocation | ~~60–100 Requisition~~ Superseded by #34: 200 Requisition. | **REPLACED** |
 | 11 | Elite Guns | Up to 5, including reserves. Profile + one optional upgrade (#37). Cap expandable with Command Tokens. A second pilot is an expensive Elite Gun option. | **LOCKED** |
 | 12 | Hired Guns | 0 Requisition; Irregular; shared profile; equipment templates, no customization (#38). Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
@@ -41,12 +41,12 @@ Status tags:
 | 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
 | 16 | Deployment (Tactical) | New skill; every reinforcing model has it | **LOCKED** |
 | 17 | Calldowns | Orbital and aerial, with Speedballs as the baseline | **LOCKED** |
-| 18 | Replacement TAG | Stock lineup costed in Command Tokens; called in by a pilot. The lineup is universal (the same for every company) and reference-only: it is never bought in the list. | **LOCKED** |
+| 18 | Replacement TAG | Stock lineup, 1 Command Token each (#42); called in by a pilot. The lineup is universal (the same for every company) and reference-only: it is never bought in the list. | **LOCKED** |
 | 19 | Pilots | Fully custom. Mount and dismount use N4's rules, made free with any movement skill. Eject uses N5's Transmutation (Escape System). Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
 | 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. Launch scope: up to 2 chassis each for S6 and S7, and 1 for S8 (Infinity has only one S8 TAG today), so 5 in total. | **LOCKED** |
 | 21 | Signature slot | Every TAG gets one slot for its "special cool thing." Not called an ultimate; most options have no prerequisites. | **LOCKED** |
 | 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
-| 23 | Board | 36"×36", very dense | **LOCKED** |
+| 23 | Board | 36"×36" (3'×3'), very dense. Confirmed by #41. | **LOCKED** |
 | 24 | Victory | Objectives | **LOCKED** |
 | 25 | Mode | PvP first. PvPvE is the very last thing we add; it might be static emplacements that ARO, like the Qaz creatures in some scenarios. | **LOCKED** (PvPvE deferred) |
 | 26 | List-building tool | New Recruit catalogue as the source of truth, hosted in a new public repo, **Dogs of War**. Cards generated from it later. | **LOCKED** (§8) |
@@ -64,6 +64,8 @@ Status tags:
 | 38 | Hired Guns | Basic troops across the board, with no customization: fixed templates only. Specialist templates carry only a pistol and a CC weapon. | **LOCKED** (2026-10-14) |
 | 39 | Chassis baseline | Each chassis starts from the average N5 TAG of its Silhouette (`02-chassis-baseline.md`) and is tuned from there. | **LOCKED** (2026-10-14) |
 | 40 | Reserves | Each side should have plenty of models in reserve to spend flexibly. Filling an open slot (a free Hired Gun or an Elite Gun hacker?) should be an interesting, meaningful decision every round. | **LOCKED** (design goal, 2026-10-14) |
+| 41 | Table, cap and length | **3'×3'**, very dense, with at most **5 infantry in play**; TAGs and pilots don't count toward the cap. Games last **six rounds**. Long-range weapons lose value on the small table; that's handled through their Requisition prices, not rule changes. | **LOCKED** (2026-10-14) |
+| 42 | Calling in TAGs | Each list has **one custom TAG**. TAGs never start on the table: a pilot calls one in with a Short Skill with the Movement label that only pilots can use. A pilot can instead call in a **reserve TAG** for 1 Command Token: a generic, fixed profile from a stock lineup every company shares, with no customization. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -80,10 +82,10 @@ How it differs from *Infinity Deathmatch: TAG Raid*, Corvus Belli's official TAG
 | | TAG Raid | This mode |
 |---|---|---|
 | Format | 2–4 player free-for-all | 1v1, or 1v1 plus AI hostiles |
-| Focus | TAGs are the stars | One TAG supporting up to 10 infantry |
+| Focus | TAGs are the stars | One TAG supporting up to 5 infantry in play |
 | Engine | CodeOne | Full N5, with phases |
 | Building | Not confirmed whether TAGs can be customized | TAGs built from components; custom pilots; specialist pool |
-| Unique systems | Multiplayer | Reinforcements, Speedball calldowns, replacement TAGs, pilots who dismount and jockey enemy TAGs |
+| Unique systems | Multiplayer | Reinforcements, Speedball calldowns, called-in and reserve TAGs, pilots who dismount and jockey enemy TAGs |
 
 ---
 
@@ -133,7 +135,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 |---|---|
 | **Lieutenant** | Required. Costs Requisition. The pilot and some Elite Guns can take it. Using the Lieutenant Order reveals the Lieutenant (N5). |
 | **NCO** | Costs more Requisition than Lieutenant |
-| **Command Tokens** | The N5 pool, slightly enlarged. They are not regained. Uses: everything N5 allows, plus drop pods, replacement TAGs, expanding the Elite Guns cap, and calldowns. |
+| **Command Tokens** | The N5 pool, slightly enlarged. They are not regained. Uses: everything N5 allows, plus drop pods, reserve TAGs (#42), replacement TAGs, expanding the Elite Guns cap, and calldowns. |
 
 ---
 
@@ -146,7 +148,7 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 | **Elite Guns** | Up to 5, including reserves. Fixed profile + one optional upgrade (#37). Cap expandable with Command Tokens. |
 | **Second pilot** | An expensive Elite Gun option. They can spend **most of your Command Tokens** to call in a reserve TAG from the stock lineup, as early as the first Pilot phase. This allows two TAGs on the table. Intended; both players have the option. |
 | **Hired Guns** | 0 Requisition. Fill the remaining infantry slots. |
-| **On-table cap** | 1 TAG or pilot + 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
+| **On-table cap** | 5 infantry; TAGs and pilots don't count (#41). One custom TAG; any more arrive as reserve TAGs for 1 Command Token (#42). |
 
 **PROPOSED: Requisition anchors.** Solving #34's three example lists together gives these starting points. Each is an average, with a range around it:
 
@@ -177,7 +179,7 @@ Two solid pairs + one Elite Gun = 203. The rounded anchors fit all three example
 - **Elite Guns** come only from reserves built before the game.
 - **Hired Gun** reserves are unlimited.
 
-**Replacement TAG:**
+**Reserve TAGs (#42 replaces the Command Token pricing below):**
 - Choose from a stock lineup, each TAG costed in Command Tokens. Price them so a TAG takes **most of the pool**.
 - A pilot calls it in during the Pilot phase. This can be a surviving first pilot replacing a lost TAG, or a second pilot calling in a reserve TAG.
 - **PROPOSED:** it lands in that round's Reinforcement phase.
@@ -290,8 +292,7 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 
 1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
 2. **Playtest watch: empty TAGs.** A Peripheral (Synchronized) acts on its controller's Order, so a dismounted pilot and its TAG both act on one Order. Check this doesn't make dismounting stronger than staying aboard.
-3. **Board size and model cap (leaning 3'×3'):** either 4'×4' with up to 10 models in play, or 3'×3' with up to 5. Today it's #23's 36"×36" with #9's 10 infantry. N5's weapons are balanced for 4'×4', but 3'×3' plays faster, and reinforcements arriving within ZoC and out of LoF keep the playable space shifting. Also to settle: whether the TAGs and pilots count toward the cap.
-4. **Two TAGs in one list?** #34's examples include lists with two TAG and pilot pairs, but #9 allows one custom TAG, with a second only as a reserve called in by a second pilot.
+3. **Calling in a TAG:** where and how it lands (anywhere? within the pilot's ZoC? with a landing hazard, Titanfall-style?), whether the custom TAG can be called in the first round, and whether calling one in has any cost of its own.
 
 ## 11. Numbers to set during balancing
 

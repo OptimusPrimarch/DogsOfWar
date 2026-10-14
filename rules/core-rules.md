@@ -43,13 +43,13 @@ Our own content never uses faction or unit names. Dogs of War shares Infinity's 
 | **Elite Guns** | Up to 5, including any held in reserve. Each is a fixed profile with one optional upgrade: a stat bump, a skill, or an equipment or weapon swap. Command Tokens can raise the limit. A second pilot is an expensive Elite Gun option. |
 | **Hired Guns** | Free (0 Requisition) and Irregular. Basic troops with no customization: they share one profile, and templates change only their equipment. Specialist templates carry only a pistol and a CC weapon. |
 | **Lieutenant** | Required, and costs Requisition. The pilot and some Elite Guns can take it. NCO costs more than Lieutenant. |
-| **On the table** | At most 1 TAG or pilot, plus 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
+| **On the table** | At most 5 infantry at a time. TAGs and pilots don't count toward that. A list has one custom TAG; more TAGs only arrive as reserve TAGs. |
 
 The catalogue enforces these limits. Prices are *to be written*.
 
 ## 3. Round structure
 
-A game lasts **3 rounds**. Each round runs through these phases in order. Each phase matches a unit category in the list, with TAG and Pilot acting together. In each phase, the player with initiative takes a full N5 Active Turn while the opponent reacts with AROs, and then the roles swap. Only the models that belong to the current phase may spend Orders.
+A game lasts **six rounds**. Each round runs through these phases in order. Each phase matches a unit category in the list, with TAG and Pilot acting together. In each phase, the player with initiative takes a full N5 Active Turn while the opponent reacts with AROs, and then the roles swap. Only the models that belong to the current phase may spend Orders.
 
 1. **Impetuous:** Impetuous troops.
 2. **Pilot:** pilots and the TAG they're in, including a second pilot.
@@ -87,7 +87,7 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 > **Deployment (Tactical)** — *Dogs of War skill.* Every reinforcing model has it. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy.
 
 - Elite Gun reserves are chosen before the game. Hired Gun reserves are unlimited. The only limit on arrivals is the 10-infantry cap.
-- **Replacement TAGs:** during the Pilot phase, a pilot can call in a TAG from the stock lineup, which is the same for every company. It costs Command Tokens, roughly most of the pool. Prices *to be written*.
+- **Reserve TAGs:** see [Call In TAG](#call-in-tag).
 - **Calldowns:** orbital and aerial support, built on N5's [Speedballs](https://infinitythewiki.com/Request_Speedball). The list is *to be written*.
 
 ## 7. Pilots and TAGs
@@ -122,6 +122,16 @@ N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey a
   - Its player can spend a Command Token to give it [Total Reaction](https://infinitythewiki.com/Total_Reaction) until Pilotless ends.
 - **Cancellation:** a pilot climbs in (the company's second pilot, or an enemy pilot through Unmanned TAGs), or the TAG's own pilot leaves its Null state.
 
+### Call In TAG
+
+*Dogs of War rule.*
+
+- **TAGs don't start on the table.** A pilot has to call one in.
+- **Calling in** is a Short Skill with the Movement label, and only pilots can use it.
+- **The custom TAG:** a pilot calls in its company's custom TAG.
+- **Reserve TAGs:** for 1 Command Token, a pilot calls in a reserve TAG instead. Reserve TAGs are generic, fixed profiles from a stock lineup that every company shares. They're never bought in the list and can't be customized.
+- *To be written:* where and how a TAG lands, whether the custom TAG can be called in the first round, and the stock lineup.
+
 ### The rest of the pilot rules
 
 - **Eject:** uses N5's [Transmutation](https://infinitythewiki.com/Transmutation) (Escape System). The profile the TAG turns into is the company's pilot.
@@ -136,7 +146,8 @@ N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey a
 
 ## 9. Table and miniatures
 
-- The table is **36" × 36"**, with very dense terrain.
+- The table is **36" × 36"** (3'×3'), with very dense terrain.
+- At most **5 infantry** are in play per side; TAGs and pilots don't count.
 - Corvus Belli miniatures are recommended, using N5 silhouettes for every model.
 
 ## Still to write

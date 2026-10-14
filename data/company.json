@@ -59,7 +59,8 @@
         "Command Tokens",
         "Reinforcements",
         "Deployment (Tactical)",
-        "Replacement TAGs",
+        "Call In TAG",
+        "Reserve TAGs",
         "Mount and Dismount",
         "Jockey",
         "Unmanned TAGs",
@@ -79,7 +80,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Seasoned Pilot",
@@ -92,7 +93,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Veteran Pilot",
@@ -105,7 +106,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Light TAG",
@@ -116,7 +117,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "14", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
+      "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
       "groups": [],
       "note": "Stats are the S6 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },
@@ -129,7 +130,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "16", "WIP": "13", "ARM": "7", "BTS": "6", "STR": "3", "S": "7", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
+      "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
       "groups": [
         {"name": "Ranged Hardpoint", "max": 1, "options": [{"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}]},
         {
@@ -150,7 +151,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "16", "BS": "14", "PH": "17", "WIP": "14", "ARM": "8", "BTS": "6", "STR": "3", "S": "8", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
+      "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
       "groups": [],
       "note": "Stats are the S8 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },

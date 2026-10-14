@@ -2,7 +2,7 @@
   "_about": "Dogs of War's own rules as they appear in the catalogue: a short summary and the section of rules/core-rules.md that holds the full text. Rules ported from N4 are marked \"n4\": true and get '(N4)' after their name. Keep each summary in step with core-rules.md.",
   "Round Structure": {
     "section": "3-round-structure",
-    "summary": "Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase."
+    "summary": "Six rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite Guns, Hired Guns, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase."
   },
   "Order Pool": {
     "section": "4-orders",
@@ -10,7 +10,7 @@
   },
   "Command Tokens": {
     "section": "5-command",
-    "summary": "The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite Gun slots and calldowns."
+    "summary": "The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, reserve TAGs (1 each), extra Elite Gun slots and calldowns."
   },
   "Reinforcements": {
     "section": "6-reinforcements-and-calldowns",
@@ -20,9 +20,13 @@
     "section": "6-reinforcements-and-calldowns",
     "summary": "Every reinforcing model has this skill. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy."
   },
-  "Replacement TAGs": {
-    "section": "6-reinforcements-and-calldowns",
-    "summary": "During the Pilot phase a pilot can call in a TAG from the stock lineup, the same for every company, paid with Command Tokens (roughly most of the pool). Lineup and prices to be written."
+  "Call In TAG": {
+    "section": "call-in-tag",
+    "summary": "TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. Where and how the TAG lands is to be written."
+  },
+  "Reserve TAGs": {
+    "section": "call-in-tag",
+    "summary": "A reserve TAG is a generic, fixed profile from a stock lineup that every company shares. It is never bought in the list and can't be customized. A pilot calls one in for 1 Command Token. Lineup to be written."
   },
   "Mount and Dismount": {
     "n4": true,
