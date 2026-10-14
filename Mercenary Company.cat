@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="13" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="14" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="14" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -231,6 +231,8 @@
         </infoLink>
         <infoLink id="1535-d8c4-6e53-7c5a" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
         <infoLink id="11b0-1d55-b9f2-cfde" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="bc7d-395b-6cfa-9d70" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule" />
+        <infoLink id="7194-8f4a-81e6-0607" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4066-b778-eacd-482c" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
@@ -286,6 +288,8 @@
         </infoLink>
         <infoLink id="86b8-c511-2174-e2c9" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
         <infoLink id="bb32-4454-7105-603e" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="2a9f-77a9-cf32-d400" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule" />
+        <infoLink id="c039-c233-bf72-46cb" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="14b8-0ffe-636d-ce28" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
@@ -393,6 +397,8 @@
         </infoLink>
         <infoLink id="b7f7-9f70-6411-a2a1" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
         <infoLink id="e0ea-8467-b44d-d613" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="2775-32bc-a369-1a1a" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule" />
+        <infoLink id="d214-db8f-0255-b16c" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="96c3-5baa-e995-6424" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />

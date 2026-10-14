@@ -59,7 +59,7 @@
       "min": 1,
       "max": 1,
       "rules": ["Round Structure", "Order Pool", "Command Tokens", "Reinforcements", "Deployment (Tactical)",
-                "Replacement TAGs", "Mount and Dismount", "Jockey", "Unmanned TAGs", "Eject"]
+                "Replacement TAGs", "Mount and Dismount", "Jockey", "Unmanned TAGs", "Pilotless State", "Eject"]
     },
     {
       "name": "Expanded Contract",
@@ -118,7 +118,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject"],
+      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
       "groups": []
     },
     {
@@ -130,7 +130,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject"],
+      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
       "groups": [
         {"name": "Ranged Hardpoint", "max": 1, "options": [
           {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}
@@ -150,7 +150,7 @@
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject"],
+      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
       "groups": []
     },
 

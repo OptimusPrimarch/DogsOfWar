@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="13" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="14" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
@@ -226,6 +226,7 @@
         <infoLink id="3e70-61ee-715d-34d6" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
         <infoLink id="937b-98d3-631a-64b5" name="Jockey" hidden="false" targetId="22e3-0707-4bd8-3acb" type="rule" />
         <infoLink id="f83f-27c7-3441-a1b5" name="Unmanned TAGs" hidden="false" targetId="104b-90c4-6e9d-1575" type="rule" />
+        <infoLink id="f022-9753-e3da-efc5" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
         <infoLink id="867d-b479-413f-dbca" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
       </infoLinks>
       <categoryLinks>
@@ -3526,7 +3527,7 @@ Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rul
     </rule>
     <rule id="9be1-1acb-7ccf-06d3" name="Mount and Dismount (N4)" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War · N4 rule
-N5 dropped this; Dogs of War brings back N4's version. Getting in: a pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. Getting out: at the start of an Order, right after declaring its first skill with the Movement label, the pilot starts that movement anywhere in base contact with the TAG, using its own profile for the whole Order. Neither costs anything extra. Not while Engaged or Immobilized, and never through Cautious Movement from a TAG. Getting in or out cancels Hidden Deployment and marker states. Game states carry across, except Unconscious and Possessed; a Possessed TAG's pilot can't get in or out. A pilot can still leave an Unconscious TAG. An empty TAG can't act but can be targeted, and if its pilot dies it stays on the table, empty, until another pilot climbs in. While aboard, the pilot can't be hacked or hit by E/M. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs.
+N5 dropped this; Dogs of War brings back N4's version. Getting in: a pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. Getting out: at the start of an Order, right after declaring its first skill with the Movement label, the pilot starts that movement anywhere in base contact with the TAG, using its own profile for the whole Order. Neither costs anything extra. Not while Engaged or Immobilized, and never through Cautious Movement from a TAG. Getting in or out cancels Hidden Deployment and marker states. Game states carry across, except Unconscious and Possessed; a Possessed TAG's pilot can't get in or out. A pilot can still leave an Unconscious TAG. While its pilot is out, the TAG acts as the pilot's Peripheral; while the pilot is in a Null state, the TAG is Pilotless instead. While aboard, the pilot can't be hacked or hit by E/M. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs.
 Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#mount-and-dismount-n4</description>
     </rule>
     <rule id="22e3-0707-4bd8-3acb" name="Jockey" publicationId="991d-8065-dcd4-a396" hidden="false">
@@ -3538,6 +3539,11 @@ Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rul
       <description>Dogs of War
 A pilot can climb into an enemy TAG whose pilot has dismounted, and take it over.
 Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#7-pilots-and-tags</description>
+    </rule>
+    <rule id="3813-63d4-4b21-2ad8" name="Pilotless State" publicationId="991d-8065-dcd4-a396" hidden="false">
+      <description>Dogs of War
+A TAG becomes Pilotless when its pilot enters a Null state (Unconscious, Dead…). It isn't a Null state itself: the TAG stays in play, counts for scoring and can be targeted. It can't generate or spend Orders, but it can still declare AROs, and its player can spend a Command Token to give it Total Reaction (how long that lasts is to be written). Cancelled when a pilot climbs in, or when its own pilot leaves the Null state.
+Full rule: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#pilotless-state</description>
     </rule>
     <rule id="a13e-0cf9-2fdb-667c" name="Eject" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
