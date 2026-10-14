@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="12" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="12" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="13" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="13" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <profiles>

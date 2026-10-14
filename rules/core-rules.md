@@ -96,10 +96,9 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 N5 replaced crewed TAGs with remote-operated ones and dropped the rules for getting in and out. Dogs of War deliberately breaks from the N5 baseline here and brings back N4's Pilot rule, along with N4's movement rules for mounting:
 
-- **When.** A pilot gets in or out at the start of an Order, right after declaring the Order's first skill with the Movement label (or an Entire Order skill), before any distance is measured. It costs nothing extra.
-- **Getting out.** The pilot starts that movement anywhere in base contact with the TAG, wherever its owner chooses.
-- **Getting in.** The pilot must be in base contact with the TAG when the Order starts.
-- **Which profile.** The new profile, pilot or TAG, is used for the whole Order.
+- **Getting in.** A pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. The same move lets a pilot Jockey an enemy TAG instead.
+- **Getting out.** At the start of an Order, right after declaring the Order's first skill with the Movement label (or an Entire Order skill), and before any distance is measured, the pilot gets out. It starts that movement anywhere in base contact with the TAG, wherever its owner chooses, and uses its own profile for the whole Order.
+- **Cost.** Neither costs anything extra.
 - **Who can.** The movement skill must be one the starting profile could declare. So nobody can get in or out while Engaged or Immobilized, and a TAG can't use Cautious Movement to let its pilot out, because TAGs can't declare it.
 - **Markers.** Getting in or out cancels Hidden Deployment and any marker state, on both the pilot and the TAG.
 - **An Unconscious TAG.** The pilot can still get out of it. While the pilot stays inside an Unconscious TAG, it gives no Order, and only the TAG counts for scoring, Retreat! and anything else that counts casualties.

@@ -55,7 +55,7 @@ Status tags:
 | 29 | Armory | Everything in N5's armory is imported from the official wiki into the catalogue by `tools/`. That covers every weapon, deployed item, skill, piece of equipment, hacking program and device, Martial Arts level, ammunition type, trait, label and state. Each comes with a one-line summary in our own words and a link to the official rule. `tools/check_coverage.py` confirms nothing is missed. Readable reference: `rules/armory.md`. Index of every N5 rules page: `rules/n5-index.md`. Player-facing rules: `rules/core-rules.md`. | **LOCKED** (2026-10-14) |
 | 30 | Currency and categories | The list currency is **Requisition** (it replaces "credits"). Units are categorized **TAG, Pilot, Elite, Trooper**, and the phases match those categories. | **LOCKED** (2026-10-14) |
 | 31 | Catalogue build | The catalogue is generated, not hand-edited. `tools/build.py` turns the data files in `data/`, the imported N5 armory and our rule summaries into `Dogs of War.gst` and `Mercenary Company.cat`, in the BattleScribe 2.03 XML that New Recruit reads, validated against the official schema. The New Recruit Editor is for viewing and testing; changes go into `data/`. Replaces the first JSON attempt. | **LOCKED** (2026-10-14) |
-| 32 | Empty TAGs and dismounting | A TAG whose pilot dies stays on the table, empty: it can't act but can be targeted, until another pilot climbs in (the company's second pilot, or an enemy pilot via Unmanned TAGs). This replaces N4, which removed the TAG. A dismounting pilot starts its movement anywhere in base contact with the TAG. N4's mounting rules (timing, profile, eligibility, markers) are ported with the Pilot rule. | **LOCKED** (2026-10-14) |
+| 32 | Empty TAGs and dismounting | A TAG whose pilot dies stays on the table, empty: it can't act but can be targeted, until another pilot climbs in (the company's second pilot, or an enemy pilot via Unmanned TAGs). This replaces N4, which removed the TAG. A pilot climbs in by ending a Movement skill in base contact with the TAG (at the end of that Order), the same trigger as Jockey. A dismounting pilot starts its movement anywhere in base contact with the TAG. N4's eligibility and marker rules are ported with the Pilot rule. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -196,9 +196,9 @@ N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 
 | N4 rule | Why we need it | Our changes |
 |---|---|---|
 | Pilot mount/dismount (manned TAGs) | N5 removed it, and pilots getting in and out is core to this mode | Mounting and dismounting is free with any movement skill. Pilots may also mount enemy TAGs (jockeying and stealing unmanned TAGs, see above). |
-| Mounting and dismounting (N4 General Movement Rules) | N5's movement rules dropped it along with the Pilot rule | Ported as-is: timing (start of the Order, after the first Movement skill), profile for the whole Order, eligibility, markers cancelled. We add placement: anywhere in base contact with the TAG. |
+| Mounting and dismounting (N4 General Movement Rules) | N5's movement rules dropped it along with the Pilot rule | Getting out is ported as-is: start of the Order, after the first Movement skill, with the pilot's profile for the whole Order; eligibility; markers cancelled. We add placement: anywhere in base contact with the TAG. Getting in is ours: end a Movement skill in base contact, and climb in at the end of the Order. |
 
-**Auto-titan options (OPEN, see §10):** (a) the empty TAG can only ARO, at Burst 1 and -3; (b) it can take Orders as an Irregular trooper at -3 to BS and PH, using no skills; (c) neither by default, but a Signature option grants (a) or (b), making auto mode a build choice.
+**Auto-titan options (OPEN, see §10):** while its pilot is out, the TAG either (a) becomes the pilot's **Peripheral (Synchronized)**: it acts on the pilot's Order and must stay in coherency, or goes Disconnected; or (b) enters **Isolated State**: it can't take pool Orders and acts only on its own Irregular Order. A Signature option could upgrade one into the other.
 
 ## 7. Elites and Troopers — LOCKED (lists PROPOSED)
 
