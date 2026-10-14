@@ -86,6 +86,16 @@ PICKABLE = {"Special Skill": "Armory: Special Skills", "Equipment": "Armory: Equ
             "Hacking Program": "Armory: Hacking Programs", "Supportware": "Armory: Hacking Programs"}
 # Skills offered by level rather than as one entry.
 LEVELLED = {"Martial Arts"}
+# Hand-made model profiles list their skills and equipment as text
+# ("Dodge (PH=11), Terrain (Total)"). Each item there is also linked to its
+# rule on the entry, so New Recruit shows it and opens the rule. The
+# bracketed part rides on the link as a name-append modifier, the BSData
+# pattern behind "Feel No Pain 5+".
+TEXT_FIELDS = ("Skills", "Equipment")
+TEXT_LINKABLE = {"Common Skill", "Special Skill", "Equipment", "Hacking", "Hacking Program", "Supportware"}
+# Older names that still turn up in profiles: the N5 rule each one means,
+# and what to show after it.
+ALIASES = {"escape system": ("Transmutation", "(Escape System)")}
 # Chart rows that are a mode of a common skill, not something to carry.
 NOT_CARRIED = {"Suppressive Fire Mode"}
 
@@ -187,6 +197,90 @@ def rule_description(r: dict, summary: str | None) -> str:
 def info_link(owner: str, kind: str, name: str, target_id: str) -> dict:
     return {"name": name, "id": bsid("infoLink", owner, kind, name), "hidden": False,
             "targetId": target_id, "type": kind}
+
+
+def split_items(text: str) -> list[str]:
+    """Split "Courage, Dodge (PH=11), ECM: Guided (-6)" on the commas that
+    aren't inside brackets."""
+    items, depth, cur = [], 0, ""
+    for ch in text:
+        depth += ch == "("
+        depth -= ch == ")"
+        if ch == "," and depth == 0:
+            items.append(cur.strip())
+            cur = ""
+        else:
+            cur += ch
+    items.append(cur.strip())
+    return [i for i in items if i]
+
+
+def match_rule(item: str, names: dict[str, str]) -> tuple[str, str] | None:
+    """The rule an item of profile text names, and the rest of the item
+    ("Dodge (PH=11)" -> ("Dodge", "(PH=11)")). Case doesn't matter, and the
+    longest rule name that fits wins, so "Hacking Device Plus" beats
+    "Hacking Device"."""
+    low = item.lower()
+    if low in ALIASES:
+        return ALIASES[low]
+    if low in names:
+        return names[low], ""
+    fits = [k for k in names if low.startswith(k) and low[len(k)] in " (:"]
+    if not fits:
+        return None
+    key = max(fits, key=len)
+    return names[key], item[len(key):].strip().lstrip(":").strip()
+
+
+def link_profile_text(gs: dict, linkable: dict[str, str], pub_id: str) -> tuple[int, list[str]]:
+    """Link every skill and piece of equipment named in a hand-made model
+    profile's text to its rule, on the entry that holds the profile. Links an
+    earlier build made are replaced; links made by hand are kept. Returns how
+    many links were made and the items that matched no rule."""
+    rule_ids = {r["name"]: r["id"] for r in gs["sharedRules"]}
+    made, unmatched = 0, []
+
+    def own(entries):
+        return [e for e in entries or [] if e.get("publicationId") != pub_id]
+
+    def visit(e):
+        nonlocal made
+        texts = [c.get("$text", "") for p in e.get("profiles", []) for c in p.get("characteristics", [])
+                 if c.get("name") in TEXT_FIELDS]
+        if texts:
+            def ours(link, k):
+                return link["id"] == bsid("ruleLink", e["id"], link["name"], str(k))
+            kept = [l for l in e.get("infoLinks", [])
+                    if not (l.get("type") == "rule" and any(ours(l, k) for k in range(10)))]
+            seen: dict[str, int] = {}
+            for item in (i for t in texts for i in split_items(t)):
+                hit = match_rule(item, linkable)
+                if hit is None:
+                    unmatched.append(f"{item} ({e['name']})")
+                    continue
+                rule, extra = hit
+                k = seen.get(rule, 0)
+                seen[rule] = k + 1
+                link = {"name": rule, "id": bsid("ruleLink", e["id"], rule, str(k)), "hidden": False,
+                        "targetId": rule_ids[rule], "type": "rule"}
+                if extra:
+                    link["modifiers"] = [{"type": "append", "field": "name", "value": extra}]
+                kept.append(link)
+                made += 1
+            e["infoLinks"] = kept
+        for child in own(e.get("selectionEntries")):
+            visit(child)
+        for g in e.get("selectionEntryGroups", []):
+            for child in own(g.get("selectionEntries")):
+                visit(child)
+
+    for e in own(gs.get("selectionEntries")) + own(gs.get("sharedSelectionEntries")):
+        visit(e)
+    for g in gs.get("sharedSelectionEntryGroups", []):
+        if g.get("publicationId") != pub_id:
+            for e in own(g.get("selectionEntries")):
+                visit(e)
+    return made, unmatched
 
 
 def weapon_base(name: str) -> str:
@@ -507,6 +601,11 @@ def main() -> None:
         for r in imported
     ]
 
+    # --- skills and equipment named in hand-made model profiles -> rule links
+    linkable = {clean_name(r["name"]).lower(): clean_name(r["name"])
+                for r in imported if r["family"] in TEXT_LINKABLE}
+    text_links, unmatched = link_profile_text(gs, linkable, pub_id)
+
     # --- selectable entries and the Armory groups that list them
     entries, groups = build_entries(weapons, imported, gs, pub_id, extra_profiles, extra_rules, levels)
     gs["sharedSelectionEntries"] = [e for e in gs.get("sharedSelectionEntries", [])
@@ -533,6 +632,9 @@ def main() -> None:
           + (f", {len(dropped)} removed (no longer produced):{', '.join(dropped)}" if dropped else ""))
     print(f"Rules: {len(imported)} imported")
     print("Selectable entries: " + ", ".join(f"{len(g['entryLinks'])} in {g['name']}" for g in groups))
+    print(f"Rule links from profile Skills/Equipment text: {text_links}")
+    if unmatched:
+        print(f"  No rule matches: {', '.join(unmatched)}")
     if hand_made:
         print(f"Hand-made profiles kept as they are: {', '.join(hand_made)}")
     for name, diff in changes.items():

@@ -63,6 +63,7 @@ python tools/check_coverage.py
   - Weapon profiles, including MULTI weapons as one row with every ammo option.
   - Rules, each with its summary and its wiki link.
   - A selectable entry for every weapon, special skill (Martial Arts by level), piece of equipment and hacking program, gathered in `Armory: …` groups. Hacking Devices list their programs, and mines and deployable devices carry their deployed stat lines.
+  - Rule links for the skills and equipment your own model profiles list as text, so New Recruit shows and opens them. Each item in a profile's **Skills** or **Equipment** field ("Dodge (PH=11), Terrain (Total)") is linked to its rule on that entry, with the bracketed part shown after the name. Rebuild after editing those fields, and the links follow. Items that match no rule are listed when the build runs. "Escape System" links to N5's Transmutation, as "Transmutation (Escape System)".
   - Fresh copies of `rules/armory.md` and `rules/n5-index.md`.
 - `check_coverage.py` reads the wiki's own menus, categories and charts from the cache, then confirms each item is in the game system.
 - Everything imported is tagged with the *Infinity N5 Wiki* publication, which is how the next build finds and replaces it. Hand-made entries are never touched, unless a hand-made weapon has the same name as a wiki weapon. To keep a hand-tuned copy of a wiki weapon, rename it.

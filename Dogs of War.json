@@ -3,7 +3,7 @@
     "name": "Dogs of War",
     "id": "sys-0ba1-943f-1bdf-3200",
     "battleScribeVersion": "2.03",
-    "revision": 7,
+    "revision": 8,
     "type": "gameSystem",
     "categoryEntries": [
       {
@@ -461,6 +461,92 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "ECM",
+            "id": "4143-7a90-def1-c15f",
+            "hidden": false,
+            "targetId": "ef04-02c6-e2f1-ae4e",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "Guided (-6)"
+              }
+            ]
+          },
+          {
+            "name": "Courage",
+            "id": "3c2a-ee51-276c-d469",
+            "hidden": false,
+            "targetId": "a4f3-2bbc-8877-c2f3",
+            "type": "rule"
+          },
+          {
+            "name": "Dodge",
+            "id": "9be4-0743-921e-03bd",
+            "hidden": false,
+            "targetId": "7304-3420-e690-7b7d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=11)"
+              }
+            ]
+          },
+          {
+            "name": "Transmutation",
+            "id": "4cf6-49cd-e364-f47d",
+            "hidden": false,
+            "targetId": "0032-2249-623a-c113",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Escape System)"
+              }
+            ]
+          },
+          {
+            "name": "GizmoKit",
+            "id": "c15b-7608-4811-1ad7",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=13)"
+              }
+            ]
+          },
+          {
+            "name": "Tactical Awareness",
+            "id": "1610-ba28-af12-2416",
+            "hidden": false,
+            "targetId": "d4e9-8b47-8f37-84cc",
+            "type": "rule"
+          },
+          {
+            "name": "Terrain",
+            "id": "eaee-e782-8483-e518",
+            "hidden": false,
+            "targetId": "1711-c9cd-43b7-6d20",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Total)"
+              }
+            ]
+          }
         ]
       },
       {
@@ -512,6 +598,27 @@
             "hidden": false,
             "targetId": "5865-1813-3c24-79fa",
             "type": "profile"
+          },
+          {
+            "name": "GizmoKit",
+            "id": "68cd-0992-17a4-450d",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH+1)"
+              }
+            ]
+          },
+          {
+            "name": "Specialist Operative",
+            "id": "cdf7-8438-7d06-46e0",
+            "hidden": false,
+            "targetId": "4e85-2481-9162-7597",
+            "type": "rule"
           }
         ],
         "profiles": [
@@ -689,6 +796,92 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "ECM",
+            "id": "0019-aa13-1942-1293",
+            "hidden": false,
+            "targetId": "ef04-02c6-e2f1-ae4e",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "Guided (-6)"
+              }
+            ]
+          },
+          {
+            "name": "Courage",
+            "id": "a9de-c44a-7cd5-873c",
+            "hidden": false,
+            "targetId": "a4f3-2bbc-8877-c2f3",
+            "type": "rule"
+          },
+          {
+            "name": "Dodge",
+            "id": "96ba-4979-9691-1967",
+            "hidden": false,
+            "targetId": "7304-3420-e690-7b7d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=11)"
+              }
+            ]
+          },
+          {
+            "name": "Transmutation",
+            "id": "c129-e729-3e08-081c",
+            "hidden": false,
+            "targetId": "0032-2249-623a-c113",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Escape System)"
+              }
+            ]
+          },
+          {
+            "name": "GizmoKit",
+            "id": "c88e-1ef4-deba-3e4b",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=13)"
+              }
+            ]
+          },
+          {
+            "name": "Tactical Awareness",
+            "id": "c41c-eddf-08c5-e1bf",
+            "hidden": false,
+            "targetId": "d4e9-8b47-8f37-84cc",
+            "type": "rule"
+          },
+          {
+            "name": "Terrain",
+            "id": "4ad9-367d-4c53-5f82",
+            "hidden": false,
+            "targetId": "1711-c9cd-43b7-6d20",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Total)"
+              }
+            ]
+          }
         ]
       },
       {
@@ -738,6 +931,27 @@
             "hidden": false,
             "targetId": "5865-1813-3c24-79fa",
             "type": "profile"
+          },
+          {
+            "name": "GizmoKit",
+            "id": "a8dc-3d89-3250-70f7",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH+1)"
+              }
+            ]
+          },
+          {
+            "name": "Specialist Operative",
+            "id": "8c7c-74cb-44bf-c87b",
+            "hidden": false,
+            "targetId": "4e85-2481-9162-7597",
+            "type": "rule"
           }
         ],
         "profiles": [
@@ -854,6 +1068,27 @@
             "hidden": false,
             "targetId": "5865-1813-3c24-79fa",
             "type": "profile"
+          },
+          {
+            "name": "GizmoKit",
+            "id": "1659-be0e-3f3a-f09c",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH+1)"
+              }
+            ]
+          },
+          {
+            "name": "Specialist Operative",
+            "id": "12c6-ec6c-af0a-b446",
+            "hidden": false,
+            "targetId": "4e85-2481-9162-7597",
+            "type": "rule"
           }
         ],
         "profiles": [
@@ -1029,6 +1264,92 @@
               }
             ]
           }
+        ],
+        "infoLinks": [
+          {
+            "name": "ECM",
+            "id": "7b43-aefa-0a35-970c",
+            "hidden": false,
+            "targetId": "ef04-02c6-e2f1-ae4e",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "Guided (-6)"
+              }
+            ]
+          },
+          {
+            "name": "Courage",
+            "id": "4e39-0163-f78c-9dfb",
+            "hidden": false,
+            "targetId": "a4f3-2bbc-8877-c2f3",
+            "type": "rule"
+          },
+          {
+            "name": "Dodge",
+            "id": "7e6a-637e-1215-2b97",
+            "hidden": false,
+            "targetId": "7304-3420-e690-7b7d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=11)"
+              }
+            ]
+          },
+          {
+            "name": "Transmutation",
+            "id": "6c6b-36a7-c134-e14a",
+            "hidden": false,
+            "targetId": "0032-2249-623a-c113",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Escape System)"
+              }
+            ]
+          },
+          {
+            "name": "GizmoKit",
+            "id": "95b2-eaf2-5a7b-db99",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(PH=13)"
+              }
+            ]
+          },
+          {
+            "name": "Tactical Awareness",
+            "id": "608d-f18b-42b1-e5c5",
+            "hidden": false,
+            "targetId": "d4e9-8b47-8f37-84cc",
+            "type": "rule"
+          },
+          {
+            "name": "Terrain",
+            "id": "a8cf-8dec-81a2-e34b",
+            "hidden": false,
+            "targetId": "1711-c9cd-43b7-6d20",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(Total)"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1165,6 +1486,29 @@
                 ]
               }
             ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "GizmoKit",
+            "id": "0702-f0f5-fe45-481a",
+            "hidden": false,
+            "targetId": "81a3-173c-745e-b37d",
+            "type": "rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "field": "name",
+                "value": "(+1B)"
+              }
+            ]
+          },
+          {
+            "name": "Engineer",
+            "id": "a859-f339-231f-27c5",
+            "hidden": false,
+            "targetId": "3632-0eb5-13ce-4301",
+            "type": "rule"
           }
         ]
       }
