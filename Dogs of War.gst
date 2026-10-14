@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="17" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="18" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
     <publication id="991d-8065-dcd4-a396" name="Dogs of War" shortName="DoW" publisher="OptimusPrimarch" publisherUrl="https://github.com/OptimusPrimarch/DogsOfWar" />
   </publications>
   <costTypes>
-    <costType id="11c4-ce0d-6227-e31d" name="Requisition" defaultCostLimit="100" hidden="false" />
+    <costType id="11c4-ce0d-6227-e31d" name="Requisition" defaultCostLimit="200" hidden="false" />
     <costType id="f3b0-ed43-d671-65c9" name="Command Tokens" defaultCostLimit="-1" hidden="false" />
     <costType id="9760-1ef0-60a7-4540" name="Capacity" defaultCostLimit="-1" hidden="false" />
   </costTypes>

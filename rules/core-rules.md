@@ -38,10 +38,10 @@ Our own content never uses faction or unit names. Dogs of War shares Infinity's 
 
 | | |
 |---|---|
-| **Allocation** | 60 or 100 Requisition |
-| **Pilot and TAG** | Exactly one pilot, fully custom, and one custom TAG. The TAG is built from a chassis (S6, S7 or S8), components, and one Signature slot. |
-| **Elite Guns** | Up to 5, including any held in reserve. Each is a fixed profile plus one kit item. Command Tokens can raise the limit. A second pilot is an expensive Elite Gun option. |
-| **Hired Guns** | Free (0 Requisition) and Irregular. They share one profile, and templates change only their equipment. |
+| **Allocation** | 200 Requisition for a standard game |
+| **Pilot and TAG** | Exactly one pilot and one custom TAG. The pilot is fully custom: a Specialist Operative by default, or a Doctor, Engineer, Hacker, Forward Observer or other specialist instead. The TAG is built from a chassis (S6, S7 or S8), components, and one Signature slot. |
+| **Elite Guns** | Up to 5, including any held in reserve. Each is a fixed profile with one optional upgrade: a stat bump, a skill, or an equipment or weapon swap. Command Tokens can raise the limit. A second pilot is an expensive Elite Gun option. |
+| **Hired Guns** | Free (0 Requisition) and Irregular. Basic troops with no customization: they share one profile, and templates change only their equipment. Specialist templates carry only a pistol and a CC weapon. |
 | **Lieutenant** | Required, and costs Requisition. The pilot and some Elite Guns can take it. NCO costs more than Lieutenant. |
 | **On the table** | At most 1 TAG or pilot, plus 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
 

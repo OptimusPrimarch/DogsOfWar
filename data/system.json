@@ -9,7 +9,7 @@
   },
   "catalogue": {"name": "Mercenary Company", "file": "Mercenary Company.cat"},
   "costTypes": [
-    {"name": "Requisition", "defaultCostLimit": 100, "_note": "The Allocation: 100, or 60 for a smaller game (set when creating the list)."},
+    {"name": "Requisition", "defaultCostLimit": 200, "_note": "The standard game is 200 Requisition (decision 34)."},
     {"name": "Command Tokens", "defaultCostLimit": -1, "_note": "Pre-game spends only. The limit becomes the starting pool once it's set."},
     {"name": "Capacity", "defaultCostLimit": -1, "_note": "TAG components. Each chassis caps its own Capacity."}
   ],

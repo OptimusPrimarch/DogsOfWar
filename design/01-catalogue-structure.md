@@ -69,7 +69,7 @@ DogsOfWar/
 
 | Cost type | Visible | Default limit | Used for |
 |---|---|---|---|
-| **Requisition** | Yes | 100 (players change it to 60 when creating the list) | Everything purchasable: the Allocation |
+| **Requisition** | Yes | 200, the standard game (#34) | Everything purchasable: the Allocation |
 | **Command Tokens** | Yes | The starting pool (TBD) | Pre-game spends only, such as expanding the Elite Guns cap. The roster shows what's left to start the game with. |
 | **Capacity** | Yes | None | TAG components. There's one custom TAG per list, so the list total equals that TAG's Capacity used, which gives a free running total. |
 
@@ -275,6 +275,6 @@ Build this throwaway test before anything else. It checks the one rule that depe
 ## 12. Open questions
 
 1. **Hired Gun reinforcements:** can an arriving Hired Gun take any template, or only templates from your starting lineup? If only the starting lineup, the roster needs nothing more. If any template, the Briefing should list them all.
-2. **Allocation size:** does 60 vs 100 change anything besides Requisition, such as the Elite Guns cap or the Command Token pool? If so, `limit::Requisition` can drive it.
+2. **Game sizes:** 200 is the standard game (#34). If other sizes come back, does size change anything besides Requisition, such as the Elite Guns cap or the Command Token pool? If so, `limit::Requisition` can drive it.
 3. ~~**File format for Add from Github.**~~ **Resolved 2026-10-14:** the catalogue is now generated as `.gst`/`.cat` XML (§2). **Confirmed 2026-10-14:** Add from Github loads them on the New Recruit web app, and lists build there. Still to confirm: the Capacity limit (a chassis constraint on its Capacity cost) behaves as §10 expects once chassis have Capacity values.
 4. ~~**The built file vs this blueprint.**~~ **Resolved 2026-10-14:** keep Requisition and the TAG / Pilot / Elite Guns / Hired Guns categories, with phases matching the categories (§3, §5).

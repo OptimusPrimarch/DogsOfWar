@@ -33,9 +33,9 @@ Status tags:
 | 7 | Command Tokens | Fixed N5 pool, slightly enlarged, so they dwindle over the game. Expanded uses. | **LOCKED** |
 | 8 | Suppressive Fire | N5 state, unchanged, including how long it lasts (believed to be until the model next activates; check the N5 text) | **LOCKED** |
 | 9 | Force cap | 1 TAG or pilot + 10 infantry on the table. A second pilot (Elite Gun) may also call in a reserve TAG, for most of your Command Tokens. | **LOCKED** |
-| 10 | Allocation | 60–100 Requisition | **LOCKED** |
-| 11 | Elite Guns | Up to 5, including reserves. Profile + 1 kit. Cap expandable with Command Tokens. A second pilot is an expensive Elite Gun option. | **LOCKED** |
-| 12 | Hired Guns | 0 Requisition; Irregular; shared profile; equipment templates. Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
+| 10 | Allocation | ~~60–100 Requisition~~ Superseded by #34: 200 Requisition. | **REPLACED** |
+| 11 | Elite Guns | Up to 5, including reserves. Profile + one optional upgrade (#37). Cap expandable with Command Tokens. A second pilot is an expensive Elite Gun option. | **LOCKED** |
+| 12 | Hired Guns | 0 Requisition; Irregular; shared profile; equipment templates, no customization (#38). Corpsman and Spotter are specialists. Renamed from "Grunts," which is an existing Infinity unit. | **LOCKED** |
 | 13 | Fireteams | Dropped: N5's Fireteam rules aren't used. The word "fireteam" may still appear loosely in descriptions. | **LOCKED** (clarified 2026-10-14) |
 | 14 | Reinforcement | Arrive in the Reinforcement phase and act with their own Orders. Arriving isn't an action. | **LOCKED** (leaning) |
 | 15 | Arrival methods | Drop pod (Command Token), else Deployment (Tactical), else deployment zone | **LOCKED** |
@@ -57,6 +57,13 @@ Status tags:
 | 31 | Catalogue build | The catalogue is generated, not hand-edited. `tools/build.py` turns the data files in `data/`, the imported N5 armory and our rule summaries into `Dogs of War.gst` and `Mercenary Company.cat`, in the BattleScribe 2.03 XML that New Recruit reads, validated against the official schema. The New Recruit Editor is for viewing and testing; changes go into `data/`. Replaces the first JSON attempt. | **LOCKED** (2026-10-14) |
 | 32 | Empty TAGs and mounting | While its pilot is out, a TAG becomes the pilot's **Peripheral (Synchronized)**: it must stay in coherency with the pilot, or it goes Disconnected. While its pilot is in a Null state, the TAG gains **Pilotless**, a new state that is *not* Null: it can't generate or spend Orders, can still ARO, and gains Total Reaction for a Command Token, until Pilotless ends. Pilotless is cancelled when a pilot climbs in or its own pilot leaves the Null state. This replaces N4, where an empty TAG couldn't act and was removed when its pilot died. A pilot climbs in by ending a Movement skill in base contact with the TAG (at the end of that Order), the same trigger as Jockey. A dismounting pilot starts its movement anywhere in base contact with the TAG. | **LOCKED** (2026-10-14) |
 | 33 | Category names | **Trooper** becomes **Hired Guns** and **Elite** becomes **Elite Guns**, along with their phases and entries ("Hired Gun — Rifleman"). N5 uses "trooper" for any model and "Elite" as a trooper classification, so the old names collided with rules text. The stat-line layout keeps N5's name, Trooper. | **LOCKED** (2026-10-14) |
+| 34 | Game size | The standard game is **200 Requisition** (replaces #10). It should buy, for example, one solid TAG and pilot with 3–4 Elite Guns, two mediocre TAGs and pilots with 2–3 Elite Guns, or two solid TAGs and pilots with one Elite Gun, plus Hired Guns in every case. These are examples, not limits. | **LOCKED** (2026-10-14) |
+| 35 | Pricing principles | Players spend Requisition only on TAGs, pilots and Elite Guns; that's where the fun is. Hired Guns are free, so nobody pays an "elite tax" to fill the roster. TAGs are the big expense, especially heavily upgraded ones. An Elite Gun costs slightly less than a fully kitted pilot, but not by much. Requisition must be meaningfully balanced. | **LOCKED** (2026-10-14) |
+| 36 | Pilot build | Fully custom. A pilot is a Specialist Operative by default, but the player can make it a Doctor, Engineer, Hacker, Forward Observer or other specialist instead. | **LOCKED** (2026-10-14) |
+| 37 | Elite Gun upgrade | Each Elite Gun is a fixed profile with **one optional upgrade**: a stat bump, a skill, or an equipment or weapon swap. The options are curated per Elite Gun, so players have real choice without freezing up, and will be tuned over time. Replaces "+1 kit" in #11. | **LOCKED** (2026-10-14) |
+| 38 | Hired Guns | Basic troops across the board, with no customization: fixed templates only. Specialist templates carry only a pistol and a CC weapon. | **LOCKED** (2026-10-14) |
+| 39 | Chassis baseline | Each chassis starts from the average N5 TAG of its Silhouette (`02-chassis-baseline.md`) and is tuned from there. | **LOCKED** (2026-10-14) |
+| 40 | Reserves | Each side should have plenty of models in reserve to spend flexibly. Filling an open slot (a free Hired Gun or an Elite Gun hacker?) should be an interesting, meaningful decision every round. | **LOCKED** (design goal, 2026-10-14) |
 
 ---
 
@@ -134,14 +141,25 @@ In every phase, the initiative player takes a standard N5 active turn, and the o
 
 | Slot | Rule |
 |---|---|
-| **Allocation** | 60 or 100 Requisition |
+| **Allocation** | 200 Requisition (#34) |
 | **Pilot + TAG** | One. Pilot fully custom. TAG = chassis + components + Signature. |
-| **Elite Guns** | Up to 5, including reserves. Fixed profile + 1 kit. Cap expandable with Command Tokens. |
+| **Elite Guns** | Up to 5, including reserves. Fixed profile + one optional upgrade (#37). Cap expandable with Command Tokens. |
 | **Second pilot** | An expensive Elite Gun option. They can spend **most of your Command Tokens** to call in a reserve TAG from the stock lineup, as early as the first Pilot phase. This allows two TAGs on the table. Intended; both players have the option. |
 | **Hired Guns** | 0 Requisition. Fill the remaining infantry slots. |
 | **On-table cap** | 1 TAG or pilot + 10 infantry. A reserve TAG called in by a second pilot is the only way to field a second TAG. |
 
-**PROPOSED:** seed Elite Gun and component prices from N5 points (roughly N5 points ÷ 3, rounded), then simplify into price bands where equal cost means roughly equal power.
+**PROPOSED: Requisition anchors.** Solving #34's three example lists together gives these starting points. Each is an average, with a range around it:
+
+| What | Requisition | Check against #34 |
+|---|---|---|
+| Elite Gun | about 33 (25–40) | |
+| Fully kitted pilot | about 35–38 | "slightly more than an Elite Gun" (#35) |
+| Solid TAG chassis, fully upgraded | about 50 | |
+| **Solid TAG + pilot** | **about 85** | one pair + 3 Elite Guns = 184; + 4 = 217 |
+| Mediocre TAG + pilot | about 58 | two pairs + 2–3 Elite Guns = 182–215 |
+| Hired Gun | 0 | |
+
+Two solid pairs + one Elite Gun = 203. The rounded anchors fit all three examples within a few points, so tuning goes into the ranges, not the averages. Price bands, where equal cost means roughly equal power, come next. N5 points are a sanity check, not a formula: a median N5 TAG is about 63 points of a 300-point list (21%), and a solid pair here is about 42% of the list.
 
 ---
 
@@ -205,7 +223,7 @@ N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 
 
 **Elite Gun pool:** Hacker, Doctor, Engineer, Forward Observer, Paramedic, Sniper, Missile Launcher, an Officer who can be Lieutenant, Heavy Infantry, and a **second pilot**.
 
-**Hired Guns:** one shared profile. Templates change equipment only.
+**Hired Guns:** one shared profile. Templates change equipment only. Specialist templates (Corpsman, Spotter) carry only a pistol and a CC weapon (#38).
 
 | Template | Equipment | Specialist? |
 |---|---|---|
@@ -272,6 +290,8 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 
 1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
 2. **Playtest watch: empty TAGs.** A Peripheral (Synchronized) acts on its controller's Order, so a dismounted pilot and its TAG both act on one Order. Check this doesn't make dismounting stronger than staying aboard.
+3. **Board size and model cap (leaning 3'×3'):** either 4'×4' with up to 10 models in play, or 3'×3' with up to 5. Today it's #23's 36"×36" with #9's 10 infantry. N5's weapons are balanced for 4'×4', but 3'×3' plays faster, and reinforcements arriving within ZoC and out of LoF keep the playable space shifting. Also to settle: whether the TAGs and pilots count toward the cap.
+4. **Two TAGs in one list?** #34's examples include lists with two TAG and pilot pairs, but #9 allows one custom TAG, with a second only as a reserve called in by a second pilot.
 
 ## 11. Numbers to set during balancing
 

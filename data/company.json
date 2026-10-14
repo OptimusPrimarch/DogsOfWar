@@ -113,11 +113,12 @@
       "status": "prototype",
       "cost": {"Requisition": 20},
       "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "14", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
       "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
-      "groups": []
+      "groups": [],
+      "note": "Stats are the S6 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },
     {
       "name": "Medium TAG",
@@ -125,7 +126,7 @@
       "status": "prototype",
       "cost": {"Requisition": 30},
       "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "16", "WIP": "13", "ARM": "7", "BTS": "6", "STR": "3", "S": "7", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
       "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
@@ -137,7 +138,8 @@
           "default": "CC Weapon",
           "options": [{"weapon": "CC Weapon", "mods": {"PS": "=6"}}, {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}, "mods": {"PS": "=6"}}]
         }
-      ]
+      ],
+      "note": "Stats are the S7 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },
     {
       "name": "Heavy TAG",
@@ -145,11 +147,12 @@
       "status": "prototype",
       "cost": {"Requisition": 40},
       "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "16", "BS": "14", "PH": "17", "WIP": "14", "ARM": "8", "BTS": "6", "STR": "3", "S": "8", "Capacity": "?"}},
       "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
       "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
-      "groups": []
+      "groups": [],
+      "note": "Stats are the S8 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },
     {
       "name": "Combat Engineer",
@@ -181,8 +184,8 @@
       "status": "prototype",
       "sharedProfile": "Hired Gun",
       "skills": ["Paramedic"],
-      "weapons": ["Submachine Gun"],
-      "note": "Foundations: Paramedic + a lighter weapon. The SMG is a stand-in."
+      "weapons": ["Pistol", "CC Weapon"],
+      "note": "Specialist templates carry only a pistol and a CC weapon (decision 38)."
     },
     {
       "name": "Hired Gun — Spotter",
@@ -191,8 +194,8 @@
       "status": "prototype",
       "sharedProfile": "Hired Gun",
       "skills": ["Forward Observer"],
-      "weapons": ["Submachine Gun"],
-      "note": "Foundations: Forward Observer + a lighter weapon. The SMG is a stand-in."
+      "weapons": ["Pistol", "CC Weapon"],
+      "note": "Specialist templates carry only a pistol and a CC weapon (decision 38)."
     }
   ]
 }
