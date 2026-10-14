@@ -80,7 +80,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Seasoned Pilot",
@@ -93,7 +93,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Veteran Pilot",
@@ -106,7 +106,7 @@
       "weapons": ["Pistol"],
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
-      "rules": ["Call In TAG", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
+      "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"]
     },
     {
       "name": "Light TAG",

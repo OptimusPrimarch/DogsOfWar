@@ -22,7 +22,7 @@
   },
   "Call In TAG": {
     "section": "call-in-tag",
-    "summary": "TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. Where and how the TAG lands is to be written."
+    "summary": "TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. The pilot makes a WIP roll. On a success, the TAG lands anywhere in the pilot's Zone of Control and its landing works like Explode (a Circular Template centred on the TAG, Shock ammunition, PS 7). On a failure, it lands in base contact with the pilot, with no explosion. It can be called in from the first round. The custom TAG costs nothing more; a second TAG needs a second pilot and 1 Command Token."
   },
   "Reserve TAGs": {
     "section": "call-in-tag",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="19" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="20" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
@@ -3523,7 +3523,7 @@ Every reinforcing model has this skill. Place the model within the Zone of Contr
     </rule>
     <rule id="6924-acd7-89c8-8015" name="Call In TAG" publicationId="991d-8065-dcd4-a396" hidden="false">
       <description>Dogs of War
-TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. Where and how the TAG lands is to be written.
+TAGs don't start on the table: a pilot must call one in. Calling in is a Short Skill with the Movement label that only pilots can use. A pilot calls in its company's custom TAG, or, for 1 Command Token, a reserve TAG. The pilot makes a WIP roll. On a success, the TAG lands anywhere in the pilot's Zone of Control and its landing works like Explode (a Circular Template centred on the TAG, Shock ammunition, PS 7). On a failure, it lands in base contact with the pilot, with no explosion. It can be called in from the first round. The custom TAG costs nothing more; a second TAG needs a second pilot and 1 Command Token.
 [Full rule in the Dogs of War core rules](https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md#call-in-tag)</description>
     </rule>
     <rule id="93aa-3478-35e8-8e93" name="Reserve TAGs" publicationId="991d-8065-dcd4-a396" hidden="false">

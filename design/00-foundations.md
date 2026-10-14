@@ -65,7 +65,7 @@ Status tags:
 | 39 | Chassis baseline | Each chassis starts from the average N5 TAG of its Silhouette (`02-chassis-baseline.md`) and is tuned from there. | **LOCKED** (2026-10-14) |
 | 40 | Reserves | Each side should have plenty of models in reserve to spend flexibly. Filling an open slot (a free Hired Gun or an Elite Gun hacker?) should be an interesting, meaningful decision every round. | **LOCKED** (design goal, 2026-10-14) |
 | 41 | Table, cap and length | **3'×3'**, very dense, with at most **5 infantry in play**; TAGs and pilots don't count toward the cap. Games last **six rounds**. Long-range weapons lose value on the small table; that's handled through their Requisition prices, not rule changes. | **LOCKED** (2026-10-14) |
-| 42 | Calling in TAGs | Each list has **one custom TAG**. TAGs never start on the table: a pilot calls one in with a Short Skill with the Movement label that only pilots can use. A pilot can instead call in a **reserve TAG** for 1 Command Token: a generic, fixed profile from a stock lineup every company shares, with no customization. | **LOCKED** (2026-10-14) |
+| 42 | Calling in TAGs | Each list has **one custom TAG**. TAGs never start on the table: a pilot calls one in with a Short Skill with the Movement label that only pilots can use. A pilot can instead call in a **reserve TAG** for 1 Command Token: a generic, fixed profile from a stock lineup every company shares, with no customization. Calling in takes a WIP roll: on a success the TAG lands anywhere in the pilot's ZoC and its landing works like Explode; on a failure it lands in base contact with the pilot, with no explosion. TAGs can be called in from the first round. The custom TAG costs nothing more to call in; a second TAG needs a second pilot and 1 Command Token. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -292,7 +292,6 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 
 1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
 2. **Playtest watch: empty TAGs.** A Peripheral (Synchronized) acts on its controller's Order, so a dismounted pilot and its TAG both act on one Order. Check this doesn't make dismounting stronger than staying aboard.
-3. **Calling in a TAG:** where and how it lands (anywhere? within the pilot's ZoC? with a landing hazard, Titanfall-style?), whether the custom TAG can be called in the first round, and whether calling one in has any cost of its own.
 
 ## 11. Numbers to set during balancing
 

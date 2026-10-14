@@ -128,9 +128,13 @@ N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey a
 
 - **TAGs don't start on the table.** A pilot has to call one in.
 - **Calling in** is a Short Skill with the Movement label, and only pilots can use it.
-- **The custom TAG:** a pilot calls in its company's custom TAG.
-- **Reserve TAGs:** for 1 Command Token, a pilot calls in a reserve TAG instead. Reserve TAGs are generic, fixed profiles from a stock lineup that every company shares. They're never bought in the list and can't be customized.
-- *To be written:* where and how a TAG lands, whether the custom TAG can be called in the first round, and the stock lineup.
+- **The roll.** The pilot makes a WIP roll.
+  - **Success:** the TAG lands anywhere in the pilot's Zone of Control, and its landing works like [Explode](https://infinitythewiki.com/Explode): a Circular Template centred on the TAG, Shock ammunition, PS 7.
+  - **Failure:** the TAG lands in base contact with the pilot, with no explosion.
+- **When.** From the first round: the TAG doesn't start on the table, but a pilot can call it in straight away.
+- **The custom TAG** costs nothing more to call in: it was paid for in Requisition.
+- **Reserve TAGs:** for 1 Command Token, a pilot calls in a reserve TAG instead. A second TAG therefore needs a second pilot, bought in the list, and a Command Token. Reserve TAGs are generic, fixed profiles from a stock lineup that every company shares. They're never bought in the list and can't be customized.
+- *To be written:* the stock lineup.
 
 ### The rest of the pilot rules
 
