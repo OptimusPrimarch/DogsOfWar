@@ -4666,6 +4666,14 @@
       "page": "Explode"
     },
     {
+      "name": "Exrah",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Exrah",
+      "page": "Exrah"
+    },
+    {
       "name": "Forward Deployment",
       "family": "Special Skill",
       "type": "Deployment Skill",
@@ -5000,6 +5008,14 @@
       "labels": "Attack, Optional, Zone of Control",
       "url": "https://infinitythewiki.com/Sensor",
       "page": "Sensor"
+    },
+    {
+      "name": "Shasvastii",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Shasvastii",
+      "page": "Shasvastii"
     },
     {
       "name": "Sixth Sense",

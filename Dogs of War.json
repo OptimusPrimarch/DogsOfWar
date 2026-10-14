@@ -3,7 +3,7 @@
     "name": "Dogs of War",
     "id": "sys-0ba1-943f-1bdf-3200",
     "battleScribeVersion": "2.03",
-    "revision": 6,
+    "revision": 7,
     "type": "gameSystem",
     "categoryEntries": [
       {
@@ -15170,6 +15170,14 @@
             "type": "selectionEntry"
           },
           {
+            "name": "Exrah",
+            "id": "17bc-7fe4-d11e-3418",
+            "hidden": false,
+            "import": true,
+            "targetId": "d308-0df6-10a2-c4db",
+            "type": "selectionEntry"
+          },
+          {
             "name": "Forward Deployment",
             "id": "a31f-da19-cb68-6fe3",
             "hidden": false,
@@ -15535,6 +15543,14 @@
             "hidden": false,
             "import": true,
             "targetId": "1524-581d-eb2b-266c",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Shasvastii",
+            "id": "52c7-d4c0-4846-71d8",
+            "hidden": false,
+            "import": true,
+            "targetId": "7ef1-49c2-04a3-e62d",
             "type": "selectionEntry"
           },
           {
@@ -16284,6 +16300,13 @@
         "description": "Special Skill · Automatic Skill · Attack, Obligatory\nWhen knocked Unconscious, the trooper detonates at the end of the Order: a circular template centred on it, Shock ammunition at PS 7. Then it's removed as Dead.\nFull rule: https://infinitythewiki.com/Explode"
       },
       {
+        "name": "Exrah",
+        "id": "0420-ee04-627a-4f1b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Special Skill · Automatic Skill · Obligatory\nThe trooper can't survive being knocked down: the moment it falls Unconscious it dies outright, with no extra wound, so nothing can heal it. Works even while it's in a Null state.\nFull rule: https://infinitythewiki.com/Exrah"
+      },
+      {
         "name": "Forward Deployment",
         "id": "25a7-2d08-54c1-3090",
         "hidden": false,
@@ -16576,6 +16599,13 @@
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "Special Skill · Short Skill · Attack, Optional, Zone of Control\nA WIP+6 roll that reveals every hidden or camouflaged enemy in the trooper's ZoC at once, without needing LoF. Enemies can't re-camouflage there, and Discover rolls against camouflage markers get +6.\nFull rule: https://infinitythewiki.com/Sensor"
+      },
+      {
+        "name": "Shasvastii",
+        "id": "13a5-e03b-507b-e198",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Special Skill · Automatic Skill · Obligatory\nWhen the trooper falls Unconscious it becomes an embryo instead. It still counts for Retreat! and scenario conditions during the game, but not at final scoring, and Shock ammunition kills it outright.\nFull rule: https://infinitythewiki.com/Shasvastii"
       },
       {
         "name": "Sixth Sense",
@@ -22895,6 +22925,23 @@
         ]
       },
       {
+        "name": "Exrah",
+        "id": "d308-0df6-10a2-c4db",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Exrah",
+            "id": "f3b2-30c5-2e26-d265",
+            "hidden": false,
+            "targetId": "0420-ee04-627a-4f1b",
+            "type": "rule"
+          }
+        ]
+      },
+      {
         "name": "Forward Deployment",
         "id": "2719-a631-4859-b45c",
         "hidden": false,
@@ -23742,6 +23789,23 @@
             "id": "b244-78b4-b83c-fb31",
             "hidden": false,
             "targetId": "1a74-4676-263a-ddc4",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Shasvastii",
+        "id": "7ef1-49c2-04a3-e62d",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Shasvastii",
+            "id": "49f8-d10c-1b5f-1030",
+            "hidden": false,
+            "targetId": "13a5-e03b-507b-e198",
             "type": "rule"
           }
         ]

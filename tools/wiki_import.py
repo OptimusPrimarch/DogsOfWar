@@ -63,11 +63,10 @@ NOT_RULES = {
 }
 # Pages a link can redirect into that are chapters, not rules of their own.
 NOT_RULE_PAGES = {"Skills and Equipment Module"}
-# Dogs of War shares Infinity's skills, equipment and weapons but never names
-# a faction or unit, so skills named after a faction are left out. Tri-Core
-# is still in the wiki's Special Skills category, but its page says it's an
-# N4 rule that no longer exists in N5.
-EXCLUDE_RULES = {"Exrah", "Shasvastii", "Tri-Core"}
+# Rules left out of the catalogue. Tri-Core is still in the wiki's Special
+# Skills category, but its page says it's an N4 rule (a Fireteam bonus) that
+# no longer exists in N5.
+EXCLUDE_RULES = {"Tri-Core"}
 # In the ammo-and-weaponry lists, these are special weapons with their own
 # rules pages rather than ammunition types.
 SPECIAL_WEAPONRY = {

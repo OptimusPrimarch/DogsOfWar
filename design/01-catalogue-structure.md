@@ -215,6 +215,9 @@ So the price lives **where it's offered.** Each link to a weapon carries a *Set 
 
 SQL analogy: the weapon table has no price column. Price lives in the junction table between "weapon" and "where it's offered."
 
+### Variants on the link, not as separate rules
+Each skill is **one** shared rule (Mimetism, Terrain, Immunity…). A unit with a variant links that rule and adds the parameter on its own info link, with a modifier: *type* `append`, *field* `name`, *value* `(-6)`. The unit then shows "Mimetism (-6)" and still opens the one Mimetism rule. This is the standard BSData pattern New Recruit reads; the 40K data does it for "Feel No Pain 5+" and "Deadly Demise D6".
+
 ---
 
 ## 9. Text and IP hygiene — PROPOSED

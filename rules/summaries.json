@@ -241,5 +241,7 @@
   "Private Information": "You don't have to reveal it until it's used or the game ends.",
   "States Phase": "Used only in the States Phase, unless stated otherwise.",
   "Superior Deployment": "Groups the skills that let troopers deploy outside their Deployment Zone, so a rule that mentions Superior Deployment covers all of them.",
-  "Supportware": "Hacking Programs that support allied troopers or hinder enemies rather than attacking directly."
+  "Supportware": "Hacking Programs that support allied troopers or hinder enemies rather than attacking directly.",
+  "Exrah": "The trooper can't survive being knocked down: the moment it falls Unconscious it dies outright, with no extra wound, so nothing can heal it. Works even while it's in a Null state.",
+  "Shasvastii": "When the trooper falls Unconscious it becomes an embryo instead. It still counts for Retreat! and scenario conditions during the game, but not at final scoring, and Shock ammunition kills it outright."
 }

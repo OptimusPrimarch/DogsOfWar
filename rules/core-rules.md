@@ -32,7 +32,7 @@ Dogs of War is played on the **Infinity N5** rules. Anything this document doesn
 
 Players command **mercenary companies** in the Infinity universe. The game should feel like Infinity to anyone who has played it.
 
-No faction or unit names are used anywhere. Dogs of War shares Infinity's skills, equipment and weapons, and adds its own when a specific need calls for it.
+Our own content never uses faction or unit names. Dogs of War shares Infinity's skills, equipment and weapons under their own names, and adds its own when a specific need calls for it. That includes the alien skills Exrah and Shasvastii, so a company can be alien-coded if its players want.
 
 ## 2. Building a company
 
@@ -101,7 +101,6 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 ## 8. Not used from N5
 
 - **Fireteams.** N5's Fireteam rules aren't used, so skills that only work inside a Fireteam (FT Master, Number 2, Strategic Deployment, and the Fireteam parts of others) have no effect. The word "fireteam" may still appear loosely in descriptions.
-- **Exrah** and **Shasvastii** (skills named after factions).
 - **Tri-Core**, an N4 rule the wiki marks as no longer part of N5.
 
 ## 9. Table and miniatures

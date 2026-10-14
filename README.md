@@ -66,7 +66,7 @@ python tools/check_coverage.py
   - Fresh copies of `rules/armory.md` and `rules/n5-index.md`.
 - `check_coverage.py` reads the wiki's own menus, categories and charts from the cache, then confirms each item is in the game system.
 - Everything imported is tagged with the *Infinity N5 Wiki* publication, which is how the next build finds and replaces it. Hand-made entries are never touched, unless a hand-made weapon has the same name as a wiki weapon. To keep a hand-tuned copy of a wiki weapon, rename it.
-- Faction-named skills (Exrah, Shasvastii) and Tri-Core, an N4 rule the wiki marks as gone from N5, are left out. See `EXCLUDE_RULES` in `wiki_import.py`.
+- Tri-Core, an N4 Fireteam rule the wiki marks as gone from N5, is left out. See `EXCLUDE_RULES` in `wiki_import.py`.
 
 ## Status
 
