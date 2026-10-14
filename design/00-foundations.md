@@ -69,7 +69,7 @@ Status tags:
 | 43 | Chassis | Three chassis, **S6, S7 and S8**, each on its baseline (#39), with component choices that let players build the TAG they picture: sensor suites, additional armour, jump jets (Super-Jump) and the like. Every TAG in the core game should be buildable from components, though none is the default. Replaces #20's five chassis. | **LOCKED** (2026-10-14) |
 | 44 | Pilot training packages | All pilots share one baseline stat line. Veterancy sets how many **training packages** a pilot takes: Rookie 1, Seasoned 2, Veteran 3, and any pilot can buy one more for Requisition. Packages cover attribute bumps or skills, and can bundle several where that makes sense. Each has a clear name that says at a glance what it does, and all are loosely equal in value. Equipment is chosen separately. Builds on #36. | **LOCKED** (2026-10-14) |
 | 45 | Elite Gun archetypes | Elite Guns come from archetypes common across N5 rosters: engineers, gunfighters, melee monsters, sharpshooters, bruisers, infiltrators and so on. The aim is a well-rounded roster, so players can bring the right tool for the job and enjoy using it. | **LOCKED** (2026-10-14) |
-| 46 | Points formula | Costs follow the general model inferred from N5 prices (`03-points-formula.md`), at **1 Requisition ≈ 1 N5 point**. It matches #34's anchors without scaling. | **PROPOSED** (2026-10-14) |
+| 46 | Points formula | Costs follow the general model inferred from N5 prices (`03-points-formula.md`), at **1 Requisition = 1 N5 point**. It matches #34's anchors without scaling. Quick reference: `points-cheatsheet.md`. | **LOCKED** (2026-10-14) |
 
 ---
 
