@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="20" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-0ba1-943f-1bdf-3200" name="Dogs of War" revision="21" battleScribeVersion="2.03" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <readme>Dogs of War is an unofficial, non-commercial fan game mode for Infinity N5: mercenary companies built around one custom TAG and its pilot. Not affiliated with or endorsed by Corvus Belli S.L.; Infinity and all associated names, rules and game data are (c) Corvus Belli S.L. N5 weapon profiles and rule names come from the official Infinity wiki (https://infinitythewiki.com); rule summaries are our own, and each links to its full official text, which wins wherever the two differ. Dogs of War's own rules: https://github.com/OptimusPrimarch/DogsOfWar/blob/main/rules/core-rules.md</readme>
   <publications>
     <publication id="c98c-3c50-3d4f-04b5" name="Infinity N5 Wiki" shortName="N5 Wiki" publisher="Corvus Belli" publisherUrl="https://infinitythewiki.com" />
@@ -2838,7 +2838,7 @@ Enemies making Comms Attacks against the trooper take the bracketed penalty, and
     </rule>
     <rule id="81a3-173c-745e-b37d" name="GizmoKit" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Short Skill
-Repairs allies with STR, either by shooting a remote hit (Non-Lethal) or in base contact. The target then rolls PH to recover.
+Repairs allies with STR, either by shooting a remote hit (Non-Lethal) or in base contact. The target then rolls PH to recover. A bracketed value on a profile, like (PH+1) or (PH=13), changes the PH used when that model's GizmoKit is applied; it doesn't add a second GizmoKit.
 [Full rule on the Infinity wiki](https://infinitythewiki.com/GizmoKit)</description>
     </rule>
     <rule id="df33-f1d8-5267-b20b" name="Hacking Device" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
@@ -2868,7 +2868,7 @@ A hunter's device that runs Cybermask and Trinity, for taking down enemy Hackers
     </rule>
     <rule id="e4bc-5900-c716-cbb5" name="MediKit" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
       <description>Equipment · Short Skill
-Revives Unconscious allies with VITA, either by shooting a remote hit (Non-Lethal) or in base contact. The patient then rolls PH to recover.
+Revives Unconscious allies with VITA, either by shooting a remote hit (Non-Lethal) or in base contact. The patient then rolls PH to recover. A bracketed value on a profile, like (PH+1), changes the PH used when that model's MediKit is applied.
 [Full rule on the Infinity wiki](https://infinitythewiki.com/MediKit)</description>
     </rule>
     <rule id="2a28-ed87-412f-2111" name="Motorcycle" publicationId="c98c-3c50-3d4f-04b5" hidden="false">
