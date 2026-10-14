@@ -276,5 +276,5 @@ Build this throwaway test before anything else. It checks the one rule that depe
 
 1. **Trooper reinforcements:** can an arriving Trooper take any template, or only templates from your starting lineup? If only the starting lineup, the roster needs nothing more. If any template, the Briefing should list them all.
 2. **Allocation size:** does 60 vs 100 change anything besides Requisition, such as the Elite cap or the Command Token pool? If so, `limit::Requisition` can drive it.
-3. ~~**File format for Add from Github.**~~ **Resolved 2026-10-14:** the catalogue is now generated as `.gst`/`.cat` XML (§2). Still to confirm in New Recruit: Add from Github loads them, and the Capacity limit (a chassis constraint on its Capacity cost) behaves as §10 expects once chassis have Capacity values.
+3. ~~**File format for Add from Github.**~~ **Resolved 2026-10-14:** the catalogue is now generated as `.gst`/`.cat` XML (§2). **Confirmed 2026-10-14:** Add from Github loads them on the New Recruit web app, and lists build there. Still to confirm: the Capacity limit (a chassis constraint on its Capacity cost) behaves as §10 expects once chassis have Capacity values.
 4. ~~**The built file vs this blueprint.**~~ **Resolved 2026-10-14:** keep Requisition and the TAG / Pilot / Elite / Trooper categories, with phases matching the categories (§3, §5).

@@ -27,7 +27,7 @@
   "Mount and Dismount": {
     "n4": true,
     "section": "mount-and-dismount-n4",
-    "summary": "N5 dropped this; Dogs of War brings back N4's version. Getting in: a pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. Getting out: at the start of an Order, right after declaring its first skill with the Movement label, the pilot starts that movement anywhere in base contact with the TAG, using its own profile for the whole Order. Neither costs anything extra. Not while Engaged or Immobilized, and never through Cautious Movement from a TAG. Getting in or out cancels Hidden Deployment and marker states. Game states carry across, except Unconscious and Possessed; a Possessed TAG's pilot can't get in or out. A pilot can still leave an Unconscious TAG. While its pilot is out, the TAG acts as the pilot's Peripheral; while the pilot is in a Null state, the TAG is Pilotless instead. While aboard, the pilot can't be hacked or hit by E/M. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs."
+    "summary": "N5 dropped this; Dogs of War brings back N4's version. Getting in: a pilot that ends a skill with the Movement label in base contact with the TAG climbs in at the end of that Order. Getting out: at the start of an Order, right after declaring its first skill with the Movement label, the pilot starts that movement anywhere in base contact with the TAG, using its own profile for the whole Order. Neither costs anything extra. Not while Engaged or Immobilized, and never through Cautious Movement from a TAG. Getting in or out cancels Hidden Deployment and marker states. Game states carry across, except Unconscious and Possessed; a Possessed TAG's pilot can't get in or out. A pilot can still leave an Unconscious TAG. While its pilot is out, the TAG acts as the pilot's Peripheral (Synchronized), staying in coherency with it or going Disconnected; while the pilot is in a Null state, the TAG is Pilotless instead. While aboard, the pilot can't be hacked or hit by E/M. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs."
   },
   "Jockey": {
     "section": "7-pilots-and-tags",
@@ -39,7 +39,7 @@
   },
   "Pilotless State": {
     "section": "pilotless-state",
-    "summary": "A TAG becomes Pilotless when its pilot enters a Null state (Unconscious, Dead…). It isn't a Null state itself: the TAG stays in play, counts for scoring and can be targeted. It can't generate or spend Orders, but it can still declare AROs, and its player can spend a Command Token to give it Total Reaction (how long that lasts is to be written). Cancelled when a pilot climbs in, or when its own pilot leaves the Null state."
+    "summary": "A TAG becomes Pilotless when its pilot enters a Null state (Unconscious, Dead…). It isn't a Null state itself: the TAG stays in play, counts for scoring and can be targeted. It can't generate or spend Orders, but it can still declare AROs, and its player can spend a Command Token to give it Total Reaction until Pilotless ends. Cancelled when a pilot climbs in, or when its own pilot leaves the Null state."
   },
   "Eject": {
     "section": "7-pilots-and-tags",

@@ -116,9 +116,9 @@
       "cost": {"Requisition": 20},
       "capacity": null,
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
+      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
       "groups": []
     },
     {
@@ -128,9 +128,9 @@
       "cost": {"Requisition": 30},
       "capacity": null,
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
+      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
       "groups": [
         {"name": "Ranged Hardpoint", "max": 1, "options": [
           {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}
@@ -148,9 +148,9 @@
       "cost": {"Requisition": 40},
       "capacity": null,
       "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
       "equipment": ["ECM: Guided (-6)"],
-      "rules": ["Mount and Dismount", "Eject", "Peripheral", "Pilotless State"],
+      "rules": ["Mount and Dismount", "Eject", "Pilotless State"],
       "groups": []
     },
 

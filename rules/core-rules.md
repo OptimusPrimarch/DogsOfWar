@@ -103,7 +103,7 @@ N5 replaced crewed TAGs with remote-operated ones and dropped the rules for gett
 - **Markers.** Getting in or out cancels Hidden Deployment and any marker state, on both the pilot and the TAG.
 - **An Unconscious TAG.** The pilot can still get out of it. While the pilot stays inside an Unconscious TAG, it gives no Order, and only the TAG counts for scoring, Retreat! and anything else that counts casualties.
 - **A Possessed TAG.** Its pilot can't get in or out.
-- **While its pilot is out,** the TAG becomes the pilot's [Peripheral](https://infinitythewiki.com/Peripheral) and acts on the pilot's Orders. Which kind of Peripheral is *to be decided*: Synchronized, which must stay in coherency with its pilot, or the no-distance kind that Doctors' and Engineers' helpers use. *This replaces N4, where an empty TAG couldn't act at all.*
+- **While its pilot is out,** the TAG becomes the pilot's [Peripheral (Synchronized)](https://infinitythewiki.com/Peripheral#Peripheral_.28Synchronized.29) and acts on the pilot's Orders. It must stay in coherency with its pilot, or it goes Disconnected until it's back in coherency. *This replaces N4, where an empty TAG couldn't act at all.*
 - **Game states carry across.** On getting out, the pilot takes on the TAG's states, except Unconscious and Possessed. On getting in, the TAG takes on the pilot's states, on top of its own.
 - **While aboard,** the pilot isn't on the table, so Hacking Programs and E/M can't affect it.
 - **While its pilot is in a Null state** (Unconscious, Dead and so on), the TAG is [Pilotless](#pilotless-state) instead. *This replaces N4, which removed the TAG when its pilot died.*
@@ -119,7 +119,7 @@ N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey a
   - Pilotless is **not** a Null state. The TAG stays in play, still counts for scoring, and can be targeted.
   - The TAG can't generate or spend Orders.
   - It can still declare AROs.
-  - Its player can spend a Command Token to give it [Total Reaction](https://infinitythewiki.com/Total_Reaction). *How long that lasts is to be written.*
+  - Its player can spend a Command Token to give it [Total Reaction](https://infinitythewiki.com/Total_Reaction) until Pilotless ends.
 - **Cancellation:** a pilot climbs in (the company's second pilot, or an enemy pilot through Unmanned TAGs), or the TAG's own pilot leaves its Null state.
 
 ### The rest of the pilot rules

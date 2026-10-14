@@ -55,7 +55,7 @@ Status tags:
 | 29 | Armory | Everything in N5's armory is imported from the official wiki into the catalogue by `tools/`. That covers every weapon, deployed item, skill, piece of equipment, hacking program and device, Martial Arts level, ammunition type, trait, label and state. Each comes with a one-line summary in our own words and a link to the official rule. `tools/check_coverage.py` confirms nothing is missed. Readable reference: `rules/armory.md`. Index of every N5 rules page: `rules/n5-index.md`. Player-facing rules: `rules/core-rules.md`. | **LOCKED** (2026-10-14) |
 | 30 | Currency and categories | The list currency is **Requisition** (it replaces "credits"). Units are categorized **TAG, Pilot, Elite, Trooper**, and the phases match those categories. | **LOCKED** (2026-10-14) |
 | 31 | Catalogue build | The catalogue is generated, not hand-edited. `tools/build.py` turns the data files in `data/`, the imported N5 armory and our rule summaries into `Dogs of War.gst` and `Mercenary Company.cat`, in the BattleScribe 2.03 XML that New Recruit reads, validated against the official schema. The New Recruit Editor is for viewing and testing; changes go into `data/`. Replaces the first JSON attempt. | **LOCKED** (2026-10-14) |
-| 32 | Empty TAGs and mounting | While its pilot is out, a TAG becomes the pilot's **Peripheral** (which kind is open, §10). While its pilot is in a Null state, the TAG gains **Pilotless**, a new state that is *not* Null: it can't generate or spend Orders, can still ARO, and gains Total Reaction for a Command Token. Pilotless is cancelled when a pilot climbs in or its own pilot leaves the Null state. This replaces N4, where an empty TAG couldn't act and was removed when its pilot died. A pilot climbs in by ending a Movement skill in base contact with the TAG (at the end of that Order), the same trigger as Jockey. A dismounting pilot starts its movement anywhere in base contact with the TAG. | **LOCKED** (2026-10-14) |
+| 32 | Empty TAGs and mounting | While its pilot is out, a TAG becomes the pilot's **Peripheral (Synchronized)**: it must stay in coherency with the pilot, or it goes Disconnected. While its pilot is in a Null state, the TAG gains **Pilotless**, a new state that is *not* Null: it can't generate or spend Orders, can still ARO, and gains Total Reaction for a Command Token, until Pilotless ends. Pilotless is cancelled when a pilot climbs in or its own pilot leaves the Null state. This replaces N4, where an empty TAG couldn't act and was removed when its pilot died. A pilot climbs in by ending a Movement skill in base contact with the TAG (at the end of that Order), the same trigger as Jockey. A dismounting pilot starts its movement anywhere in base contact with the TAG. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -198,7 +198,7 @@ N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 
 | Pilot mount/dismount (manned TAGs) | N5 removed it, and pilots getting in and out is core to this mode | Mounting and dismounting is free with any movement skill. Pilots may also mount enemy TAGs (jockeying and stealing unmanned TAGs, see above). |
 | Mounting and dismounting (N4 General Movement Rules) | N5's movement rules dropped it along with the Pilot rule | Getting out is ported as-is: start of the Order, after the first Movement skill, with the pilot's profile for the whole Order; eligibility; markers cancelled. We add placement: anywhere in base contact with the TAG. Getting in is ours: end a Movement skill in base contact, and climb in at the end of the Order. |
 
-**Empty TAGs (decision 32):** the TAG becomes its pilot's Peripheral while the pilot is out, and goes Pilotless while the pilot is in a Null state. Which Peripheral type is still open (§10).
+**Empty TAGs (decision 32):** the TAG becomes its pilot's Peripheral while the pilot is out, and goes Pilotless while the pilot is in a Null state. The Peripheral is Synchronized.
 
 ## 7. Elites and Troopers — LOCKED (lists PROPOSED)
 
@@ -269,8 +269,7 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 ## 10. Open questions
 
 1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
-2. **Which Peripheral is an empty TAG?** Synchronized (it must stay in coherency with its pilot, or it goes Disconnected) or the no-distance link Doctors' and Engineers' helpers use? Watch in playtest: a Peripheral acts on its controller's Order, so pilot and TAG both act on one Order.
-3. **Pilotless and Total Reaction:** how long does the Total Reaction bought with a Command Token last: one ARO, the turn, or until Pilotless ends?
+2. **Playtest watch: empty TAGs.** A Peripheral (Synchronized) acts on its controller's Order, so a dismounted pilot and its TAG both act on one Order. Check this doesn't make dismounting stronger than staying aboard.
 
 ## 11. Numbers to set during balancing
 
