@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="20" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="20" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="21" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="20" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <profiles>
@@ -499,6 +499,9 @@
         <infoLink id="0483-9a31-3f4c-cdeb" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
         <infoLink id="4c25-765a-f74f-60b4" name="Combi Rifle" hidden="false" targetId="79d8-80b0-c30c-1238" type="profile" />
         <infoLink id="1761-ac1d-74c9-cffa" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="a30c-ccc2-798a-eb3d" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="827a-fb8d-0988-d6fd" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile" />
+        <infoLink id="52c3-a564-2bf3-fbfe" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="59dd-0ff8-951e-b920" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
@@ -510,6 +513,9 @@
         <infoLink id="52c1-e177-6b98-14e4" name="Hired Gun" hidden="false" targetId="edc1-3583-6dff-d318" type="profile" />
         <infoLink id="81f3-8f9c-21df-84ce" name="Spitfire" hidden="false" targetId="9abb-588f-671c-0596" type="profile" />
         <infoLink id="97df-23b9-9060-4241" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="f6db-8a04-41b4-10af" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="f407-5025-5bef-fdeb" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile" />
+        <infoLink id="a243-3695-98e3-3386" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8495-6ac8-f6d3-e10a" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
@@ -522,6 +528,9 @@
         <infoLink id="01ea-f98d-80c8-50fc" name="Grenade Launcher" hidden="false" targetId="dd79-f402-c653-fc6d" type="profile" />
         <infoLink id="d460-79c0-90db-fe96" name="Impact Template" hidden="false" targetId="d515-904e-7f49-17b1" type="rule" />
         <infoLink id="fffe-b2c9-5715-cf57" name="Speculative Attack" hidden="false" targetId="16d3-83ad-2f43-af1e" type="rule" />
+        <infoLink id="aea0-1ff2-ec39-29ca" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="c8ab-18eb-c61c-6153" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile" />
+        <infoLink id="ec44-abee-1648-3994" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e0f8-ff12-22bc-2675" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
@@ -534,6 +543,9 @@
         <infoLink id="5cfc-ff3c-c78d-ad4d" name="Panzerfaust" hidden="false" targetId="3996-c9e2-a9bd-8b1a" type="profile" />
         <infoLink id="7119-0dd9-50aa-8c39" name="Anti-materiel" hidden="false" targetId="e196-fa3f-b53c-73ee" type="rule" />
         <infoLink id="e179-f184-fba9-1306" name="Disposable (X)" hidden="false" targetId="8b2d-eeb9-e446-9928" type="rule" />
+        <infoLink id="fe95-91a9-e434-86c9" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="7187-aaf9-6206-c093" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile" />
+        <infoLink id="478c-d4b9-e95b-96da" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
       </infoLinks>
       <categoryLinks>
         <categoryLink id="74f0-b98d-6d03-2568" name="Hired Guns" hidden="false" targetId="e036-febd-6292-761f" primary="true" />
@@ -635,14 +647,14 @@
   <sharedProfiles>
     <profile id="edc1-3583-6dff-d318" name="Hired Gun" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
       <characteristics>
-        <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">?</characteristic>
-        <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">?</characteristic>
-        <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">?</characteristic>
-        <characteristic name="PH" typeId="0622-6e35-2324-c118">?</characteristic>
-        <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">?</characteristic>
-        <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">?</characteristic>
-        <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">?</characteristic>
-        <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">?</characteristic>
+        <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
+        <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">14</characteristic>
+        <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">11</characteristic>
+        <characteristic name="PH" typeId="0622-6e35-2324-c118">10</characteristic>
+        <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">13</characteristic>
+        <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">1</characteristic>
+        <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">0</characteristic>
+        <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">1</characteristic>
         <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
         <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Irregular</characteristic>
       </characteristics>

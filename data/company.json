@@ -40,11 +40,7 @@
     "Start in Reserve": {"removesCategory": "Deployed", "rules": ["Reinforcements"]}
   },
   "profiles": {
-    "Hired Gun": {
-      "type": "Trooper",
-      "status": "prototype",
-      "stats": {"MOV": "?", "CC": "?", "BS": "?", "PH": "?", "WIP": "?", "ARM": "?", "BTS": "?", "VITA": "?", "S": "2", "Orders": "Irregular"}
-    }
+    "Hired Gun": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "14", "BS": "11", "PH": "10", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Irregular"}}
   },
   "units": [
     {
@@ -167,22 +163,20 @@
       "groups": [{"name": "Weapon", "max": 1, "options": [{"weapon": "MULTI Rifle", "cost": {"Requisition": 1}}, {"weapon": "Chain Rifle"}]}],
       "upgrades": ["Start in Reserve"]
     },
-    {"name": "Hired Gun — Rifleman", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Combi Rifle"]},
-    {"name": "Hired Gun — Gunner", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Spitfire"]},
+    {"name": "Hired Gun — Rifleman", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Combi Rifle", "Pistol", "CC Weapon"]},
+    {"name": "Hired Gun — Gunner", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Spitfire", "Pistol", "CC Weapon"]},
     {
       "name": "Hired Gun — Grenadier",
       "category": "Hired Guns",
       "also": ["Deployed"],
-      "status": "prototype",
       "sharedProfile": "Hired Gun",
-      "weapons": ["Grenade Launcher"]
+      "weapons": ["Grenade Launcher", "Pistol", "CC Weapon"]
     },
-    {"name": "Hired Gun — AT Gunner", "category": "Hired Guns", "also": ["Deployed"], "status": "prototype", "sharedProfile": "Hired Gun", "weapons": ["Panzerfaust"]},
+    {"name": "Hired Gun — AT Gunner", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Panzerfaust", "Pistol", "CC Weapon"]},
     {
       "name": "Hired Gun — Corpsman",
       "category": "Hired Guns",
       "also": ["Deployed", "Specialist"],
-      "status": "prototype",
       "sharedProfile": "Hired Gun",
       "skills": ["Paramedic"],
       "weapons": ["Pistol", "CC Weapon"],
@@ -192,7 +186,6 @@
       "name": "Hired Gun — Spotter",
       "category": "Hired Guns",
       "also": ["Deployed", "Specialist"],
-      "status": "prototype",
       "sharedProfile": "Hired Gun",
       "skills": ["Forward Observer"],
       "weapons": ["Pistol", "CC Weapon"],
