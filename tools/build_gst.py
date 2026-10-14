@@ -44,6 +44,7 @@ DATA = HERE / "wiki" / "n5_data.json"
 TARGET = HERE.parent / "Dogs of War.json"
 SUMMARIES = HERE.parent / "rules" / "summaries.json"
 ARMORY = HERE.parent / "rules" / "armory.md"
+INDEX = HERE.parent / "rules" / "n5-index.md"
 BACKUPS = HERE / "backups"
 
 PUBLICATION = {
@@ -60,16 +61,31 @@ README = (
     "to its full official text there, which wins wherever the two differ."
 )
 RANGED, CC = "Ranged Weapon Profile", "CC Weapon Profile"
+PROGRAM, MARTIAL, DEPLOYED = "Hacking Program Profile", "Martial Arts Profile", "Deployable Profile"
+# Profile types the import adds to the game system if it doesn't have them,
+# with the columns of the wiki chart each comes from.
+NEW_TYPES = {
+    PROGRAM: ["Attack MOD", "Opp. MOD", "PS", "Burst", "Target", "Skill Type", "Special"],
+    MARTIAL: ["Attack MOD", "Opponent MOD", "Burst MOD"],
+    DEPLOYED: ["ARM", "BTS", "STR", "S"],
+}
 BANDS = ["0-8", "8-16", "16-24", "24-32", "32-40", "40-48", "48-96"]
-FAMILY_ORDER = ["Common Skill", "Special Skill", "Equipment", "Weapon Trait",
-                "Ammunition", "Weaponry", "State"]
+FAMILY_ORDER = ["Common Skill", "Special Skill", "Equipment", "Hacking", "Hacking Program",
+                "Supportware", "Weapon Trait", "Label", "Ammunition", "Weaponry", "State"]
+FAMILY_TITLES = {"Common Skill": "Common Skills", "Special Skill": "Special Skills",
+                 "Equipment": "Equipment", "Hacking": "Hacking", "Hacking Program": "Hacking Programs",
+                 "Supportware": "Supportware", "Weapon Trait": "Weapon Traits", "Label": "Labels",
+                 "Ammunition": "Ammunition", "Weaponry": "Special Weaponry", "State": "States"}
 # Modes that only swap the ammunition. A weapon whose modes are all of these,
 # with the same range bands and PS, is shown as one row.
 AMMO_MODES = {"Anti-materiel", "AP", "Shock"}
 MODE = re.compile(r"^(.*?) \((.+) Mode\)$")
 SEP = " · "
 # Rule families a model can be given; common skills belong to everyone.
-PICKABLE = {"Special Skill": "Armory: Special Skills", "Equipment": "Armory: Equipment"}
+PICKABLE = {"Special Skill": "Armory: Special Skills", "Equipment": "Armory: Equipment",
+            "Hacking Program": "Armory: Hacking Programs", "Supportware": "Armory: Hacking Programs"}
+# Skills offered by level rather than as one entry.
+LEVELLED = {"Martial Arts"}
 # Chart rows that are a mode of a common skill, not something to carry.
 NOT_CARRIED = {"Suppressive Fire Mode"}
 
@@ -173,9 +189,43 @@ def info_link(owner: str, kind: str, name: str, target_id: str) -> dict:
             "targetId": target_id, "type": kind}
 
 
-def build_entries(weapons: list[dict], rules: list[dict], gs: dict, pub_id: str):
-    """Selectable entries for every weapon, special skill and piece of
-    equipment, plus the "Armory: …" groups that list them."""
+def weapon_base(name: str) -> str:
+    m = MODE.match(name)
+    return m.group(1) if m else name
+
+
+def deployable_owner(stat_name: str, owners: list[str]) -> str | None:
+    """The entry a deployable stat line belongs to: "AP MINE" -> "AP Mines",
+    "DISCO BALL" -> "Disco Baller". Matched ignoring case, spaces and
+    slashes; the shortest name that starts with it wins."""
+    def norm(s):
+        return re.sub(r"[\s/]", "", s.lower())
+    key = norm(stat_name)
+    hits = sorted((o for o in owners if norm(o).startswith(key)), key=len)
+    return hits[0] if hits else None
+
+
+def deployed_name(stat_name: str, owner: str) -> str:
+    """The deployed item's own name in the owner's spelling ("E/M Mine" from
+    "E/M Mines"), so the stat line reads naturally."""
+    want, out = len(re.sub(r"[\s/]", "", stat_name)), ""
+    for ch in owner:
+        if want == 0:
+            break
+        out += ch
+        if not re.match(r"[\s/]", ch):
+            want -= 1
+    return f"{out} (deployed)"
+
+
+def build_entries(weapons: list[dict], rules: list[dict], gs: dict, pub_id: str,
+                  extra_profiles: dict[str, list[str]], extra_rules: dict[str, list[str]],
+                  levels: dict[str, list[str]]):
+    """Selectable entries for every weapon, special skill, piece of equipment
+    and hacking program, plus the "Armory: …" groups that list them.
+    extra_profiles/extra_rules add more links to an entry by name (a hacking
+    device's programs, a mine's deployed stat line); levels turns one skill
+    into an entry per level, each with that level's profile."""
     rule_ids = {r["name"]: r["id"] for r in gs["sharedRules"]}
     profiles = {p["name"].lower(): p for p in gs["sharedProfiles"]}
     pickable = {clean_name(r["name"]) for r in rules if r["family"] in PICKABLE}
@@ -197,10 +247,17 @@ def build_entries(weapons: list[dict], rules: list[dict], gs: dict, pub_id: str)
                                             *PICKABLE.values())}
 
     def entry(kind: str, name: str, links: list[dict]) -> dict:
+        links = list({l["id"]: l for l in links}.values())  # drop repeats, keep order
         e = {"name": name, "id": bsid("entry", kind, name), "hidden": False, "type": "upgrade",
              "import": True, "publicationId": pub_id, "infoLinks": links}
         entries.append(e)
         return e
+
+    def extra_links(owner: str) -> tuple[list[dict], list[dict]]:
+        profs = [info_link(owner, "profile", profiles[n.lower()]["name"], profiles[n.lower()]["id"])
+                 for n in extra_profiles.get(owner, [])]
+        rls = [info_link(owner, "rule", n, rule_ids[n]) for n in extra_rules.get(owner, []) if n != owner]
+        return profs, rls
 
     def profile_links(owner: str, rows: list[dict]) -> list[dict]:
         out = []
@@ -214,7 +271,8 @@ def build_entries(weapons: list[dict], rules: list[dict], gs: dict, pub_id: str)
         return [info_link(owner, "rule", n, rule_ids[n]) for n in names]
 
     for base, rows in weapon_rows.items():
-        e = entry("weapon", base, profile_links(base, rows) + trait_links(base, rows))
+        profs, rls = extra_links(base)
+        e = entry("weapon", base, profile_links(base, rows) + profs + trait_links(base, rows) + rls)
         kinds = {profiles[clean_name(w["name"]).lower()]["typeName"] for w in rows}
         if RANGED in kinds:
             members["Armory: Ranged Weapons"].append(e)
@@ -225,10 +283,19 @@ def build_entries(weapons: list[dict], rules: list[dict], gs: dict, pub_id: str)
         if r["family"] not in PICKABLE:
             continue
         name = clean_name(r["name"])
+        group = members[PICKABLE[r["family"]]]
+        kind = r["family"].lower()
+        rule = info_link(name, "rule", name, rule_ids[name])
+        if name in levels:
+            for level in levels[name]:
+                p = profiles[level.lower()]
+                group.append(entry(kind, level, [info_link(level, "profile", p["name"], p["id"]),
+                                                 info_link(level, "rule", name, rule_ids[name])]))
+            continue
         rows = [attack_rows[name]] if name in attack_rows else []
-        links = (profile_links(name, rows) + [info_link(name, "rule", name, rule_ids[name])]
-                 + trait_links(name, rows, skip={name}))
-        members[PICKABLE[r["family"]]].append(entry(r["family"].lower(), name, links))
+        profs, rls = extra_links(name)
+        links = profile_links(name, rows) + profs + [rule] + trait_links(name, rows, skip={name}) + rls
+        group.append(entry(kind, name, links))
 
     groups = [{"name": title, "id": bsid("group", title), "hidden": False, "publicationId": pub_id,
                "entryLinks": [{"name": e["name"], "id": bsid("entryLink", title, e["name"]),
@@ -244,11 +311,11 @@ def armory_page(gs: dict, rules: list[dict], summaries: dict, pub_id: str) -> st
     def cell(v: str) -> str:
         return v.replace("|", "\\|") if v else ""
 
-    def table(kind: str) -> list[str]:
+    def table(kind: str, first: str = "Weapon") -> list[str]:
         cols = [c["name"] for c in next(t for t in gs["profileTypes"]
                                         if t["name"] == kind)["characteristicTypes"]]
         rows = [p for p in gs["sharedProfiles"] if p.get("typeName") == kind]
-        out = ["| Weapon | " + " | ".join(cols) + " |", "|---" * (len(cols) + 1) + "|"]
+        out = [f"| {first} | " + " | ".join(cols) + " |", "|---" * (len(cols) + 1) + "|"]
         for p in sorted(rows, key=lambda p: p["name"].lower()):
             vals = {c["name"]: c.get("$text", "") for c in p["characteristics"]}
             mark = "" if p.get("publicationId") == pub_id else " †"
@@ -258,28 +325,31 @@ def armory_page(gs: dict, rules: list[dict], summaries: dict, pub_id: str) -> st
     lines = [
         "# Armory",
         "",
-        "Every weapon, skill and piece of equipment in the Dogs of War catalogue.",
+        "Every weapon, skill, piece of equipment and hacking program in the Dogs of War catalogue,"
+        " with every rule they use.",
         "",
         "> Generated by `tools/build_gst.py` from the catalogue. Don't edit it by hand: change the"
         " catalogue, or the summaries in `rules/summaries.json`, then rebuild.",
         "",
         "The summaries are ours, written for quick reference. Each name links to the full official"
         " rule on the [Infinity wiki](https://infinitythewiki.com) (© Corvus Belli), and the official"
-        " rule wins wherever the two differ. Weapons marked † are Dogs of War's own.",
+        " rule wins wherever the two differ. Profiles marked † are Dogs of War's own. The rest of the"
+        " N5 rules are indexed in [n5-index.md](n5-index.md).",
         "",
         "## Weapons",
         "",
         "### Ranged", "", *table(RANGED), "",
         "### Close combat", "", *table(CC), "",
+        "### Deployed items", "", "Stat lines for mines and devices once they're on the table.", "",
+        *table(DEPLOYED, "Item"), "",
+        "## Hacking Programs", "", *table(PROGRAM, "Program"), "",
+        "## Martial Arts", "", *table(MARTIAL, "Level"), "",
     ]
     by_family: dict[str, list[dict]] = {}
     for r in rules:
         by_family.setdefault(r["family"], []).append(r)
-    titles = {"Common Skill": "Common Skills", "Special Skill": "Special Skills",
-              "Equipment": "Equipment", "Weapon Trait": "Weapon Traits",
-              "Ammunition": "Ammunition", "Weaponry": "Special Weaponry", "State": "States"}
     for family in FAMILY_ORDER:
-        lines += [f"## {titles[family]}", ""]
+        lines += [f"## {FAMILY_TITLES[family]}", ""]
         for r in sorted(by_family.get(family, []), key=lambda r: r["name"].lower()):
             name = clean_name(r["name"])
             tags = " · ".join(x for x in (r["type"], r["labels"]) if x)
@@ -294,6 +364,35 @@ def armory_page(gs: dict, rules: list[dict], summaries: dict, pub_id: str) -> st
         lines.append("None in the catalogue yet. Our own rules are written up in"
                      " [core-rules.md](core-rules.md) as they're decided.")
     return "\n".join(lines) + "\n"
+
+
+def index_page(data: dict) -> str:
+    """rules/n5-index.md: every page of the N5 rules on the wiki, by chapter."""
+    lines = [
+        "# N5 Rules Index",
+        "",
+        "Every page of the official Infinity N5 rules on the [Infinity wiki](https://infinitythewiki.com)"
+        " (© Corvus Belli), chapter by chapter. Dogs of War plays on these rules except where"
+        " [core-rules.md](core-rules.md) says otherwise. Weapons, skills and equipment are listed in"
+        " [armory.md](armory.md).",
+        "",
+        "> Generated by `tools/build_gst.py` from the wiki's own chapter menus. Don't edit it by hand.",
+        "",
+    ]
+    for ch in data["index"]:
+        lines += [f"## [{ch['chapter']}]({ch['url']})", ""]
+        if ch["pages"]:
+            lines += [" · ".join(f"[{p['title']}]({p['url']})" for p in ch["pages"]), ""]
+    if data.get("other_pages"):
+        lines += ["## Other pages", "", " · ".join(f"[{p['title']}]({p['url']})"
+                                                   for p in data["other_pages"]), ""]
+    return "\n".join(lines)
+
+
+def write_if_changed(path: Path, text: str) -> None:
+    if not path.exists() or path.read_text(encoding="utf-8") != text:
+        path.write_text(text, encoding="utf-8")
+        print(f"Wrote {path.relative_to(HERE.parent)}")
 
 
 def main() -> None:
@@ -314,25 +413,27 @@ def main() -> None:
                                   **{k: v for k, v in PUBLICATION.items() if k != "name"}}]
     gs["readme"] = README
 
+    for name, cols in NEW_TYPES.items():
+        if not any(t["name"] == name for t in gs["profileTypes"]):
+            gs["profileTypes"].append({"name": name, "id": bsid("profileType", name), "hidden": False,
+                                       "characteristicTypes": [{"name": c, "id": bsid("characteristicType", name, c)}
+                                                               for c in cols]})
     types = {t["name"]: t for t in gs["profileTypes"]}
     ensure_band_96(types[RANGED])
 
-    # --- weapons -> shared profiles
+    # --- weapons, hacking programs, Martial Arts levels and deployed items
+    #     -> shared profiles
     profiles = gs.setdefault("sharedProfiles", [])
     by_name = {p["name"].lower(): p for p in profiles}
-    wiki_names = set()
+    produced: set[str] = set()
     updated, added, changes = [], [], {}
-    for w in weapons:
-        name = clean_name(w["name"])
-        wiki_names.add(name.lower())
-        kind = weapon_kind(w)
-        existing = by_name.get(name.lower())
-        if existing and existing.get("typeName") in (RANGED, CC):
-            kind = existing["typeName"]  # keep the type its links' modifiers expect
+
+    def put_profile(name: str, kind: str, vals: dict) -> None:
+        produced.add(name.lower())
         ptype = types[kind]
-        vals = weapon_values(w, kind)
         chars = [{"name": c["name"], "$text": vals.get(c["name"], ""), "typeId": c["id"]}
                  for c in ptype["characteristicTypes"]]
+        existing = by_name.get(name.lower())
         if existing:
             before = {c["name"]: c.get("$text", "") for c in existing.get("characteristics", [])}
             diff = {c["name"]: (before.get(c["name"], "(none)"), c["$text"])
@@ -350,10 +451,49 @@ def main() -> None:
             profiles.append(p)
             by_name[name.lower()] = p
             added.append(name)
-    # Imported weapons this build no longer produces: gone from the wiki's
-    # chart, or mode rows now folded into one profile.
+
+    def na(vals: dict) -> dict:
+        return {k: ("N/A" if v in ("--", "") else v) for k, v in vals.items()}
+
+    for w in weapons:
+        name = clean_name(w["name"])
+        kind = weapon_kind(w)
+        existing = by_name.get(name.lower())
+        if existing and existing.get("typeName") in (RANGED, CC):
+            kind = existing["typeName"]  # keep the type its links' modifiers expect
+        put_profile(name, kind, weapon_values(w, kind))
+    for p in data["hacking_programs"]:
+        put_profile(p["name"], PROGRAM, na({c: p.get(c, "") for c in NEW_TYPES[PROGRAM]}))
+    levels = {"Martial Arts": []}
+    for lv in data["martial_arts"]:
+        name = f"Martial Arts L{lv['Level']}"
+        levels["Martial Arts"].append(name)
+        put_profile(name, MARTIAL, {c: lv.get(c, "") for c in NEW_TYPES[MARTIAL]})
+
+    # Links each entry gets beyond its own profile and rule: a Hacking
+    # Device's programs, a mine's or device's deployed stat line.
+    extra_profiles: dict[str, list[str]] = {}
+    extra_rules: dict[str, list[str]] = {}
+    for d in data["hacking_devices"]:
+        extra_profiles[d["name"]] = list(d["programs"])
+        extra_rules[d["name"]] = list(d["programs"])
+    for p in data["hacking_programs"]:
+        extra_rules[p["name"]] = p["rules"]
+    owners = sorted({weapon_base(clean_name(w["name"])) for w in weapons}
+                    | {clean_name(r["name"]) for r in data["rules"] if r["family"] in PICKABLE})
+    for dep in data["deployables"]:
+        owner = deployable_owner(dep["Deployable"], owners)
+        if owner is None:
+            print(f"Deployed stat line '{dep['Deployable']}' matches no weapon or equipment; skipped.")
+            continue
+        name = deployed_name(dep["Deployable"], owner)
+        put_profile(name, DEPLOYED, {c: dep.get(c, "") for c in NEW_TYPES[DEPLOYED]})
+        extra_profiles.setdefault(owner, []).append(name)
+
+    # Imported profiles this build no longer produces: gone from the wiki,
+    # or mode rows now folded into one profile.
     dropped = [p["name"] for p in profiles
-               if p.get("publicationId") == pub_id and p["name"].lower() not in wiki_names]
+               if p.get("publicationId") == pub_id and p["name"].lower() not in produced]
     gs["sharedProfiles"] = [p for p in profiles if p["name"] not in dropped]
     hand_made = [p["name"] for p in gs["sharedProfiles"] if p.get("publicationId") != pub_id]
 
@@ -368,16 +508,14 @@ def main() -> None:
     ]
 
     # --- selectable entries and the Armory groups that list them
-    entries, groups = build_entries(weapons, imported, gs, pub_id)
+    entries, groups = build_entries(weapons, imported, gs, pub_id, extra_profiles, extra_rules, levels)
     gs["sharedSelectionEntries"] = [e for e in gs.get("sharedSelectionEntries", [])
                                     if e.get("publicationId") != pub_id] + entries
     gs["sharedSelectionEntryGroups"] = [g for g in gs.get("sharedSelectionEntryGroups", [])
                                         if g.get("publicationId") != pub_id] + groups
 
-    page = armory_page(gs, imported, summaries, pub_id)
-    if not ARMORY.exists() or ARMORY.read_text(encoding="utf-8") != page:
-        ARMORY.write_text(page, encoding="utf-8")
-        print(f"Wrote {ARMORY.relative_to(HERE.parent)}")
+    write_if_changed(ARMORY, armory_page(gs, imported, summaries, pub_id))
+    write_if_changed(INDEX, index_page(data))
 
     if doc == original:
         print("Game system already up to date; nothing written.")
@@ -391,7 +529,7 @@ def main() -> None:
     target.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     print(f"Wrote {target} (revision {gs['revision']}); backup in {backup.relative_to(HERE)}")
-    print(f"Weapons: {len(added)} added, {len(updated)} updated"
+    print(f"Profiles: {len(added)} added, {len(updated)} updated"
           + (f", {len(dropped)} removed (no longer produced):{', '.join(dropped)}" if dropped else ""))
     print(f"Rules: {len(imported)} imported")
     print("Selectable entries: " + ", ".join(f"{len(g['entryLinks'])} in {g['name']}" for g in groups))

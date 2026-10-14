@@ -81,6 +81,9 @@ Use the column order of the current N5 profile charts, so Infinity players read 
 | **TAG** | MOV, CC, BS, PH, WIP, ARM, BTS, STR, S, Capacity | Chassis |
 | **Weapon** | Copy the N5 weapon chart columns exactly (range bands, burst, damage, ammo, traits) | Every weapon |
 | **Signature** | Effect, Uses | Signature slot options |
+| **Hacking Program Profile** *(built)* | Attack MOD, Opp. MOD, PS, Burst, Target, Skill Type, Special | Hacking programs, from the wiki's Hacking Programs Chart |
+| **Martial Arts Profile** *(built)* | Attack MOD, Opponent MOD, Burst MOD | Martial Arts L1–L5 |
+| **Deployable Profile** *(built)* | ARM, BTS, STR, S | Mines and devices once they're on the table |
 
 - **Orders** holds Regular, Irregular, or Regular + Tactical Awareness, so the activation economy is visible on every card.
 - Skills and equipment are **rules**, not profiles (see §8).
@@ -201,7 +204,7 @@ Mercenary Company  (force entry)
 | **Stock TAG lineup** | Profiles for the universal stock TAGs. Shown in the Briefing, never selectable. |
 | **Trooper profile** | The one shared Trooper stat line |
 | **Rules: N5 references** | Every N5 skill, piece of equipment, weapon trait, ammunition type and state: name, type, a one-line summary in our own words, and a link to the official rule. No rules text copied. Built by `tools/build_gst.py`. |
-| **Armory entries** *(built)* | A selectable entry for every N5 weapon (all its modes, plus its trait rules), special skill and piece of equipment, with no price. They're gathered in four groups, `Armory: Ranged Weapons`, `Armory: CC Weapons`, `Armory: Special Skills` and `Armory: Equipment`, ready to link and price. Skills and equipment that attack with range bands (Forward Observer, MediKit…) carry their weapon profile. |
+| **Armory entries** *(built)* | A selectable entry for every N5 weapon (all its modes, plus its trait rules), special skill and piece of equipment, with no price. There's also an entry for each hacking program, and Martial Arts comes as one entry per level (L1–L5). They're gathered in five groups, `Armory: Ranged Weapons`, `Armory: CC Weapons`, `Armory: Special Skills`, `Armory: Equipment` and `Armory: Hacking Programs`, ready to link and price. Skills and equipment that attack with range bands (Forward Observer, MediKit…) carry their weapon profile. Hacking Devices list their programs, and mines and deployable devices carry their deployed stat line. |
 | **Rules: Dogs of War** | Our own rules, in our own words: Deployment (Tactical), Jockey, phase order, and N4 ports (each marked as an N4 port) |
 | **Publications** | "Infinity N5 Core Rules" (Corvus Belli) and "Dogs of War" (this repo) |
 

@@ -722,7 +722,7 @@
         "Impact Template",
         "Non-Lethal",
         "Reflective",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -748,7 +748,7 @@
         "BS Weapon (PH)",
         "Impact Template",
         "Non-Lethal",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -772,7 +772,7 @@
       "rules": [
         "BS Weapon (PH)",
         "Impact Template",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -797,7 +797,7 @@
         "BS Weapon (PH)",
         "Impact Template",
         "Non-Lethal",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -823,7 +823,7 @@
         "Impact Template",
         "Non-Lethal",
         "Reflective",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -848,7 +848,7 @@
       "rules": [
         "Impact Template",
         "Non-Lethal",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -871,7 +871,7 @@
       "Traits": "Speculative Attack, Impact Template (Circular)",
       "rules": [
         "Impact Template",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -895,7 +895,7 @@
       "rules": [
         "Impact Template",
         "Non-Lethal",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -1327,6 +1327,7 @@
       "Needed Saves": "2",
       "Traits": "Comms Attack, Intuitive Attack, Concealed, Disposable (3), State: Stunned/Immobilized-B, Non-Lethal, Direct Template (Small Teardrop), Deployable",
       "rules": [
+        "Comms Attack",
         "Concealed",
         "Deployable",
         "Direct Template",
@@ -1361,7 +1362,7 @@
         "BS Weapon (PH)",
         "Disposable (X)",
         "Drop Bears",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -1441,7 +1442,7 @@
         "Disposable (X)",
         "Double Shot",
         "Mine Dispenser",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -1605,6 +1606,7 @@
       "Traits": "BS Weapon (WIP), Comms Attack, Disposable (2), Double Shot, Target (VITA), No LoF, Zone of Control",
       "rules": [
         "BS Weapon (WIP)",
+        "Comms Attack",
         "Disposable (X)",
         "Double Shot",
         "Target (Attribute)"
@@ -1630,6 +1632,7 @@
       "Traits": "BS Weapon (WIP), Comms Attack, Target (VITA), State: Isolated, Non-Lethal, No LoF, Zone of Control",
       "rules": [
         "BS Weapon (WIP)",
+        "Comms Attack",
         "Isolated State",
         "Non-Lethal",
         "State",
@@ -1656,6 +1659,7 @@
       "Traits": "BS Weapon (WIP), Comms Attack, Impact Template (Circular), Non-Lethal, Reflective, No LoF, Targetless, Zone of Control",
       "rules": [
         "BS Weapon (WIP)",
+        "Comms Attack",
         "Impact Template",
         "Non-Lethal",
         "Reflective",
@@ -3317,7 +3321,7 @@
         "Disco Baller",
         "Disposable (X)",
         "Double Shot",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -3619,6 +3623,7 @@
       "Traits": "BS Weapon (WIP), Comms Attack, Intuitive Attack, Disposable (2), State: Isolated, Non-Lethal, No Lof, Zone of Control",
       "rules": [
         "BS Weapon (WIP)",
+        "Comms Attack",
         "Disposable (X)",
         "Intuitive Attack (Trait)",
         "Isolated State",
@@ -3647,7 +3652,7 @@
       "rules": [
         "Anti-materiel",
         "Impact Template",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -3834,7 +3839,7 @@
         "Indiscriminate",
         "Non-Lethal",
         "Pitcher",
-        "Speculative Attack (Trait)",
+        "Speculative Attack",
         "Targetless"
       ]
     },
@@ -3979,7 +3984,7 @@
       "rules": [
         "Burst: Single Target",
         "Impact Template",
-        "Speculative Attack (Trait)"
+        "Speculative Attack"
       ]
     },
     {
@@ -4027,6 +4032,356 @@
         "Intuitive Attack (Trait)",
         "Non-Lethal"
       ]
+    }
+  ],
+  "deployables": [
+    {
+      "Deployable": "AP MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "CYBERMINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "DROP BEAR",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "E/M MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "MONOFILAMENT MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "PARA MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "SHOCK MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "VIRAL MINE",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "0"
+    },
+    {
+      "Deployable": "WILDPARROT",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "CRAZYKOALA",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "DAZER",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "DEPLOYABLE REPEATER",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "DISCO BALL",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "FASTPANDA",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    },
+    {
+      "Deployable": "MADTRAP",
+      "ARM": "0",
+      "BTS": "0",
+      "STR": "1",
+      "S": "1"
+    }
+  ],
+  "hacking_programs": [
+    {
+      "name": "Assisted Fire",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "--",
+      "Target": "REM",
+      "Skill Type": "Long Skill",
+      "Special": "Target Model gains Marksmanship.",
+      "rules": [
+        "Marksmanship"
+      ]
+    },
+    {
+      "name": "Carbonite",
+      "Attack MOD": "0",
+      "Opp. MOD": "0",
+      "PS": "7",
+      "Burst": "2",
+      "Target": "TAG, HI, REM, VH, Hacker",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "DA Ammo, Non-Lethal, State: Immobilized-B.",
+      "rules": [
+        "Double Action (DA) Ammunition",
+        "Hacker",
+        "Immobilized-B State",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Controlled Jump",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "--",
+      "Target": "--",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "+3/-3 MOD to the PH of every Trooper that performs Combat Jump.",
+      "rules": [
+        "Combat Jump"
+      ]
+    },
+    {
+      "name": "Cybermask",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "--",
+      "Target": "--",
+      "Skill Type": "Long Skill",
+      "Special": "Replace user with IMP-2 Marker.",
+      "rules": [
+        "Impersonation State"
+      ]
+    },
+    {
+      "name": "Enhanced Reaction",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "--",
+      "Target": "REM",
+      "Skill Type": "Long Skill",
+      "Special": "Target gains B2 in ARO.",
+      "rules": []
+    },
+    {
+      "name": "Fairy Dust",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "--",
+      "Target": "TAG, REM, HI, VH",
+      "Skill Type": "Long Skill",
+      "Special": "The targets gain Firewall MODs.",
+      "rules": [
+        "Firewall"
+      ]
+    },
+    {
+      "name": "Oblivion",
+      "Attack MOD": "0",
+      "Opp. MOD": "0",
+      "PS": "4",
+      "Burst": "2",
+      "Target": "TAG, HI, REM, VH, Hacker",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "AP Ammo, Non-Lethal, State: Isolated.",
+      "rules": [
+        "Armor Piercing (AP) Ammunition",
+        "Hacker",
+        "Isolated State",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Spotlight",
+      "Attack MOD": "0",
+      "Opp. MOD": "0",
+      "PS": "5",
+      "Burst": "2",
+      "Target": "--",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "AP Ammo, Non-Lethal, State: Targeted.",
+      "rules": [
+        "Armor Piercing (AP) Ammunition",
+        "Non-Lethal",
+        "State",
+        "Targeted State"
+      ]
+    },
+    {
+      "name": "Total Control",
+      "Attack MOD": "0",
+      "Opp. MOD": "0",
+      "PS": "4",
+      "Burst": "1",
+      "Target": "TAG",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "DA Ammo, Non-Lethal, State: POS/Normal.",
+      "rules": [
+        "Double Action (DA) Ammunition",
+        "Non-Lethal",
+        "Normal State",
+        "Possessed State",
+        "State"
+      ]
+    },
+    {
+      "name": "Trinity",
+      "Attack MOD": "+3",
+      "Opp. MOD": "0",
+      "PS": "6",
+      "Burst": "3",
+      "Target": "Hacker",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "Target receives 1 Wound for each failed Saving Roll.",
+      "rules": [
+        "Hacker"
+      ]
+    },
+    {
+      "name": "White Noise",
+      "Attack MOD": "--",
+      "Opp. MOD": "--",
+      "PS": "--",
+      "Burst": "1",
+      "Target": "--",
+      "Skill Type": "Short Skill",
+      "Special": "NFB, Reflective, Circular Template.",
+      "rules": [
+        "Negative Feedback (NFB)",
+        "Reflective"
+      ]
+    },
+    {
+      "name": "Zero Pain",
+      "Attack MOD": "0",
+      "Opp. MOD": "-3",
+      "PS": "--",
+      "Burst": "2",
+      "Target": "--",
+      "Skill Type": "Short Skill / ARO",
+      "Special": "Nullifies Comms Attack. B2 in ARO, Non-Lethal.",
+      "rules": [
+        "Comms Attack",
+        "Non-Lethal"
+      ]
+    }
+  ],
+  "hacking_devices": [
+    {
+      "name": "Hacking Device",
+      "programs": [
+        "Carbonite",
+        "Spotlight",
+        "Total Control",
+        "Oblivion"
+      ]
+    },
+    {
+      "name": "Hacking Device Plus",
+      "programs": [
+        "Carbonite",
+        "Spotlight",
+        "Total Control",
+        "Oblivion",
+        "White Noise",
+        "Cybermask"
+      ]
+    },
+    {
+      "name": "Killer Hacking Device",
+      "programs": [
+        "Trinity",
+        "Cybermask"
+      ]
+    },
+    {
+      "name": "EVO Hacking Device",
+      "programs": [
+        "Assisted Fire",
+        "Enhanced Reaction",
+        "Fairy Dust",
+        "Controlled Jump"
+      ]
+    }
+  ],
+  "martial_arts": [
+    {
+      "Level": "1",
+      "Attack MOD": "0",
+      "Opponent MOD": "-3",
+      "Burst MOD": "0"
+    },
+    {
+      "Level": "2",
+      "Attack MOD": "+3",
+      "Opponent MOD": "-3",
+      "Burst MOD": "0"
+    },
+    {
+      "Level": "3",
+      "Attack MOD": "+3",
+      "Opponent MOD": "-3",
+      "Burst MOD": "+1 SD"
+    },
+    {
+      "Level": "4",
+      "Attack MOD": "+3",
+      "Opponent MOD": "-3",
+      "Burst MOD": "+1B"
+    },
+    {
+      "Level": "5",
+      "Attack MOD": "+3",
+      "Opponent MOD": "-3",
+      "Burst MOD": "+1B, +1 SD"
     }
   ],
   "rules": [
@@ -4783,6 +5138,14 @@
       "page": "Warhorse"
     },
     {
+      "name": "Bioimmunity",
+      "family": "Special Skill",
+      "type": null,
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Bioimmunity",
+      "page": "Bioimmunity"
+    },
+    {
       "name": "360° Visor",
       "family": "Equipment",
       "type": "Automatic Equipment",
@@ -5199,12 +5562,76 @@
       "page": "WildParrot"
     },
     {
+      "name": "Camouflaged State",
+      "family": "State",
+      "type": null,
+      "labels": "Marker",
+      "url": "https://infinitythewiki.com/Camouflaged_State",
+      "page": "Camouflaged State"
+    },
+    {
       "name": "Dead State",
       "family": "State",
       "type": null,
       "labels": "Null",
       "url": "https://infinitythewiki.com/Dead_State",
-      "page": "Dead"
+      "page": "Dead State"
+    },
+    {
+      "name": "Decoy State",
+      "family": "State",
+      "type": null,
+      "labels": "Marker",
+      "url": "https://infinitythewiki.com/Decoy_State",
+      "page": "Decoy State"
+    },
+    {
+      "name": "Disconnected State",
+      "family": "State",
+      "type": null,
+      "labels": "Null",
+      "url": "https://infinitythewiki.com/Disconnected_State",
+      "page": "Disconnected State"
+    },
+    {
+      "name": "Engaged State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Engaged_State",
+      "page": "Engaged State"
+    },
+    {
+      "name": "Foxhole State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Foxhole_State",
+      "page": "Foxhole State"
+    },
+    {
+      "name": "Hidden Deployment State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Hidden_Deployment_State",
+      "page": "Hidden Deployment State"
+    },
+    {
+      "name": "Holoecho State",
+      "family": "State",
+      "type": null,
+      "labels": "Marker",
+      "url": "https://infinitythewiki.com/Holoecho_State",
+      "page": "Holoecho State"
+    },
+    {
+      "name": "HoloMask State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/HoloMask_State",
+      "page": "HoloMask State"
     },
     {
       "name": "Immobilized-A State",
@@ -5212,15 +5639,7 @@
       "type": null,
       "labels": null,
       "url": "https://infinitythewiki.com/Immobilized-A_State",
-      "page": "Immobilized-A"
-    },
-    {
-      "name": "Stunned State",
-      "family": "State",
-      "type": null,
-      "labels": null,
-      "url": "https://infinitythewiki.com/Stunned_State",
-      "page": "Stunned"
+      "page": "Immobilized-A State"
     },
     {
       "name": "Immobilized-B State",
@@ -5228,7 +5647,15 @@
       "type": null,
       "labels": null,
       "url": "https://infinitythewiki.com/Immobilized-B_State",
-      "page": "Immobilized-B"
+      "page": "Immobilized-B State"
+    },
+    {
+      "name": "Impersonation State",
+      "family": "State",
+      "type": null,
+      "labels": "Marker",
+      "url": "https://infinitythewiki.com/Impersonation_State",
+      "page": "Impersonation State"
     },
     {
       "name": "Isolated State",
@@ -5236,15 +5663,39 @@
       "type": null,
       "labels": null,
       "url": "https://infinitythewiki.com/Isolated_State",
-      "page": "Isolated"
+      "page": "Isolated State"
     },
     {
-      "name": "Targeted State",
+      "name": "Normal State",
       "family": "State",
       "type": null,
       "labels": null,
-      "url": "https://infinitythewiki.com/Targeted_State",
-      "page": "Targeted"
+      "url": "https://infinitythewiki.com/Normal_State",
+      "page": "Normal State"
+    },
+    {
+      "name": "Prone State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Prone_State",
+      "page": "Prone State"
+    },
+    {
+      "name": "Possessed State",
+      "family": "State",
+      "type": null,
+      "labels": "Null",
+      "url": "https://infinitythewiki.com/Possessed_State",
+      "page": "Possessed State"
+    },
+    {
+      "name": "Retreat! State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Retreat_State",
+      "page": "Retreat State"
     },
     {
       "name": "Sepsitorized State",
@@ -5252,7 +5703,178 @@
       "type": null,
       "labels": "Null",
       "url": "https://infinitythewiki.com/Sepsitorized_State",
-      "page": "Sepsitorized"
+      "page": "Sepsitorized State"
+    },
+    {
+      "name": "Stunned State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Stunned_State",
+      "page": "Stunned State"
+    },
+    {
+      "name": "Suppressive Fire State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Suppressive_Fire_State",
+      "page": "Suppressive Fire State"
+    },
+    {
+      "name": "Targeted State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Targeted_State",
+      "page": "Targeted State"
+    },
+    {
+      "name": "Unconscious State",
+      "family": "State",
+      "type": null,
+      "labels": "Null",
+      "url": "https://infinitythewiki.com/Unconscious_State",
+      "page": "Unconscious State"
+    },
+    {
+      "name": "Unloaded State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Unloaded_State",
+      "page": "Unloaded State"
+    },
+    {
+      "name": "Hacking Area",
+      "family": "Hacking",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Hacking_Area",
+      "page": "Hacking Area"
+    },
+    {
+      "name": "Assisted Fire",
+      "family": "Supportware",
+      "type": "Long Skill",
+      "labels": "Supportware, No Roll",
+      "url": "https://infinitythewiki.com/Assisted_Fire",
+      "page": "Assisted Fire"
+    },
+    {
+      "name": "Carbonite",
+      "family": "Hacking Program",
+      "type": "Short Skill / ARO",
+      "labels": "Comms Attack, Non-Lethal",
+      "url": "https://infinitythewiki.com/Carbonite",
+      "page": "Carbonite"
+    },
+    {
+      "name": "Controlled Jump",
+      "family": "Supportware",
+      "type": "Short Skill / ARO",
+      "labels": "Supportware, No Roll",
+      "url": "https://infinitythewiki.com/Controlled_Jump",
+      "page": "Controlled Jump"
+    },
+    {
+      "name": "Cybermask",
+      "family": "Hacking Program",
+      "type": "Long Skill",
+      "labels": "NFB, No Roll",
+      "url": "https://infinitythewiki.com/Cybermask",
+      "page": "Cybermask"
+    },
+    {
+      "name": "Enhanced Reaction",
+      "family": "Supportware",
+      "type": "Long Skill",
+      "labels": "Supportware, No Roll",
+      "url": "https://infinitythewiki.com/Enhanced_Reaction",
+      "page": "Enhanced Reaction"
+    },
+    {
+      "name": "Fairy Dust",
+      "family": "Supportware",
+      "type": "Long Skill",
+      "labels": "Supportware, No Roll",
+      "url": "https://infinitythewiki.com/Fairy_Dust",
+      "page": "Fairy Dust"
+    },
+    {
+      "name": "Oblivion",
+      "family": "Hacking Program",
+      "type": "Short Skill / ARO",
+      "labels": "Comms Attack, Non-Lethal",
+      "url": "https://infinitythewiki.com/Oblivion",
+      "page": "Oblivion"
+    },
+    {
+      "name": "Spotlight",
+      "family": "Hacking Program",
+      "type": "Short Skill / ARO",
+      "labels": "Comms Attack, Non-Lethal",
+      "url": "https://infinitythewiki.com/Spotlight",
+      "page": "Spotlight"
+    },
+    {
+      "name": "Total Control",
+      "family": "Hacking Program",
+      "type": "Short Skill / ARO",
+      "labels": "Comms Attack, Non-Lethal",
+      "url": "https://infinitythewiki.com/Total_Control",
+      "page": "Total Control"
+    },
+    {
+      "name": "Trinity",
+      "family": "Hacking Program",
+      "type": "Short Skills / ARO",
+      "labels": "Comms Attack",
+      "url": "https://infinitythewiki.com/Trinity",
+      "page": "Trinity"
+    },
+    {
+      "name": "White Noise",
+      "family": "Hacking Program",
+      "type": "Short Skill",
+      "labels": "NFB",
+      "url": "https://infinitythewiki.com/White_Noise",
+      "page": "White Noise"
+    },
+    {
+      "name": "Zero Pain",
+      "family": "Hacking Program",
+      "type": "Short Skill / ARO",
+      "labels": "Comms Attack, Non-Lethal",
+      "url": "https://infinitythewiki.com/Zero_Pain",
+      "page": "Zero Pain"
+    },
+    {
+      "name": "Hacking Device Plus",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment",
+      "url": "https://infinitythewiki.com/Hacking_Device#Hacking_Device_Plus",
+      "page": "Hacking Device",
+      "section": "Hacking Device Plus"
+    },
+    {
+      "name": "Killer Hacking Device",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment",
+      "url": "https://infinitythewiki.com/Hacking_Device#Killer_Hacking_Device",
+      "page": "Hacking Device",
+      "section": "Killer Hacking Device"
+    },
+    {
+      "name": "EVO Hacking Device",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment",
+      "url": "https://infinitythewiki.com/Hacking_Device#EVO_Hacking_Device",
+      "page": "Hacking Device",
+      "section": "EVO Hacking Device"
     },
     {
       "name": "Anti-materiel",
@@ -5484,6 +6106,719 @@
       "type": null,
       "labels": null,
       "url": "https://infinitythewiki.com/Traits#Zone_of_Control_.28ZoC.29"
+    },
+    {
+      "name": "Airborne Deployment (AD)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Airborne_Deployment_.28AD.29"
+    },
+    {
+      "name": "Assignable (Transmutation)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Assignable_.28Transmutation.29"
+    },
+    {
+      "name": "Attack",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Attack"
+    },
+    {
+      "name": "BS Attack (Label)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#BS_Attack"
+    },
+    {
+      "name": "CC Attack (Label)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#CC_Attack"
+    },
+    {
+      "name": "CC Special Skill",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#CC_Special_Skill"
+    },
+    {
+      "name": "Comms Attack",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Comms_Attack"
+    },
+    {
+      "name": "Comms Equipment",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Comms_Equipment"
+    },
+    {
+      "name": "Hackable",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Hackable"
+    },
+    {
+      "name": "Hostile",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Hostile"
+    },
+    {
+      "name": "Marker",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Marker"
+    },
+    {
+      "name": "Movement",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Movement"
+    },
+    {
+      "name": "Negative Feedback (NFB)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Negative_Feedback_.28NFB.29"
+    },
+    {
+      "name": "No LoF",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#No_LoF"
+    },
+    {
+      "name": "Non-Reloadable (Label)",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Non-Reloadable"
+    },
+    {
+      "name": "No Roll",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#No_Roll"
+    },
+    {
+      "name": "Null",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Null"
+    },
+    {
+      "name": "Obligatory",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Obligatory"
+    },
+    {
+      "name": "Optional",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Optional"
+    },
+    {
+      "name": "Private Information",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Private_Information"
+    },
+    {
+      "name": "States Phase",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#States_Phase"
+    },
+    {
+      "name": "Superior Deployment",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Superior_Deployment"
+    },
+    {
+      "name": "Supportware",
+      "family": "Label",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Labels#Supportware"
+    }
+  ],
+  "index": [
+    {
+      "chapter": "Introduction",
+      "url": "https://infinitythewiki.com/Introduction",
+      "pages": []
+    },
+    {
+      "chapter": "Basic Rules",
+      "url": "https://infinitythewiki.com/Basic_Rules",
+      "pages": [
+        {
+          "title": "Open and Private Information",
+          "url": "https://infinitythewiki.com/Open_and_Private_Information"
+        },
+        {
+          "title": "Unit Profile",
+          "url": "https://infinitythewiki.com/Unit_Profile"
+        },
+        {
+          "title": "Army List",
+          "url": "https://infinitythewiki.com/Army_List"
+        },
+        {
+          "title": "Orders and the Order Pool",
+          "url": "https://infinitythewiki.com/Orders_and_the_Order_Pool"
+        },
+        {
+          "title": "Trooper Activation",
+          "url": "https://infinitythewiki.com/Trooper_Activation"
+        },
+        {
+          "title": "ARO: Automatic Reaction Order",
+          "url": "https://infinitythewiki.com/ARO:_Automatic_Reaction_Order"
+        },
+        {
+          "title": "Order Expenditure Sequence",
+          "url": "https://infinitythewiki.com/Order_Expenditure_Sequence"
+        },
+        {
+          "title": "Initiative and Deployment",
+          "url": "https://infinitythewiki.com/Initiative_and_Deployment"
+        },
+        {
+          "title": "Game Sequence",
+          "url": "https://infinitythewiki.com/Game_Sequence"
+        },
+        {
+          "title": "Loss of Lieutenant",
+          "url": "https://infinitythewiki.com/Loss_of_Lieutenant"
+        },
+        {
+          "title": "Silhouettes",
+          "url": "https://infinitythewiki.com/Silhouettes"
+        },
+        {
+          "title": "Line of Fire",
+          "url": "https://infinitythewiki.com/Line_of_Fire"
+        },
+        {
+          "title": "Zone of Control",
+          "url": "https://infinitythewiki.com/Zone_of_Control"
+        },
+        {
+          "title": "Zones, Bases and Silhouettes",
+          "url": "https://infinitythewiki.com/Zones,_Bases_and_Silhouettes"
+        },
+        {
+          "title": "Coherency",
+          "url": "https://infinitythewiki.com/Coherency"
+        },
+        {
+          "title": "Distances and Measurements",
+          "url": "https://infinitythewiki.com/Distances_and_Measurements"
+        },
+        {
+          "title": "Replacing Game Elements",
+          "url": "https://infinitythewiki.com/Replacing_Game_Elements"
+        },
+        {
+          "title": "Rolls",
+          "url": "https://infinitythewiki.com/Rolls"
+        },
+        {
+          "title": "Face to Face Rolls",
+          "url": "https://infinitythewiki.com/Face_to_Face_Rolls"
+        }
+      ]
+    },
+    {
+      "chapter": "Movement Module",
+      "url": "https://infinitythewiki.com/Movement_Module",
+      "pages": [
+        {
+          "title": "Moving and Measuring",
+          "url": "https://infinitythewiki.com/Moving_and_Measuring"
+        },
+        {
+          "title": "Move",
+          "url": "https://infinitythewiki.com/Move"
+        },
+        {
+          "title": "General Movement Rules",
+          "url": "https://infinitythewiki.com/General_Movement_Rules"
+        },
+        {
+          "title": "Cautious Movement",
+          "url": "https://infinitythewiki.com/Cautious_Movement"
+        },
+        {
+          "title": "Climb",
+          "url": "https://infinitythewiki.com/Climb"
+        },
+        {
+          "title": "Jump",
+          "url": "https://infinitythewiki.com/Jump"
+        }
+      ]
+    },
+    {
+      "chapter": "Combat Module",
+      "url": "https://infinitythewiki.com/Combat_Module",
+      "pages": [
+        {
+          "title": "Possibility of Survival (PS)",
+          "url": "https://infinitythewiki.com/Possibility_of_Survival_(PS)"
+        },
+        {
+          "title": "Saving Roll (SR)",
+          "url": "https://infinitythewiki.com/Saving_Roll_(SR)"
+        },
+        {
+          "title": "Wounds",
+          "url": "https://infinitythewiki.com/Wounds"
+        },
+        {
+          "title": "Guts Roll",
+          "url": "https://infinitythewiki.com/Guts_Roll"
+        },
+        {
+          "title": "Ballistic Skills",
+          "url": "https://infinitythewiki.com/Ballistic_Skills"
+        },
+        {
+          "title": "BS Attack",
+          "url": "https://infinitythewiki.com/BS_Attack"
+        },
+        {
+          "title": "Template Weapons and Equipment",
+          "url": "https://infinitythewiki.com/Template_Weapons_and_Equipment"
+        },
+        {
+          "title": "Direct Template Weapons",
+          "url": "https://infinitythewiki.com/Direct_Template_Weapons"
+        },
+        {
+          "title": "Impact Template Weapons",
+          "url": "https://infinitythewiki.com/Impact_Template_Weapons"
+        },
+        {
+          "title": "Ranged Weapon Profile",
+          "url": "https://infinitythewiki.com/Ranged_Weapon_Profile"
+        },
+        {
+          "title": "Intuitive Attack",
+          "url": "https://infinitythewiki.com/Intuitive_Attack"
+        },
+        {
+          "title": "Speculative Attack",
+          "url": "https://infinitythewiki.com/Speculative_Attack"
+        },
+        {
+          "title": "Close Combat",
+          "url": "https://infinitythewiki.com/Close_Combat"
+        },
+        {
+          "title": "CC Attack",
+          "url": "https://infinitythewiki.com/CC_Attack"
+        },
+        {
+          "title": "Melee Weapon Profile",
+          "url": "https://infinitythewiki.com/Melee_Weapon_Profile"
+        },
+        {
+          "title": "Quantronic Combat (Hacking)",
+          "url": "https://infinitythewiki.com/Quantronic_Combat_(Hacking)"
+        }
+      ]
+    },
+    {
+      "chapter": "Ammunition and Weaponry",
+      "url": "https://infinitythewiki.com/Ammunition_and_Weaponry",
+      "pages": [
+        {
+          "title": "Ammunition",
+          "url": "https://infinitythewiki.com/Ammunition"
+        },
+        {
+          "title": "Normal (N) Ammunition",
+          "url": "https://infinitythewiki.com/Normal_(N)_Ammunition"
+        },
+        {
+          "title": "Armor Piercing (AP) Ammunition",
+          "url": "https://infinitythewiki.com/Armor_Piercing_(AP)_Ammunition"
+        },
+        {
+          "title": "Double Action (DA) Ammunition",
+          "url": "https://infinitythewiki.com/Double_Action_(DA)_Ammunition"
+        },
+        {
+          "title": "Eclipse Ammunition",
+          "url": "https://infinitythewiki.com/Eclipse_Ammunition"
+        },
+        {
+          "title": "Electromagnetic (E/M) Ammunition",
+          "url": "https://infinitythewiki.com/Electromagnetic_(E/M)_Ammunition"
+        },
+        {
+          "title": "Explosive (EXP) Ammunition",
+          "url": "https://infinitythewiki.com/Explosive_(EXP)_Ammunition"
+        },
+        {
+          "title": "Paralysis (PARA) Ammunition",
+          "url": "https://infinitythewiki.com/Paralysis_(PARA)_Ammunition"
+        },
+        {
+          "title": "Shock Ammunition",
+          "url": "https://infinitythewiki.com/Shock_Ammunition"
+        },
+        {
+          "title": "Smoke Ammunition",
+          "url": "https://infinitythewiki.com/Smoke_Ammunition"
+        },
+        {
+          "title": "Stun Ammunition",
+          "url": "https://infinitythewiki.com/Stun_Ammunition"
+        },
+        {
+          "title": "T2 Ammunition",
+          "url": "https://infinitythewiki.com/T2_Ammunition"
+        },
+        {
+          "title": "Combined Ammunition",
+          "url": "https://infinitythewiki.com/Combined_Ammunition"
+        },
+        {
+          "title": "Combined Saving Roll",
+          "url": "https://infinitythewiki.com/Combined_Saving_Roll"
+        },
+        {
+          "title": "Ammunition Summary Chart",
+          "url": "https://infinitythewiki.com/Ammunition_Summary_Chart"
+        },
+        {
+          "title": "Weaponry",
+          "url": "https://infinitythewiki.com/Weaponry"
+        },
+        {
+          "title": "Mixed Weapons",
+          "url": "https://infinitythewiki.com/Mixed_Weapons"
+        },
+        {
+          "title": "Armed Turret",
+          "url": "https://infinitythewiki.com/Armed_Turret"
+        },
+        {
+          "title": "Chest Mines",
+          "url": "https://infinitythewiki.com/Chest_Mines"
+        },
+        {
+          "title": "D-Charges",
+          "url": "https://infinitythewiki.com/D-Charges"
+        },
+        {
+          "title": "Disco Baller",
+          "url": "https://infinitythewiki.com/Disco_Baller"
+        },
+        {
+          "title": "Drop Bears",
+          "url": "https://infinitythewiki.com/Drop_Bears"
+        },
+        {
+          "title": "Mine Dispenser",
+          "url": "https://infinitythewiki.com/Mine_Dispenser"
+        },
+        {
+          "title": "Mines",
+          "url": "https://infinitythewiki.com/Mines"
+        },
+        {
+          "title": "Perimeter Weapons",
+          "url": "https://infinitythewiki.com/Perimeter_Weapons"
+        },
+        {
+          "title": "Pitcher",
+          "url": "https://infinitythewiki.com/Pitcher"
+        },
+        {
+          "title": "Sepsitor",
+          "url": "https://infinitythewiki.com/Sepsitor"
+        },
+        {
+          "title": "SymbioBomb",
+          "url": "https://infinitythewiki.com/SymbioBomb"
+        },
+        {
+          "title": "WildParrot",
+          "url": "https://infinitythewiki.com/WildParrot"
+        },
+        {
+          "title": "Weapon Chart",
+          "url": "https://infinitythewiki.com/Weapon_Chart"
+        },
+        {
+          "title": "Alternative Weapon Chart",
+          "url": "https://infinitythewiki.com/Alternative_Weapon_Chart"
+        }
+      ]
+    },
+    {
+      "chapter": "Skills and Equipment Module",
+      "url": "https://infinitythewiki.com/Skills_and_Equipment_Module",
+      "pages": [
+        {
+          "title": "Common Skills",
+          "url": "https://infinitythewiki.com/Common_Skills"
+        },
+        {
+          "title": "Special Skills",
+          "url": "https://infinitythewiki.com/Special_Skills"
+        },
+        {
+          "title": "Equipment",
+          "url": "https://infinitythewiki.com/Equipment"
+        }
+      ]
+    },
+    {
+      "chapter": "Command Module",
+      "url": "https://infinitythewiki.com/Command_Module",
+      "pages": [
+        {
+          "title": "Command Tokens",
+          "url": "https://infinitythewiki.com/Command_Tokens"
+        },
+        {
+          "title": "Coordinated Orders",
+          "url": "https://infinitythewiki.com/Coordinated_Orders"
+        }
+      ]
+    },
+    {
+      "chapter": "Fireteams Module",
+      "url": "https://infinitythewiki.com/Fireteams_Module",
+      "pages": [
+        {
+          "title": "Fireteams: Basic Rules",
+          "url": "https://infinitythewiki.com/Fireteams:_Basic_Rules"
+        },
+        {
+          "title": "Fireteams Chart",
+          "url": "https://infinitythewiki.com/Fireteams_Chart"
+        },
+        {
+          "title": "Fireteam Integrity",
+          "url": "https://infinitythewiki.com/Fireteam_Integrity"
+        },
+        {
+          "title": "Fireteams in the Active Turn",
+          "url": "https://infinitythewiki.com/Fireteams_in_the_Active_Turn"
+        },
+        {
+          "title": "Fireteams in the Reactive Turn",
+          "url": "https://infinitythewiki.com/Fireteams_in_the_Reactive_Turn"
+        },
+        {
+          "title": "Fireteam Bonuses",
+          "url": "https://infinitythewiki.com/Fireteam_Bonuses"
+        },
+        {
+          "title": "Fireteam Examples",
+          "url": "https://infinitythewiki.com/Fireteam_Examples"
+        }
+      ]
+    },
+    {
+      "chapter": "Terrain and Scenery Structures",
+      "url": "https://infinitythewiki.com/Terrain_and_Scenery_Structures",
+      "pages": [
+        {
+          "title": "Types of Terrain",
+          "url": "https://infinitythewiki.com/Types_of_Terrain"
+        },
+        {
+          "title": "Difficult Terrain",
+          "url": "https://infinitythewiki.com/Difficult_Terrain"
+        },
+        {
+          "title": "Saturation",
+          "url": "https://infinitythewiki.com/Saturation"
+        },
+        {
+          "title": "Visibility Conditions",
+          "url": "https://infinitythewiki.com/Visibility_Conditions"
+        },
+        {
+          "title": "Scenery Structures",
+          "url": "https://infinitythewiki.com/Scenery_Structures"
+        }
+      ]
+    },
+    {
+      "chapter": "Triumph and Defeat Module",
+      "url": "https://infinitythewiki.com/Triumph_and_Defeat_Module",
+      "pages": [
+        {
+          "title": "Retreat Situation",
+          "url": "https://infinitythewiki.com/Retreat_Situation"
+        },
+        {
+          "title": "Retreat State",
+          "url": "https://infinitythewiki.com/Retreat_State"
+        }
+      ]
+    },
+    {
+      "chapter": "Setting up the Gaming Table",
+      "url": "https://infinitythewiki.com/Setting_up_the_Gaming_Table",
+      "pages": []
+    },
+    {
+      "chapter": "Scenarios",
+      "url": "https://infinitythewiki.com/Scenarios",
+      "pages": [
+        {
+          "title": "Annihilation",
+          "url": "https://infinitythewiki.com/Annihilation"
+        },
+        {
+          "title": "Domination",
+          "url": "https://infinitythewiki.com/Domination"
+        },
+        {
+          "title": "Supplies",
+          "url": "https://infinitythewiki.com/Supplies"
+        },
+        {
+          "title": "Firefight",
+          "url": "https://infinitythewiki.com/Firefight"
+        }
+      ]
+    },
+    {
+      "chapter": "Game States and Glossary",
+      "url": "https://infinitythewiki.com/Game_States_and_Glossary",
+      "pages": [
+        {
+          "title": "States",
+          "url": "https://infinitythewiki.com/States"
+        },
+        {
+          "title": "Terminology",
+          "url": "https://infinitythewiki.com/Terminology"
+        },
+        {
+          "title": "Alignment",
+          "url": "https://infinitythewiki.com/Alignment"
+        },
+        {
+          "title": "Labels",
+          "url": "https://infinitythewiki.com/Labels"
+        },
+        {
+          "title": "Traits",
+          "url": "https://infinitythewiki.com/Traits"
+        }
+      ]
+    },
+    {
+      "chapter": "Quick Reference Charts",
+      "url": "https://infinitythewiki.com/Quick_Reference_Charts",
+      "pages": [
+        {
+          "title": "Weapon Chart",
+          "url": "https://infinitythewiki.com/Weapon_Chart"
+        },
+        {
+          "title": "Alternative Weapon Chart",
+          "url": "https://infinitythewiki.com/Alternative_Weapon_Chart"
+        },
+        {
+          "title": "Ammunition Summary Chart",
+          "url": "https://infinitythewiki.com/Ammunition_Summary_Chart"
+        },
+        {
+          "title": "Booty Chart",
+          "url": "https://infinitythewiki.com/Booty"
+        },
+        {
+          "title": "Fireteam Bonuses Chart",
+          "url": "https://infinitythewiki.com/Fireteam_Bonuses"
+        },
+        {
+          "title": "Hacking Programs Chart",
+          "url": "https://infinitythewiki.com/Hacking_Programs_Chart"
+        },
+        {
+          "title": "Martial Arts Chart",
+          "url": "https://infinitythewiki.com/Martial_Arts"
+        },
+        {
+          "title": "MetaChemistry Chart",
+          "url": "https://infinitythewiki.com/MetaChemistry"
+        },
+        {
+          "title": "Orders and AROs Reference Chart",
+          "url": "https://infinitythewiki.com/Orders_and_AROs_Reference_Chart"
+        },
+        {
+          "title": "Restrictions Chart",
+          "url": "https://infinitythewiki.com/Restrictions_Chart"
+        },
+        {
+          "title": "Retreat! and Loss of Lieutenant Summary Chart",
+          "url": "https://infinitythewiki.com/Retreat%21_and_Loss_of_Lieutenant_Summary_Chart"
+        },
+        {
+          "title": "Translation Charts",
+          "url": "https://infinitythewiki.com/Translation_Charts"
+        }
+      ]
+    },
+    {
+      "chapter": "Infinity Reinforcements",
+      "url": "https://infinitythewiki.com/Infinity_Reinforcements",
+      "pages": []
+    },
+    {
+      "chapter": "ITS FAQ",
+      "url": "https://infinitythewiki.com/ITS_FAQ",
+      "pages": []
+    }
+  ],
+  "other_pages": [
+    {
+      "title": "Immobilized",
+      "url": "https://infinitythewiki.com/Immobilized"
+    },
+    {
+      "title": "Immobilized State",
+      "url": "https://infinitythewiki.com/Immobilized_State"
     }
   ],
   "missing_pages": []

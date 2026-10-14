@@ -1,10 +1,19 @@
-"""Pull N5 weapons, skills, equipment, ammunition, weapon traits and states
-from the Infinity wiki (infinitythewiki.com) into wiki/n5_data.json.
+"""Pull the N5 armory from the Infinity wiki (infinitythewiki.com) into
+wiki/n5_data.json:
 
-What is extracted is game data and labels, never rules prose: weapon stat
-lines, each rule's name and type ("Automatic Skill", "Short Skill / ARO"),
-its label line ("Movement, Optional"), and the URL of the full rule. The
-rules text itself stays on the wiki (it is Corvus Belli's); the catalogue
+- every weapon on the Weapon Chart, plus the deployables' stat lines;
+- every common skill, special skill, piece of equipment, hacking program,
+  supportware program, ammunition type, special weapon, weapon trait, label
+  and game state, with its type, label line and a link to the full rule;
+- the Hacking Device table, the Hacking Programs Chart and the Martial Arts
+  levels;
+- an index of every page of the wiki's rules, chapter by chapter.
+
+Rule lists come from both the wiki's navigation menus and its categories,
+since each misses a few pages the other has.
+
+What is extracted is game data, names and labels, never rules prose. The
+rules text stays on the wiki (it is Corvus Belli's), and the catalogue
 links to it.
 
     python wiki_import.py            # use cached pages where present
@@ -30,27 +39,37 @@ API = "https://infinitythewiki.com/api.php"
 SITE = "https://infinitythewiki.com/"
 USER_AGENT = "DogsOfWar-NewRecruit-import/0.1 (fan project; non-commercial)"
 
-# Navigation templates that list each rule family.
+# Each rule family's navigation menu and wiki category.
 INDEXES = {
-    "Common Skill": "Template:N5-section-common-skills",
-    "Special Skill": "Template:N5-section-special-skills",
-    "Equipment": "Template:N5-section-equipment",
-    "Ammunition": "Template:N5-section-ammo-and-weaponry",
+    "Common Skill": ("Template:N5-section-common-skills", "Common Skills"),
+    "Special Skill": ("Template:N5-section-special-skills", "Special Skills"),
+    "Equipment": ("Template:N5-section-equipment", "Equipment"),
+    "Ammunition": ("Template:N5-section-ammo-and-weaponry", "Ammunition and Weaponry"),
+    "State": ("Template:N5-section-game-states", "Game States"),
 }
-TRAITS_PAGE = "Traits"
-# Links in those templates that are chapter headers or charts, not rules.
+# Single rules outside those lists, and the family each belongs to.
+EXTRA_RULES = {"Hacking Area": "Hacking"}
+TRAITS_PAGE, LABELS_PAGE = "Traits", "Labels"
+PROGRAMS_PAGE, DEVICES_PAGE, BASE_DEVICE = "Hacking Programs Chart", "Hacking Device", "Hacking Device"
+MARTIAL_ARTS_PAGE, WEAPON_CHART = "Martial Arts", "Weapon Chart"
+SUPPORTWARE = "Supportware"            # category of the support hacking programs
+MAIN_SECTIONS = "Template:Section-main-sections"
+# Links in the menus that are chapters, overviews or charts, not rules.
 NOT_RULES = {
     "Common Skills", "Special Skills", "Equipment", "Ammunition and Weaponry",
     "Ammunition", "Weaponry", "Weapon Chart", "Alternative Weapon Chart",
-    "Ammunition Summary Chart",
+    "Ammunition Summary Chart", "Game States and Glossary", "States", "Terminology",
+    "Alignment", "Labels", "Traits",
 }
-# Pages a link can redirect into that are glossaries, not rules of their own.
-NOT_RULE_PAGES = {"Labels", "Skills and Equipment Module"}
+# Pages a link can redirect into that are chapters, not rules of their own.
+NOT_RULE_PAGES = {"Skills and Equipment Module"}
 # Dogs of War shares Infinity's skills, equipment and weapons but never names
-# a faction or unit, so skills named after a faction are left out.
-EXCLUDE_RULES = {"Exrah", "Shasvastii"}
-# In the ammo-and-weaponry template, these links are special weapons with
-# their own rules pages rather than ammunition types.
+# a faction or unit, so skills named after a faction are left out. Tri-Core
+# is still in the wiki's Special Skills category, but its page says it's an
+# N4 rule that no longer exists in N5.
+EXCLUDE_RULES = {"Exrah", "Shasvastii", "Tri-Core"}
+# In the ammo-and-weaponry lists, these are special weapons with their own
+# rules pages rather than ammunition types.
 SPECIAL_WEAPONRY = {
     "Mixed Weapons", "Armed Turret", "Chest Mines", "D-Charges", "Disco Baller",
     "Drop Bears", "Mine Dispenser", "Mines", "Perimeter Weapons", "Pitcher",
@@ -79,7 +98,7 @@ def fetch_pages(titles: list[str], refresh: bool) -> dict[str, dict | None]:
     redirects; "fragment" is the section a redirect points into, if any.
     A missing page maps to None."""
     result, todo = {}, []
-    for t in titles:
+    for t in dict.fromkeys(titles):
         p = cache_path(t)
         if p.exists() and not refresh:
             result[t] = json.loads(p.read_text(encoding="utf-8"))
@@ -114,6 +133,29 @@ def fetch_pages(titles: list[str], refresh: bool) -> dict[str, dict | None]:
     return result
 
 
+def listing(name: str, params: dict, key: str, refresh: bool) -> list[str]:
+    """Page titles from a paged API list (category members, all pages),
+    cached like pages."""
+    path = cache_path("_list_" + name)
+    if path.exists() and not refresh:
+        return json.loads(path.read_text(encoding="utf-8"))
+    titles, cont = [], {}
+    while True:
+        d = api({"action": "query", **params, **cont})
+        titles += [p["title"] for p in d["query"][key]]
+        if "continue" not in d:
+            break
+        cont = d["continue"]
+        time.sleep(1)
+    path.write_text(json.dumps(titles, ensure_ascii=False), encoding="utf-8")
+    return titles
+
+
+def category(name: str, refresh: bool) -> list[str]:
+    return listing("cat_" + name, {"list": "categorymembers", "cmtitle": "Category:" + name,
+                                   "cmnamespace": "0", "cmlimit": "500"}, "categorymembers", refresh)
+
+
 # --- wikitext helpers -------------------------------------------------------
 
 LINK = re.compile(r"\[\[\s*([^\]|]+?)\s*(?:\|\s*([^\]]*?)\s*)?\]\]")
@@ -125,6 +167,7 @@ def current_text(text: str) -> str:
     text = re.sub(r"\{\{original\}\}.*?\{\{original-end\}\}", "", text, flags=re.S)
     text = re.sub(r"\{\{originalhighblock\}\}.*?\{\{originalhighblock-end\}\}", "", text, flags=re.S)
     text = re.sub(r"\{\{\s*(?:errata|original)highlight\w*(?:-end)?\s*\}\}", "", text, flags=re.I)
+    text = re.sub(r"\{\{\s*erratahighblock(?:-end)?\s*\}\}", "", text, flags=re.I)
     return text.replace("&#61;", "=")
 
 
@@ -153,8 +196,39 @@ def from_anchor(fragment: str) -> str:
 
 
 def page_url(title: str, anchor: str | None = None) -> str:
+    if "#" in title and anchor is None:
+        title, frag = title.split("#", 1)
+        anchor = legacy_anchor(frag)
     url = SITE + urllib.parse.quote(title.replace(" ", "_"), safe="/():-_,'")
     return url + "#" + anchor if anchor else url
+
+
+def clean_name(name: str) -> str:
+    # The wiki spells "360° Visor" with a mangled character or an ordinal sign.
+    return name.replace("�", "°").replace("º", "°")
+
+
+def wiki_tables(text: str, header_cell: str) -> list[tuple[list[str], list[list[str]]]]:
+    """Every {| … |} table whose header row has header_cell: its header cells
+    and its rows of raw (wikitext) cells."""
+    found = []
+    for m in re.finditer(r"\{\|(.*?)\n\|\}", text, re.S):
+        header, rows = [], []
+        for chunk in re.split(r"\n\|-[^\n]*", m.group(1))[1:]:
+            chunk = chunk.strip()
+            if chunk.startswith("!"):
+                if "colspan" not in chunk and not header:
+                    header = [c.strip() for c in re.split(r"!!|\n!", chunk.lstrip("!"))]
+            elif chunk.startswith("|"):
+                rows.append([c.strip() for c in re.split(r"\|\||\n\|", chunk[1:])])
+        if header_cell in header:
+            found.append((header, rows))
+    return found
+
+
+def wiki_table(text: str, header_cell: str) -> tuple[list[str], list[list[str]]]:
+    """The first table whose header row has header_cell."""
+    return (wiki_tables(text, header_cell) or [([], [])])[0]
 
 
 # --- weapons ----------------------------------------------------------------
@@ -245,26 +319,70 @@ def classify(text: str) -> tuple[str | None, str | None]:
     return rtype, labels
 
 
-def parse_traits(text: str) -> list[dict]:
-    """One rule per === heading === on the Traits page. Each heading links to
-    a category whose name is what the wiki's redirects point at."""
-    traits = []
+def section(text: str, heading: str) -> str:
+    """The body of the == heading == section of a page."""
+    m = re.search(r"^(=+)\s*" + re.escape(heading) + r"\s*\1\s*$(.*?)(?=^=+[^=\n]+=+\s*$|\Z)",
+                  text, re.M | re.S)
+    return m.group(2) if m else ""
+
+
+def parse_glossary(text: str, page: str, family: str) -> list[dict]:
+    """One rule per === heading === on the Traits or Labels page. Each
+    heading links to a category, whose name is what redirects point at."""
+    out = []
     for m in re.finditer(r"^===\s*\[\[\s*:Category:([^|\]]+?)\s*\|\s*([^\]]+?)\s*\]\]\s*===\s*$",
                          current_text(text), re.M):
         key, heading = m.group(1).strip(), m.group(2).strip()
-        traits.append({"key": key, "name": heading, "family": "Weapon Trait",
-                       "type": None, "labels": None,
-                       "url": page_url(TRAITS_PAGE, legacy_anchor(heading))})
-    return traits
+        out.append({"key": key, "heading": heading, "name": heading, "family": family,
+                    "type": None, "labels": None, "url": page_url(page, legacy_anchor(heading))})
+    return out
+
+
+def menu_links(text: str) -> list[tuple[str, str]]:
+    return [(t, l) for t, l in link_targets(text) if t not in NOT_RULES]
+
+
+def chapter_index(refresh: bool) -> list[dict]:
+    """Every chapter of the wiki's rules and the pages its menu lists."""
+    main = fetch_pages([MAIN_SECTIONS], refresh)[MAIN_SECTIONS]["text"]
+    chapters = [t for t, _ in link_targets(main) if t != "Main Sections"]
+    pages = fetch_pages(chapters, refresh)
+    menus = {}
+    for ch in chapters:
+        text = (pages.get(ch) or {}).get("text", "")
+        names = re.findall(r"\{\{\s*((?:n5-)?section-[^|}]*?)\s*\}\}", text)
+        menus[ch] = ["Template:" + n[0].upper() + n[1:] for n in dict.fromkeys(names)
+                     if n != "section-main-sections"]
+    templates = fetch_pages(sorted({t for ts in menus.values() for t in ts}), refresh)
+    index = []
+    for ch in chapters:
+        if not pages.get(ch):
+            continue
+        # A chapter's own menu names it in bold; other menus on its page
+        # (the special skills list on Infinity Reinforcements) don't count.
+        own = [templates[t]["text"] for t in menus[ch]
+               if templates.get(t) and f"'''[[{ch}]]'''" in templates[t]["text"]]
+        links, seen = [], set()
+        for text in own:
+            for target, label in link_targets(text):
+                if target in seen or target == ch or target in chapters \
+                        or target.startswith((":", "Category:")):
+                    continue
+                seen.add(target)
+                links.append({"title": label.replace("_", " "), "url": page_url(target.replace("_", " "))})
+        index.append({"chapter": ch, "url": page_url(pages[ch]["title"]), "pages": links})
+    return index
 
 
 def main() -> None:
     refresh = "--refresh" in sys.argv
     CACHE.mkdir(parents=True, exist_ok=True)
 
-    idx = fetch_pages(list(INDEXES.values()) + ["Weapon Chart", TRAITS_PAGE], refresh)
+    menus = [m for m, _ in INDEXES.values()]
+    idx = fetch_pages(menus + [WEAPON_CHART, TRAITS_PAGE, LABELS_PAGE, PROGRAMS_PAGE,
+                               DEVICES_PAGE, MARTIAL_ARTS_PAGE], refresh)
     weapons, seen = [], {}
-    for w in parse_weapon_chart(idx["Weapon Chart"]["text"]):
+    for w in parse_weapon_chart(idx[WEAPON_CHART]["text"]):
         # The chart repeats a few rows (AP Rifle); keep the first, and say so
         # if a repeat disagrees with it.
         if w["name"] in seen:
@@ -273,100 +391,175 @@ def main() -> None:
             continue
         seen[w["name"]] = w
         weapons.append(w)
-    traits = parse_traits(idx[TRAITS_PAGE]["text"])
+    # The chart ends with stat lines for deployed mines and devices, split
+    # over more than one table.
+    chart = current_text(idx[WEAPON_CHART]["text"])
+    deployables = [dict(zip(head, (plain(c) for c in r)))
+                   for head, rows in wiki_tables(chart, "Deployable") for r in rows]
 
-    # Rules listed in the navigation templates, named as the template shows
-    # them ("Request Reinforcements" lives on the "Infinity Reinforcements" page).
+    traits = parse_glossary(idx[TRAITS_PAGE]["text"], TRAITS_PAGE, "Weapon Trait")
+    labels = parse_glossary(idx[LABELS_PAGE]["text"], LABELS_PAGE, "Label")
+
+    # Rules named in the menus and categories, named as the menu shows them
+    # ("Request Reinforcements" lives on the "Infinity Reinforcements" page).
     listed: dict[str, tuple[str, str]] = {}  # link target -> (family, display name)
-    for family, tmpl in INDEXES.items():
-        for target, label in link_targets(idx[tmpl]["text"]):
-            if target in NOT_RULES or target in listed:
+    for family, (menu, cat) in INDEXES.items():
+        entries = menu_links(idx[menu]["text"]) + [(t, t) for t in category(cat, refresh)
+                                                   if t not in NOT_RULES]
+        for target, label in entries:
+            if target in listed:
                 continue
             if family == "Ammunition":
                 family_here = "Weaponry" if target in SPECIAL_WEAPONRY else "Ammunition"
             else:
                 family_here = family
-            # The equipment template has a mangled degree sign in "360° Visor".
-            listed[target] = (family_here, label.replace("�", "°"))
-    # Everything weapons link to: traits, states, special weapon pages.
-    for w in weapons:
-        for target in w["links"]:
-            listed.setdefault(target, ("", target))
+            listed[target] = (family_here, clean_name(label))
+    for target, family in EXTRA_RULES.items():
+        listed.setdefault(target, (family, target))
 
-    pages = fetch_pages(sorted(listed), refresh)
+    # Hacking programs, from the chart.
+    head, rows = wiki_table(current_text(idx[PROGRAMS_PAGE]["text"]), "Attack MOD")
+    supportware = set(category(SUPPORTWARE, refresh))
+    programs = []
+    for r in rows:
+        r += [""] * (len(head) - len(r))
+        target = link_targets(r[0])[0][0] if link_targets(r[0]) else plain(r[0])
+        family = "Supportware" if target in supportware else "Hacking Program"
+        listed[target] = (family, plain(r[0]))
+        programs.append({"name": plain(r[0]), **{h: plain(c) for h, c in zip(head[1:], r[1:])},
+                         "links": [t for t, _ in link_targets(" ".join(r[1:]))]})
+
+    # Hacking Devices: which programs each carries. The variants are
+    # sections of the Hacking Device page.
+    devices_text = current_text(idx[DEVICES_PAGE]["text"])
+    head, rows = wiki_table(devices_text, "Program 1")
+    devices = [{"name": plain(r[0]), "programs": [plain(c) for c in r[1:] if link_targets(c)]}
+               for r in rows]
+
+    # Martial Arts levels.
+    head, rows = wiki_table(current_text(idx[MARTIAL_ARTS_PAGE]["text"]), "Attack MOD")
+    martial_arts = [dict(zip(head, (plain(c) for c in r))) for r in rows]
+
+    # Everything weapons and programs link to: traits, labels, states,
+    # special weapon pages, ammunition.
+    weapon_links = {t for w in weapons for t in w["links"]}
+    program_links = {t for p in programs for t in p["links"]}
+    pages = fetch_pages(sorted(set(listed) | weapon_links | program_links), refresh)
 
     rules: dict[str, dict] = {}       # rule name -> rule
-    resolve: dict[str, str] = {}      # any link target -> rule name
-    # Redirects point into a trait's section by its category name ("Disposable")
-    # or by its heading ("Suppressive Fire (SF)"); accept either.
-    traits_by_key = {}
-    for t in traits:
-        for k in (t["key"], t["name"], re.sub(r"\s*\(.*\)$", "", t["name"])):
-            traits_by_key.setdefault(k.lower(), t)
+    title_rule: dict[str, str] = {}   # page title -> rule name, for the page's main rule
     missing = []
+
+    def add_rule(name, family, page_title, frag, text, target):
+        rtype, lbl = classify(text)
+        rules[name] = {"name": name, "family": family, "type": rtype, "labels": lbl,
+                       "url": page_url(page_title, legacy_anchor(from_anchor(frag)) if frag else None),
+                       "page": target}
+
     for target, (family, label) in listed.items():
         page = pages.get(target)
         if page is None:
             missing.append(target)
             continue
         title, frag = page["title"], page["fragment"]
-        if title == TRAITS_PAGE:
-            # Redirect into one section of the Traits page.
-            key = from_anchor(frag or "").lower()
-            if key in traits_by_key:
-                resolve[target] = traits_by_key[key]["name"]
+        if title in (TRAITS_PAGE, LABELS_PAGE) or title in NOT_RULE_PAGES:
             continue
-        if title in NOT_RULE_PAGES:
+        name = clean_name(label)
+        if name in EXCLUDE_RULES or name in rules:
             continue
-        # Rules from the skill/equipment lists keep the name the list shows,
-        # since one page can hold several (Commlink and Request Reinforcements
-        # both live on "Infinity Reinforcements"). Pages reached only from the
-        # weapon chart are named by their title.
-        name = label if family else title
-        # The wiki spells "360° Visor" with a mangled character or an ordinal sign.
-        name = name.replace("�", "°").replace("º", "°")
-        if name in EXCLUDE_RULES:
+        add_rule(name, family, title, frag, page["text"], target)
+        title_rule.setdefault(title, name)
+    # Pages only the weapon chart links to (special weapons, states).
+    for target in sorted(weapon_links - set(listed)):
+        page = pages.get(target)
+        if page is None or page["title"] in title_rule or page["title"] in (TRAITS_PAGE, LABELS_PAGE) \
+                or page["title"] in NOT_RULE_PAGES:
             continue
-        if name not in rules:
-            if not family:
-                family = "State" if title.endswith(" State") else "Weaponry"
-            rtype, labels = classify(page["text"])
-            rules[name] = {"name": name, "family": family, "type": rtype, "labels": labels,
-                           "url": page_url(title, legacy_anchor(from_anchor(frag)) if frag else None),
-                           "page": target}
-        resolve[target] = name
+        family = "State" if page["title"].endswith(" State") else "Weaponry"
+        add_rule(page["title"], family, page["title"], page["fragment"], page["text"], target)
+        title_rule[page["title"]] = page["title"]
+    # Hacking Device variants, each a section of the base device's page.
+    for d in devices:
+        if d["name"] != BASE_DEVICE and d["name"] not in rules:
+            rtype, lbl = classify(section(devices_text, d["name"]))
+            rules[d["name"]] = {"name": d["name"], "family": "Equipment", "type": rtype, "labels": lbl,
+                                "url": page_url(DEVICES_PAGE, legacy_anchor(d["name"])),
+                                "page": DEVICES_PAGE, "section": d["name"]}
 
-    all_rules = list(rules.values()) + [{k: v for k, v in t.items() if k != "key"} for t in traits]
-    # A trait sharing a skill's name ("Intuitive Attack") gets "(Trait)" so the
-    # two stay distinguishable in NewRecruit.
-    skill_names = {r["name"].lower() for r in rules.values()}
-    for t in traits:
-        base = re.sub(r"\s*\(.*\)$", "", t["name"])
-        if base.lower() in skill_names:
-            new = base + " (Trait)"
-            for r in all_rules:
-                if r["name"] == t["name"] and r["family"] == "Weapon Trait":
-                    r["name"] = new
-            for k, v in resolve.items():
-                if v == t["name"]:
-                    resolve[k] = new
+    # Traits and labels sharing a name with a rule ("Intuitive Attack") get
+    # "(Trait)" or "(Label)" so they stay distinguishable in NewRecruit.
+    taken = {n.lower() for n in rules}
+    for group, suffix in ((traits, "Trait"), (labels, "Label")):
+        for g in group:
+            base = re.sub(r"\s*\(.*\)$", "", g["name"])
+            if base.lower() in taken or g["name"].lower() in taken:
+                g["name"] = f"{base} ({suffix})"
+        taken |= {g["name"].lower() for g in group}
+
+    def by_key(group):
+        # Redirects point into a section by its category name ("Disposable")
+        # or by its heading ("Suppressive Fire (SF)"); accept either.
+        out = {}
+        for g in group:
+            for k in (g["key"], g["heading"], g["name"], re.sub(r"\s*\(.*\)$", "", g["heading"])):
+                out.setdefault(k.lower(), g["name"])
+        return out
+    glossary = {TRAITS_PAGE: by_key(traits), LABELS_PAGE: by_key(labels)}
+
+    def resolve(target: str) -> str | None:
+        """The rule a link points at, if it points at one."""
+        page = pages.get(target)
+        if page is None:
+            return None
+        if page["title"] in glossary:
+            return glossary[page["title"]].get(from_anchor(page["fragment"] or "").lower())
+        if target in listed and clean_name(listed[target][1]) in rules:
+            return clean_name(listed[target][1])
+        return title_rule.get(page["title"])
 
     for w in weapons:
-        w["rules"] = sorted({resolve[t] for t in w.pop("links") if t in resolve})
+        w["rules"] = sorted({r for t in w.pop("links") if (r := resolve(t))})
+    for p in programs:
+        p["rules"] = sorted({r for t in p.pop("links") if (r := resolve(t))} - {p["name"]})
+
+    all_rules = list(rules.values()) + [{k: v for k, v in g.items() if k not in ("key", "heading")}
+                                        for g in traits + labels]
+
+    # The full index of the wiki's rules pages, chapter by chapter, plus the
+    # pages no chapter menu lists.
+    index = chapter_index(refresh)
+    indexed = ({urllib.parse.unquote(p["url"][len(SITE):]).split("#")[0].replace("_", " ")
+                for ch in index for p in ch["pages"]} | {ch["chapter"] for ch in index})
+    used = {r["page"] for r in rules.values()} | {pages[r["page"]]["title"] for r in rules.values()
+                                                  if pages.get(r["page"])}
+    everything = listing("allpages", {"list": "allpages", "apnamespace": "0",
+                                      "apfilterredir": "nonredirects", "aplimit": "500"},
+                         "allpages", refresh)
+    other = [t for t in everything if t not in indexed and t not in used
+             and t not in ("Main Page", "Main Sections") and t not in EXCLUDE_RULES]
 
     OUT.write_text(json.dumps({
         "source": SITE,
         "attribution": "Infinity and all associated names and game data are © Corvus Belli S.L.",
         "weapons": weapons,
+        "deployables": deployables,
+        "hacking_programs": programs,
+        "hacking_devices": devices,
+        "martial_arts": martial_arts,
         "rules": all_rules,
+        "index": index,
+        "other_pages": [{"title": t, "url": page_url(t)} for t in other],
         "missing_pages": missing,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
 
     fams: dict[str, int] = {}
     for r in all_rules:
         fams[r["family"]] = fams.get(r["family"], 0) + 1
-    print(f"{len(weapons)} weapon profiles, {len(all_rules)} rules: "
-          + ", ".join(f"{n} {f}" for f, n in fams.items()))
+    print(f"{len(weapons)} weapon profiles, {len(deployables)} deployables, {len(programs)} hacking "
+          f"programs, {len(devices)} hacking devices, {len(martial_arts)} Martial Arts levels")
+    print(f"{len(all_rules)} rules: " + ", ".join(f"{n} {f}" for f, n in fams.items()))
+    print(f"Index: {len(index)} chapters, {sum(len(c['pages']) for c in index)} pages, "
+          f"{len(other)} other pages")
     if missing:
         print(f"{len(missing)} linked pages not found on the wiki: {', '.join(missing)}")
     print(f"Wrote {OUT.relative_to(HERE)}")

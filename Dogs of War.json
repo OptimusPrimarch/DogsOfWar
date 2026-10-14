@@ -3,7 +3,7 @@
     "name": "Dogs of War",
     "id": "sys-0ba1-943f-1bdf-3200",
     "battleScribeVersion": "2.03",
-    "revision": 5,
+    "revision": 6,
     "type": "gameSystem",
     "categoryEntries": [
       {
@@ -273,6 +273,83 @@
           {
             "name": "Traits",
             "id": "f298-c990-339d-8275"
+          }
+        ]
+      },
+      {
+        "name": "Hacking Program Profile",
+        "id": "7bb4-13ec-8229-ec3a",
+        "hidden": false,
+        "characteristicTypes": [
+          {
+            "name": "Attack MOD",
+            "id": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "id": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "id": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "id": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "id": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "id": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "id": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts Profile",
+        "id": "c1b1-9281-8405-7b68",
+        "hidden": false,
+        "characteristicTypes": [
+          {
+            "name": "Attack MOD",
+            "id": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "id": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "id": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "Deployable Profile",
+        "id": "8823-bc9e-26ad-f80e",
+        "hidden": false,
+        "characteristicTypes": [
+          {
+            "name": "ARM",
+            "id": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "id": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "id": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "id": "8e23-a6f0-96c5-6e94"
           }
         ]
       }
@@ -12318,6 +12395,1121 @@
             "typeId": "13c8-287f-98a3-1093"
           }
         ]
+      },
+      {
+        "name": "Assisted Fire",
+        "id": "aea2-83d8-b482-9efa",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "N/A",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "REM",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Long Skill",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "Target Model gains Marksmanship.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Carbonite",
+        "id": "1af1-9ae7-a239-52be",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "0",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "7",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "2",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "TAG, HI, REM, VH, Hacker",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "DA Ammo, Non-Lethal, State: Immobilized-B.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Controlled Jump",
+        "id": "4520-cc48-1994-0bc7",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "N/A",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "N/A",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "+3/-3 MOD to the PH of every Trooper that performs Combat Jump.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Cybermask",
+        "id": "d2f0-5b18-3a6b-0e16",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "N/A",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "N/A",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Long Skill",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "Replace user with IMP-2 Marker.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Enhanced Reaction",
+        "id": "2b7c-db63-ea51-6b2b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "N/A",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "REM",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Long Skill",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "Target gains B2 in ARO.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Fairy Dust",
+        "id": "c498-9578-971a-0050",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "N/A",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "TAG, REM, HI, VH",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Long Skill",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "The targets gain Firewall MODs.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Oblivion",
+        "id": "5d2c-02b6-53ce-1b2a",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "0",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "4",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "2",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "TAG, HI, REM, VH, Hacker",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "AP Ammo, Non-Lethal, State: Isolated.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Spotlight",
+        "id": "85cf-2a1f-5be4-065f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "0",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "5",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "2",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "N/A",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "AP Ammo, Non-Lethal, State: Targeted.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Total Control",
+        "id": "5961-c524-fd6f-534e",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "0",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "4",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "1",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "TAG",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "DA Ammo, Non-Lethal, State: POS/Normal.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Trinity",
+        "id": "a4a4-2acd-5cbe-4707",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "+3",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "0",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "6",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "3",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "Hacker",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "Target receives 1 Wound for each failed Saving Roll.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "White Noise",
+        "id": "c2ef-2ade-438c-15bb",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "N/A",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "N/A",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "1",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "N/A",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "NFB, Reflective, Circular Template.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Zero Pain",
+        "id": "676a-786a-af12-bced",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "7bb4-13ec-8229-ec3a",
+        "typeName": "Hacking Program Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "87e7-f070-4cca-2347"
+          },
+          {
+            "name": "Opp. MOD",
+            "$text": "-3",
+            "typeId": "4d11-ccd1-e0b9-b660"
+          },
+          {
+            "name": "PS",
+            "$text": "N/A",
+            "typeId": "1611-6de3-87a2-0f5e"
+          },
+          {
+            "name": "Burst",
+            "$text": "2",
+            "typeId": "3982-7787-a7b0-004e"
+          },
+          {
+            "name": "Target",
+            "$text": "N/A",
+            "typeId": "f837-c28c-2a77-273c"
+          },
+          {
+            "name": "Skill Type",
+            "$text": "Short Skill / ARO",
+            "typeId": "b804-8464-5aea-ce70"
+          },
+          {
+            "name": "Special",
+            "$text": "Nullifies Comms Attack. B2 in ARO, Non-Lethal.",
+            "typeId": "cb2f-1f42-df81-5c83"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L1",
+        "id": "2bde-e446-8506-e238",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "c1b1-9281-8405-7b68",
+        "typeName": "Martial Arts Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "0",
+            "typeId": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "$text": "-3",
+            "typeId": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "$text": "0",
+            "typeId": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L2",
+        "id": "f873-26a4-fc00-8a35",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "c1b1-9281-8405-7b68",
+        "typeName": "Martial Arts Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "+3",
+            "typeId": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "$text": "-3",
+            "typeId": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "$text": "0",
+            "typeId": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L3",
+        "id": "c0f8-e2bb-90c5-3c51",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "c1b1-9281-8405-7b68",
+        "typeName": "Martial Arts Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "+3",
+            "typeId": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "$text": "-3",
+            "typeId": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "$text": "+1 SD",
+            "typeId": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L4",
+        "id": "ef50-5598-2209-ec3e",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "c1b1-9281-8405-7b68",
+        "typeName": "Martial Arts Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "+3",
+            "typeId": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "$text": "-3",
+            "typeId": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "$text": "+1B",
+            "typeId": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L5",
+        "id": "fcbe-111b-7947-ed85",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "c1b1-9281-8405-7b68",
+        "typeName": "Martial Arts Profile",
+        "characteristics": [
+          {
+            "name": "Attack MOD",
+            "$text": "+3",
+            "typeId": "e99b-b256-824e-d112"
+          },
+          {
+            "name": "Opponent MOD",
+            "$text": "-3",
+            "typeId": "2ce4-d745-5dbb-0c98"
+          },
+          {
+            "name": "Burst MOD",
+            "$text": "+1B, +1 SD",
+            "typeId": "f28d-fb28-4e75-b5d8"
+          }
+        ]
+      },
+      {
+        "name": "AP Mine (deployed)",
+        "id": "6882-394c-af16-280b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Cybermine (deployed)",
+        "id": "78e9-02c5-3a85-3496",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Drop Bear (deployed)",
+        "id": "0ee4-13ac-3fa0-de6b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "E/M Mine (deployed)",
+        "id": "1ecf-0146-2470-c559",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Monofilament Mine (deployed)",
+        "id": "7666-2c55-eb5a-b504",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "PARA Mine (deployed)",
+        "id": "c56c-38ad-b390-93cc",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Shock Mine (deployed)",
+        "id": "2622-f22f-60ef-be34",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Viral Mine (deployed)",
+        "id": "c3fb-6110-bca1-c26c",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "0",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "WildParrot (deployed)",
+        "id": "0151-42b6-693b-fe14",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "CrazyKoala (deployed)",
+        "id": "a606-8ff8-0c7b-db90",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Dazer (deployed)",
+        "id": "3042-f010-c641-65e8",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Deployable Repeater (deployed)",
+        "id": "54b6-aa58-c185-a654",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Disco Ball (deployed)",
+        "id": "405b-eede-2254-7d42",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "FastPanda (deployed)",
+        "id": "5f96-4642-6d9f-ceee",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
+      },
+      {
+        "name": "Madtrap (deployed)",
+        "id": "cf0c-55b7-b696-52f4",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "typeId": "8823-bc9e-26ad-f80e",
+        "typeName": "Deployable Profile",
+        "characteristics": [
+          {
+            "name": "ARM",
+            "$text": "0",
+            "typeId": "804f-b47a-023b-905c"
+          },
+          {
+            "name": "BTS",
+            "$text": "0",
+            "typeId": "6f40-365f-1e20-63e9"
+          },
+          {
+            "name": "STR",
+            "$text": "1",
+            "typeId": "cd39-02d0-4f1c-a59f"
+          },
+          {
+            "name": "S",
+            "$text": "1",
+            "typeId": "8e23-a6f0-96c5-6e94"
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -13850,6 +15042,14 @@
             "type": "selectionEntry"
           },
           {
+            "name": "Bioimmunity",
+            "id": "50ba-a555-2261-1d77",
+            "hidden": false,
+            "import": true,
+            "targetId": "f8ba-0e47-8a19-10b3",
+            "type": "selectionEntry"
+          },
+          {
             "name": "Booty",
             "id": "0c66-288b-4a26-61d5",
             "hidden": false,
@@ -14114,11 +15314,43 @@
             "type": "selectionEntry"
           },
           {
-            "name": "Martial Arts",
-            "id": "1197-08c8-4aba-c05d",
+            "name": "Martial Arts L1",
+            "id": "952d-ebcb-a4f5-1973",
             "hidden": false,
             "import": true,
-            "targetId": "d662-84cb-1741-bfb8",
+            "targetId": "7947-3c09-7fd0-1bfc",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Martial Arts L2",
+            "id": "bd1c-21dd-9b81-8a04",
+            "hidden": false,
+            "import": true,
+            "targetId": "39dd-bef3-d3e4-0519",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Martial Arts L3",
+            "id": "4002-45fe-6bb9-3305",
+            "hidden": false,
+            "import": true,
+            "targetId": "2597-2a21-7f57-c4be",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Martial Arts L4",
+            "id": "bdfa-7f95-e1ef-4202",
+            "hidden": false,
+            "import": true,
+            "targetId": "d9c3-f96a-3018-d981",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Martial Arts L5",
+            "id": "3eb6-deda-3e93-d879",
+            "hidden": false,
+            "import": true,
+            "targetId": "8a3b-537a-f550-0c85",
             "type": "selectionEntry"
           },
           {
@@ -14546,6 +15778,14 @@
             "type": "selectionEntry"
           },
           {
+            "name": "EVO Hacking Device",
+            "id": "c0f9-0b69-4727-e984",
+            "hidden": false,
+            "import": true,
+            "targetId": "1819-a889-bd32-ba6e",
+            "type": "selectionEntry"
+          },
+          {
             "name": "FastPanda",
             "id": "ef07-87e2-42c8-a715",
             "hidden": false,
@@ -14578,6 +15818,14 @@
             "type": "selectionEntry"
           },
           {
+            "name": "Hacking Device Plus",
+            "id": "4dc6-76a6-f5d1-6feb",
+            "hidden": false,
+            "import": true,
+            "targetId": "b98c-a870-cf54-f7bb",
+            "type": "selectionEntry"
+          },
+          {
             "name": "HoloMask",
             "id": "71a2-09f1-0f7d-31a2",
             "hidden": false,
@@ -14591,6 +15839,14 @@
             "hidden": false,
             "import": true,
             "targetId": "554c-1afd-7352-5f48",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Killer Hacking Device",
+            "id": "54f0-4c4a-52be-123b",
+            "hidden": false,
+            "import": true,
+            "targetId": "d37d-207c-9b73-5d03",
             "type": "selectionEntry"
           },
           {
@@ -14655,6 +15911,110 @@
             "hidden": false,
             "import": true,
             "targetId": "b33f-3fbe-23e1-a929",
+            "type": "selectionEntry"
+          }
+        ]
+      },
+      {
+        "name": "Armory: Hacking Programs",
+        "id": "56cc-d247-a3e0-ef95",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "entryLinks": [
+          {
+            "name": "Assisted Fire",
+            "id": "dd87-d0be-e9ab-0b9b",
+            "hidden": false,
+            "import": true,
+            "targetId": "bb94-060c-f6d5-c76d",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Carbonite",
+            "id": "4d54-ef0b-304f-46f5",
+            "hidden": false,
+            "import": true,
+            "targetId": "2660-84d5-15c9-d474",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Controlled Jump",
+            "id": "0389-7b91-a155-bef0",
+            "hidden": false,
+            "import": true,
+            "targetId": "1f19-e9fa-982d-5c31",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Cybermask",
+            "id": "993a-1732-37f4-521d",
+            "hidden": false,
+            "import": true,
+            "targetId": "e635-efe4-3cd4-a8e5",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Enhanced Reaction",
+            "id": "28e7-eb69-de29-6a70",
+            "hidden": false,
+            "import": true,
+            "targetId": "052c-42f7-8501-d7e7",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Fairy Dust",
+            "id": "c3d7-335c-9cdc-8450",
+            "hidden": false,
+            "import": true,
+            "targetId": "fa95-8e04-6b30-22e2",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Oblivion",
+            "id": "cdfc-f79e-0125-0cca",
+            "hidden": false,
+            "import": true,
+            "targetId": "e702-57ad-6707-fb7f",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Spotlight",
+            "id": "5947-f4e9-f224-7fd3",
+            "hidden": false,
+            "import": true,
+            "targetId": "d741-6147-027a-49dd",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Total Control",
+            "id": "aa39-7fd8-a7e5-f5e4",
+            "hidden": false,
+            "import": true,
+            "targetId": "bf19-1569-1da2-9a65",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Trinity",
+            "id": "a087-03ae-12a5-5f75",
+            "hidden": false,
+            "import": true,
+            "targetId": "613c-6324-1e46-e583",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "White Noise",
+            "id": "e3ed-d664-0e3b-1b5e",
+            "hidden": false,
+            "import": true,
+            "targetId": "b9ff-aa26-4e9c-3c7a",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Zero Pain",
+            "id": "0b90-54a5-fc4e-54ba",
+            "hidden": false,
+            "import": true,
+            "targetId": "f489-d9bf-c6d6-dff6",
             "type": "selectionEntry"
           }
         ]
@@ -14810,6 +16170,13 @@
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "Special Skill · Long Skill · Attack, CC Attack, CC Special Skill, Movement, Optional\nOne Long Skill: charge up to both MOV values combined into base contact with a target in LoF, then attack in close combat, adding any bonus in brackets. If the charge can't reach, the trooper Idles.\nFull rule: https://infinitythewiki.com/Berserk"
+      },
+      {
+        "name": "Bioimmunity",
+        "id": "4264-05d3-22b8-2254",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Special Skill · Optional\nWhen making a saving roll against ARM or BTS, the trooper may use whichever of the two values is better. The attack's other effects still apply. Not against Comms Attacks.\nFull rule: https://infinitythewiki.com/Bioimmunity"
       },
       {
         "name": "Booty",
@@ -15414,6 +16781,13 @@
         "description": "Equipment · Automatic Equipment\nElectronic countermeasures: enemies attacking the trooper with the attack type in brackets take the listed penalty.\nFull rule: https://infinitythewiki.com/ECM"
       },
       {
+        "name": "EVO Hacking Device",
+        "id": "7c08-5614-a336-8bde",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Equipment · Automatic Equipment · Comms Equipment\nA support device that runs the Supportware programs: Assisted Fire, Controlled Jump, Enhanced Reaction and Fairy Dust.\nFull rule: https://infinitythewiki.com/Hacking_Device#EVO_Hacking_Device"
+      },
+      {
         "name": "FastPanda",
         "id": "d106-8035-7411-471f",
         "hidden": false,
@@ -15442,6 +16816,13 @@
         "description": "Equipment · Automatic Equipment · Comms Equipment\nComms equipment that lets a Hacker run Hacking Programs. The basic device carries Carbonite, Oblivion, Spotlight and Total Control; other devices add more.\nFull rule: https://infinitythewiki.com/Hacking_Device"
       },
       {
+        "name": "Hacking Device Plus",
+        "id": "2080-5f00-90e3-474b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Equipment · Automatic Equipment · Comms Equipment\nA Hacking Device that runs Carbonite, Cybermask, Oblivion, Spotlight, Total Control and White Noise.\nFull rule: https://infinitythewiki.com/Hacking_Device#Hacking_Device_Plus"
+      },
+      {
         "name": "HoloMask",
         "id": "780f-1e58-e0ec-c930",
         "hidden": false,
@@ -15454,6 +16835,13 @@
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "Equipment · Automatic Equipment · Optional, NFB\nThe trooper can deploy in, or later switch to, the Holoecho state.\nFull rule: https://infinitythewiki.com/Holoprojector"
+      },
+      {
+        "name": "Killer Hacking Device",
+        "id": "3d95-6eaa-02c5-0811",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Equipment · Automatic Equipment · Comms Equipment\nA hunter's device that runs Cybermask and Trinity, for taking down enemy Hackers.\nFull rule: https://infinitythewiki.com/Hacking_Device#Killer_Hacking_Device"
       },
       {
         "name": "MediKit",
@@ -15510,6 +16898,97 @@
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "Equipment · Automatic Equipment · Obligatory\nImproves the trooper's range penalties: -3 becomes 0 and -6 becomes -3, for weapons and for ranged skills such as Discover.\nFull rule: https://infinitythewiki.com/X-Visor"
+      },
+      {
+        "name": "Hacking Area",
+        "id": "dd7c-6890-300f-d707",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking\nWhere Hacking Programs reach: the Hacker's own ZoC plus the ZoC of every friendly Repeater. A Hacker inside an enemy Repeater's ZoC can reach the whole table, but only enemy Hackers can be targeted that way.\nFull rule: https://infinitythewiki.com/Hacking_Area"
+      },
+      {
+        "name": "Carbonite",
+        "id": "fa48-c592-c940-ca9c",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal\nA Burst 2 Comms Attack on enemy Hackable troopers or Hackers. Each hit forces two BTS saves at PS 7, and a failure leaves the target Immobilized-B.\nFull rule: https://infinitythewiki.com/Carbonite"
+      },
+      {
+        "name": "Cybermask",
+        "id": "0ad9-aa2e-b1d7-d83b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Long Skill · NFB, No Roll\nNo roll: while out of enemy LoF, the Hacker disguises itself as an IMP-2 marker until it reveals itself.\nFull rule: https://infinitythewiki.com/Cybermask"
+      },
+      {
+        "name": "Oblivion",
+        "id": "2b85-5bbb-76d8-13b0",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal\nA Burst 2 Comms Attack on enemy Hackable troopers or Hackers. Each hit forces a save at half BTS, PS 4, and a failure leaves the target Isolated.\nFull rule: https://infinitythewiki.com/Oblivion"
+      },
+      {
+        "name": "Spotlight",
+        "id": "a6ef-dd80-be82-b35f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal\nA Burst 2 Comms Attack. Each hit forces a save at half BTS, PS 5, and a failure leaves the target Targeted.\nFull rule: https://infinitythewiki.com/Spotlight"
+      },
+      {
+        "name": "Total Control",
+        "id": "ded0-2afe-5722-3925",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal\nA Burst 1 Comms Attack on an enemy TAG. Each hit forces two BTS saves at PS 4, and a failure takes the TAG over (Possessed). Used on a Possessed TAG, it frees it instead.\nFull rule: https://infinitythewiki.com/Total_Control"
+      },
+      {
+        "name": "Trinity",
+        "id": "b0e2-e5a9-7000-7919",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skills / ARO · Comms Attack\nA Burst 3 Comms Attack on enemy Hackers, at +3 WIP. Each hit forces a BTS save at PS 6, and each failure is a wound.\nFull rule: https://infinitythewiki.com/Trinity"
+      },
+      {
+        "name": "White Noise",
+        "id": "7b63-67e7-a3a6-43e0",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill · NFB\nOn a WIP roll, place a circular White Noise zone of unlimited height inside your Hacking Area until the States Phase. It's Reflective, so it affects troopers with Multispectral Visors or Marksmanship.\nFull rule: https://infinitythewiki.com/White_Noise"
+      },
+      {
+        "name": "Zero Pain",
+        "id": "c669-1340-97e1-f22c",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Hacking Program · Short Skill / ARO · Comms Attack, Non-Lethal\nA defensive program: roll WIP twice, face to face, to evade every Comms Attack in the Order, with -3 to the attackers. Burst 2 in ARO.\nFull rule: https://infinitythewiki.com/Zero_Pain"
+      },
+      {
+        "name": "Assisted Fire",
+        "id": "101c-f0d7-056c-8aa3",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Supportware · Long Skill · Supportware, No Roll\nSupportware, no roll: an allied Remote in your Hacking Area gains Marksmanship. Once it's running, it reaches across the whole table.\nFull rule: https://infinitythewiki.com/Assisted_Fire"
+      },
+      {
+        "name": "Controlled Jump",
+        "id": "6290-6631-cd10-866f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Supportware · Short Skill / ARO · Supportware, No Roll\nSupportware, no roll: shifts the PH rolls for Combat Jumps, +3 for your jumpers and -3 for the enemy's.\nFull rule: https://infinitythewiki.com/Controlled_Jump"
+      },
+      {
+        "name": "Enhanced Reaction",
+        "id": "4dd2-9e24-a424-6532",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Supportware · Long Skill · Supportware, No Roll\nSupportware, no roll: an allied Remote in your Hacking Area gets Burst 2 in ARO. Once it's running, it reaches across the whole table.\nFull rule: https://infinitythewiki.com/Enhanced_Reaction"
+      },
+      {
+        "name": "Fairy Dust",
+        "id": "1f3d-d9b2-f10b-a54d",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Supportware · Long Skill · Supportware, No Roll\nSupportware, no roll: pick one troop type (HI, REM, TAG or VH). All of your troopers of that type get Firewall (-3) against Comms Attacks.\nFull rule: https://infinitythewiki.com/Fairy_Dust"
       },
       {
         "name": "Anti-materiel",
@@ -15743,6 +17222,167 @@
         "description": "Weapon Trait\nThe item's range is the user's Zone of Control (8 inches).\nFull rule: https://infinitythewiki.com/Traits#Zone_of_Control_.28ZoC.29"
       },
       {
+        "name": "Airborne Deployment (AD)",
+        "id": "e35a-bc8f-d118-568b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nGroups the skills for airborne troops, so a rule that mentions Airborne Deployment covers all of them.\nFull rule: https://infinitythewiki.com/Labels#Airborne_Deployment_.28AD.29"
+      },
+      {
+        "name": "Assignable (Transmutation)",
+        "id": "3d71-5cc5-abd4-d46d",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nAt deployment only, the item can be handed to a trooper with Transmutation that's on the table as a model. It stays in base contact with that trooper and moves with it.\nFull rule: https://infinitythewiki.com/Labels#Assignable_.28Transmutation.29"
+      },
+      {
+        "name": "Attack",
+        "id": "5830-338e-da7a-f3fe",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nUsing it counts as an Attack, and Attacks can't target allies or neutral elements.\nFull rule: https://infinitythewiki.com/Labels#Attack"
+      },
+      {
+        "name": "BS Attack (Label)",
+        "id": "3723-cbec-ac6f-a7c0",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nUsing it counts as a BS Attack.\nFull rule: https://infinitythewiki.com/Labels#BS_Attack"
+      },
+      {
+        "name": "CC Attack (Label)",
+        "id": "304b-9d1f-519c-090f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nUsing it counts as a CC Attack.\nFull rule: https://infinitythewiki.com/Labels#CC_Attack"
+      },
+      {
+        "name": "CC Special Skill",
+        "id": "63f7-0388-5f92-b1d5",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nWorks only in base contact with the target. Its MODs stack with other CC Special Skills, in both the Active and Reactive Turn.\nFull rule: https://infinitythewiki.com/Labels#CC_Special_Skill"
+      },
+      {
+        "name": "Comms Attack",
+        "id": "4899-55d1-2017-b7ca",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nAn attack you avoid with Reset, not Dodge. Partial Cover doesn't help against it.\nFull rule: https://infinitythewiki.com/Labels#Comms_Attack"
+      },
+      {
+        "name": "Comms Equipment",
+        "id": "36b0-1f74-eace-57bc",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nEquipment that certain Hacking Programs and ammunition can affect.\nFull rule: https://infinitythewiki.com/Labels#Comms_Equipment"
+      },
+      {
+        "name": "Hackable",
+        "id": "5204-f121-97ae-0681",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nAllies and enemies can target it with certain Hacking Programs.\nFull rule: https://infinitythewiki.com/Labels#Hackable"
+      },
+      {
+        "name": "Hostile",
+        "id": "8ef7-15f7-a803-01f0",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nA game element outside every army list, with its own attributes. Every player treats it as an enemy, and it can attack and be attacked.\nFull rule: https://infinitythewiki.com/Labels#Hostile"
+      },
+      {
+        "name": "Marker",
+        "id": "85a2-a189-815f-ec59",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nCan be shown on the table as a marker instead of a model or token.\nFull rule: https://infinitythewiki.com/Labels#Marker"
+      },
+      {
+        "name": "Movement",
+        "id": "e7de-09fd-1c02-65b8",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nUsing it counts as Movement.\nFull rule: https://infinitythewiki.com/Labels#Movement"
+      },
+      {
+        "name": "Negative Feedback (NFB)",
+        "id": "781f-3be4-4eb7-f206",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nOnly one NFB skill, item or program can be active at a time. Switching one on switches off any other.\nFull rule: https://infinitythewiki.com/Labels#Negative_Feedback_.28NFB.29"
+      },
+      {
+        "name": "No LoF",
+        "id": "cd08-a6c9-521f-ea33",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nDoesn't need LoF to the target.\nFull rule: https://infinitythewiki.com/Labels#No_LoF"
+      },
+      {
+        "name": "No Roll",
+        "id": "47a4-10ec-d338-8f86",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nWorks automatically, without a roll. Any fixed result is shown in brackets.\nFull rule: https://infinitythewiki.com/Labels#No_Roll"
+      },
+      {
+        "name": "Non-Reloadable (Label)",
+        "id": "ad61-ed14-9b53-fa09",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nSpent uses can never be recovered, and Unloaded can't be cleared.\nFull rule: https://infinitythewiki.com/Labels#Non-Reloadable"
+      },
+      {
+        "name": "Null",
+        "id": "70ee-127b-9a17-a96a",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nA state that stops the trooper giving an Order or counting for scoring: Dead, Disconnected, Possessed, Sepsitorized and Unconscious.\nFull rule: https://infinitythewiki.com/Labels#Null"
+      },
+      {
+        "name": "Obligatory",
+        "id": "9bee-d639-78fc-e47b",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nIts use is mandatory.\nFull rule: https://infinitythewiki.com/Labels#Obligatory"
+      },
+      {
+        "name": "Optional",
+        "id": "5b59-6bdb-3b22-3ee3",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nIts use is optional.\nFull rule: https://infinitythewiki.com/Labels#Optional"
+      },
+      {
+        "name": "Private Information",
+        "id": "d2ee-d518-68ff-c360",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nYou don't have to reveal it until it's used or the game ends.\nFull rule: https://infinitythewiki.com/Labels#Private_Information"
+      },
+      {
+        "name": "States Phase",
+        "id": "73ee-62a7-8188-fc31",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nUsed only in the States Phase, unless stated otherwise.\nFull rule: https://infinitythewiki.com/Labels#States_Phase"
+      },
+      {
+        "name": "Superior Deployment",
+        "id": "ddd8-9177-8a1d-7920",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nGroups the skills that let troopers deploy outside their Deployment Zone, so a rule that mentions Superior Deployment covers all of them.\nFull rule: https://infinitythewiki.com/Labels#Superior_Deployment"
+      },
+      {
+        "name": "Supportware",
+        "id": "1635-0212-9657-e379",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "Label\nHacking Programs that support allied troopers or hinder enemies rather than attacking directly.\nFull rule: https://infinitythewiki.com/Labels#Supportware"
+      },
+      {
         "name": "Armor Piercing (AP) Ammunition",
         "id": "2ac2-f449-3f7a-1b55",
         "hidden": false,
@@ -15925,11 +17565,67 @@
         "description": "Weaponry\nA deployable E/M mine placed anywhere in the trooper's ZoC as a visible token rather than a camouflage marker.\nFull rule: https://infinitythewiki.com/WildParrot"
       },
       {
+        "name": "Camouflaged State",
+        "id": "157e-9430-cbd3-75a8",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Marker\nThe trooper is on the table as a Camouflage marker, showing its Mimetism value if it has one. Enemies can't move into contact with it or attack it until it's revealed. Re-entering the state takes a Long Skill out of enemy LoF.\nFull rule: https://infinitythewiki.com/Camouflaged_State"
+      },
+      {
         "name": "Dead State",
         "id": "4bbb-f9a5-e18f-1905",
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "State · Null\nThe trooper took more wounds than it can survive. It's removed from the table, gives no more Orders and counts for nothing at scoring.\nFull rule: https://infinitythewiki.com/Dead_State"
+      },
+      {
+        "name": "Decoy State",
+        "id": "1f32-e815-6fce-f39e",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Marker\nWhen the trooper deploys, it also places the bracketed number of Decoy markers (one or two) within coherency, so the opponent can't tell which is real.\nFull rule: https://infinitythewiki.com/Decoy_State"
+      },
+      {
+        "name": "Disconnected State",
+        "id": "4e9f-0738-7f21-1dbb",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Null\nA Peripheral cut off from its Controller (the Controller is Isolated or down, a coherency check failed, or an attack caused it). It can't act or ARO, its automatic skills stop working, and it scores nothing.\nFull rule: https://infinitythewiki.com/Disconnected_State"
+      },
+      {
+        "name": "Engaged State",
+        "id": "4db4-856e-af87-4593",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nModels in base contact with an enemy are locked in close combat. They can only Berserk, CC Attack, Dodge, Idle, Reset or use close combat skills, and can't see outside the fight. Shooting into a close combat follows special rules.\nFull rule: https://infinitythewiki.com/Engaged_State"
+      },
+      {
+        "name": "Foxhole State",
+        "id": "22cc-8242-115d-c703",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper is dug in: at least Silhouette 3, Partial Cover from every direction, Mimetism (-3) and Courage, but it can't move while it stays in the foxhole.\nFull rule: https://infinitythewiki.com/Foxhole_State"
+      },
+      {
+        "name": "Hidden Deployment State",
+        "id": "3d53-aae5-954c-190a",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper deploys with no model or marker on the table. Its position is written down secretly, and until it's revealed it doesn't count as being on the table.\nFull rule: https://infinitythewiki.com/Hidden_Deployment_State"
+      },
+      {
+        "name": "Holoecho State",
+        "id": "8648-0c17-e5b1-19fd",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Marker\nThe trooper is shown as up to three Holoecho markers, only one of them real. It can re-enter the state in the States Phase, or with a Long Skill, while out of enemy LoF.\nFull rule: https://infinitythewiki.com/Holoecho_State"
+      },
+      {
+        "name": "HoloMask State",
+        "id": "2d40-ae4a-0121-dfdf",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper is shown as a different model of the same Silhouette, disguising what it really is while it plays with its own profile.\nFull rule: https://infinitythewiki.com/HoloMask_State"
       },
       {
         "name": "Immobilized-A State",
@@ -15946,11 +17642,46 @@
         "description": "State\nThe trooper can't act or ARO except to Reset at WIP-3, though it still provides its Order.\nFull rule: https://infinitythewiki.com/Immobilized-B_State"
       },
       {
+        "name": "Impersonation State",
+        "id": "172e-2d11-3b10-551a",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Marker\nThe trooper is disguised as an Impersonation marker. Enemies can't move into contact with it, and can't attack it at all while it's at IMP-1, until it's revealed.\nFull rule: https://infinitythewiki.com/Impersonation_State"
+      },
+      {
         "name": "Isolated State",
         "id": "5664-fa14-012c-9bd5",
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "State\nThe trooper is cut off from command: it can't receive Orders from the pool, becomes Irregular if it stays Isolated, and can't join a Fireteam.\nFull rule: https://infinitythewiki.com/Isolated_State"
+      },
+      {
+        "name": "Normal State",
+        "id": "44c9-94d6-584b-59f9",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe default state: the trooper provides its Order and counts for scoring. A trooper returns to it once every Null state is cleared.\nFull rule: https://infinitythewiki.com/Normal_State"
+      },
+      {
+        "name": "Possessed State",
+        "id": "9cb1-a85a-ead7-2b6f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Null\nThe trooper has been taken over. Its owner can't activate it, it gives no Order, and it counts as an enemy to its own side and an ally to whoever possessed it.\nFull rule: https://infinitythewiki.com/Possessed_State"
+      },
+      {
+        "name": "Prone State",
+        "id": "3fbf-031d-aab9-854f",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper is lying down. It can go prone or stand at the start or end of a movement skill (not Jump), which changes its Silhouette and how far it moves. Unconscious troopers go prone automatically, except TAGs, vehicles and riders.\nFull rule: https://infinitythewiki.com/Prone_State"
+      },
+      {
+        "name": "Retreat! State",
+        "id": "1c34-51a1-7e47-c181",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nOnce the army is in Retreat!, each surviving trooper can only use Basic Short Skills, Cautious Movement, Dodge or Reset, and drops out of any marker state.\nFull rule: https://infinitythewiki.com/Retreat_State"
       },
       {
         "name": "Sepsitorized State",
@@ -15967,11 +17698,32 @@
         "description": "State\nThe trooper can't attack and takes -3 to every roll except saving rolls.\nFull rule: https://infinitythewiki.com/Stunned_State"
       },
       {
+        "name": "Suppressive Fire State",
+        "id": "d000-60a5-705a-f299",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper covers an area with its weapon's SF Mode profile. Enemies within 24 inches take -3 in face-to-face rolls against it, and it can ARO with the full Burst 3 at a single target.\nFull rule: https://infinitythewiki.com/Suppressive_Fire_State"
+      },
+      {
         "name": "Targeted State",
         "id": "6715-ce0a-94c8-8d7c",
         "hidden": false,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "description": "State\nThe trooper has been painted for strikes. Ranged attacks, Comms Attacks and Discover against it get +3, it takes -3 to Reset, and it loses Cautious Movement and Stealth.\nFull rule: https://infinitythewiki.com/Targeted_State"
+      },
+      {
+        "name": "Unconscious State",
+        "id": "b6fd-9a4b-f299-d590",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State · Null\nThe trooper has taken as many wounds as its VITA or STR. It can't act or ARO, gives no Order, its automatic skills stop working, it goes Prone, and it scores nothing until it's healed.\nFull rule: https://infinitythewiki.com/Unconscious_State"
+      },
+      {
+        "name": "Unloaded State",
+        "id": "aab4-86e8-b833-f08a",
+        "hidden": false,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "description": "State\nThe trooper has used up a Disposable item and can't use it again until it Reloads, or recovers in the States Phase, next to an ally with Baggage.\nFull rule: https://infinitythewiki.com/Unloaded_State"
       }
     ],
     "sharedSelectionEntries": [
@@ -16902,10 +18654,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "44ac-25bd-7374-610a",
+            "name": "Speculative Attack",
+            "id": "5fa2-26c9-253d-f351",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -16954,10 +18706,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "5573-531c-1cda-9d6b",
+            "name": "Speculative Attack",
+            "id": "daa9-425b-1a1b-f20c",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -16992,10 +18744,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "2335-4ee6-2fb7-c6e7",
+            "name": "Speculative Attack",
+            "id": "bffa-4fc2-7c28-0df8",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -17037,10 +18789,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "ab01-8099-30b3-ba4d",
+            "name": "Speculative Attack",
+            "id": "e60c-145b-076c-ba31",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -17089,10 +18841,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "8224-42fd-861c-11dd",
+            "name": "Speculative Attack",
+            "id": "4a08-f556-0e1c-79f1",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -17134,10 +18886,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "0c34-aea5-f671-c44a",
+            "name": "Speculative Attack",
+            "id": "4a38-520c-80fd-f921",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -17165,10 +18917,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "ce45-c800-6878-9063",
+            "name": "Speculative Attack",
+            "id": "e48c-0baa-9307-429a",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -17203,10 +18955,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "4e22-68d9-1c5a-d29e",
+            "name": "Speculative Attack",
+            "id": "5e1f-26d4-8058-fe4b",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -17533,6 +19285,13 @@
             "type": "profile"
           },
           {
+            "name": "AP Mine (deployed)",
+            "id": "88d1-0673-06f8-3d5d",
+            "hidden": false,
+            "targetId": "6882-394c-af16-280b",
+            "type": "profile"
+          },
+          {
             "name": "Concealed",
             "id": "1111-8fb2-2af4-1ea9",
             "hidden": false,
@@ -17651,6 +19410,20 @@
             "type": "profile"
           },
           {
+            "name": "Cybermine (deployed)",
+            "id": "a0be-3479-7f02-8e6c",
+            "hidden": false,
+            "targetId": "78e9-02c5-3a85-3496",
+            "type": "profile"
+          },
+          {
+            "name": "Comms Attack",
+            "id": "b862-8f8b-31d1-6583",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
+            "type": "rule"
+          },
+          {
             "name": "Concealed",
             "id": "54bc-14c6-2c20-d576",
             "hidden": false,
@@ -17745,6 +19518,13 @@
             "type": "profile"
           },
           {
+            "name": "Drop Bear (deployed)",
+            "id": "ee37-0301-ad38-734d",
+            "hidden": false,
+            "targetId": "0ee4-13ac-3fa0-de6b",
+            "type": "profile"
+          },
+          {
             "name": "BS Weapon (PH)",
             "id": "af78-6347-5504-04a4",
             "hidden": false,
@@ -17787,10 +19567,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "1dd8-c06f-7c67-892b",
+            "name": "Speculative Attack",
+            "id": "7467-4114-dbbb-b72f",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -17815,6 +19595,13 @@
             "id": "bcea-f537-3cd7-864b",
             "hidden": false,
             "targetId": "f948-4dd0-e51f-fa35",
+            "type": "profile"
+          },
+          {
+            "name": "E/M Mine (deployed)",
+            "id": "5804-4d8d-b8d7-0ef1",
+            "hidden": false,
+            "targetId": "1ecf-0146-2470-c559",
             "type": "profile"
           },
           {
@@ -17905,10 +19692,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "dcc5-f3c9-a7f2-c04f",
+            "name": "Speculative Attack",
+            "id": "2166-ba8c-8fcd-0256",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -17933,6 +19720,13 @@
             "id": "6252-da4e-1375-1398",
             "hidden": false,
             "targetId": "2e26-3cae-b610-f257",
+            "type": "profile"
+          },
+          {
+            "name": "Monofilament Mine (deployed)",
+            "id": "6cf7-d582-2dfa-62cb",
+            "hidden": false,
+            "targetId": "7666-2c55-eb5a-b504",
             "type": "profile"
           },
           {
@@ -18009,6 +19803,13 @@
             "type": "profile"
           },
           {
+            "name": "PARA Mine (deployed)",
+            "id": "23d3-761b-7d8a-063e",
+            "hidden": false,
+            "targetId": "c56c-38ad-b390-93cc",
+            "type": "profile"
+          },
+          {
             "name": "Concealed",
             "id": "2804-8e52-bc05-76b5",
             "hidden": false,
@@ -18075,6 +19876,13 @@
             "type": "profile"
           },
           {
+            "name": "Shock Mine (deployed)",
+            "id": "9030-670e-c156-8a7d",
+            "hidden": false,
+            "targetId": "2622-f22f-60ef-be34",
+            "type": "profile"
+          },
+          {
             "name": "Concealed",
             "id": "c2d0-8d61-6d61-6c61",
             "hidden": false,
@@ -18131,6 +19939,13 @@
             "id": "1caf-3fd4-bbf4-ca86",
             "hidden": false,
             "targetId": "6908-4686-2a74-f69e",
+            "type": "profile"
+          },
+          {
+            "name": "Viral Mine (deployed)",
+            "id": "471b-e5a2-1e60-b303",
+            "hidden": false,
+            "targetId": "c3fb-6110-bca1-c26c",
             "type": "profile"
           },
           {
@@ -18197,6 +20012,13 @@
             "id": "8ddf-fad8-d75a-d422",
             "hidden": false,
             "targetId": "06dd-ed46-c2f7-81c9",
+            "type": "profile"
+          },
+          {
+            "name": "WildParrot (deployed)",
+            "id": "3599-3ace-e9cd-d855",
+            "hidden": false,
+            "targetId": "0151-42b6-693b-fe14",
             "type": "profile"
           },
           {
@@ -18273,6 +20095,13 @@
             "type": "rule"
           },
           {
+            "name": "Comms Attack",
+            "id": "f4b9-683f-93ba-1397",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
+            "type": "rule"
+          },
+          {
             "name": "Disposable (X)",
             "id": "cccc-a658-4a05-87da",
             "hidden": false,
@@ -18315,6 +20144,13 @@
             "id": "de12-b3dd-f26c-aa2c",
             "hidden": false,
             "targetId": "64df-5f16-6f83-af68",
+            "type": "rule"
+          },
+          {
+            "name": "Comms Attack",
+            "id": "0074-b032-9eb8-e42a",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
             "type": "rule"
           },
           {
@@ -18367,6 +20203,13 @@
             "id": "36f3-98d2-cb1c-620c",
             "hidden": false,
             "targetId": "64df-5f16-6f83-af68",
+            "type": "rule"
+          },
+          {
+            "name": "Comms Attack",
+            "id": "56a6-1a27-5355-f0a9",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
             "type": "rule"
           },
           {
@@ -19810,6 +21653,13 @@
             "type": "profile"
           },
           {
+            "name": "CrazyKoala (deployed)",
+            "id": "3433-a46f-2681-a786",
+            "hidden": false,
+            "targetId": "a606-8ff8-0c7b-db90",
+            "type": "profile"
+          },
+          {
             "name": "Deployable",
             "id": "8661-29bb-1302-570d",
             "hidden": false,
@@ -19914,6 +21764,13 @@
             "type": "profile"
           },
           {
+            "name": "Disco Ball (deployed)",
+            "id": "1e75-4664-c2a9-99dd",
+            "hidden": false,
+            "targetId": "405b-eede-2254-7d42",
+            "type": "profile"
+          },
+          {
             "name": "Disco Baller",
             "id": "3536-f3a8-fe78-dbb4",
             "hidden": false,
@@ -19935,10 +21792,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "9fac-8c00-7484-46d7",
+            "name": "Speculative Attack",
+            "id": "957c-0a1f-9f8d-5fce",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -20166,6 +22023,13 @@
             "type": "rule"
           },
           {
+            "name": "Comms Attack",
+            "id": "dba4-a2b9-fe07-7254",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
+            "type": "rule"
+          },
+          {
             "name": "Disposable (X)",
             "id": "e714-005a-8af3-67b5",
             "hidden": false,
@@ -20232,10 +22096,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "a4fc-0f38-3a3c-c2a1",
+            "name": "Speculative Attack",
+            "id": "7c8d-1e94-75db-8966",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -20253,6 +22117,13 @@
             "id": "9cf8-9821-4c66-954d",
             "hidden": false,
             "targetId": "3410-5083-0df4-7a0c",
+            "type": "profile"
+          },
+          {
+            "name": "Madtrap (deployed)",
+            "id": "6297-8392-1c59-0165",
+            "hidden": false,
+            "targetId": "cf0c-55b7-b696-52f4",
             "type": "profile"
           },
           {
@@ -20453,10 +22324,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "95ca-641c-4a7a-234c",
+            "name": "Speculative Attack",
+            "id": "e2c9-5002-6306-99ba",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           },
           {
@@ -20671,10 +22542,10 @@
             "type": "rule"
           },
           {
-            "name": "Speculative Attack (Trait)",
-            "id": "7ca3-d518-5b84-c99d",
+            "name": "Speculative Attack",
+            "id": "1ca3-7910-d2c6-734d",
             "hidden": false,
-            "targetId": "8b9b-9a45-e031-f9d2",
+            "targetId": "16d3-83ad-2f43-af1e",
             "type": "rule"
           }
         ]
@@ -20747,6 +22618,23 @@
             "id": "e381-79d0-7b81-257f",
             "hidden": false,
             "targetId": "6746-134a-bf71-c1ab",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Bioimmunity",
+        "id": "f8ba-0e47-8a19-10b3",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Bioimmunity",
+            "id": "9676-f446-d862-534e",
+            "hidden": false,
+            "targetId": "4264-05d3-22b8-2254",
             "type": "rule"
           }
         ]
@@ -21348,16 +23236,119 @@
         ]
       },
       {
-        "name": "Martial Arts",
-        "id": "d662-84cb-1741-bfb8",
+        "name": "Martial Arts L1",
+        "id": "7947-3c09-7fd0-1bfc",
         "hidden": false,
         "type": "upgrade",
         "import": true,
         "publicationId": "c98c-3c50-3d4f-04b5",
         "infoLinks": [
           {
+            "name": "Martial Arts L1",
+            "id": "3041-c1eb-0a14-46db",
+            "hidden": false,
+            "targetId": "2bde-e446-8506-e238",
+            "type": "profile"
+          },
+          {
             "name": "Martial Arts",
-            "id": "29fe-7764-9c33-001d",
+            "id": "a579-ffae-f7fe-6573",
+            "hidden": false,
+            "targetId": "49a5-4d8e-6a3a-a91d",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L2",
+        "id": "39dd-bef3-d3e4-0519",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Martial Arts L2",
+            "id": "acc5-7aa0-0b51-13f6",
+            "hidden": false,
+            "targetId": "f873-26a4-fc00-8a35",
+            "type": "profile"
+          },
+          {
+            "name": "Martial Arts",
+            "id": "34bd-4338-b007-359b",
+            "hidden": false,
+            "targetId": "49a5-4d8e-6a3a-a91d",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L3",
+        "id": "2597-2a21-7f57-c4be",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Martial Arts L3",
+            "id": "f76c-b6ba-adb8-9599",
+            "hidden": false,
+            "targetId": "c0f8-e2bb-90c5-3c51",
+            "type": "profile"
+          },
+          {
+            "name": "Martial Arts",
+            "id": "3b2d-0ed6-c2c4-7c40",
+            "hidden": false,
+            "targetId": "49a5-4d8e-6a3a-a91d",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L4",
+        "id": "d9c3-f96a-3018-d981",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Martial Arts L4",
+            "id": "c376-811b-5396-503d",
+            "hidden": false,
+            "targetId": "ef50-5598-2209-ec3e",
+            "type": "profile"
+          },
+          {
+            "name": "Martial Arts",
+            "id": "72e7-b652-ad6e-0473",
+            "hidden": false,
+            "targetId": "49a5-4d8e-6a3a-a91d",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Martial Arts L5",
+        "id": "8a3b-537a-f550-0c85",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Martial Arts L5",
+            "id": "9ced-70ef-2474-d6b5",
+            "hidden": false,
+            "targetId": "fcbe-111b-7947-ed85",
+            "type": "profile"
+          },
+          {
+            "name": "Martial Arts",
+            "id": "87f3-290f-ab8b-be0b",
             "hidden": false,
             "targetId": "49a5-4d8e-6a3a-a91d",
             "type": "rule"
@@ -22179,6 +24170,13 @@
             "type": "profile"
           },
           {
+            "name": "Dazer (deployed)",
+            "id": "dacb-9f69-0d22-4758",
+            "hidden": false,
+            "targetId": "3042-f010-c641-65e8",
+            "type": "profile"
+          },
+          {
             "name": "Dazer",
             "id": "ee47-f4e1-43e3-96ca",
             "hidden": false,
@@ -22265,6 +24263,13 @@
             "type": "profile"
           },
           {
+            "name": "Deployable Repeater (deployed)",
+            "id": "d66d-4aa2-d539-d967",
+            "hidden": false,
+            "targetId": "54b6-aa58-c185-a654",
+            "type": "profile"
+          },
+          {
             "name": "Deployable Repeater",
             "id": "2b8e-96da-dd2a-7a25",
             "hidden": false,
@@ -22305,6 +24310,79 @@
         ]
       },
       {
+        "name": "EVO Hacking Device",
+        "id": "1819-a889-bd32-ba6e",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Assisted Fire",
+            "id": "5f52-ded7-ec09-eec0",
+            "hidden": false,
+            "targetId": "aea2-83d8-b482-9efa",
+            "type": "profile"
+          },
+          {
+            "name": "Enhanced Reaction",
+            "id": "7a09-495c-d990-02ca",
+            "hidden": false,
+            "targetId": "2b7c-db63-ea51-6b2b",
+            "type": "profile"
+          },
+          {
+            "name": "Fairy Dust",
+            "id": "61a9-730a-a9f1-4a59",
+            "hidden": false,
+            "targetId": "c498-9578-971a-0050",
+            "type": "profile"
+          },
+          {
+            "name": "Controlled Jump",
+            "id": "3d3f-1659-b649-32ce",
+            "hidden": false,
+            "targetId": "4520-cc48-1994-0bc7",
+            "type": "profile"
+          },
+          {
+            "name": "EVO Hacking Device",
+            "id": "7878-3eaa-a8ce-3ea1",
+            "hidden": false,
+            "targetId": "7c08-5614-a336-8bde",
+            "type": "rule"
+          },
+          {
+            "name": "Assisted Fire",
+            "id": "7587-efb8-ab14-014e",
+            "hidden": false,
+            "targetId": "101c-f0d7-056c-8aa3",
+            "type": "rule"
+          },
+          {
+            "name": "Enhanced Reaction",
+            "id": "3728-b229-0621-a772",
+            "hidden": false,
+            "targetId": "4dd2-9e24-a424-6532",
+            "type": "rule"
+          },
+          {
+            "name": "Fairy Dust",
+            "id": "3bf4-f491-2c62-5651",
+            "hidden": false,
+            "targetId": "1f3d-d9b2-f10b-a54d",
+            "type": "rule"
+          },
+          {
+            "name": "Controlled Jump",
+            "id": "38b2-6a60-3c5e-47af",
+            "hidden": false,
+            "targetId": "6290-6631-cd10-866f",
+            "type": "rule"
+          }
+        ]
+      },
+      {
         "name": "FastPanda",
         "id": "9716-f662-f523-ced5",
         "hidden": false,
@@ -22317,6 +24395,13 @@
             "id": "4a34-3e4c-0d6d-1971",
             "hidden": false,
             "targetId": "5a5c-9f74-df17-b60f",
+            "type": "profile"
+          },
+          {
+            "name": "FastPanda (deployed)",
+            "id": "67d7-49da-84c4-a9ae",
+            "hidden": false,
+            "targetId": "5f96-4642-6d9f-ceee",
             "type": "profile"
           },
           {
@@ -22413,10 +24498,167 @@
         "publicationId": "c98c-3c50-3d4f-04b5",
         "infoLinks": [
           {
+            "name": "Carbonite",
+            "id": "4b56-9fa9-be81-8985",
+            "hidden": false,
+            "targetId": "1af1-9ae7-a239-52be",
+            "type": "profile"
+          },
+          {
+            "name": "Spotlight",
+            "id": "e45e-d0f4-f5c0-ea6c",
+            "hidden": false,
+            "targetId": "85cf-2a1f-5be4-065f",
+            "type": "profile"
+          },
+          {
+            "name": "Total Control",
+            "id": "fdb2-c94f-5336-9d3b",
+            "hidden": false,
+            "targetId": "5961-c524-fd6f-534e",
+            "type": "profile"
+          },
+          {
+            "name": "Oblivion",
+            "id": "c303-6f93-8fc9-0ccf",
+            "hidden": false,
+            "targetId": "5d2c-02b6-53ce-1b2a",
+            "type": "profile"
+          },
+          {
             "name": "Hacking Device",
             "id": "1307-64be-1e67-b203",
             "hidden": false,
             "targetId": "df33-f1d8-5267-b20b",
+            "type": "rule"
+          },
+          {
+            "name": "Carbonite",
+            "id": "ee16-a29d-f1ab-5d04",
+            "hidden": false,
+            "targetId": "fa48-c592-c940-ca9c",
+            "type": "rule"
+          },
+          {
+            "name": "Spotlight",
+            "id": "df23-a95f-8af1-8016",
+            "hidden": false,
+            "targetId": "a6ef-dd80-be82-b35f",
+            "type": "rule"
+          },
+          {
+            "name": "Total Control",
+            "id": "ffbd-f2cc-1674-c188",
+            "hidden": false,
+            "targetId": "ded0-2afe-5722-3925",
+            "type": "rule"
+          },
+          {
+            "name": "Oblivion",
+            "id": "a8d0-482b-e22c-09d5",
+            "hidden": false,
+            "targetId": "2b85-5bbb-76d8-13b0",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Hacking Device Plus",
+        "id": "b98c-a870-cf54-f7bb",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Carbonite",
+            "id": "18ea-7892-fb1b-93ea",
+            "hidden": false,
+            "targetId": "1af1-9ae7-a239-52be",
+            "type": "profile"
+          },
+          {
+            "name": "Spotlight",
+            "id": "a3d4-76d4-be86-b9d3",
+            "hidden": false,
+            "targetId": "85cf-2a1f-5be4-065f",
+            "type": "profile"
+          },
+          {
+            "name": "Total Control",
+            "id": "f887-10f7-f2da-80bf",
+            "hidden": false,
+            "targetId": "5961-c524-fd6f-534e",
+            "type": "profile"
+          },
+          {
+            "name": "Oblivion",
+            "id": "8bc5-5fc0-bc82-2548",
+            "hidden": false,
+            "targetId": "5d2c-02b6-53ce-1b2a",
+            "type": "profile"
+          },
+          {
+            "name": "White Noise",
+            "id": "0667-507a-6127-71d8",
+            "hidden": false,
+            "targetId": "c2ef-2ade-438c-15bb",
+            "type": "profile"
+          },
+          {
+            "name": "Cybermask",
+            "id": "a09f-e397-8607-3324",
+            "hidden": false,
+            "targetId": "d2f0-5b18-3a6b-0e16",
+            "type": "profile"
+          },
+          {
+            "name": "Hacking Device Plus",
+            "id": "81cd-857f-6387-2d88",
+            "hidden": false,
+            "targetId": "2080-5f00-90e3-474b",
+            "type": "rule"
+          },
+          {
+            "name": "Carbonite",
+            "id": "93a9-a638-795e-afc9",
+            "hidden": false,
+            "targetId": "fa48-c592-c940-ca9c",
+            "type": "rule"
+          },
+          {
+            "name": "Spotlight",
+            "id": "0291-975c-ce0d-8810",
+            "hidden": false,
+            "targetId": "a6ef-dd80-be82-b35f",
+            "type": "rule"
+          },
+          {
+            "name": "Total Control",
+            "id": "192e-cba1-1a2f-6405",
+            "hidden": false,
+            "targetId": "ded0-2afe-5722-3925",
+            "type": "rule"
+          },
+          {
+            "name": "Oblivion",
+            "id": "787b-0913-b12d-bef2",
+            "hidden": false,
+            "targetId": "2b85-5bbb-76d8-13b0",
+            "type": "rule"
+          },
+          {
+            "name": "White Noise",
+            "id": "2ad8-631f-ed2a-9967",
+            "hidden": false,
+            "targetId": "7b63-67e7-a3a6-43e0",
+            "type": "rule"
+          },
+          {
+            "name": "Cybermask",
+            "id": "0de0-f041-7aa2-7c56",
+            "hidden": false,
+            "targetId": "0ad9-aa2e-b1d7-d83b",
             "type": "rule"
           }
         ]
@@ -22451,6 +24693,51 @@
             "id": "115d-6a3c-6d2b-0548",
             "hidden": false,
             "targetId": "3bf6-ced2-9117-bc03",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Killer Hacking Device",
+        "id": "d37d-207c-9b73-5d03",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Trinity",
+            "id": "785e-bd95-15e3-dbb8",
+            "hidden": false,
+            "targetId": "a4a4-2acd-5cbe-4707",
+            "type": "profile"
+          },
+          {
+            "name": "Cybermask",
+            "id": "125c-ca09-e292-05b4",
+            "hidden": false,
+            "targetId": "d2f0-5b18-3a6b-0e16",
+            "type": "profile"
+          },
+          {
+            "name": "Killer Hacking Device",
+            "id": "46a8-8691-973e-3b4b",
+            "hidden": false,
+            "targetId": "3d95-6eaa-02c5-0811",
+            "type": "rule"
+          },
+          {
+            "name": "Trinity",
+            "id": "7d39-c0e3-8073-1a3e",
+            "hidden": false,
+            "targetId": "b0e2-e5a9-7000-7919",
+            "type": "rule"
+          },
+          {
+            "name": "Cybermask",
+            "id": "ae9e-a044-0bf2-ef0e",
+            "hidden": false,
+            "targetId": "0ad9-aa2e-b1d7-d83b",
             "type": "rule"
           }
         ]
@@ -22601,6 +24888,406 @@
             "id": "2bd4-2063-c7bb-f5be",
             "hidden": false,
             "targetId": "039a-ca2c-44ee-4967",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Carbonite",
+        "id": "2660-84d5-15c9-d474",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Carbonite",
+            "id": "f871-ecac-17a9-8448",
+            "hidden": false,
+            "targetId": "fa48-c592-c940-ca9c",
+            "type": "rule"
+          },
+          {
+            "name": "Double Action (DA) Ammunition",
+            "id": "06ef-119c-5624-9ca5",
+            "hidden": false,
+            "targetId": "21dc-e91b-9e96-4177",
+            "type": "rule"
+          },
+          {
+            "name": "Hacker",
+            "id": "97aa-683d-a2d3-512e",
+            "hidden": false,
+            "targetId": "80c0-d4ce-49d4-0fb2",
+            "type": "rule"
+          },
+          {
+            "name": "Immobilized-B State",
+            "id": "fd83-2b99-cae1-9a38",
+            "hidden": false,
+            "targetId": "7e54-dbab-8645-2573",
+            "type": "rule"
+          },
+          {
+            "name": "Non-Lethal",
+            "id": "cc24-aae3-d677-5d02",
+            "hidden": false,
+            "targetId": "d803-d330-3780-823e",
+            "type": "rule"
+          },
+          {
+            "name": "State",
+            "id": "284c-1575-32a1-9f67",
+            "hidden": false,
+            "targetId": "a15e-7481-0da9-5e08",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Cybermask",
+        "id": "e635-efe4-3cd4-a8e5",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Cybermask",
+            "id": "9a3a-ef95-bc4b-3e1e",
+            "hidden": false,
+            "targetId": "0ad9-aa2e-b1d7-d83b",
+            "type": "rule"
+          },
+          {
+            "name": "Impersonation State",
+            "id": "27d0-c0be-f774-2962",
+            "hidden": false,
+            "targetId": "172e-2d11-3b10-551a",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Oblivion",
+        "id": "e702-57ad-6707-fb7f",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Oblivion",
+            "id": "7052-eab7-c4df-2e3a",
+            "hidden": false,
+            "targetId": "2b85-5bbb-76d8-13b0",
+            "type": "rule"
+          },
+          {
+            "name": "Armor Piercing (AP) Ammunition",
+            "id": "11d2-5d0a-6fd1-989d",
+            "hidden": false,
+            "targetId": "2ac2-f449-3f7a-1b55",
+            "type": "rule"
+          },
+          {
+            "name": "Hacker",
+            "id": "9a8c-bfcb-ae81-7d17",
+            "hidden": false,
+            "targetId": "80c0-d4ce-49d4-0fb2",
+            "type": "rule"
+          },
+          {
+            "name": "Isolated State",
+            "id": "aa8d-cf2e-800b-8478",
+            "hidden": false,
+            "targetId": "5664-fa14-012c-9bd5",
+            "type": "rule"
+          },
+          {
+            "name": "Non-Lethal",
+            "id": "e70b-8bc0-3fdd-ea3f",
+            "hidden": false,
+            "targetId": "d803-d330-3780-823e",
+            "type": "rule"
+          },
+          {
+            "name": "State",
+            "id": "2566-545e-ae40-d24d",
+            "hidden": false,
+            "targetId": "a15e-7481-0da9-5e08",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Spotlight",
+        "id": "d741-6147-027a-49dd",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Spotlight",
+            "id": "0648-dcb4-6148-a475",
+            "hidden": false,
+            "targetId": "a6ef-dd80-be82-b35f",
+            "type": "rule"
+          },
+          {
+            "name": "Armor Piercing (AP) Ammunition",
+            "id": "5398-fb95-2880-c5fe",
+            "hidden": false,
+            "targetId": "2ac2-f449-3f7a-1b55",
+            "type": "rule"
+          },
+          {
+            "name": "Non-Lethal",
+            "id": "dc33-7663-ff1b-4cc4",
+            "hidden": false,
+            "targetId": "d803-d330-3780-823e",
+            "type": "rule"
+          },
+          {
+            "name": "State",
+            "id": "0128-139b-d152-0d64",
+            "hidden": false,
+            "targetId": "a15e-7481-0da9-5e08",
+            "type": "rule"
+          },
+          {
+            "name": "Targeted State",
+            "id": "7931-7780-aa87-97c0",
+            "hidden": false,
+            "targetId": "6715-ce0a-94c8-8d7c",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Total Control",
+        "id": "bf19-1569-1da2-9a65",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Total Control",
+            "id": "c3e5-a139-05c0-09eb",
+            "hidden": false,
+            "targetId": "ded0-2afe-5722-3925",
+            "type": "rule"
+          },
+          {
+            "name": "Double Action (DA) Ammunition",
+            "id": "d9ec-9b91-daa8-899d",
+            "hidden": false,
+            "targetId": "21dc-e91b-9e96-4177",
+            "type": "rule"
+          },
+          {
+            "name": "Non-Lethal",
+            "id": "e0bf-5893-86dc-43fb",
+            "hidden": false,
+            "targetId": "d803-d330-3780-823e",
+            "type": "rule"
+          },
+          {
+            "name": "Normal State",
+            "id": "be3b-9392-ab8b-db92",
+            "hidden": false,
+            "targetId": "44c9-94d6-584b-59f9",
+            "type": "rule"
+          },
+          {
+            "name": "Possessed State",
+            "id": "d2a9-3e93-3ae9-1d64",
+            "hidden": false,
+            "targetId": "9cb1-a85a-ead7-2b6f",
+            "type": "rule"
+          },
+          {
+            "name": "State",
+            "id": "263d-f6ff-694f-2474",
+            "hidden": false,
+            "targetId": "a15e-7481-0da9-5e08",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Trinity",
+        "id": "613c-6324-1e46-e583",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Trinity",
+            "id": "f48e-6fb3-3df2-5040",
+            "hidden": false,
+            "targetId": "b0e2-e5a9-7000-7919",
+            "type": "rule"
+          },
+          {
+            "name": "Hacker",
+            "id": "de84-7917-72c5-a2cd",
+            "hidden": false,
+            "targetId": "80c0-d4ce-49d4-0fb2",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "White Noise",
+        "id": "b9ff-aa26-4e9c-3c7a",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "White Noise",
+            "id": "4f64-2f41-ddb6-12e1",
+            "hidden": false,
+            "targetId": "7b63-67e7-a3a6-43e0",
+            "type": "rule"
+          },
+          {
+            "name": "Negative Feedback (NFB)",
+            "id": "2481-9c33-c88f-03ca",
+            "hidden": false,
+            "targetId": "781f-3be4-4eb7-f206",
+            "type": "rule"
+          },
+          {
+            "name": "Reflective",
+            "id": "19b7-2ed5-8200-5ed9",
+            "hidden": false,
+            "targetId": "a5c2-9e7d-b60b-fa4b",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Zero Pain",
+        "id": "f489-d9bf-c6d6-dff6",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Zero Pain",
+            "id": "b592-c849-ee88-87ad",
+            "hidden": false,
+            "targetId": "c669-1340-97e1-f22c",
+            "type": "rule"
+          },
+          {
+            "name": "Comms Attack",
+            "id": "a87f-ae49-28d7-9337",
+            "hidden": false,
+            "targetId": "4899-55d1-2017-b7ca",
+            "type": "rule"
+          },
+          {
+            "name": "Non-Lethal",
+            "id": "d83d-b2d6-d84c-5306",
+            "hidden": false,
+            "targetId": "d803-d330-3780-823e",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Assisted Fire",
+        "id": "bb94-060c-f6d5-c76d",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Assisted Fire",
+            "id": "1a59-21b1-f459-9b84",
+            "hidden": false,
+            "targetId": "101c-f0d7-056c-8aa3",
+            "type": "rule"
+          },
+          {
+            "name": "Marksmanship",
+            "id": "30f3-0e43-9d20-eb6a",
+            "hidden": false,
+            "targetId": "bc0f-db4c-495e-8761",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Controlled Jump",
+        "id": "1f19-e9fa-982d-5c31",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Controlled Jump",
+            "id": "9827-fa2d-4bda-2d81",
+            "hidden": false,
+            "targetId": "6290-6631-cd10-866f",
+            "type": "rule"
+          },
+          {
+            "name": "Combat Jump",
+            "id": "595c-d9c7-fe68-422b",
+            "hidden": false,
+            "targetId": "1631-6f66-d6f4-21e0",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Enhanced Reaction",
+        "id": "052c-42f7-8501-d7e7",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Enhanced Reaction",
+            "id": "da82-dc20-a441-ac40",
+            "hidden": false,
+            "targetId": "4dd2-9e24-a424-6532",
+            "type": "rule"
+          }
+        ]
+      },
+      {
+        "name": "Fairy Dust",
+        "id": "fa95-8e04-6b30-22e2",
+        "hidden": false,
+        "type": "upgrade",
+        "import": true,
+        "publicationId": "c98c-3c50-3d4f-04b5",
+        "infoLinks": [
+          {
+            "name": "Fairy Dust",
+            "id": "e136-5a57-5bc3-9cc5",
+            "hidden": false,
+            "targetId": "1f3d-d9b2-f10b-a54d",
+            "type": "rule"
+          },
+          {
+            "name": "Firewall",
+            "id": "9747-d223-1fc3-44e8",
+            "hidden": false,
+            "targetId": "c743-149e-0d8b-b92d",
             "type": "rule"
           }
         ]

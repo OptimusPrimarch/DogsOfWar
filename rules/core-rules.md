@@ -6,8 +6,8 @@
 
 Dogs of War is played on the **Infinity N5** rules. Anything this document doesn't mention works exactly as N5 says. This document covers only what Dogs of War changes or adds, and where the two disagree, this document wins.
 
-- **The N5 rules** are on the official [Infinity wiki](https://infinitythewiki.com) (© Corvus Belli). The chapters are linked below.
-- **Weapons, skills and equipment:** every one in the catalogue is listed in [armory.md](armory.md), with a short summary and a link to its official rule.
+- **The N5 rules** are on the official [Infinity wiki](https://infinitythewiki.com) (© Corvus Belli). The chapters are linked below, and [n5-index.md](n5-index.md) links every page of every chapter.
+- **Weapons, skills, equipment and hacking programs:** every one in the catalogue is listed in [armory.md](armory.md), with a short summary and a link to its official rule.
 - **Our own rules** are written in our own words. Rules brought back from the previous edition, N4, are marked **(N4)**.
 
 ### The N5 chapters
@@ -102,6 +102,7 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 - **Fireteams.** N5's Fireteam rules aren't used, so skills that only work inside a Fireteam (FT Master, Number 2, Strategic Deployment, and the Fireteam parts of others) have no effect. The word "fireteam" may still appear loosely in descriptions.
 - **Exrah** and **Shasvastii** (skills named after factions).
+- **Tri-Core**, an N4 rule the wiki marks as no longer part of N5.
 
 ## 9. Table and miniatures
 
