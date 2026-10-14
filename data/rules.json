@@ -1,0 +1,45 @@
+{
+  "_about": "Dogs of War's own rules as they appear in the catalogue: a short summary and the section of rules/core-rules.md that holds the full text. Rules ported from N4 are marked \"n4\": true and get '(N4)' after their name. Keep each summary in step with core-rules.md.",
+
+  "Round Structure": {
+    "section": "3-round-structure",
+    "summary": "Three rounds. Each round runs Impetuous, Pilot (pilots and their TAG), Elite, Trooper, then Reinforcement. In each phase the player with initiative takes a full N5 Active Turn, then the other player does; only that phase's models spend Orders. The Lieutenant Order can be spent in any phase."
+  },
+  "Order Pool": {
+    "section": "4-orders",
+    "summary": "Pilots and Elites give Regular Orders to one pool, spent by whoever acts in the current phase. Troopers are Irregular and act on their own Orders in the Trooper phase. Track the pool with tokens: one per Regular model at the start of the round, discard one per Order spent, and at the start of each of your turns discard one per Regular model lost since your last turn."
+  },
+  "Command Tokens": {
+    "section": "5-command",
+    "summary": "The N5 starting pool, slightly enlarged (number to be set), never regained. Besides N5's uses they pay for drop pods, replacement TAGs, extra Elite slots and calldowns."
+  },
+  "Reinforcements": {
+    "section": "6-reinforcements-and-calldowns",
+    "summary": "Arrivals come in the Reinforcement phase, by the first method possible: a drop pod (1 Command Token) anywhere on the table, Deployment (Tactical), or your deployment zone. Elite reserves are chosen before the game; Trooper reserves are unlimited. The 10-infantry cap is the only limit."
+  },
+  "Deployment (Tactical)": {
+    "section": "6-reinforcements-and-calldowns",
+    "summary": "Every reinforcing model has this skill. Place the model within the Zone of Control of an allied model and outside the LoF of every enemy."
+  },
+  "Replacement TAGs": {
+    "section": "6-reinforcements-and-calldowns",
+    "summary": "During the Pilot phase a pilot can call in a TAG from the stock lineup, the same for every company, paid with Command Tokens (roughly most of the pool). Lineup and prices to be written."
+  },
+  "Mount and Dismount": {
+    "n4": true,
+    "section": "mount-and-dismount-n4",
+    "summary": "N5 dropped this; Dogs of War brings back N4's version. A pilot gets into or out of a TAG as part of any skill with the Movement label, at no extra cost. A pilot can still get out of an Unconscious TAG, and can't get in or out of a Possessed one. An empty TAG can't spend Orders or AROs but can still be targeted. Game states carry across when the pilot gets in or out, except Unconscious and Possessed. While aboard, the pilot isn't on the table, so it can't be hacked or hit by E/M; and while its TAG is Unconscious, the pilot gives no Order and only the TAG counts for scoring. If a dismounted pilot dies, its TAG is removed as a casualty too. N4 let pilots board only their own TAG; Dogs of War adds Jockey and Unmanned TAGs."
+  },
+  "Jockey": {
+    "section": "7-pilots-and-tags",
+    "summary": "Pilots only. A pilot that ends any movement in base contact with an enemy TAG makes a face-to-face WIP roll against it. Results to be written."
+  },
+  "Unmanned TAGs": {
+    "section": "7-pilots-and-tags",
+    "summary": "A pilot can climb into an enemy TAG whose pilot has dismounted, and take it over."
+  },
+  "Eject": {
+    "section": "7-pilots-and-tags",
+    "summary": "A TAG ejects its pilot through N5's Transmutation (Escape System). The profile the TAG turns into is the company's pilot."
+  }
+}

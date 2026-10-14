@@ -1,0 +1,1 @@
+Catalogue.xsd is the BattleScribe 2.03 data schema from https://github.com/BSData/schemas (src/xml/schema/v2_03), under the MIT licence in LICENSE.md. tools/build.py validates the game system and catalogue against it when the xmlschema package is installed.

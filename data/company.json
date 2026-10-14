@@ -1,0 +1,190 @@
+{
+  "_about": "Everything a player picks when building a company. tools/build.py turns this into 'Mercenary Company.cat'. Stat lines and prices marked \"status\": \"prototype\" are carried over from the first New Recruit attempt and are placeholders until designed.",
+
+  "_howto": {
+    "cost": "{\"Requisition\": 5, \"Capacity\": 2, \"Command Tokens\": 1}; null or a missing cost type means none yet.",
+    "skills / equipment": "Names as a unit profile would print them: \"Dodge (PH=11)\". Each links to its rule; the bracketed part is shown after the name.",
+    "weapons": "Weapons the unit always carries, by name from the armory.",
+    "lists": "Names of shared option lists below, offered to this unit.",
+    "groups": "Option lists only this unit has. Each option is a weapon from the armory with a price, and optional stat changes (\"mods\": {\"PS\": \"-1\"} lowers PS by 1, {\"PS\": \"=6\"} sets it to 6).",
+    "upgrades": "Names from \"upgrades\" below."
+  },
+
+  "lists": {
+    "Pilot Sidearms": {
+      "max": 1,
+      "status": "prototype",
+      "options": [
+        {"weapon": "Submachine Gun", "cost": {"Requisition": 1}},
+        {"weapon": "Boarding Shotgun", "cost": {"Requisition": 1}},
+        {"weapon": "Combi Rifle", "cost": {"Requisition": 2}},
+        {"weapon": "Spitfire", "cost": {"Requisition": 4}}
+      ]
+    },
+    "Pilot CC Weapons": {
+      "min": 1,
+      "max": 1,
+      "default": "CC Weapon",
+      "status": "prototype",
+      "options": [
+        {"weapon": "CC Weapon"},
+        {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}},
+        {"weapon": "Shock CC Weapon", "cost": {"Requisition": 1}},
+        {"weapon": "DA CC Weapon", "cost": {"Requisition": 2}},
+        {"weapon": "T2 CC Weapon", "cost": {"Requisition": 2}},
+        {"weapon": "EXP CC Weapon", "cost": {"Requisition": 3}}
+      ]
+    }
+  },
+
+  "upgrades": {
+    "Lieutenant": {"category": "Lieutenant", "rules": ["Lieutenant"], "cost": {"Requisition": null}},
+    "NCO": {"rules": ["NCO"], "cost": {"Requisition": null}},
+    "Start in Reserve": {"removesCategory": "Deployed", "rules": ["Reinforcements"]}
+  },
+
+  "profiles": {
+    "Trooper": {
+      "type": "Trooper",
+      "status": "prototype",
+      "stats": {"MOV": "?", "CC": "?", "BS": "?", "PH": "?", "WIP": "?", "ARM": "?", "BTS": "?", "VITA": "?", "S": "2", "Orders": "Irregular"}
+    }
+  },
+
+  "units": [
+    {
+      "name": "Company Briefing",
+      "category": "Company",
+      "type": "upgrade",
+      "min": 1,
+      "max": 1,
+      "rules": ["Round Structure", "Order Pool", "Command Tokens", "Reinforcements", "Deployment (Tactical)",
+                "Replacement TAGs", "Mount and Dismount", "Jockey", "Unmanned TAGs", "Eject"]
+    },
+    {
+      "name": "Expanded Contract",
+      "category": "Company",
+      "type": "upgrade",
+      "note": "Each one adds 1 to the Elite limit.",
+      "cost": {"Command Tokens": null}
+    },
+
+    {
+      "name": "Rookie Pilot",
+      "category": "Pilot",
+      "status": "prototype",
+      "cost": {"Requisition": 5},
+      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "18", "BS": "12", "PH": "13", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "2", "S": "2", "Orders": "Regular"}},
+      "skills": ["Specialist Operative"],
+      "equipment": ["GizmoKit (PH+1)"],
+      "weapons": ["Pistol"],
+      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "upgrades": ["Lieutenant", "NCO"],
+      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+    },
+    {
+      "name": "Seasoned Pilot",
+      "category": "Pilot",
+      "status": "prototype",
+      "cost": {"Requisition": 10},
+      "profile": {"type": "Trooper", "stats": {"MOV": "6-2", "CC": "20", "BS": "13", "PH": "14", "WIP": "14", "ARM": "1", "BTS": "6", "VITA": "2", "S": "2", "Orders": "Regular"}},
+      "skills": ["Specialist Operative"],
+      "equipment": ["GizmoKit (PH+1)"],
+      "weapons": ["Pistol"],
+      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "upgrades": ["Lieutenant", "NCO"],
+      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+    },
+    {
+      "name": "Veteran Pilot",
+      "category": "Pilot",
+      "status": "prototype",
+      "cost": {"Requisition": 15},
+      "profile": {"type": "Trooper", "stats": {"MOV": "6-4", "CC": "22", "BS": "14", "PH": "15", "WIP": "15", "ARM": "1", "BTS": "9", "VITA": "2", "S": "2", "Orders": "Regular"}},
+      "skills": ["Specialist Operative"],
+      "equipment": ["GizmoKit (PH+1)"],
+      "weapons": ["Pistol"],
+      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "upgrades": ["Lieutenant", "NCO"],
+      "rules": ["Mount and Dismount", "Jockey", "Unmanned TAGs"]
+    },
+
+    {
+      "name": "Light TAG",
+      "category": "TAG",
+      "status": "prototype",
+      "cost": {"Requisition": 20},
+      "capacity": null,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "equipment": ["ECM: Guided (-6)"],
+      "rules": ["Mount and Dismount", "Eject"],
+      "groups": []
+    },
+    {
+      "name": "Medium TAG",
+      "category": "TAG",
+      "status": "prototype",
+      "cost": {"Requisition": 30},
+      "capacity": null,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "equipment": ["ECM: Guided (-6)"],
+      "rules": ["Mount and Dismount", "Eject"],
+      "groups": [
+        {"name": "Ranged Hardpoint", "max": 1, "options": [
+          {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}
+        ]},
+        {"name": "CQC Hardpoints", "max": 2, "default": "CC Weapon", "options": [
+          {"weapon": "CC Weapon", "mods": {"PS": "=6"}},
+          {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}, "mods": {"PS": "=6"}}
+        ]}
+      ]
+    },
+    {
+      "name": "Heavy TAG",
+      "category": "TAG",
+      "status": "prototype",
+      "cost": {"Requisition": 40},
+      "capacity": null,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "17", "BS": "14", "PH": "15", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
+      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)"],
+      "equipment": ["ECM: Guided (-6)"],
+      "rules": ["Mount and Dismount", "Eject"],
+      "groups": []
+    },
+
+    {
+      "name": "Combat Engineer",
+      "category": "Elite",
+      "also": ["Deployed", "Specialist"],
+      "status": "prototype",
+      "cost": {"Requisition": 4},
+      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "14", "BS": "12", "PH": "12", "WIP": "13", "ARM": "3", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
+      "skills": ["Engineer"],
+      "equipment": ["GizmoKit (+1B)"],
+      "groups": [
+        {"name": "Weapon", "max": 1, "options": [
+          {"weapon": "MULTI Rifle", "cost": {"Requisition": 1}},
+          {"weapon": "Chain Rifle"}
+        ]}
+      ],
+      "upgrades": ["Start in Reserve"]
+    },
+
+    {"name": "Trooper — Rifleman", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
+     "sharedProfile": "Trooper", "weapons": ["Combi Rifle"]},
+    {"name": "Trooper — Gunner", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
+     "sharedProfile": "Trooper", "weapons": ["Spitfire"]},
+    {"name": "Trooper — Grenadier", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
+     "sharedProfile": "Trooper", "weapons": ["Grenade Launcher"]},
+    {"name": "Trooper — AT Gunner", "category": "Trooper", "also": ["Deployed"], "status": "prototype",
+     "sharedProfile": "Trooper", "weapons": ["Panzerfaust"]},
+    {"name": "Trooper — Corpsman", "category": "Trooper", "also": ["Deployed", "Specialist"], "status": "prototype",
+     "sharedProfile": "Trooper", "skills": ["Paramedic"], "weapons": ["Submachine Gun"],
+     "note": "Foundations: Paramedic + a lighter weapon. The SMG is a stand-in."},
+    {"name": "Trooper — Spotter", "category": "Trooper", "also": ["Deployed", "Specialist"], "status": "prototype",
+     "sharedProfile": "Trooper", "skills": ["Forward Observer"], "weapons": ["Submachine Gun"],
+     "note": "Foundations: Forward Observer + a lighter weapon. The SMG is a stand-in."}
+  ]
+}

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="11" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="11" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="aeb1-6bed-41f4-c80d" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <characteristics>
+            <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
+            <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">18</characteristic>
+            <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">12</characteristic>
+            <characteristic name="PH" typeId="0622-6e35-2324-c118">13</characteristic>
+            <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">13</characteristic>
+            <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">1</characteristic>
+            <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">3</characteristic>
+            <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">2</characteristic>
+            <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
+            <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Regular</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="caa2-fef8-6e59-4031" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="b4c2-1856-2da0-f26a" name="Specialist Operative" hidden="false" targetId="4e85-2481-9162-7597" type="rule" />
+        <infoLink id="a442-09d6-148d-08e6" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH+1)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="0eec-4e9d-6938-b8ce" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="fe16-b56b-ab4a-9a70" name="Jockey" hidden="false" targetId="22e3-0707-4bd8-3acb" type="rule" />
+        <infoLink id="4a6b-42f0-1491-1d15" name="Unmanned TAGs" hidden="false" targetId="104b-90c4-6e9d-1575" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="0f1f-c041-8f09-d38f" name="Pilot" hidden="false" targetId="87f9-8f57-f1d0-ce32" primary="true" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="4f2e-201f-d053-d135" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9976-1499-6d7c-c50f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="3cbe-ca31-f294-2c8c" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="fda8-ab0f-017f-de75" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="daa1-10fc-bc2e-01b0" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="b609-db5b-a2b9-c5cc" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="9386-40af-5b3b-bf7b" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="a477-4bcd-1125-5483" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
+        <entryLink id="0de2-5271-6b8d-8e7b" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
+      </entryLinks>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fa45-11e3-805b-9d60" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="1635-c253-8239-a695" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <characteristics>
+            <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-2</characteristic>
+            <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">20</characteristic>
+            <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">13</characteristic>
+            <characteristic name="PH" typeId="0622-6e35-2324-c118">14</characteristic>
+            <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">14</characteristic>
+            <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">1</characteristic>
+            <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">6</characteristic>
+            <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">2</characteristic>
+            <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
+            <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Regular</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="1ec5-ce15-42e5-eb63" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="1580-0ff3-2933-c158" name="Specialist Operative" hidden="false" targetId="4e85-2481-9162-7597" type="rule" />
+        <infoLink id="68ed-3264-6123-a5f8" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH+1)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="79c8-68af-e011-6fd1" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="cd31-e6f8-500c-d405" name="Jockey" hidden="false" targetId="22e3-0707-4bd8-3acb" type="rule" />
+        <infoLink id="f18a-54ba-12bd-451b" name="Unmanned TAGs" hidden="false" targetId="104b-90c4-6e9d-1575" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ced0-5214-9858-c947" name="Pilot" hidden="false" targetId="87f9-8f57-f1d0-ce32" primary="true" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="ba7c-ffdf-ff02-4f59" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="bdda-43a4-ff40-a24d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="42b3-b8e8-9cf7-596b" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="7e35-bd17-87f6-35dc" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="b7a6-0a17-7340-8900" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="d4b2-2ab5-7e62-fa31" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="0ac2-0a4e-3659-2f08" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="17e4-7391-e0a9-d9fa" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
+        <entryLink id="b37b-40bb-1163-e71d" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
+      </entryLinks>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="10" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="4a14-5c8d-0afa-5c30" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="0d74-525e-1916-e22d" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <characteristics>
+            <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-4</characteristic>
+            <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">22</characteristic>
+            <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">14</characteristic>
+            <characteristic name="PH" typeId="0622-6e35-2324-c118">15</characteristic>
+            <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">15</characteristic>
+            <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">1</characteristic>
+            <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">9</characteristic>
+            <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">2</characteristic>
+            <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
+            <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Regular</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="4f1e-cf67-5c5b-294b" name="Pistol" hidden="false" targetId="98f7-c555-889e-699d" type="profile" />
+        <infoLink id="6622-3a17-5c3e-b030" name="Specialist Operative" hidden="false" targetId="4e85-2481-9162-7597" type="rule" />
+        <infoLink id="d2ff-41eb-5849-d373" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH+1)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="f8f6-21b6-599d-66d7" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="1165-ae50-2ae2-072f" name="Jockey" hidden="false" targetId="22e3-0707-4bd8-3acb" type="rule" />
+        <infoLink id="aa2c-81d8-81e8-d601" name="Unmanned TAGs" hidden="false" targetId="104b-90c4-6e9d-1575" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="119d-02ab-a2a2-792d" name="Pilot" hidden="false" targetId="87f9-8f57-f1d0-ce32" primary="true" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="a702-6674-ccba-ea07" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="18eb-178e-d7bd-9f0c" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="44c0-6796-ca57-91ab" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="db93-7274-64ae-eb26" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry id="b9de-b215-c2ab-7b27" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="af3e-7858-240a-4698" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="aff7-8e4d-d786-c16d" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="2030-49f0-d338-cab7" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
+        <entryLink id="2230-096f-7b43-d8cb" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
+      </entryLinks>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="15" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5c28-73d9-cc86-81f8" name="Light TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="9d9a-d9f3-d30f-e888" name="Light TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <characteristics>
+            <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
+            <characteristic name="CC" typeId="7f81-6698-29b8-57fa">17</characteristic>
+            <characteristic name="BS" typeId="a4b2-ea3b-d314-a9d0">14</characteristic>
+            <characteristic name="PH" typeId="f3ec-762a-c84c-d810">15</characteristic>
+            <characteristic name="WIP" typeId="61dd-7489-88eb-68c4">13</characteristic>
+            <characteristic name="ARM" typeId="ff16-0c92-ce9e-e1c6">6</characteristic>
+            <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
+            <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
+            <characteristic name="S" typeId="e584-99d0-09c9-3ec5">6</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b97b-cf13-86a7-69da" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="50d7-c838-7085-2909" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=11)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="ef7b-6f29-c1eb-fd78" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Escape System)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="5387-3e08-28ad-7ae3" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=13)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="a13e-36be-37b8-6a33" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
+        <infoLink id="be2b-3c8a-5cf4-c993" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Total)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="1ec5-a54b-e0f6-3e19" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="Guided (-6)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="1535-d8c4-6e53-7c5a" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="11b0-1d55-b9f2-cfde" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4066-b778-eacd-482c" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="20" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3927-745a-2368-5ab6" name="Medium TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="6aea-e4c1-34a1-365b" name="Medium TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <characteristics>
+            <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
+            <characteristic name="CC" typeId="7f81-6698-29b8-57fa">17</characteristic>
+            <characteristic name="BS" typeId="a4b2-ea3b-d314-a9d0">14</characteristic>
+            <characteristic name="PH" typeId="f3ec-762a-c84c-d810">15</characteristic>
+            <characteristic name="WIP" typeId="61dd-7489-88eb-68c4">13</characteristic>
+            <characteristic name="ARM" typeId="ff16-0c92-ce9e-e1c6">6</characteristic>
+            <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
+            <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
+            <characteristic name="S" typeId="e584-99d0-09c9-3ec5">6</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="d65d-04e6-493f-76a9" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="b382-e992-a959-0ce4" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=11)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="13a9-d713-e802-1ef1" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Escape System)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="22b0-bb07-70aa-6815" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=13)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="7329-f2dc-67a3-b2c8" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
+        <infoLink id="9079-cdd9-750a-80c8" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Total)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="04e9-1789-41ac-f928" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="Guided (-6)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="86b8-c511-2174-e2c9" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="bb32-4454-7105-603e" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="14b8-0ffe-636d-ce28" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="5be7-4876-9f68-89c9" name="Ranged Hardpoint" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint id="38f6-1461-a049-296e" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="83d2-fc1b-bf41-ec4a" name="Heavy Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="350e-1de0-1ece-9439" name="Heavy Machine Gun" hidden="false" targetId="8412-d672-8525-7d7c" type="profile">
+                  <modifiers>
+                    <modifier type="decrement" field="76b7-f614-c586-ebbc" value="1" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="8723-6b5c-685c-8404" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="67b6-f5e8-f626-1046" name="CQC Hardpoints" hidden="false" collective="false" import="true" defaultSelectionEntryId="f15d-41ed-a60f-5ae3">
+          <constraints>
+            <constraint id="8bb3-1f5f-119a-75e5" type="max" value="2" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="f15d-41ed-a60f-5ae3" name="CC Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="6500-a99b-52e0-df19" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="8a39-81db-8fb4-7a5d" value="6" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="6061-a498-ebbe-bd14" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="a18b-7f22-31a3-d2c1" name="AP CC Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="97aa-9bd9-83ff-265e" name="AP CC Weapon" hidden="false" targetId="90ae-0bbf-2d91-d8e2" type="profile">
+                  <modifiers>
+                    <modifier type="set" field="8a39-81db-8fb4-7a5d" value="6" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="7cbc-6990-ce01-fbc7" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="30" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0e0a-61f0-c260-1548" name="Heavy TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="42e0-8973-3a25-70ea" name="Heavy TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <characteristics>
+            <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
+            <characteristic name="CC" typeId="7f81-6698-29b8-57fa">17</characteristic>
+            <characteristic name="BS" typeId="a4b2-ea3b-d314-a9d0">14</characteristic>
+            <characteristic name="PH" typeId="f3ec-762a-c84c-d810">15</characteristic>
+            <characteristic name="WIP" typeId="61dd-7489-88eb-68c4">13</characteristic>
+            <characteristic name="ARM" typeId="ff16-0c92-ce9e-e1c6">6</characteristic>
+            <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
+            <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
+            <characteristic name="S" typeId="e584-99d0-09c9-3ec5">6</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="92cf-c48b-c744-710b" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="6c74-e5a7-0dce-9129" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=11)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="6fae-1093-07b1-f1cf" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Escape System)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="4b29-ac44-d2f2-31b2" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(PH=13)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="b3e8-6a5a-5445-f4f6" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
+        <infoLink id="6c85-ff99-578a-0306" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(Total)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="9a77-973e-2964-8105" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="Guided (-6)" />
+          </modifiers>
+        </infoLink>
+        <infoLink id="b7f7-9f70-6411-a2a1" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="e0ea-8467-b44d-d613" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="96c3-5baa-e995-6424" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+      </categoryLinks>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="40" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fb79-e548-6f0b-2dc8" name="Combat Engineer" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="remove" field="category" value="1654-8554-b1ff-a897">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="6585-9594-ca90-275d" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="fc71-7463-b038-4334" name="Combat Engineer" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <characteristics>
+            <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
+            <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">14</characteristic>
+            <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">12</characteristic>
+            <characteristic name="PH" typeId="0622-6e35-2324-c118">12</characteristic>
+            <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">13</characteristic>
+            <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">3</characteristic>
+            <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">3</characteristic>
+            <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">1</characteristic>
+            <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
+            <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Regular</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="ebcb-c3be-0e06-db98" name="Engineer" hidden="false" targetId="3632-0eb5-13ce-4301" type="rule" />
+        <infoLink id="031d-7482-3a2e-6615" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
+          <modifiers>
+            <modifier type="append" field="name" value="(+1B)" />
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2031-e0a9-930a-a095" name="Elite" hidden="false" targetId="acbf-f945-7e91-b604" primary="true" />
+        <categoryLink id="7c86-055f-0866-2933" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="e357-4502-fba8-fcb0" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="6585-9594-ca90-275d" name="Start in Reserve" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="5b1e-3ce4-50a6-132c" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="5d69-3d6e-5a55-b344" name="Reinforcements" hidden="false" targetId="b3ea-8b45-a666-1699" type="rule" />
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0014-8f7d-56af-31b1" name="Weapon" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint id="b0f1-00e6-7caf-7ab1" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <entryLinks>
+            <entryLink id="d578-dea6-a834-6924" name="MULTI Rifle" hidden="false" collective="false" import="true" targetId="0583-1150-9698-36af" type="selectionEntry">
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+              </costs>
+            </entryLink>
+            <entryLink id="effb-b8ea-ca93-d08d" name="Chain Rifle" hidden="false" collective="false" import="true" targetId="1260-a54d-e65f-5758" type="selectionEntry" />
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="6f78-0545-1c10-8c4c" name="Trooper — Rifleman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="6ed9-b1c0-cb62-a378" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="94d3-1c2d-c383-f1a9" name="Combi Rifle" hidden="false" targetId="79d8-80b0-c30c-1238" type="profile" />
+        <infoLink id="c25d-edea-634c-d4fd" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="8dab-747a-0b51-a4b3" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="7052-8cf4-eeeb-16a0" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="c724-0d98-eb94-f29a" name="Trooper — Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="6c5e-f741-7ed9-4dd4" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="7ca0-913b-984e-00ca" name="Spitfire" hidden="false" targetId="9abb-588f-671c-0596" type="profile" />
+        <infoLink id="d4f9-8d9f-29e0-24d2" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6c43-eba9-bdb1-97c2" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="f02e-d142-4390-b95b" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="bba3-4c57-ef5e-73ef" name="Trooper — Grenadier" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="4ea2-7bbc-25f6-2b1d" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="f8b8-f9e1-1d8c-335a" name="Grenade Launcher" hidden="false" targetId="dd79-f402-c653-fc6d" type="profile" />
+        <infoLink id="f47d-db4e-59b6-8463" name="Impact Template" hidden="false" targetId="d515-904e-7f49-17b1" type="rule" />
+        <infoLink id="1700-01b9-5390-82aa" name="Speculative Attack" hidden="false" targetId="16d3-83ad-2f43-af1e" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="256a-2298-9bd0-4145" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="9941-bb18-ad49-859f" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="1c26-e716-30b7-a02e" name="Trooper — AT Gunner" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="750d-0f2a-a5c7-52f0" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="e516-e2ef-45b1-33f5" name="Panzerfaust" hidden="false" targetId="3996-c9e2-a9bd-8b1a" type="profile" />
+        <infoLink id="907f-f812-5c82-3ead" name="Anti-materiel" hidden="false" targetId="e196-fa3f-b53c-73ee" type="rule" />
+        <infoLink id="42aa-610e-1656-bae6" name="Disposable (X)" hidden="false" targetId="8b2d-eeb9-e446-9928" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4056-d134-a300-b555" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="ebbe-ea99-91e7-b675" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="fe2f-1c17-7804-6ef0" name="Trooper — Corpsman" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="c223-b2e4-4f5d-ccc7" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="48d3-b583-dcf0-0af3" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
+        <infoLink id="43da-0184-c053-3f57" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="340f-5194-d2bb-94bd" name="Paramedic" hidden="false" targetId="1319-c1b0-c288-0d3e" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="ac4a-98b7-eb0c-1bca" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="e800-6dd4-2665-7c23" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="380a-fdb1-13ef-e912" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry id="a440-ec82-d291-70b8" name="Trooper — Spotter" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <infoLinks>
+        <infoLink id="a663-6d8b-7cb1-6a5f" name="Trooper" hidden="false" targetId="12b0-e8c0-dc8f-e89a" type="profile" />
+        <infoLink id="e2a9-eca1-6155-3241" name="Submachine Gun" hidden="false" targetId="109c-c1d9-93f7-c0cc" type="profile" />
+        <infoLink id="bcd5-1612-19f3-846f" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
+        <infoLink id="2b46-87c0-3891-7aaa" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="6dae-18a3-1251-33a4" name="Trooper" hidden="false" targetId="2577-fd16-96b1-2450" primary="true" />
+        <categoryLink id="f042-de7c-3845-5712" name="Deployed" hidden="false" targetId="1654-8554-b1ff-a897" primary="false" />
+        <categoryLink id="0a52-3573-2d56-e1e6" name="Specialist" hidden="false" targetId="dc03-a4ce-a40d-849a" primary="false" />
+      </categoryLinks>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup id="f599-5992-2180-0033" name="Pilot Sidearms" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint id="e159-edf2-2505-a306" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+      </constraints>
+      <entryLinks>
+        <entryLink id="181a-bf2b-5fdc-dcfd" name="Submachine Gun" hidden="false" collective="false" import="true" targetId="16c1-d774-3750-fb32" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="0c59-bb33-503a-59e1" name="Boarding Shotgun" hidden="false" collective="false" import="true" targetId="bbd5-afa0-cd6b-549b" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="69b3-6537-b866-771e" name="Combi Rifle" hidden="false" collective="false" import="true" targetId="1fa4-16e4-b81b-7a69" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="6e55-2bed-3f35-acb5" name="Spitfire" hidden="false" collective="false" import="true" targetId="0c7f-50a6-e7cf-af99" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="9b12-caa4-cae6-9505" name="Pilot CC Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="7902-5417-c998-5bf0">
+      <constraints>
+        <constraint id="166a-cb1d-1744-d67e" type="min" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+        <constraint id="0525-9e08-26b6-bf43" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+      </constraints>
+      <entryLinks>
+        <entryLink id="7902-5417-c998-5bf0" name="CC Weapon" hidden="false" collective="false" import="true" targetId="39ab-422e-8144-9c33" type="selectionEntry" />
+        <entryLink id="8a9d-e0c0-dd15-3abc" name="AP CC Weapon" hidden="false" collective="false" import="true" targetId="6770-94b2-3be4-4ce1" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="3f30-6b97-a220-c263" name="Shock CC Weapon" hidden="false" collective="false" import="true" targetId="859e-9cd1-b333-2b4e" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="9e2e-bd72-5ae9-fea1" name="DA CC Weapon" hidden="false" collective="false" import="true" targetId="5299-664a-2608-6e49" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="d433-4a50-f3cf-f836" name="T2 CC Weapon" hidden="false" collective="false" import="true" targetId="487f-e905-7e84-e295" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="b8b0-8bbb-3d59-2c9d" name="EXP CC Weapon" hidden="false" collective="false" import="true" targetId="4ec1-e361-456b-773e" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+  <sharedProfiles>
+    <profile id="12b0-e8c0-dc8f-e89a" name="Trooper" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+      <characteristics>
+        <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">?</characteristic>
+        <characteristic name="CC" typeId="f61b-bf6c-b56b-3540">?</characteristic>
+        <characteristic name="BS" typeId="c5a3-d039-8cfb-d6e3">?</characteristic>
+        <characteristic name="PH" typeId="0622-6e35-2324-c118">?</characteristic>
+        <characteristic name="WIP" typeId="f1f5-0fb1-2440-a5fb">?</characteristic>
+        <characteristic name="ARM" typeId="30fe-164f-947f-0ba3">?</characteristic>
+        <characteristic name="BTS" typeId="1242-78b3-a9ac-5ad5">?</characteristic>
+        <characteristic name="VITA" typeId="78f8-22ed-b0ec-cc42">?</characteristic>
+        <characteristic name="S" typeId="d23b-1fa5-c26e-cd0e">2</characteristic>
+        <characteristic name="Orders" typeId="fe97-34df-d5d8-4f77">Irregular</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>

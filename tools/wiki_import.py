@@ -21,7 +21,7 @@ links to it.
 
 Pages are fetched through the MediaWiki API, 50 to a request, and cached
 under wiki/cache/ so a rebuild doesn't touch the wiki at all. Run
-build_gst.py afterwards to write the result into NewRecruit.
+build.py afterwards to write the result into New Recruit.
 """
 
 import json

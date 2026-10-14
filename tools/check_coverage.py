@@ -5,15 +5,16 @@ categories and charts), independently of wiki/n5_data.json, and looks for
 each item in the built game system: as a rule, a profile or a selectable
 entry. Prints anything missing; exits with status 1 if something is.
 
-    python check_coverage.py                  # the repo's game system
-    python check_coverage.py path/to/file.json
+    python tools/check_coverage.py                  # the repo's game system
+    python tools/check_coverage.py path/to/file.gst
 
-Run wiki_import.py first (it fills the cache), then build_gst.py.
+Run wiki_import.py first (it fills the cache), then build.py.
 """
 
 import json
 import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from wiki_import import (BASE_DEVICE, DEVICES_PAGE, EXCLUDE_RULES, INDEXES, LABELS_PAGE,
@@ -22,7 +23,7 @@ from wiki_import import (BASE_DEVICE, DEVICES_PAGE, EXCLUDE_RULES, INDEXES, LABE
                          plain, wiki_table, wiki_tables)
 
 HERE = Path(__file__).resolve().parent
-TARGET = HERE.parent / "Dogs of War.json"
+TARGET = HERE.parent / "Dogs of War.gst"
 
 
 def norm(s: str) -> str:
@@ -38,10 +39,11 @@ def cached(title: str):
 
 def main() -> None:
     target = Path(sys.argv[1]) if len(sys.argv) > 1 else TARGET
-    gs = json.loads(target.read_text(encoding="utf-8"))["gameSystem"]
-    rules = {norm(r["name"]) for r in gs.get("sharedRules", [])}
-    profiles = {norm(p["name"]) for p in gs.get("sharedProfiles", [])}
-    entries = {norm(e["name"]) for e in gs.get("sharedSelectionEntries", [])}
+    root = ET.parse(target).getroot()
+    ns = {"b": root.tag.split("}")[0].strip("{")}
+    rules = {norm(r.get("name")) for r in root.iterfind("b:sharedRules/b:rule", ns)}
+    profiles = {norm(p.get("name")) for p in root.iterfind("b:sharedProfiles/b:profile", ns)}
+    entries = {norm(e.get("name")) for e in root.iterfind("b:sharedSelectionEntries/b:selectionEntry", ns)}
     skipped = {norm(n) for n in EXCLUDE_RULES}
     missing: dict[str, list[str]] = {}
 

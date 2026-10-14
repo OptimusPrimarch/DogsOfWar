@@ -92,7 +92,22 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 ## 7. Pilots and TAGs
 
-- **Mount and dismount (N4):** N5 dropped the rules for getting in and out of a TAG, so Dogs of War brings back N4's version with one change: mounting or dismounting is free with any movement skill. *Full text to be written.*
+### Mount and Dismount (N4)
+
+N5 replaced crewed TAGs with remote-operated ones and dropped the rules for getting in and out. Dogs of War deliberately breaks from the N5 baseline here and brings back N4's Pilot rule:
+
+- **Getting in and out.** A pilot mounts or dismounts as part of any skill with the Movement label, at no extra cost. Where the pilot is placed on getting out is *to be written*.
+- **An Unconscious TAG.** The pilot can still get out of it. While the pilot stays inside an Unconscious TAG, it gives no Order, and only the TAG counts for scoring, Retreat! and anything else that counts casualties.
+- **A Possessed TAG.** Its pilot can't get in or out.
+- **An empty TAG** can't spend Orders or AROs, but the enemy can still target it.
+- **Game states carry across.** On getting out, the pilot takes on the TAG's states, except Unconscious and Possessed. On getting in, the TAG takes on the pilot's states, on top of its own.
+- **While aboard,** the pilot isn't on the table, so Hacking Programs and E/M can't affect it.
+- **If a dismounted pilot dies,** its TAG is removed as a casualty too.
+
+N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey and Unmanned TAGs, below.
+
+### The rest of the pilot rules
+
 - **Eject:** uses N5's [Transmutation](https://infinitythewiki.com/Transmutation) (Escape System). The profile the TAG turns into is the company's pilot.
 - **Jockey:** *Dogs of War rule.* Pilots only. A pilot that ends any movement in base contact with an enemy TAG makes a face-to-face WIP roll against it. *Results to be written.*
 - **Unmanned TAGs:** a pilot can climb into an enemy TAG whose pilot has dismounted, and take it over.
@@ -110,7 +125,7 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 ## Still to write
 
-Mount and dismount (N4 port), Jockey results, Requisition prices, the Command Token pool and prices, drop pod scatter and damage, the calldown list, the stock TAG lineup, and scenarios.
+Where a dismounting pilot is placed, Jockey results, Requisition prices, the Command Token pool and prices, drop pod scatter and damage, the calldown list, the stock TAG lineup, and scenarios.
 
 ## Adding to these rules
 

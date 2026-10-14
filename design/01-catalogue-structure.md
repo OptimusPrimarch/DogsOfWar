@@ -42,15 +42,21 @@ These don't work in the old BattleScribe app. That's fine, because New Recruit i
 
 ---
 
-## 2. Files and repository layout — PROPOSED
+## 2. Files and repository layout — BUILT (2026-10-14)
 
 ```
 DogsOfWar/
-├── Dogs of War.gst          ← game system: types, categories, force entry, shared library
-├── Mercenary Company.cat    ← the company: chassis, pilots, Elites, Troopers
+├── Dogs of War.gst          ← generated: types, categories, force, company items, rules, N5 armory
+├── Mercenary Company.cat    ← generated: pilots, chassis, Elites, Troopers
+├── data/                    ← the source: system.json, company.json, rules.json
+├── rules/                   ← core rules, generated armory and N5 index, rule summaries
+├── tools/                   ← build.py, wiki_import.py, check_coverage.py, schema/
 ├── README.md
 └── design/
 ```
+
+- **Generated, not hand-edited.** `tools/build.py` writes both files from `data/` and the imported N5 armory, in BattleScribe 2.03 XML, validated against the official schema. Every id comes from a name, so rebuilds don't churn the files.
+- **Company-wide items live in the `.gst`.** The Company Briefing and Expanded Contract sit beside the force entry, because the force's Elite limit counts Expanded Contracts. This is the pattern BSData's own systems use for game-wide selections.
 
 - **New Recruit only finds `.gst` and `.cat` files at the repo root.** Keep them there.
 - **Save uncompressed** (`.gst` / `.cat`, not `.gstz` / `.catz`). The uncompressed files are plain XML, so Git can show line-by-line changes between versions. A compressed file shows up as one opaque blob.
@@ -203,7 +209,7 @@ Mercenary Company  (force entry)
 | **Pilot build** | The full pilot build (profile, skills, sidearm, gear, Lieutenant / NCO). Linked by both the Pilot and the Second Pilot. |
 | **Stock TAG lineup** | Profiles for the universal stock TAGs. Shown in the Briefing, never selectable. |
 | **Trooper profile** | The one shared Trooper stat line |
-| **Rules: N5 references** | Every N5 skill, piece of equipment, weapon trait, ammunition type and state: name, type, a one-line summary in our own words, and a link to the official rule. No rules text copied. Built by `tools/build_gst.py`. |
+| **Rules: N5 references** | Every N5 skill, piece of equipment, weapon trait, ammunition type and state: name, type, a one-line summary in our own words, and a link to the official rule. No rules text copied. Built by `tools/build.py`. |
 | **Armory entries** *(built)* | A selectable entry for every N5 weapon (all its modes, plus its trait rules), special skill and piece of equipment, with no price. There's also an entry for each hacking program, and Martial Arts comes as one entry per level (L1–L5). They're gathered in five groups, `Armory: Ranged Weapons`, `Armory: CC Weapons`, `Armory: Special Skills`, `Armory: Equipment` and `Armory: Hacking Programs`, ready to link and price. Skills and equipment that attack with range bands (Forward Observer, MediKit…) carry their weapon profile. Hacking Devices list their programs, and mines and deployable devices carry their deployed stat line. |
 | **Rules: Dogs of War** | Our own rules, in our own words: Deployment (Tactical), Jockey, phase order, and N4 ports (each marked as an N4 port) |
 | **Publications** | "Infinity N5 Core Rules" (Corvus Belli) and "Dogs of War" (this repo) |
@@ -218,7 +224,7 @@ SQL analogy: the weapon table has no price column. Price lives in the junction t
 ### Variants on the link, not as separate rules
 Each skill is **one** shared rule (Mimetism, Terrain, Immunity…). A unit with a variant links that rule and adds the parameter on its own info link, with a modifier: *type* `append`, *field* `name`, *value* `(-6)`. The unit then shows "Mimetism (-6)" and still opens the one Mimetism rule. This is the standard BSData pattern New Recruit reads; the 40K data does it for "Feel No Pain 5+" and "Deadly Demise D6".
 
-**Built:** `tools/build_gst.py` makes these links itself from the text of each model profile's Skills and Equipment fields, so a profile only has to list "Dodge (PH=11)" to get the linked rule.
+**Built:** `tools/build.py` makes these links from each unit's `skills` and `equipment` lists in `data/company.json`, so a unit only has to list "Dodge (PH=11)" to get the linked rule.
 
 ---
 
@@ -270,5 +276,5 @@ Build this throwaway test before anything else. It checks the one rule that depe
 
 1. **Trooper reinforcements:** can an arriving Trooper take any template, or only templates from your starting lineup? If only the starting lineup, the roster needs nothing more. If any template, the Briefing should list them all.
 2. **Allocation size:** does 60 vs 100 change anything besides Requisition, such as the Elite cap or the Command Token pool? If so, `limit::Requisition` can drive it.
-3. **File format for Add from Github:** the game system is currently `Dogs of War.json`, the NewRecruit Editor's JSON format, at the repo root. §2 assumes `.gst`/`.cat`. Test whether New Recruit's Add from Github loads the JSON. If it doesn't, save the system as `.gst` (XML) and point `tools/build_gst.py` at that.
+3. ~~**File format for Add from Github.**~~ **Resolved 2026-10-14:** the catalogue is now generated as `.gst`/`.cat` XML (§2). Still to confirm in New Recruit: Add from Github loads them, and the Capacity limit (a chassis constraint on its Capacity cost) behaves as §10 expects once chassis have Capacity values.
 4. ~~**The built file vs this blueprint.**~~ **Resolved 2026-10-14:** keep Requisition and the TAG / Pilot / Elite / Trooper categories, with phases matching the categories (§3, §5).
