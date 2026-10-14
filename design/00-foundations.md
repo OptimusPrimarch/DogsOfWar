@@ -43,7 +43,7 @@ Status tags:
 | 17 | Calldowns | Orbital and aerial, with Speedballs as the baseline | **LOCKED** |
 | 18 | Replacement TAG | Stock lineup, 1 Command Token each (#42); called in by a pilot. The lineup is universal (the same for every company) and reference-only: it is never bought in the list. | **LOCKED** |
 | 19 | Pilots | Fully custom. Mount and dismount use N4's rules, made free with any movement skill. Eject uses N5's Transmutation (Escape System). Jockey enemy TAGs with WIP vs WIP. Can steal unmanned TAGs. | **LOCKED** |
-| 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. Launch scope: up to 2 chassis each for S6 and S7, and 1 for S8 (Infinity has only one S8 TAG today), so 5 in total. | **LOCKED** |
+| 20 | TAG chassis | S6, S7, S8. Built from components. No Heat. ~~Launch scope: 5 chassis.~~ Superseded by #43: three chassis (S6, S7, S8) plus components. | **LOCKED** |
 | 21 | Signature slot | Every TAG gets one slot for its "special cool thing." Not called an ultimate; most options have no prerequisites. | **LOCKED** |
 | 22 | Miniatures | Corvus Belli miniatures recommended; N5 silhouettes for every unit | **LOCKED** |
 | 23 | Board | 36"×36" (3'×3'), very dense. Confirmed by #41. | **LOCKED** |
@@ -66,6 +66,10 @@ Status tags:
 | 40 | Reserves | Each side should have plenty of models in reserve to spend flexibly. Filling an open slot (a free Hired Gun or an Elite Gun hacker?) should be an interesting, meaningful decision every round. | **LOCKED** (design goal, 2026-10-14) |
 | 41 | Table, cap and length | **3'×3'**, very dense, with at most **5 infantry in play**; TAGs and pilots don't count toward the cap. Games last **six rounds**. Long-range weapons lose value on the small table; that's handled through their Requisition prices, not rule changes. | **LOCKED** (2026-10-14) |
 | 42 | Calling in TAGs | Each list has **one custom TAG**. TAGs never start on the table: a pilot calls one in with a Short Skill with the Movement label that only pilots can use. A pilot can instead call in a **reserve TAG** for 1 Command Token: a generic, fixed profile from a stock lineup every company shares, with no customization. Calling in takes a WIP roll: on a success the TAG lands anywhere in the pilot's ZoC and its landing works like Explode; on a failure it lands in base contact with the pilot, with no explosion. TAGs can be called in from the first round. The custom TAG costs nothing more to call in; a second TAG needs a second pilot and 1 Command Token. | **LOCKED** (2026-10-14) |
+| 43 | Chassis | Three chassis, **S6, S7 and S8**, each on its baseline (#39), with component choices that let players build the TAG they picture: sensor suites, additional armour, jump jets (Super-Jump) and the like. Every TAG in the core game should be buildable from components, though none is the default. Replaces #20's five chassis. | **LOCKED** (2026-10-14) |
+| 44 | Pilot training packages | All pilots share one baseline stat line. Veterancy sets how many **training packages** a pilot takes: Rookie 1, Seasoned 2, Veteran 3, and any pilot can buy one more for Requisition. Packages cover attribute bumps or skills, and can bundle several where that makes sense. Each has a clear name that says at a glance what it does, and all are loosely equal in value. Equipment is chosen separately. Builds on #36. | **LOCKED** (2026-10-14) |
+| 45 | Elite Gun archetypes | Elite Guns come from archetypes common across N5 rosters: engineers, gunfighters, melee monsters, sharpshooters, bruisers, infiltrators and so on. The aim is a well-rounded roster, so players can bring the right tool for the job and enjoy using it. | **LOCKED** (2026-10-14) |
+| 46 | Points formula | Costs follow the general model inferred from N5 prices (`03-points-formula.md`), at **1 Requisition ≈ 1 N5 point**. It matches #34's anchors without scaling. | **PROPOSED** (2026-10-14) |
 
 ---
 

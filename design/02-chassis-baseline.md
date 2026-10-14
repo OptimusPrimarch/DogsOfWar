@@ -42,6 +42,6 @@ These are a starting point for the hardpoint lists.
 
 ## Next steps
 
-1. Launch scope is five chassis (decision 20): two at S6, two at S7, one at S8. Each pair should move off the baseline in opposite directions, for example a fast light-armour design and a slow heavy-armour one.
+1. Three chassis, S6, S7 and S8 (decision 43), each on its baseline. Variety comes from components (sensor suites, extra armour, jump jets and so on), so every core-game TAG can be built without being the default.
 2. Set each chassis's Capacity, its mounts and their sizes, and its Systems and Signature options.
-3. Price them with the Requisition anchors in `00-foundations.md` §4.
+3. Price them with `03-points-formula.md`.
