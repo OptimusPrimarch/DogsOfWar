@@ -94,15 +94,20 @@ Reinforcements arrive in the Reinforcement phase. Each one uses the first of the
 
 ### Mount and Dismount (N4)
 
-N5 replaced crewed TAGs with remote-operated ones and dropped the rules for getting in and out. Dogs of War deliberately breaks from the N5 baseline here and brings back N4's Pilot rule:
+N5 replaced crewed TAGs with remote-operated ones and dropped the rules for getting in and out. Dogs of War deliberately breaks from the N5 baseline here and brings back N4's Pilot rule, along with N4's movement rules for mounting:
 
-- **Getting in and out.** A pilot mounts or dismounts as part of any skill with the Movement label, at no extra cost. Where the pilot is placed on getting out is *to be written*.
+- **When.** A pilot gets in or out at the start of an Order, right after declaring the Order's first skill with the Movement label (or an Entire Order skill), before any distance is measured. It costs nothing extra.
+- **Getting out.** The pilot starts that movement anywhere in base contact with the TAG, wherever its owner chooses.
+- **Getting in.** The pilot must be in base contact with the TAG when the Order starts.
+- **Which profile.** The new profile, pilot or TAG, is used for the whole Order.
+- **Who can.** The movement skill must be one the starting profile could declare. So nobody can get in or out while Engaged or Immobilized, and a TAG can't use Cautious Movement to let its pilot out, because TAGs can't declare it.
+- **Markers.** Getting in or out cancels Hidden Deployment and any marker state, on both the pilot and the TAG.
 - **An Unconscious TAG.** The pilot can still get out of it. While the pilot stays inside an Unconscious TAG, it gives no Order, and only the TAG counts for scoring, Retreat! and anything else that counts casualties.
 - **A Possessed TAG.** Its pilot can't get in or out.
 - **An empty TAG** can't spend Orders or AROs, but the enemy can still target it.
 - **Game states carry across.** On getting out, the pilot takes on the TAG's states, except Unconscious and Possessed. On getting in, the TAG takes on the pilot's states, on top of its own.
 - **While aboard,** the pilot isn't on the table, so Hacking Programs and E/M can't affect it.
-- **If a dismounted pilot dies,** its TAG is removed as a casualty too.
+- **If a dismounted pilot dies,** its TAG stays on the table, empty and inactive, until another pilot climbs in: the company's second pilot, or an enemy pilot (see Unmanned TAGs). *This replaces N4, which removed the TAG.*
 
 N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey and Unmanned TAGs, below.
 
@@ -125,7 +130,7 @@ N4 let a pilot board only its own TAG. Dogs of War adds two exceptions, Jockey a
 
 ## Still to write
 
-Where a dismounting pilot is placed, Jockey results, Requisition prices, the Command Token pool and prices, drop pod scatter and damage, the calldown list, the stock TAG lineup, and scenarios.
+Jockey results, Requisition prices, the Command Token pool and prices, drop pod scatter and damage, the calldown list, the stock TAG lineup, and scenarios.
 
 ## Adding to these rules
 

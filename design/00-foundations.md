@@ -55,6 +55,7 @@ Status tags:
 | 29 | Armory | Everything in N5's armory is imported from the official wiki into the catalogue by `tools/`. That covers every weapon, deployed item, skill, piece of equipment, hacking program and device, Martial Arts level, ammunition type, trait, label and state. Each comes with a one-line summary in our own words and a link to the official rule. `tools/check_coverage.py` confirms nothing is missed. Readable reference: `rules/armory.md`. Index of every N5 rules page: `rules/n5-index.md`. Player-facing rules: `rules/core-rules.md`. | **LOCKED** (2026-10-14) |
 | 30 | Currency and categories | The list currency is **Requisition** (it replaces "credits"). Units are categorized **TAG, Pilot, Elite, Trooper**, and the phases match those categories. | **LOCKED** (2026-10-14) |
 | 31 | Catalogue build | The catalogue is generated, not hand-edited. `tools/build.py` turns the data files in `data/`, the imported N5 armory and our rule summaries into `Dogs of War.gst` and `Mercenary Company.cat`, in the BattleScribe 2.03 XML that New Recruit reads, validated against the official schema. The New Recruit Editor is for viewing and testing; changes go into `data/`. Replaces the first JSON attempt. | **LOCKED** (2026-10-14) |
+| 32 | Empty TAGs and dismounting | A TAG whose pilot dies stays on the table, empty: it can't act but can be targeted, until another pilot climbs in (the company's second pilot, or an enemy pilot via Unmanned TAGs). This replaces N4, which removed the TAG. A dismounting pilot starts its movement anywhere in base contact with the TAG. N4's mounting rules (timing, profile, eligibility, markers) are ported with the Pilot rule. | **LOCKED** (2026-10-14) |
 
 ---
 
@@ -195,6 +196,9 @@ N5 stays the baseline, because it's the edition Corvus Belli maintains. When N5 
 | N4 rule | Why we need it | Our changes |
 |---|---|---|
 | Pilot mount/dismount (manned TAGs) | N5 removed it, and pilots getting in and out is core to this mode | Mounting and dismounting is free with any movement skill. Pilots may also mount enemy TAGs (jockeying and stealing unmanned TAGs, see above). |
+| Mounting and dismounting (N4 General Movement Rules) | N5's movement rules dropped it along with the Pilot rule | Ported as-is: timing (start of the Order, after the first Movement skill), profile for the whole Order, eligibility, markers cancelled. We add placement: anywhere in base contact with the TAG. |
+
+**Auto-titan options (OPEN, see §10):** (a) the empty TAG can only ARO, at Burst 1 and -3; (b) it can take Orders as an Irregular trooper at -3 to BS and PH, using no skills; (c) neither by default, but a Signature option grants (a) or (b), making auto mode a build choice.
 
 ## 7. Elites and Troopers — LOCKED (lists PROPOSED)
 
@@ -265,8 +269,7 @@ The full catalogue blueprint is in [`01-catalogue-structure.md`](01-catalogue-st
 ## 10. Open questions
 
 1. **PvPvE:** deferred to last. Starting idea: static hostile emplacements that only ARO.
-2. **A dead pilot's TAG:** N4's Pilot rule removes a TAG when its dismounted pilot dies. That would also stop anyone taking that TAG over as an Unmanned TAG. Keep the N4 rule, or leave the empty TAG on the table to be stolen?
-3. **Where a dismounting pilot is placed:** N4 took this from its General Movement Rules, which N5 doesn't carry. Write our own placement rule.
+2. **Auto-titan mode (OPEN):** instead of sitting inert, should an empty TAG still act, just much worse, the way a Titanfall titan fights on in auto mode? See §6.1 for options.
 
 ## 11. Numbers to set during balancing
 
