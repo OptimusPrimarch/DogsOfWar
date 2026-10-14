@@ -1,0 +1,5490 @@
+{
+  "source": "https://infinitythewiki.com/",
+  "attribution": "Infinity and all associated names and game data are © Corvus Belli S.L.",
+  "weapons": [
+    {
+      "name": "Tactical Bow",
+      "family": "Bows",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, Silent (-6)",
+      "rules": [
+        "Anti-materiel",
+        "Silent (X)"
+      ]
+    },
+    {
+      "name": "Viral Tactical Bow",
+      "family": "Bows",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock), Silent (-6)",
+      "rules": [
+        "BioWeapon",
+        "Silent (X)"
+      ]
+    },
+    {
+      "name": "E/M Carbine",
+      "family": "Carbines",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Non-Lethal",
+      "rules": [
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Plasma Carbine (Blast Mode)",
+      "family": "Carbines",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "Impact Template (Circular)",
+      "rules": [
+        "Combined Saving Roll",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Plasma Carbine (Hit Mode)",
+      "family": "Carbines",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "",
+      "rules": [
+        "Combined Saving Roll"
+      ]
+    },
+    {
+      "name": "AP CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "CC",
+      "rules": [
+        "CC"
+      ]
+    },
+    {
+      "name": "AP+DA CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "AP+DA",
+      "Save Type": "ARM/2",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "AP+EXP CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "AP+Shock CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "AP+SHOCK",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "CC",
+      "rules": [
+        "CC"
+      ]
+    },
+    {
+      "name": "AP+T2 CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "AP+T2",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "CC",
+      "rules": [
+        "CC"
+      ]
+    },
+    {
+      "name": "DA CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "E/M CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N+E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "CC",
+      "rules": [
+        "CC"
+      ]
+    },
+    {
+      "name": "EXP CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "EXP",
+      "Save Type": "ARM",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "Monofilament CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "CC, State: Dead",
+      "rules": [
+        "CC",
+        "Dead State",
+        "State"
+      ]
+    },
+    {
+      "name": "PARA CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "CC, State: Immobilized-A, Non-Lethal",
+      "rules": [
+        "CC",
+        "Immobilized-A State",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Shock CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "CC",
+      "rules": [
+        "CC"
+      ]
+    },
+    {
+      "name": "T2 CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC"
+      ]
+    },
+    {
+      "name": "Trench-Hammer (BS Mode)",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "--",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, BS Weapon (PH)",
+      "rules": [
+        "Anti-materiel",
+        "BS Weapon (PH)",
+        "Mixed Weapons"
+      ]
+    },
+    {
+      "name": "Trench-Hammer (CC Mode)",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC",
+        "Mixed Weapons"
+      ]
+    },
+    {
+      "name": "Viral CC Weapon",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock), CC",
+      "rules": [
+        "BioWeapon",
+        "CC"
+      ]
+    },
+    {
+      "name": "Vorpal CC Weapon (BS Mode)",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "--",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "BS Weapon (PH), State: Dead",
+      "rules": [
+        "BS Weapon (PH)",
+        "Dead State",
+        "Mixed Weapons",
+        "State"
+      ]
+    },
+    {
+      "name": "Vorpal CC Weapon (CC Mode)",
+      "family": "CC Weapons",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "CC, State: Dead",
+      "rules": [
+        "CC",
+        "Dead State",
+        "Mixed Weapons",
+        "State"
+      ]
+    },
+    {
+      "name": "Akrylat-Kanone",
+      "family": "Disposable Support Weapons",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "Disposable (2), State: Immobilized-A, Non-Lethal",
+      "rules": [
+        "Disposable (X)",
+        "Immobilized-A State",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Blitzen",
+      "family": "Disposable Support Weapons",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Disposable (2), Non-Lethal",
+      "rules": [
+        "Disposable (X)",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Flammenspeer (Blast Mode)",
+      "family": "Disposable Support Weapons",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage, Disposable (2), Impact Template (Circular)",
+      "rules": [
+        "Continuous Damage",
+        "Disposable (X)",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Flammenspeer (Hit Mode)",
+      "family": "Disposable Support Weapons",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage, Disposable (2)",
+      "rules": [
+        "Continuous Damage",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "Panzerfaust",
+      "family": "Disposable Support Weapons",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, Disposable (2)",
+      "rules": [
+        "Anti-materiel",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "Heavy Flamethrower",
+      "family": "Flamethrowers",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Continuous Damage, Direct Template (Large Teardrop)",
+      "rules": [
+        "Continuous Damage",
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Light Flamethrower",
+      "family": "Flamethrowers",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Continuous Damage, Direct Template (Small Teardrop)",
+      "rules": [
+        "Continuous Damage",
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Eclipse Grenades",
+      "family": "Grenades",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "-3",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "ECLIPSE",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, BS Weapon (PH), Impact Template (Circular), Non-Lethal, Reflective, Targetless",
+      "rules": [
+        "BS Weapon (PH)",
+        "Impact Template",
+        "Non-Lethal",
+        "Reflective",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "E/M Grenades",
+      "family": "Grenades",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "-3",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Speculative Attack, BS Weapon (PH), Impact Template (Circular), Non-Lethal",
+      "rules": [
+        "BS Weapon (PH)",
+        "Impact Template",
+        "Non-Lethal",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Grenades",
+      "family": "Grenades",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "-3",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Speculative Attack, BS Weapon (PH), Impact Template (Circular)",
+      "rules": [
+        "BS Weapon (PH)",
+        "Impact Template",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Smoke Grenades",
+      "family": "Grenades",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "-3",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "SMOKE",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, BS Weapon (PH), Impact Template (Circular), Non-Lethal, Targetless",
+      "rules": [
+        "BS Weapon (PH)",
+        "Impact Template",
+        "Non-Lethal",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "Eclipse Grenade Launcher",
+      "family": "Grenade Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "ECLIPSE",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, Non-Lethal, Impact Template (Circular), Reflective, Targetless",
+      "rules": [
+        "Impact Template",
+        "Non-Lethal",
+        "Reflective",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "E/M Grenade Launcher",
+      "family": "Grenade Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Speculative Attack, Non-Lethal, Impact Template (Circular)",
+      "rules": [
+        "Impact Template",
+        "Non-Lethal",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Grenade Launcher",
+      "family": "Grenade Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Speculative Attack, Impact Template (Circular)",
+      "rules": [
+        "Impact Template",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Smoke Grenade Launcher",
+      "family": "Grenade Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "SMOKE",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, Non-Lethal, Impact Template (Circular), Targetless",
+      "rules": [
+        "Impact Template",
+        "Non-Lethal",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "AP Heavy Machine Gun",
+      "family": "Heavy Machine Guns",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Heavy Machine Gun",
+      "family": "Heavy Machine Guns",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "4",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Heavy Machine Gun (Anti-materiel Mode)",
+      "family": "Heavy Machine Guns",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "1",
+      "Ammo": "EXP",
+      "Save Type": "ARM",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Heavy Machine Gun (AP Mode)",
+      "family": "Heavy Machine Guns",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Heavy Machine Gun (Shock Mode)",
+      "family": "Heavy Machine Guns",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "4",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "AP Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Breaker Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "K1 Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, Suppressive Fire",
+      "rules": [
+        "Anti-materiel",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Marksman Rifle (Anti-materiel Mode)",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Marksman Rifle (AP Mode)",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Marksman Rifle (Shock Mode)",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Shock Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "T2 Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, Suppressive Fire",
+      "rules": [
+        "Anti-materiel",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Viral Marksman Rifle",
+      "family": "Marksman Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock), Suppressive Fire",
+      "rules": [
+        "BioWeapon",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "AP Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Concealed, Disposable (3), Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines"
+      ]
+    },
+    {
+      "name": "Chest Mines (BS Mode)",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Disposable (2), Double Shot, Direct Template (Small Teardrop)",
+      "rules": [
+        "Chest Mines",
+        "Direct Template",
+        "Disposable (X)",
+        "Double Shot",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Chest Mines (CC Mode)",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "CC Attack (+3), Disposable (2)",
+      "rules": [
+        "Chest Mines",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "Cybermines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "5",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "BTS",
+      "Needed Saves": "2",
+      "Traits": "Comms Attack, Intuitive Attack, Concealed, Disposable (3), State: Stunned/Immobilized-B, Non-Lethal, Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Immobilized-B State",
+        "Intuitive Attack (Trait)",
+        "Mines",
+        "Non-Lethal",
+        "State",
+        "Stunned State"
+      ]
+    },
+    {
+      "name": "Drop Bears (BS Mode)",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "-3",
+        "16-24": "--",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "BS Weapon (PH), Speculative Attack, Disposable (3), Targetless",
+      "rules": [
+        "BS Weapon (PH)",
+        "Disposable (X)",
+        "Drop Bears",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "Drop Bears (Deployable Mode)",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Disposable (3), Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Drop Bears",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "E/M Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Intuitive Attack, Concealed, Disposable (3), Direct Template (Small Teardrop), Non-Lethal, Deployable",
+      "rules": [
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Mine Dispenser",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-6",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, Double Shot, Disposable (2), Targetless",
+      "rules": [
+        "Disposable (X)",
+        "Double Shot",
+        "Mine Dispenser",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "Monofilament Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "8",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Concealed, Disposable (3), Direct Template (Small Teardrop), Deployable, State: Dead",
+      "rules": [
+        "Concealed",
+        "Dead State",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines",
+        "State"
+      ]
+    },
+    {
+      "name": "PARA Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Concealed, Disposable (3), Direct Template (Small Teardrop), Non-Lethal, Deployable",
+      "rules": [
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Shock Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Concealed, Disposable (3), Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines"
+      ]
+    },
+    {
+      "name": "Viral Mines",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, BioWeapon (DA+Shock), Concealed, Disposable (3), Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "BioWeapon",
+        "Concealed",
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Mines"
+      ]
+    },
+    {
+      "name": "WildParrot",
+      "family": "Mines",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Intuitive Attack, Disposable (1), Non-Lethal, Perimeter, Direct Template (Small Teardrop), Deployable",
+      "rules": [
+        "Deployable",
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Non-Lethal",
+        "Perimeter",
+        "WildParrot"
+      ]
+    },
+    {
+      "name": "PT: Endgame",
+      "family": "Pheroware Tactics (PT)",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "AP",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "BS Weapon (WIP), Comms Attack, Disposable (2), Double Shot, Target (VITA), No LoF, Zone of Control",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Disposable (X)",
+        "Double Shot",
+        "Target (Attribute)"
+      ]
+    },
+    {
+      "name": "PT: Eraser",
+      "family": "Pheroware Tactics (PT)",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "DA",
+      "Save Type": "BTS",
+      "Needed Saves": "2",
+      "Traits": "BS Weapon (WIP), Comms Attack, Target (VITA), State: Isolated, Non-Lethal, No LoF, Zone of Control",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Isolated State",
+        "Non-Lethal",
+        "State",
+        "Target (Attribute)"
+      ]
+    },
+    {
+      "name": "PT: Mirrorball",
+      "family": "Pheroware Tactics (PT)",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "ECLIPSE",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "BS Weapon (WIP), Comms Attack, Impact Template (Circular), Non-Lethal, Reflective, No LoF, Targetless, Zone of Control",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Impact Template",
+        "Non-Lethal",
+        "Reflective",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "AP Heavy Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Assault Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "4",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Boarding Pistol (Blast Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Direct Template (Small Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Boarding Pistol (Hit Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Breaker Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Heavy Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Kobra Pistol (BS Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": [
+        "Mixed Weapons"
+      ]
+    },
+    {
+      "name": "Kobra Pistol (CC Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, CC",
+      "rules": [
+        "Anti-materiel",
+        "CC",
+        "Mixed Weapons"
+      ]
+    },
+    {
+      "name": "MULTI Pistol (Anti-materiel Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Pistol (AP Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "MULTI Pistol (Shock Mode)",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "9",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Silenced Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "2",
+      "Ammo": "AP+SHOCK",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "Silent (-6)",
+      "rules": [
+        "Silent (X)"
+      ]
+    },
+    {
+      "name": "Stun Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "2",
+      "Ammo": "STUN",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Non-Lethal, State: Stunned",
+      "rules": [
+        "Non-Lethal",
+        "State",
+        "Stunned State"
+      ]
+    },
+    {
+      "name": "Viral Pistol",
+      "family": "Pistols",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "8",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock)",
+      "rules": [
+        "BioWeapon"
+      ]
+    },
+    {
+      "name": "AP Red Fury",
+      "family": "Red Furies",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Red Fury (Anti-materiel Mode)",
+      "family": "Red Furies",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Red Fury (AP Mode)",
+      "family": "Red Furies",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Red Fury (Shock Mode)",
+      "family": "Red Furies",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "4",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Red Fury",
+      "family": "Red Furies",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "4",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "AP Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Adhesive Launcher Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "2",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "Non-Lethal",
+      "rules": [
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Breaker Combi Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Breaker Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "BTS/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Combi Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "K1 Combi Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, Suppressive Fire",
+      "rules": [
+        "Anti-materiel",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Rifle (Anti-materiel Mode)",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Rifle (AP Mode)",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Rifle (Shock Mode)",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Plasma Rifle (Blast Mode)",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "Suppressive Fire, Impact Template (Circular)",
+      "rules": [
+        "Combined Saving Roll",
+        "Impact Template",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Plasma Rifle (Hit Mode)",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Combined Saving Roll",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "T2 Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel, Suppressive Fire",
+      "rules": [
+        "Anti-materiel",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Viral Combi Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock), Suppressive Fire",
+      "rules": [
+        "BioWeapon",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Viral Rifle",
+      "family": "Rifles",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock), Suppressive Fire",
+      "rules": [
+        "BioWeapon",
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Heavy Riotstopper",
+      "family": "Riotstoppers",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "State: Immobilized-A, Intuitive Attack, Non-Lethal, Direct Template (Large Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Immobilized-A State",
+        "Intuitive Attack (Trait)",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Light Riotstopper",
+      "family": "Riotstoppers",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "State: Immobilized-A, Intuitive Attack, Non-Lethal, Direct Template (Small Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Immobilized-A State",
+        "Intuitive Attack (Trait)",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Heavy Rocket Launcher (Blast Mode)",
+      "family": "Rocket Launchers",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage, Impact Template (Circular)",
+      "rules": [
+        "Continuous Damage",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Heavy Rocket Launcher (Hit Mode)",
+      "family": "Rocket Launchers",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage",
+      "rules": [
+        "Continuous Damage"
+      ]
+    },
+    {
+      "name": "Light Rocket Launcher (Blast Mode)",
+      "family": "Rocket Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage, Impact Template (Circular)",
+      "rules": [
+        "Continuous Damage",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Light Rocket Launcher (Hit Mode)",
+      "family": "Rocket Launchers",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage",
+      "rules": [
+        "Continuous Damage"
+      ]
+    },
+    {
+      "name": "Boarding Shotgun",
+      "family": "Shotguns",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Heavy Shotgun",
+      "family": "Shotguns",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Light Shotgun",
+      "family": "Shotguns",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "T2 Boarding Shotgun",
+      "family": "Shotguns",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Vulkan Shotgun",
+      "family": "Shotguns",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Continuous Damage",
+      "rules": [
+        "Continuous Damage"
+      ]
+    },
+    {
+      "name": "AP Sniper Rifle",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "K1 Sniper Rifle",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM=0",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Sniper Rifle (Anti-materiel Mode)",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Sniper Rifle (AP Mode)",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "MULTI Sniper Rifle (Shock Mode)",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Plasma Sniper Rifle (Blast Mode)",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "Impact Template (Circular)",
+      "rules": [
+        "Combined Saving Roll",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Plasma Sniper Rifle (Hit Mode)",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM and BTS",
+      "Needed Saves": "1 and 1",
+      "Traits": "",
+      "rules": [
+        "Combined Saving Roll"
+      ]
+    },
+    {
+      "name": "Sniper Rifle",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "T2 Sniper Rifle",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Viral Sniper Rifle",
+      "family": "Sniper Rifles",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "+3",
+        "48-96": "-3"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BioWeapon (DA+Shock)",
+      "rules": [
+        "BioWeapon"
+      ]
+    },
+    {
+      "name": "AP Spitfire",
+      "family": "Spitfires",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Spitfire (Anti-materiel Mode)",
+      "family": "Spitfires",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "MULTI Spitfire (AP Mode)",
+      "family": "Spitfires",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "4",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "MULTI Spitfire (Shock Mode)",
+      "family": "Spitfires",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "4",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Spitfire",
+      "family": "Spitfires",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "4",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "AP Submachine Gun",
+      "family": "Submachine Guns",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "-6",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Submachine Gun",
+      "family": "Submachine Guns",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "-6",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "AP Thunderbolt",
+      "family": "Thunderbolts",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Thunderbolt",
+      "family": "Thunderbolts",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "",
+      "rules": []
+    },
+    {
+      "name": "Chain-Colt",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Direct Template (Small Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Chain Rifle",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Direct Template (Large Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Contender",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "0",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "CrazyKoalas",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "5",
+      "B": "1",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Disposable (2), Boost, Perimeter, Deployable",
+      "rules": [
+        "Deployable",
+        "Disposable (X)",
+        "Perimeter",
+        "Perimeter Weapons"
+      ]
+    },
+    {
+      "name": "D-Charges (Demolition Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, Disposable (3)",
+      "rules": [
+        "Anti-materiel",
+        "D-Charges",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "D-Charges (CC Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, CC, Disposable (3), Improvised",
+      "rules": [
+        "Anti-materiel",
+        "CC",
+        "D-Charges",
+        "Disposable (X)",
+        "Improvised"
+      ]
+    },
+    {
+      "name": "Dazer",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "",
+      "B": "",
+      "Ammo": "",
+      "Save Type": "",
+      "Needed Saves": "",
+      "Traits": "Disposable (3), Deployable, Zone of Control",
+      "rules": [
+        "Dazer",
+        "Deployable",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "Deactivator",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "+6",
+        "8-16": "+3",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "BS Weapon (WIP)",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Deactivator"
+      ]
+    },
+    {
+      "name": "Deployable Repeater",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "",
+      "B": "",
+      "Ammo": "",
+      "Save Type": "",
+      "Needed Saves": "",
+      "Traits": "Disposable (3), Deployable",
+      "rules": [
+        "Deployable",
+        "Deployable Repeater",
+        "Disposable (X)"
+      ]
+    },
+    {
+      "name": "Disco Baller",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "-3",
+        "24-32": "-6",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, Disposable (2), Double Shot, Targetless",
+      "rules": [
+        "Disco Baller",
+        "Disposable (X)",
+        "Double Shot",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "Discover",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "0",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "-6"
+      },
+      "PS": "--",
+      "B": "--",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "",
+      "rules": [
+        "Discover"
+      ]
+    },
+    {
+      "name": "E/Marat",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Intuitive Attack, Non-Lethal, Direct Template (Large Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "E/Mitter",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "7",
+      "B": "2",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Non-Lethal",
+      "rules": [
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "FastPanda",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Disposable (1), Indiscriminate, Perimeter, Deployable, Zone of Control",
+      "rules": [
+        "Deployable",
+        "Disposable (X)",
+        "FastPanda",
+        "Indiscriminate",
+        "Perimeter"
+      ]
+    },
+    {
+      "name": "Feuerbach (Blast Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "EXP",
+      "Save Type": "ARM",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Feuerbach (Burst Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "AP+DA",
+      "Save Type": "ARM/2",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Flash Pulse",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "-6"
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "STUN",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BS Weapon (WIP), Non-Lethal, State: Stunned",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Non-Lethal",
+        "State",
+        "Stunned State"
+      ]
+    },
+    {
+      "name": "Forward Observer",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "-3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "-6"
+      },
+      "PS": "--",
+      "B": "2",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "BS Weapon (WIP), State: Targeted, Non-Lethal",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Forward Observer",
+        "Non-Lethal",
+        "State",
+        "Targeted State"
+      ]
+    },
+    {
+      "name": "GizmoKit",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Non-Lethal",
+      "rules": [
+        "GizmoKit",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Hyper-Rapid Magnetic Cannon (Anti-materiel Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Hyper-Rapid Magnetic Cannon (AP Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "5",
+      "Ammo": "AP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Hyper-Rapid Magnetic Cannon (Shock Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "0",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "5",
+      "Ammo": "SHOCK",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Jammer",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "BS Weapon (WIP), Comms Attack, Intuitive Attack, Disposable (2), State: Isolated, Non-Lethal, No Lof, Zone of Control",
+      "rules": [
+        "BS Weapon (WIP)",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Isolated State",
+        "Non-Lethal",
+        "State"
+      ]
+    },
+    {
+      "name": "Katyusha MRL",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "0",
+        "32-40": "0",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "DA",
+      "Save Type": "ARM",
+      "Needed Saves": "2",
+      "Traits": "Anti-materiel, Speculative Attack, Impact Template (Circular)",
+      "rules": [
+        "Anti-materiel",
+        "Impact Template",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Madtraps",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "PARA",
+      "Save Type": "PH-6",
+      "Needed Saves": "1",
+      "Traits": "Disposable (2), Boost, Non-Lethal, Perimeter, Deployable",
+      "rules": [
+        "Deployable",
+        "Disposable (X)",
+        "Non-Lethal",
+        "Perimeter",
+        "Perimeter Weapons"
+      ]
+    },
+    {
+      "name": "MediKit",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "+3",
+        "8-16": "0",
+        "16-24": "-6",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Non-Lethal",
+      "rules": [
+        "MediKit",
+        "Non-Lethal"
+      ]
+    },
+    {
+      "name": "Missile Launcher (Blast Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "-3",
+        "48-96": "-3"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "EXP",
+      "Save Type": "ARM",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel, Impact Template (Circular)",
+      "rules": [
+        "Anti-materiel",
+        "Impact Template"
+      ]
+    },
+    {
+      "name": "Missile Launcher (Hit Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "0",
+        "24-32": "+3",
+        "32-40": "+3",
+        "40-48": "-3",
+        "48-96": "-3"
+      },
+      "PS": "6",
+      "B": "1",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Mk12",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "-3",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "3",
+      "Ammo": "N",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Suppressive Fire",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Nanopulser",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Direct Template (Small Teardrop), Intuitive Attack",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Ohotnik",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "0",
+        "40-48": "-3",
+        "48-96": "-6"
+      },
+      "PS": "6",
+      "B": "2",
+      "Ammo": "T2",
+      "Save Type": "ARM",
+      "Needed Saves": "1",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Pitcher",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "-6",
+        "32-40": "-6",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "--",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "--",
+      "Needed Saves": "--",
+      "Traits": "Speculative Attack, Disposable (2), Indiscriminate, Non-Lethal, Targetless",
+      "rules": [
+        "Disposable (X)",
+        "Indiscriminate",
+        "Non-Lethal",
+        "Pitcher",
+        "Speculative Attack (Trait)",
+        "Targetless"
+      ]
+    },
+    {
+      "name": "Portable Autocannon",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "0",
+        "16-24": "+3",
+        "24-32": "+3",
+        "32-40": "-3",
+        "40-48": "-3",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "2",
+      "Ammo": "AP+EXP",
+      "Save Type": "ARM/2",
+      "Needed Saves": "3",
+      "Traits": "Anti-materiel",
+      "rules": [
+        "Anti-materiel"
+      ]
+    },
+    {
+      "name": "Pulzar",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "N",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Direct Template (Large Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Sepsitor",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "4",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Disposable (2), Direct Template (Large Teardrop), State: Sepsitorized",
+      "rules": [
+        "Direct Template",
+        "Disposable (X)",
+        "Intuitive Attack (Trait)",
+        "Sepsitor",
+        "Sepsitorized State",
+        "State"
+      ]
+    },
+    {
+      "name": "Sepsitor Plus",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "3",
+      "B": "1",
+      "Ammo": "--",
+      "Save Type": "BTS",
+      "Needed Saves": "1",
+      "Traits": "Intuitive Attack, Direct Template (Large Teardrop), State: Sepsitorized",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)",
+        "Sepsitor",
+        "Sepsitorized State",
+        "State"
+      ]
+    },
+    {
+      "name": "Suppressive Fire Mode",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "0",
+        "8-16": "0",
+        "16-24": "-3",
+        "24-32": "--",
+        "32-40": "--",
+        "40-48": "--",
+        "48-96": "--"
+      },
+      "PS": "*",
+      "B": "3",
+      "Ammo": "*",
+      "Save Type": "*",
+      "Needed Saves": "*",
+      "Traits": "",
+      "rules": [
+        "Suppressive Fire (Trait)"
+      ]
+    },
+    {
+      "name": "Uragan MRL (Blast Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "0",
+        "32-40": "0",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "6",
+      "B": "3",
+      "Ammo": "AP+SHOCK",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Speculative Attack, Impact Template (Circular), Burst: Single Target",
+      "rules": [
+        "Burst: Single Target",
+        "Impact Template",
+        "Speculative Attack (Trait)"
+      ]
+    },
+    {
+      "name": "Uragan MRL (Hit Mode)",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "-3",
+        "8-16": "+3",
+        "16-24": "+3",
+        "24-32": "0",
+        "32-40": "0",
+        "40-48": "-6",
+        "48-96": "--"
+      },
+      "PS": "5",
+      "B": "3",
+      "Ammo": "AP+SHOCK",
+      "Save Type": "ARM/2",
+      "Needed Saves": "1",
+      "Traits": "Burst: Single Target",
+      "rules": [
+        "Burst: Single Target"
+      ]
+    },
+    {
+      "name": "Zapper",
+      "family": "Uncategorized",
+      "ranges": {
+        "0-8": "",
+        "8-16": "",
+        "16-24": "",
+        "24-32": "",
+        "32-40": "",
+        "40-48": "",
+        "48-96": ""
+      },
+      "PS": "7",
+      "B": "1",
+      "Ammo": "E/M",
+      "Save Type": "BTS/2",
+      "Needed Saves": "2",
+      "Traits": "Intuitive Attack, Non-Lethal, Direct Template (Small Teardrop)",
+      "rules": [
+        "Direct Template",
+        "Intuitive Attack (Trait)",
+        "Non-Lethal"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "name": "Alert",
+      "family": "Common Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional, No Roll",
+      "url": "https://infinitythewiki.com/Alert",
+      "page": "Alert"
+    },
+    {
+      "name": "BS Attack",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/BS_Attack",
+      "page": "BS Attack"
+    },
+    {
+      "name": "Cautious Movement",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "Movement, No Roll",
+      "url": "https://infinitythewiki.com/Cautious_Movement",
+      "page": "Cautious Movement"
+    },
+    {
+      "name": "CC Attack",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/CC_Attack",
+      "page": "CC Attack"
+    },
+    {
+      "name": "Climb",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "Movement, No LoF, No Roll",
+      "url": "https://infinitythewiki.com/Climb",
+      "page": "Climb"
+    },
+    {
+      "name": "Discover",
+      "family": "Common Skill",
+      "type": "Basic Short Skill / ARO",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Discover",
+      "page": "Discover"
+    },
+    {
+      "name": "Dodge",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "Movement",
+      "url": "https://infinitythewiki.com/Dodge",
+      "page": "Dodge"
+    },
+    {
+      "name": "Idle",
+      "family": "Common Skill",
+      "type": "Basic Short Skill",
+      "labels": "No Roll",
+      "url": "https://infinitythewiki.com/Idle",
+      "page": "Idle"
+    },
+    {
+      "name": "Intuitive Attack",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "BS Attack",
+      "url": "https://infinitythewiki.com/Intuitive_Attack",
+      "page": "Intuitive Attack"
+    },
+    {
+      "name": "Jump",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "Movement, No LoF, No Roll",
+      "url": "https://infinitythewiki.com/Jump",
+      "page": "Jump"
+    },
+    {
+      "name": "Move",
+      "family": "Common Skill",
+      "type": "Basic Short Skill",
+      "labels": "Movement, No LoF, No Roll",
+      "url": "https://infinitythewiki.com/Move",
+      "page": "Move"
+    },
+    {
+      "name": "Look Out",
+      "family": "Common Skill",
+      "type": "ARO",
+      "labels": "No Roll",
+      "url": "https://infinitythewiki.com/Look_Out",
+      "page": "Look Out"
+    },
+    {
+      "name": "Place Deployable",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Place_Deployable",
+      "page": "Place Deployable"
+    },
+    {
+      "name": "Reload",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Reload",
+      "page": "Reload"
+    },
+    {
+      "name": "Request Speedball",
+      "family": "Common Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Request_Speedball",
+      "page": "Request Speedball"
+    },
+    {
+      "name": "Reset",
+      "family": "Common Skill",
+      "type": "Short Skill / ARO",
+      "labels": "No LoF",
+      "url": "https://infinitythewiki.com/Reset",
+      "page": "Reset"
+    },
+    {
+      "name": "Speculative Attack",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "BS Attack",
+      "url": "https://infinitythewiki.com/Speculative_Attack",
+      "page": "Speculative Attack"
+    },
+    {
+      "name": "Suppressive Fire",
+      "family": "Common Skill",
+      "type": "Long Skill",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Suppressive_Fire",
+      "page": "Suppressive Fire"
+    },
+    {
+      "name": "Aerial",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Aerial",
+      "page": "Aerial"
+    },
+    {
+      "name": "Berserk",
+      "family": "Special Skill",
+      "type": "Long Skill",
+      "labels": "Attack, CC Attack, CC Special Skill, Movement, Optional",
+      "url": "https://infinitythewiki.com/Berserk",
+      "page": "Berserk"
+    },
+    {
+      "name": "Booty",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Booty",
+      "page": "Booty"
+    },
+    {
+      "name": "Camouflage",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Camouflage",
+      "page": "Camouflage"
+    },
+    {
+      "name": "Chain of Command",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional, Private Information",
+      "url": "https://infinitythewiki.com/Chain_of_Command",
+      "page": "Chain of Command"
+    },
+    {
+      "name": "Climbing Plus",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Movement, Optional",
+      "url": "https://infinitythewiki.com/Climbing_Plus",
+      "page": "Climbing Plus"
+    },
+    {
+      "name": "Combat Instinct",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Combat_Instinct",
+      "page": "Combat Instinct"
+    },
+    {
+      "name": "Combat Jump",
+      "family": "Special Skill",
+      "type": "Long Skill",
+      "labels": "Airborne Deployment (AD), Private Information, Optional",
+      "url": "https://infinitythewiki.com/Combat_Jump",
+      "page": "Combat Jump"
+    },
+    {
+      "name": "Commlink",
+      "family": "Special Skill",
+      "type": null,
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Infinity_Reinforcements#Commlink",
+      "page": "Commlink"
+    },
+    {
+      "name": "Courage",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Courage",
+      "page": "Courage"
+    },
+    {
+      "name": "Counterintelligence",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional, Private Information",
+      "url": "https://infinitythewiki.com/Counterintelligence",
+      "page": "Counterintelligence"
+    },
+    {
+      "name": "Cyberplug",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Cyberplug",
+      "page": "Cyberplug"
+    },
+    {
+      "name": "Decoy",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Decoy",
+      "page": "Decoy"
+    },
+    {
+      "name": "Doctor",
+      "family": "Special Skill",
+      "type": "Short Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Doctor",
+      "page": "Doctor"
+    },
+    {
+      "name": "Dogged",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Dogged",
+      "page": "Dogged"
+    },
+    {
+      "name": "Engineer",
+      "family": "Special Skill",
+      "type": "Short Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Engineer",
+      "page": "Engineer"
+    },
+    {
+      "name": "Explode",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Attack, Obligatory",
+      "url": "https://infinitythewiki.com/Explode",
+      "page": "Explode"
+    },
+    {
+      "name": "Forward Deployment",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Superior Deployment, Optional",
+      "url": "https://infinitythewiki.com/Forward_Deployment",
+      "page": "Forward Deployment"
+    },
+    {
+      "name": "Forward Observer",
+      "family": "Special Skill",
+      "type": "Short Skill / ARO",
+      "labels": "BS Attack, Optional",
+      "url": "https://infinitythewiki.com/Forward_Observer",
+      "page": "Forward Observer"
+    },
+    {
+      "name": "Frenzy",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory, States Phase",
+      "url": "https://infinitythewiki.com/Frenzy",
+      "page": "Frenzy"
+    },
+    {
+      "name": "FT Master",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/FT_Master",
+      "page": "FT Master"
+    },
+    {
+      "name": "G: Jumper",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/G:_Jumper",
+      "page": "G: Jumper"
+    },
+    {
+      "name": "Guard",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Guard",
+      "page": "Guard"
+    },
+    {
+      "name": "Hacker",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Hacker",
+      "page": "Hacker"
+    },
+    {
+      "name": "Hidden Deployment",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional, Private Information",
+      "url": "https://infinitythewiki.com/Hidden_Deployment",
+      "page": "Hidden Deployment"
+    },
+    {
+      "name": "Immunity",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Immunity",
+      "page": "Immunity"
+    },
+    {
+      "name": "Impersonation",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional, NFB, Superior Deployment",
+      "url": "https://infinitythewiki.com/Impersonation",
+      "page": "Impersonation"
+    },
+    {
+      "name": "Impetuous",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Impetuous Phase, Obligatory",
+      "url": "https://infinitythewiki.com/Impetuous",
+      "page": "Impetuous"
+    },
+    {
+      "name": "Infiltration",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Superior Deployment, Optional",
+      "url": "https://infinitythewiki.com/Infiltration",
+      "page": "Infiltration"
+    },
+    {
+      "name": "Infinity Spec-Ops",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Infinity_Spec-Ops",
+      "page": "Infinity Spec-Ops"
+    },
+    {
+      "name": "Inspiring Leadership",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Inspiring_Leadership",
+      "page": "Inspiring Leadership"
+    },
+    {
+      "name": "Journalist",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Journalist",
+      "page": "Journalist"
+    },
+    {
+      "name": "Lieutenant",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Private Information, Obligatory",
+      "url": "https://infinitythewiki.com/Lieutenant",
+      "page": "Lieutenant"
+    },
+    {
+      "name": "Limited Cover",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Limited_Cover",
+      "page": "Limited Cover"
+    },
+    {
+      "name": "Marksmanship",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Marksmanship",
+      "page": "Marksmanship"
+    },
+    {
+      "name": "Martial Arts",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "CC Special Skill, Optional",
+      "url": "https://infinitythewiki.com/Martial_Arts",
+      "page": "Martial Arts"
+    },
+    {
+      "name": "MetaChemistry",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/MetaChemistry",
+      "page": "MetaChemistry"
+    },
+    {
+      "name": "Mimetism",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "NFB, Obligatory",
+      "url": "https://infinitythewiki.com/Mimetism",
+      "page": "Mimetism"
+    },
+    {
+      "name": "Minelayer",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Minelayer",
+      "page": "Minelayer"
+    },
+    {
+      "name": "Mnemonica",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Mnemonica",
+      "page": "Mnemonica"
+    },
+    {
+      "name": "Morpho-Scan",
+      "family": "Special Skill",
+      "type": "Short Skill",
+      "labels": "Comms Attack, No Roll, Optional, Zone of Control",
+      "url": "https://infinitythewiki.com/Morpho-Scan",
+      "page": "Morpho-Scan"
+    },
+    {
+      "name": "Natural Born Warrior",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "CC Special Skill",
+      "url": "https://infinitythewiki.com/Natural_Born_Warrior",
+      "page": "Natural Born Warrior"
+    },
+    {
+      "name": "NCO",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/NCO",
+      "page": "NCO"
+    },
+    {
+      "name": "Neurocinetics",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Neurocinetics",
+      "page": "Neurocinetics"
+    },
+    {
+      "name": "No Cover",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/No_Cover",
+      "page": "No Cover"
+    },
+    {
+      "name": "No Wound Incapacitation",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/No_Wound_Incapacitation",
+      "page": "No Wound Incapacitation"
+    },
+    {
+      "name": "Non-Hackable",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Non-Hackable",
+      "page": "Non-Hackable"
+    },
+    {
+      "name": "Number 2",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Number_2",
+      "page": "Number 2"
+    },
+    {
+      "name": "Parachutist",
+      "family": "Special Skill",
+      "type": "Long Skill",
+      "labels": "Airborne Deployment (AD), Optional, Private Information",
+      "url": "https://infinitythewiki.com/Parachutist",
+      "page": "Parachutist"
+    },
+    {
+      "name": "Paramedic",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Paramedic",
+      "page": "Paramedic"
+    },
+    {
+      "name": "Peripheral",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Peripheral",
+      "page": "Peripheral"
+    },
+    {
+      "name": "Protheion",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "CC Special Skill, Optional",
+      "url": "https://infinitythewiki.com/Protheion",
+      "page": "Protheion"
+    },
+    {
+      "name": "Regeneration",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "States Phase, Optional",
+      "url": "https://infinitythewiki.com/Regeneration",
+      "page": "Regeneration"
+    },
+    {
+      "name": "Religious Troop",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Religious_Troop",
+      "page": "Religious Troop"
+    },
+    {
+      "name": "Remdriver",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Remdriver",
+      "page": "Remdriver"
+    },
+    {
+      "name": "Remote Presence",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Remote_Presence",
+      "page": "Remote Presence"
+    },
+    {
+      "name": "Request Reinforcements",
+      "family": "Special Skill",
+      "type": null,
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Infinity_Reinforcements",
+      "page": "Infinity Reinforcements"
+    },
+    {
+      "name": "Sapper",
+      "family": "Special Skill",
+      "type": "Deployment Skill / Long Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Sapper",
+      "page": "Sapper"
+    },
+    {
+      "name": "Sensor",
+      "family": "Special Skill",
+      "type": "Short Skill",
+      "labels": "Attack, Optional, Zone of Control",
+      "url": "https://infinitythewiki.com/Sensor",
+      "page": "Sensor"
+    },
+    {
+      "name": "Sixth Sense",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Sixth_Sense",
+      "page": "Sixth Sense"
+    },
+    {
+      "name": "Specialist Operative",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Specialist_Operative",
+      "page": "Specialist Operative"
+    },
+    {
+      "name": "Stealth",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Stealth",
+      "page": "Stealth"
+    },
+    {
+      "name": "Strategic Deployment",
+      "family": "Special Skill",
+      "type": "Deployment Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Strategic_Deployment",
+      "page": "Strategic Deployment"
+    },
+    {
+      "name": "Strategos",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Strategos",
+      "page": "Strategos"
+    },
+    {
+      "name": "Super-Jump",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Movement, Optional",
+      "url": "https://infinitythewiki.com/Super-Jump",
+      "page": "Super-Jump"
+    },
+    {
+      "name": "Surprise Attack",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Surprise_Attack",
+      "page": "Surprise Attack"
+    },
+    {
+      "name": "Tactical Awareness",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Tactical_Awareness",
+      "page": "Tactical Awareness"
+    },
+    {
+      "name": "TAGCom",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/TAGCom",
+      "page": "TAGCom"
+    },
+    {
+      "name": "Tech-Recovery",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Tech-Recovery",
+      "page": "Tech-Recovery"
+    },
+    {
+      "name": "Technorganic",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Technorganic",
+      "page": "Technorganic"
+    },
+    {
+      "name": "Terrain",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Terrain",
+      "page": "Terrain"
+    },
+    {
+      "name": "Total Reaction",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Total_Reaction",
+      "page": "Total Reaction"
+    },
+    {
+      "name": "Transmutation",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Transmutation",
+      "page": "Transmutation"
+    },
+    {
+      "name": "Triangulated Fire",
+      "family": "Special Skill",
+      "type": "Long Skill",
+      "labels": "Attack, Optional",
+      "url": "https://infinitythewiki.com/Triangulated_Fire",
+      "page": "Triangulated Fire"
+    },
+    {
+      "name": "Vulnerability",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Vulnerability",
+      "page": "Vulnerability"
+    },
+    {
+      "name": "Warhorse",
+      "family": "Special Skill",
+      "type": "Automatic Skill",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Warhorse",
+      "page": "Warhorse"
+    },
+    {
+      "name": "360° Visor",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/360%C2%BA_Visor",
+      "page": "360º Visor"
+    },
+    {
+      "name": "AI Motorcycle",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": null,
+      "url": "https://infinitythewiki.com/AI_Motorcycle",
+      "page": "AI Motorcycle"
+    },
+    {
+      "name": "Albedo",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory, NFB",
+      "url": "https://infinitythewiki.com/Albedo",
+      "page": "Albedo"
+    },
+    {
+      "name": "Baggage",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory, No Roll",
+      "url": "https://infinitythewiki.com/Baggage",
+      "page": "Baggage"
+    },
+    {
+      "name": "Bangbomb",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/Bangbomb",
+      "page": "Bangbomb"
+    },
+    {
+      "name": "Biometric Visor",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Biometric_Visor",
+      "page": "Biometric Visor"
+    },
+    {
+      "name": "Cube",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Cube",
+      "page": "Cube"
+    },
+    {
+      "name": "Dazer",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Deployable, Disposable (3), Zone of Control",
+      "url": "https://infinitythewiki.com/Dazer",
+      "page": "Dazer"
+    },
+    {
+      "name": "Deactivator",
+      "family": "Equipment",
+      "type": "Short Skill",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Deactivator",
+      "page": "Deactivator"
+    },
+    {
+      "name": "Deployable Cover",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Deployable, Disposable (2), Indiscriminate, Perimeter",
+      "url": "https://infinitythewiki.com/Deployable_Cover",
+      "page": "Deployable Cover"
+    },
+    {
+      "name": "Deployable Repeater",
+      "family": "Equipment",
+      "type": "Equipment",
+      "labels": "Comms Equipment, Deployable, Disposable (3), Indiscriminate, Zone of Control",
+      "url": "https://infinitythewiki.com/Deployable_Repeater",
+      "page": "Deployable Repeater"
+    },
+    {
+      "name": "ECM",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": null,
+      "url": "https://infinitythewiki.com/ECM",
+      "page": "ECM"
+    },
+    {
+      "name": "FastPanda",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": null,
+      "url": "https://infinitythewiki.com/FastPanda",
+      "page": "FastPanda"
+    },
+    {
+      "name": "Firewall",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Firewall",
+      "page": "Firewall"
+    },
+    {
+      "name": "GizmoKit",
+      "family": "Equipment",
+      "type": "Short Skill",
+      "labels": null,
+      "url": "https://infinitythewiki.com/GizmoKit",
+      "page": "GizmoKit"
+    },
+    {
+      "name": "Hacking Device",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment",
+      "url": "https://infinitythewiki.com/Hacking_Device",
+      "page": "Hacking Device"
+    },
+    {
+      "name": "HoloMask",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Optional",
+      "url": "https://infinitythewiki.com/HoloMask",
+      "page": "HoloMask"
+    },
+    {
+      "name": "Holoprojector",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Optional, NFB",
+      "url": "https://infinitythewiki.com/Holoprojector",
+      "page": "Holoprojector"
+    },
+    {
+      "name": "MediKit",
+      "family": "Equipment",
+      "type": "Short Skill",
+      "labels": null,
+      "url": "https://infinitythewiki.com/MediKit",
+      "page": "MediKit"
+    },
+    {
+      "name": "Motorcycle",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Motorcycle",
+      "page": "Motorcycle"
+    },
+    {
+      "name": "Multispectral Visor",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Multispectral_Visor",
+      "page": "Multispectral Visor"
+    },
+    {
+      "name": "Nanoscreen",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/Nanoscreen",
+      "page": "Nanoscreen"
+    },
+    {
+      "name": "Repeater",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment, Obligatory, Zone of Control",
+      "url": "https://infinitythewiki.com/Repeater",
+      "page": "Repeater"
+    },
+    {
+      "name": "SymbioMate",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Assignable (Transmutation), Obligatory",
+      "url": "https://infinitythewiki.com/SymbioMate",
+      "page": "SymbioMate"
+    },
+    {
+      "name": "TinBot",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Comms Equipment, Prior Deployment",
+      "url": "https://infinitythewiki.com/TinBot",
+      "page": "TinBot"
+    },
+    {
+      "name": "X-Visor",
+      "family": "Equipment",
+      "type": "Automatic Equipment",
+      "labels": "Obligatory",
+      "url": "https://infinitythewiki.com/X-Visor",
+      "page": "X-Visor"
+    },
+    {
+      "name": "Normal (N) Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Normal_(N)_Ammunition",
+      "page": "Normal (N) Ammunition"
+    },
+    {
+      "name": "Armor Piercing (AP) Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Armor_Piercing_(AP)_Ammunition",
+      "page": "Armor Piercing (AP) Ammunition"
+    },
+    {
+      "name": "Double Action (DA) Ammunition",
+      "family": "Ammunition",
+      "type": "",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Double_Action_(DA)_Ammunition",
+      "page": "Double Action (DA) Ammunition"
+    },
+    {
+      "name": "Eclipse Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Eclipse_Ammunition",
+      "page": "Eclipse Ammunition"
+    },
+    {
+      "name": "Electromagnetic (E/M) Ammunition",
+      "family": "Ammunition",
+      "type": "",
+      "labels": null,
+      "url": "https://infinitythewiki.com/Electromagnetic_(E/M)_Ammunition",
+      "page": "Electromagnetic (E/M) Ammunition"
+    },
+    {
+      "name": "Explosive (EXP) Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Explosive_(EXP)_Ammunition",
+      "page": "Explosive (EXP) Ammunition"
+    },
+    {
+      "name": "Paralysis (PARA) Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Paralysis_(PARA)_Ammunition",
+      "page": "Paralysis (PARA) Ammunition"
+    },
+    {
+      "name": "Shock Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Shock_Ammunition",
+      "page": "Shock Ammunition"
+    },
+    {
+      "name": "Smoke Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Smoke_Ammunition",
+      "page": "Smoke Ammunition"
+    },
+    {
+      "name": "Stun Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Stun_Ammunition",
+      "page": "Stun Ammunition"
+    },
+    {
+      "name": "T2 Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/T2_Ammunition",
+      "page": "T2 Ammunition"
+    },
+    {
+      "name": "Combined Ammunition",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Combined_Ammunition",
+      "page": "Combined Ammunition"
+    },
+    {
+      "name": "Combined Saving Roll",
+      "family": "Ammunition",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Combined_Saving_Roll",
+      "page": "Combined Saving Roll"
+    },
+    {
+      "name": "Mixed Weapons",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Mixed_Weapons",
+      "page": "Mixed Weapons"
+    },
+    {
+      "name": "Armed Turret",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Armed_Turret",
+      "page": "Armed Turret"
+    },
+    {
+      "name": "Chest Mines",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Chest_Mines",
+      "page": "Chest Mines"
+    },
+    {
+      "name": "D-Charges",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/D-Charges",
+      "page": "D-Charges"
+    },
+    {
+      "name": "Disco Baller",
+      "family": "Weaponry",
+      "type": "Short Skill",
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Disco_Baller",
+      "page": "Disco Baller"
+    },
+    {
+      "name": "Drop Bears",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Drop_Bears",
+      "page": "Drop Bears"
+    },
+    {
+      "name": "Mine Dispenser",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Mine_Dispenser",
+      "page": "Mine Dispenser"
+    },
+    {
+      "name": "Mines",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Mines",
+      "page": "Mines"
+    },
+    {
+      "name": "Perimeter Weapons",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Perimeter_Weapons",
+      "page": "Perimeter Weapons"
+    },
+    {
+      "name": "Pitcher",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Pitcher",
+      "page": "Pitcher"
+    },
+    {
+      "name": "Sepsitor",
+      "family": "Weaponry",
+      "type": null,
+      "labels": "Attack",
+      "url": "https://infinitythewiki.com/Sepsitor",
+      "page": "Sepsitor"
+    },
+    {
+      "name": "SymbioBomb",
+      "family": "Weaponry",
+      "type": null,
+      "labels": "Assignable (Transmutation), Comms Attack, Optional",
+      "url": "https://infinitythewiki.com/SymbioBomb",
+      "page": "SymbioBomb"
+    },
+    {
+      "name": "WildParrot",
+      "family": "Weaponry",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/WildParrot",
+      "page": "WildParrot"
+    },
+    {
+      "name": "Dead State",
+      "family": "State",
+      "type": null,
+      "labels": "Null",
+      "url": "https://infinitythewiki.com/Dead_State",
+      "page": "Dead"
+    },
+    {
+      "name": "Immobilized-A State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Immobilized-A_State",
+      "page": "Immobilized-A"
+    },
+    {
+      "name": "Stunned State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Stunned_State",
+      "page": "Stunned"
+    },
+    {
+      "name": "Immobilized-B State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Immobilized-B_State",
+      "page": "Immobilized-B"
+    },
+    {
+      "name": "Isolated State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Isolated_State",
+      "page": "Isolated"
+    },
+    {
+      "name": "Targeted State",
+      "family": "State",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Targeted_State",
+      "page": "Targeted"
+    },
+    {
+      "name": "Sepsitorized State",
+      "family": "State",
+      "type": null,
+      "labels": "Null",
+      "url": "https://infinitythewiki.com/Sepsitorized_State",
+      "page": "Sepsitorized"
+    },
+    {
+      "name": "Anti-materiel",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Anti-materiel"
+    },
+    {
+      "name": "ARM = 0",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#ARM_.3D_0"
+    },
+    {
+      "name": "ARO",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#ARO"
+    },
+    {
+      "name": "BioWeapon",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#BioWeapon"
+    },
+    {
+      "name": "Boost",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Boost"
+    },
+    {
+      "name": "BS Weapon (PH)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#BS_Weapon_.28PH.29"
+    },
+    {
+      "name": "BS Weapon (WIP)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#BS_Weapon_.28WIP.29"
+    },
+    {
+      "name": "BTS = 0",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#BTS_.3D_0"
+    },
+    {
+      "name": "Burst (B)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Burst_.28B.29"
+    },
+    {
+      "name": "Burst: Single Target",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Burst:_Single_Target"
+    },
+    {
+      "name": "CC",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#CC"
+    },
+    {
+      "name": "Concealed",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Concealed"
+    },
+    {
+      "name": "Continuous Damage",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Continuous_Damage"
+    },
+    {
+      "name": "Deployable",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Deployable"
+    },
+    {
+      "name": "Direct Template",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Direct_Template"
+    },
+    {
+      "name": "Disposable (X)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Disposable_.28X.29"
+    },
+    {
+      "name": "Double Shot",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Double_Shot"
+    },
+    {
+      "name": "Impact Template",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Impact_Template"
+    },
+    {
+      "name": "Improvised",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Improvised"
+    },
+    {
+      "name": "Indiscriminate",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Indiscriminate"
+    },
+    {
+      "name": "Intuitive Attack (Trait)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Intuitive_Attack"
+    },
+    {
+      "name": "Non-Lethal",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Non-Lethal"
+    },
+    {
+      "name": "Non-Reloadable",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Non-Reloadable"
+    },
+    {
+      "name": "Perimeter",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Perimeter"
+    },
+    {
+      "name": "Prior Deployment",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Prior_Deployment"
+    },
+    {
+      "name": "Reflective",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Reflective"
+    },
+    {
+      "name": "Silent (X)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Silent_.28X.29"
+    },
+    {
+      "name": "Speculative Attack (Trait)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Speculative_Attack"
+    },
+    {
+      "name": "State",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#State"
+    },
+    {
+      "name": "Suppressive Fire (Trait)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Suppressive_Fire_.28SF.29"
+    },
+    {
+      "name": "Target (Attribute)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Target_.28Attribute.29"
+    },
+    {
+      "name": "Targetless",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Targetless"
+    },
+    {
+      "name": "Zone of Control (ZoC)",
+      "family": "Weapon Trait",
+      "type": null,
+      "labels": null,
+      "url": "https://infinitythewiki.com/Traits#Zone_of_Control_.28ZoC.29"
+    }
+  ],
+  "missing_pages": []
+}

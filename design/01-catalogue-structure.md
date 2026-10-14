@@ -14,7 +14,7 @@ A catalogue is a small database. If you know SQL, most of it maps directly.
 |---|---|---|
 | **Game system file** (`.gst`) | Shared definitions every catalogue uses | Schema plus lookup tables |
 | **Catalogue file** (`.cat`) | The selectable content (units, options) | Data rows |
-| **Cost type** | A number every entry can carry, totalled across a list (Credits, Command Tokens, Capacity) | A numeric column that gets `SUM()`med |
+| **Cost type** | A number every entry can carry, totalled across a list (Requisition, Command Tokens, Capacity) | A numeric column that gets `SUM()`med |
 | **Profile type** | The column layout of a stat line (e.g. MOV, CC, BS…) | A table definition |
 | **Profile** | One stat line using a profile type | A row in that table |
 | **Category** | A tag on entries. Lists group by category, and limits can count by it. | A lookup/tag column you `GROUP BY` |
@@ -38,7 +38,7 @@ These don't work in the old BattleScribe app. That's fine, because New Recruit i
 | **Custom messages on constraints** | Messages like "Elite limit: {current}/{value}" instead of the default text |
 | **`exactly` constraint type** | Cleaner than a matching min and max pair |
 | **Extra modifier operations** | Multiply, divide, cumulative add, and more, if pricing ever needs them |
-| **`limit::Credits` query** | Lets rules react to the Allocation the player chose (60 or 100), if we ever need that |
+| **`limit::Requisition` query** | Lets rules react to the Allocation the player chose (60 or 100), if we ever need that |
 
 ---
 
@@ -59,11 +59,11 @@ DogsOfWar/
 
 ---
 
-## 3. Cost types — PROPOSED
+## 3. Cost types — Requisition LOCKED, the rest PROPOSED
 
 | Cost type | Visible | Default limit | Used for |
 |---|---|---|---|
-| **Credits** | Yes | 100 (players change it to 60 when creating the list) | Everything purchasable: the Allocation |
+| **Requisition** | Yes | 100 (players change it to 60 when creating the list) | Everything purchasable: the Allocation |
 | **Command Tokens** | Yes | The starting pool (TBD) | Pre-game spends only, such as expanding the Elite cap. The roster shows what's left to start the game with. |
 | **Capacity** | Yes | None | TAG components. There's one custom TAG per list, so the list total equals that TAG's Capacity used, which gives a free running total. |
 
@@ -88,32 +88,27 @@ Use the column order of the current N5 profile charts, so Infinity players read 
 
 ---
 
-## 5. Categories — PROPOSED
+## 5. Categories — main four LOCKED (2026-10-14), the rest PROPOSED
 
-There are two kinds, kept separate on purpose.
+**Unit categories (LOCKED)** are *primary*. Each unit has one, and it decides where the unit appears in the roster. **The phases match them**, so the list reads in activation order. These are the categories the catalogue already uses.
 
-**Phase categories** are *primary*. They decide where a unit appears in the roster, so the list reads in activation order.
+| Category | Contains | Acts in | Limit in the catalogue |
+|---|---|---|---|
+| **TAG** | The custom TAG chassis | Pilot phase, with its pilot | Exactly 1 |
+| **Pilot** | The pilot, and a second pilot | Pilot phase | 1–2 |
+| **Elite** | Elites | Elite phase | Up to 5 |
+| **Trooper** | Troopers | Trooper phase | Up to 10 |
 
-| Category | Contains |
-|---|---|
-| **Company** | Briefing, Expanded Contract |
-| **Pilot Phase** | The pilot, the TAG chassis, the second pilot |
-| **Elite Phase** | Elites |
-| **Trooper Phase** | Troopers |
-
-**Slot categories** are *secondary*. They exist so limits can count them.
+**Other categories (PROPOSED)** are *secondary*. They exist so limits and scenario rules can count them.
 
 | Category | Counted by |
 |---|---|
-| **Custom TAG** | Exactly 1 per company |
-| **Primary Pilot** | Exactly 1 per company. The pilot of the custom TAG. |
-| **Elite** | The Elite cap. The second pilot is in the Pilot Phase category *and* the Elite category, so it acts in the Pilot phase but counts toward the Elite cap. |
+| **Company** | Briefing and Expanded Contract, which aren't units |
+| **Elite** (as a secondary category) | Put on the second pilot, so it counts toward the Elite cap while acting in the Pilot phase |
 | **Lieutenant** | Exactly 1 |
 | **NCO** | Price only, for now |
 | **Specialist** | Reference for scenarios. Elites that are specialists, plus Corpsman and Spotter. |
 | **Deployed** | The 10-infantry starting cap |
-
-This split is the key idea of the whole layout: **where a unit acts** (phase) and **which limits it counts toward** (slot) are separate tags.
 
 ---
 
@@ -128,39 +123,39 @@ Mercenary Company  (force entry)
 │
 ├── Expanded Contract (+1 Elite) [Company]          costs Command Tokens; repeatable
 │
-├── Pilot                        [Pilot Phase, Primary Pilot]          exactly 1
+├── Pilot                        [Pilot]                              exactly 1
 │     └── link to shared Pilot build
 │           ├── Trooper profile (the pilot on foot)
 │           ├── Skills               group
 │           ├── Sidearm              group, exactly 1
 │           ├── Gear                 group, 1–2
-│           └── Lieutenant / NCO     upgrades (credits)
+│           └── Lieutenant / NCO     upgrades (Requisition)
 │
-├── <Chassis name> (S6 / S7 / S8)   [Pilot Phase, Custom TAG]          exactly 1 across all chassis
+├── <Chassis name> (S6 / S7 / S8)   [TAG]                              exactly 1 across all chassis
 │     ├── TAG profile (includes its Capacity limit), Chassis Trait rule
 │     ├── Hardpoint: <mount name> (Light|Medium|Heavy)   group, max 1   ← one group per mount
 │     │     └── links to the shared weapon groups this size may take
 │     ├── Systems                    group, max N        → links to shared Systems
 │     └── Signature                  group, exactly 1    → links to shared Signature options
 │
-├── Second Pilot                 [Pilot Phase, Elite, Deployed]        optional
+├── Second Pilot                 [Pilot, Elite, Deployed]              optional
 │     └── link to the same shared Pilot build
 │
-├── <Elite name>                 [Elite Phase, Elite, Deployed (+Specialist)]
+├── <Elite name>                 [Elite, Deployed (+Specialist)]
 │     ├── Trooper profile, fixed weapons and skills
 │     ├── Kit                        group, max 1   → links to shared Elite Kit
 │     ├── Lieutenant                 upgrade, only on Elites allowed to be Lieutenant
 │     └── Start in Reserve           upgrade, 0 cost → removes the Deployed category
 │
-└── Trooper — <template>         [Trooper Phase, Deployed (+Specialist)]   one entry per template
+└── Trooper — <template>         [Trooper, Deployed (+Specialist)]   one entry per template
       └── info link to the shared Trooper profile; template weapons
 ```
 
 ### Why the pilot and TAG are separate
 - **It matches the table.** The pilot becomes its own model whenever they dismount, jockey an enemy TAG, or eject (Transmutation turns the TAG into the pilot's profile). Separate entries mean separate cards, one per physical model.
 - **Each card stays readable.** The pilot card holds skills and gear. The TAG card holds hardpoints, systems, and Signature. Nesting them made one very long card.
-- **Validation loses nothing.** There's exactly one Primary Pilot and exactly one custom TAG per company, so which pilot drives which TAG is never ambiguous, and nothing has to link them. The second pilot never gets a custom TAG, only stock TAGs called in during the game.
-- **Both share the Phase category,** so they sit next to each other at the top of the roster.
+- **Validation loses nothing.** There's exactly one primary pilot and exactly one custom TAG per company, so which pilot drives which TAG is never ambiguous, and nothing has to link them. The second pilot never gets a custom TAG, only stock TAGs called in during the game.
+- **Both act in the Pilot phase,** and the roster lists the TAG and Pilot categories together at the top.
 
 ### Why the rest is built this way
 - **There's one entry per chassis,** not one generic "TAG" entry, because each chassis has its own hardpoint layout and Capacity. Every chassis links to the same shared weapon and system libraries, so nothing is duplicated.
@@ -175,9 +170,9 @@ Mercenary Company  (force entry)
 
 | Rule (from foundations) | Mechanism |
 |---|---|
-| Allocation of 60 or 100 credits | Credits roster limit, set when creating the list |
-| Exactly 1 custom TAG | Custom TAG category: `exactly 1`, scope force |
-| Exactly 1 pilot for it | Primary Pilot category: `exactly 1`, scope force |
+| Allocation of 60 or 100 Requisition | Requisition roster limit, set when creating the list |
+| Exactly 1 custom TAG | TAG category: `exactly 1`, scope force |
+| 1 pilot for it, plus an optional second pilot | Pilot category: `min 1`, `max 2`, scope force |
 | Exactly 1 Lieutenant | Lieutenant category: `exactly 1`, scope force |
 | Up to 5 Elites, including reserves | Elite category: `max 5`, scope force. A modifier adds +1 to that max for each Expanded Contract in the force (a repeat). |
 | Up to 10 infantry at the start | Deployed category: `max 10`, scope force. "Start in Reserve" triggers a modifier on its Elite that removes the Deployed category. |
@@ -205,12 +200,13 @@ Mercenary Company  (force entry)
 | **Pilot build** | The full pilot build (profile, skills, sidearm, gear, Lieutenant / NCO). Linked by both the Pilot and the Second Pilot. |
 | **Stock TAG lineup** | Profiles for the universal stock TAGs. Shown in the Briefing, never selectable. |
 | **Trooper profile** | The one shared Trooper stat line |
-| **Rules: N5 references** | Skills and equipment by name, plus publication and page, with no rules text copied |
+| **Rules: N5 references** | Every N5 skill, piece of equipment, weapon trait, ammunition type and state: name, type, a one-line summary in our own words, and a link to the official rule. No rules text copied. Built by `tools/build_gst.py`. |
+| **Armory entries** *(built)* | A selectable entry for every N5 weapon (all its modes, plus its trait rules), special skill and piece of equipment, with no price. They're gathered in four groups, `Armory: Ranged Weapons`, `Armory: CC Weapons`, `Armory: Special Skills` and `Armory: Equipment`, ready to link and price. Skills and equipment that attack with range bands (Forward Observer, MediKit…) carry their weapon profile. |
 | **Rules: Dogs of War** | Our own rules, in our own words: Deployment (Tactical), Jockey, phase order, and N4 ports (each marked as an N4 port) |
 | **Publications** | "Infinity N5 Core Rules" (Corvus Belli) and "Dogs of War" (this repo) |
 
 ### Price on the link, not on the weapon
-A weapon is defined **once** (its profile), but it can be offered in several places at different prices. For example, a Spitfire on a TAG mount costs Credits **and** Capacity; as Elite kit it costs only Credits.
+A weapon is defined **once** (its profile), but it can be offered in several places at different prices. For example, a Spitfire on a TAG mount costs Requisition **and** Capacity; as Elite kit it costs only Requisition.
 
 So the price lives **where it's offered.** Each link to a weapon carries a *Set cost* modifier for that context. Modifiers on a link change the target for that link only.
 
@@ -220,7 +216,7 @@ SQL analogy: the weapon table has no price column. Price lives in the junction t
 
 ## 9. Text and IP hygiene — PROPOSED
 
-- **N5 content:** names, stat values, and a publication + page reference. Don't paste rules text. Players need the N5 rules anyway.
+- **N5 content:** names, stat values, a one-line summary in our own words, and a link to the official rule on the wiki. Don't paste rules text. Players need the N5 rules anyway. The summaries live in `rules/summaries.json`.
 - **Our content:** written in our own words.
 - **N4 ports:** mark them in the rule name or description, e.g. "Mount/Dismount (N4)", matching the ports table in `00-foundations.md` §6.1.
 
@@ -230,7 +226,7 @@ SQL analogy: the weapon table has no price column. Price lives in the junction t
 
 Build this throwaway test before anything else. It checks the one rule that depends on an untested editor feature.
 
-1. Create a test game system with two cost types: **Credits** and **Capacity**.
+1. Create a test game system with two cost types: **Requisition** and **Capacity**.
 2. Add one entry, "Test Chassis" (type `unit`). Its Capacity limit is 5.
 3. Inside it, add a group "Hardpoints" with three upgrades, each costing **Capacity 2**. Allow up to 3 selections.
 4. On "Test Chassis", add a modifier:
@@ -252,7 +248,7 @@ Build this throwaway test before anything else. It checks the one rule that depe
 1. **Capacity prototype** (§10).
 2. **`.gst` skeleton:** cost types, profile types, categories, the force entry and its limits.
 3. **Library basics:** N5 rule references, the Trooper profile, a handful of weapons in the size groups.
-4. **Troopers.** They're the simplest: 0 credits, no options.
+4. **Troopers.** They're the simplest: 0 Requisition, no options.
 5. **Elites:** kit, Lieutenant, Start in Reserve.
 6. **The Pilot build** and the Pilot and Second Pilot entries that link to it.
 7. **One chassis end to end:** hardpoints, systems, Signature, Capacity.
@@ -265,4 +261,6 @@ Build this throwaway test before anything else. It checks the one rule that depe
 ## 12. Open questions
 
 1. **Trooper reinforcements:** can an arriving Trooper take any template, or only templates from your starting lineup? If only the starting lineup, the roster needs nothing more. If any template, the Briefing should list them all.
-2. **Allocation size:** does 60 vs 100 change anything besides credits, such as the Elite cap or the Command Token pool? If so, `limit::Credits` can drive it.
+2. **Allocation size:** does 60 vs 100 change anything besides Requisition, such as the Elite cap or the Command Token pool? If so, `limit::Requisition` can drive it.
+3. **File format for Add from Github:** the game system is currently `Dogs of War.json`, the NewRecruit Editor's JSON format, at the repo root. §2 assumes `.gst`/`.cat`. Test whether New Recruit's Add from Github loads the JSON. If it doesn't, save the system as `.gst` (XML) and point `tools/build_gst.py` at that.
+4. ~~**The built file vs this blueprint.**~~ **Resolved 2026-10-14:** keep Requisition and the TAG / Pilot / Elite / Trooper categories, with phases matching the categories (§3, §5).

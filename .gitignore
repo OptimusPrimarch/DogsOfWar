@@ -1,0 +1,9 @@
+# Raw wiki pages, Corvus Belli's full rules text included. Only the extracted
+# data (tools/wiki/n5_data.json) is kept in the repo.
+tools/wiki/cache/
+# Copies of the game system from before each build; git history covers this.
+tools/backups/
+# Barnyard's local search index and settings.
+.barnyard/
+Barnyard/
+__pycache__/
