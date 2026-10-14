@@ -24,16 +24,16 @@ Decision 48: every pilot starts on one **trained-pilot line**, above the Hired G
 
 | MOV | CC | BS | PH | WIP | ARM | BTS | VITA | S | Orders |
 |---|---|---|---|---|---|---|---|---|---|
-| 4-4 | 14 | 12 | 10 | 13 | 1 | 3 | 1 | 2 | Regular + Tactical Awareness |
+| 4-4 | 15 | 12 | 11 | 13 | 1 | 3 | 1 | 2 | Regular + Tactical Awareness |
 
 - **Skills:** Courage, Tactical Awareness and Specialist Operative. Specialist Operative can be swapped for Doctor, Engineer, Hacker, Forward Observer and so on (#36).
 - **Kit:** Pistol and CC Weapon. Sidearms and gear are bought separately.
-- **Against the floor:** CC is raised from the survey's 13 to the Hired Gun's 14, because nothing goes below the floor (#47).
+- **Above the survey:** CC 15 and PH 11, one point above the Hired Gun floor in each (decided 2026-10-14), so a pilot is clearly better trained than a hired trooper. By the formula this costs about +0.5.
 - **VITA 1**, the same as the floor. A second wound is a natural training package.
 
 ## Cost
 
-By `03-points-formula.md` the line is worth about **20 Requisition**. At about 4 per training package (#44):
+By `03-points-formula.md` the line is worth about **20–21 Requisition**. At about 4 per training package (#44):
 
 | | Packages | Requisition |
 |---|---|---|
