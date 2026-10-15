@@ -601,25 +601,53 @@ class Company:
                      conditions=[cond])
         return e, mod
 
-    def training(self, uid: str, name: str, spec: dict):
-        """A pilot's training packages: a list capped at the tier's count, an
-        upgrade that buys one more, and the stat bumps each package gives."""
-        gid = bsid("training", uid)
-        extra_id = bsid("upgrade", uid, "Extra Training Package")
+    def packs(self, uid: str, name: str, spec: dict, packs: dict, kind: str):
+        """Selectable bundles of stat bumps, skills, equipment and weapons (training
+        packages, Elite Gun upgrades), and the modifiers that apply their stats to
+        the unit's profile when picked."""
         cols = self.armory.types[spec["profile"]["type"]][1]
         entries, stat_mods = [], []
-        for pname, pk in self.data["trainingPackages"].items():
-            pid = bsid("package", uid, pname)
+        for pname, pk in packs.items():
+            pid = bsid(kind, uid, pname)
+            links = self.named_rules(f"{name}: {pname}", pk.get("skills", []) + pk.get("equipment", []))
+            for w in pk.get("weapons", []):
+                links += self.weapon_links(pid, w)
             entries.append(el("selectionEntry", {"id": pid, "name": pname, "hidden": False, "collective": False,
                                                  "import": True, "type": "upgrade"},
                               constraints=[constraint(bsid("constraint", pid, "max"), "max", 1, children=False)],
-                              infoLinks=self.named_rules(f"{name}: {pname}",
-                                                         pk.get("skills", []) + pk.get("equipment", []))))
+                              infoLinks=dedupe(links), costs=self.costs(pk.get("cost"))))
             for stat, bump in pk.get("stats", {}).items():
                 cond = el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "self",
                                         "childId": pid, "shared": True, "includeChildSelections": True})
                 stat_mods.append(el("modifier", {"type": "increment", "field": cols[stat], "value": bump},
                                     conditions=[cond]))
+        return entries, stat_mods
+
+    def archetype_upgrades(self, uid: str, name: str, spec: dict):
+        """An Elite Gun's one optional upgrade, from either of its two archetypes'
+        lists. Upgrades that only repeat a skill it already has are left out."""
+        have = {s.split(" (")[0].lower() for s in spec.get("skills", []) + spec.get("equipment", [])}
+        packs = {}
+        for tag in spec["tags"]:
+            for uname, u in self.data["archetypes"][tag]["upgrades"].items():
+                adds = {s.split(" (")[0].lower() for s in u.get("skills", []) + u.get("equipment", [])}
+                if adds and adds <= have and not u.get("stats") and not u.get("weapons"):
+                    continue
+                packs.setdefault(uname, u)
+        entries, stat_mods = self.packs(uid, name, spec, packs, "elite-upgrade")
+        gid = bsid("archetypes", uid)
+        group = el("selectionEntryGroup", {"id": gid, "name": f"Upgrade ({' / '.join(spec['tags'])})", "hidden": False,
+                                           "collective": False, "import": True},
+                   constraints=[constraint(bsid("constraint", gid, "max"), "max", 1, children=False)],
+                   selectionEntries=entries)
+        return group, stat_mods
+
+    def training(self, uid: str, name: str, spec: dict):
+        """A pilot's training packages: a list capped at the tier's count, an
+        upgrade that buys one more, and the stat bumps each package gives."""
+        gid = bsid("training", uid)
+        extra_id = bsid("upgrade", uid, "Extra Training Package")
+        entries, stat_mods = self.packs(uid, name, spec, self.data["trainingPackages"], "package")
         max_id = bsid("constraint", gid, "max")
         more = el("modifier", {"type": "increment", "field": max_id, "value": 1},
                   conditions=[el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "parent",
@@ -666,6 +694,10 @@ class Company:
             group, extra, stat_mods = self.training(uid, name, spec)
             groups.append(group)
             upgrades.append(extra)
+            mods += stat_mods
+        if spec.get("tags"):
+            group, stat_mods = self.archetype_upgrades(uid, name, spec)
+            groups.append(group)
             mods += stat_mods
         list_links = [el("entryLink", {"id": bsid("listLink", uid, l), "name": l, "hidden": False,
                                        "collective": False, "import": True, "targetId": self.list_ids[l],

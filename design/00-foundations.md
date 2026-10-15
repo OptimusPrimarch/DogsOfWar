@@ -73,6 +73,8 @@ Status tags:
 | 47 | Hired Gun baseline | The Hired Gun stat line is the median of N5's 31 Line and Garrison light infantry: MOV 4-4, CC 14, BS 11, PH 10, WIP 13, ARM 1, BTS 0, VITA 1, S2, Irregular, with a Pistol and CC Weapon (`04-hired-guns-baseline.md`). It is the floor for every attribute: pilots, Elite Guns and chassis build up from it. | **LOCKED** (2026-10-14) |
 | 48 | Pilot baseline | Every pilot starts on the trained-pilot line, the median of N5's TAG operators: MOV 4-4, CC 15, BS 12, PH 11, WIP 13, ARM 1, BTS 3, VITA 1, S2, Regular (CC and PH one above the operator median), with Courage, Tactical Awareness and Specialist Operative, plus a Pistol and CC Weapon (`05-pilot-baseline.md`). It's worth about 20 Requisition; training packages build up from it. | **LOCKED** (2026-10-14) |
 | 49 | Elite Gun range | Elite Guns are sourced from N5 non-TAG profiles worth roughly **25–60 points** (Requisition). Expect far more variance among Elite Guns than among pilots or Hired Guns. | **LOCKED** (guidance, 2026-10-14) |
+| 50 | Elite Gun archetypes | Seven archetypes: Marksman, Gunner, Brawler, Infiltrator, Specialist, Juggernaut and Skirmisher. Each Elite Gun has two, and each of the 21 possible pairs is used exactly once, giving 21 Elite Guns. Each archetype has its own upgrade list; an Elite Gun takes at most one upgrade from either of its lists. Builds on #37 and #45; roster in `06-elite-guns.md`. | **LOCKED** (2026-10-14) |
+| 51 | Hired Gun templates | Ten fixed templates: Rifleman, Gunner, Grenadier, AT Gunner, Shotgunner, Flamer, Breacher, Corpsman, Spotter and Signaller. | **LOCKED** (2026-10-14) |
 
 ---
 

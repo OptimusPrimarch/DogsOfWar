@@ -36,7 +36,7 @@
   ],
   "force": {"name": "Mercenary Company", "rules": ["Round Structure", "Order Pool"]},
   "profileTypes": {
-    "Trooper": ["MOV", "CC", "BS", "PH", "WIP", "ARM", "BTS", "VITA", "S", "Orders"],
+    "Trooper": ["Type", "MOV", "CC", "BS", "PH", "WIP", "ARM", "BTS", "VITA", "S", "Orders"],
     "TAG": ["MOV", "CC", "BS", "PH", "WIP", "ARM", "BTS", "STR", "S", "Capacity"],
     "Signature": ["Effect", "Uses"]
   }

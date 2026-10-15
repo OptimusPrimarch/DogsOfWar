@@ -7,7 +7,8 @@
     "lists": "Names of shared option lists below, offered to this unit.",
     "groups": "Option lists only this unit has. Each option is a weapon from the armory with a price, and optional stat changes (\"mods\": {\"PS\": \"-1\"} lowers PS by 1, {\"PS\": \"=6\"} sets it to 6).",
     "upgrades": "Names from \"upgrades\" below.",
-    "packages": "Pilots: \"packages\" is how many training packages the tier includes; \"extraPackage\" is the price of one more. Each package raises stats (\"stats\": {\"BS\": 1}) and adds skills, written the way a profile prints them."
+    "packages": "Pilots: \"packages\" is how many training packages the tier includes; \"extraPackage\" is the price of one more. Each package raises stats (\"stats\": {\"BS\": 1}) and adds skills, written the way a profile prints them.",
+    "tags": "Elite Guns: \"tags\" names two archetypes; the Elite Gun may take one upgrade from either archetype's list."
   },
   "lists": {
     "Pilot Sidearms": {
@@ -38,7 +39,10 @@
     "Start in Reserve": {"removesCategory": "Deployed", "rules": ["Reinforcements"]}
   },
   "profiles": {
-    "Hired Gun": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "14", "BS": "11", "PH": "10", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Irregular"}}
+    "Hired Gun": {
+      "type": "Trooper",
+      "stats": {"Type": "LI", "MOV": "4-4", "CC": "14", "BS": "11", "PH": "10", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Irregular"}
+    }
   },
   "units": [
     {
@@ -68,7 +72,10 @@
       "category": "Pilot",
       "status": "prototype",
       "cost": {"Requisition": 24},
-      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
@@ -84,7 +91,10 @@
       "category": "Pilot",
       "status": "prototype",
       "cost": {"Requisition": 28},
-      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
@@ -100,7 +110,10 @@
       "category": "Pilot",
       "status": "prototype",
       "cost": {"Requisition": 32},
-      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
@@ -159,15 +172,339 @@
       "note": "Stats are the S8 baseline from design/02-chassis-baseline.md, until this chassis is designed."
     },
     {
-      "name": "Combat Engineer",
+      "name": "Overwatch",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Marksman", "Gunner"],
+      "cost": {"Requisition": 29},
+      "note": "Watches a lane and punishes anything that crosses it.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "4-4", "CC": "15", "BS": "13", "PH": "11", "WIP": "13", "ARM": "2", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Total Reaction"],
+      "equipment": [],
+      "weapons": ["MULTI Marksman Rifle", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Gunslinger",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Marksman", "Brawler"],
+      "cost": {"Requisition": 26},
+      "note": "Twin-pistol duelist who is as dangerous at arm's length as at 16 inches.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "4-4", "CC": "19", "BS": "13", "PH": "12", "WIP": "13", "ARM": "2", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Martial Arts L1", "Combat Instinct"],
+      "equipment": [],
+      "weapons": ["Heavy Pistol", "DA CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Stalker",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Marksman", "Infiltrator"],
+      "cost": {"Requisition": 30},
+      "note": "Camouflaged sniper who infiltrates forward and takes the first shot.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "13", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Camouflage", "Infiltration", "Mimetism (-6)"],
+      "equipment": [],
+      "weapons": ["Sniper Rifle", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Designator",
       "category": "Elite Guns",
       "also": ["Deployed", "Specialist"],
-      "status": "prototype",
-      "cost": {"Requisition": 4},
-      "profile": {"type": "Trooper", "stats": {"MOV": "4-4", "CC": "14", "BS": "12", "PH": "12", "WIP": "13", "ARM": "3", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}},
-      "skills": ["Engineer"],
-      "equipment": ["GizmoKit (+1B)"],
-      "groups": [{"name": "Weapon", "max": 1, "options": [{"weapon": "MULTI Rifle", "cost": {"Requisition": 1}}, {"weapon": "Chain Rifle"}]}],
+      "tags": ["Marksman", "Specialist"],
+      "cost": {"Requisition": 31},
+      "note": "Long-range spotter who marks targets for the company's heavy guns.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "14", "BS": "14", "PH": "10", "WIP": "15", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Forward Observer", "Specialist Operative", "Marksmanship"],
+      "equipment": ["X-Visor"],
+      "weapons": ["Marksman Rifle", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Siege Rifleman",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Marksman", "Juggernaut"],
+      "cost": {"Requisition": 39},
+      "note": "Armoured sniper who doesn't need to hide.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "4-4", "CC": "15", "BS": "13", "PH": "12", "WIP": "13", "ARM": "4", "BTS": "3", "VITA": "2", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Courage"],
+      "equipment": [],
+      "weapons": ["MULTI Sniper Rifle", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Rooftopper",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Marksman", "Skirmisher"],
+      "cost": {"Requisition": 29},
+      "note": "Gets above the fight and shoots down into it.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "14", "PH": "12", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Climbing Plus", "Super-Jump", "Mimetism (-3)"],
+      "equipment": ["Multispectral Visor"],
+      "weapons": ["Marksman Rifle", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Breacher",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Gunner", "Brawler"],
+      "cost": {"Requisition": 26},
+      "note": "First through the door: shotgun, chain-colt and a blade.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "4-4", "CC": "18", "BS": "12", "PH": "12", "WIP": "13", "ARM": "3", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Natural Born Warrior"],
+      "equipment": [],
+      "weapons": ["Boarding Shotgun", "Chain-Colt", "AP CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Ambusher",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Gunner", "Infiltrator"],
+      "cost": {"Requisition": 27},
+      "note": "Hidden support gun that springs a crossfire.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Camouflage", "Mimetism (-3)"],
+      "equipment": [],
+      "weapons": ["Spitfire", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Sapper",
+      "category": "Elite Guns",
+      "also": ["Deployed", "Specialist"],
+      "tags": ["Gunner", "Specialist"],
+      "cost": {"Requisition": 25},
+      "note": "Combat engineer who fixes TAGs, mines lanes and blows doors.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "11", "WIP": "13", "ARM": "2", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Engineer", "Minelayer"],
+      "equipment": ["GizmoKit"],
+      "weapons": ["Heavy Shotgun", "D-Charges", "Shock Mines", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Colossus",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Gunner", "Juggernaut"],
+      "cost": {"Requisition": 51},
+      "note": "S5 armoured heavy-weapons platform: the company's walking bunker.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "4-4", "CC": "17", "BS": "13", "PH": "13", "WIP": "13", "ARM": "5", "BTS": "6", "VITA": "2", "S": "5", "Orders": "Regular"}
+      },
+      "skills": ["Courage", "No Wound Incapacitation"],
+      "equipment": [],
+      "weapons": ["Heavy Machine Gun", "Heavy Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Outrider",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Gunner", "Skirmisher"],
+      "cost": {"Requisition": 25},
+      "note": "Bike-mounted gunner who swings round a flank.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "6-4", "CC": "15", "BS": "12", "PH": "12", "WIP": "13", "ARM": "2", "BTS": "3", "VITA": "1", "S": "4", "Orders": "Regular"}
+      },
+      "skills": ["Dodge"],
+      "equipment": ["Motorcycle"],
+      "weapons": ["Spitfire", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Shiv",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Brawler", "Infiltrator"],
+      "cost": {"Requisition": 29},
+      "note": "Disguised assassin: walks up looking friendly and cuts the target down.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "21", "BS": "12", "PH": "12", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Impersonation", "Martial Arts L3", "Surprise Attack (-3)"],
+      "equipment": [],
+      "weapons": ["Monofilament CC Weapon", "Pistol"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Sawbones",
+      "category": "Elite Guns",
+      "also": ["Deployed", "Specialist"],
+      "tags": ["Brawler", "Specialist"],
+      "cost": {"Requisition": 26},
+      "note": "Battlefield surgeon who has learned to hold the line around the wounded.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "4-4", "CC": "18", "BS": "12", "PH": "12", "WIP": "14", "ARM": "2", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Doctor", "Martial Arts L2"],
+      "equipment": ["MediKit"],
+      "weapons": ["Shock CC Weapon", "Pistol"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Ravager",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Brawler", "Juggernaut"],
+      "cost": {"Requisition": 32},
+      "note": "S6 melee monster: huge, fast and nearly impossible to stop once it closes.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "6-4", "CC": "23", "BS": "11", "PH": "16", "WIP": "13", "ARM": "4", "BTS": "3", "VITA": "2", "S": "6", "Orders": "Regular + Impetuous"}
+      },
+      "skills": ["Martial Arts L2", "Super-Jump", "Immunity (Shock)", "Courage", "No Cover", "Impetuous"],
+      "equipment": [],
+      "weapons": ["AP CC Weapon", "Chain Rifle"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Pouncer",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Brawler", "Skirmisher"],
+      "cost": {"Requisition": 25},
+      "note": "S4 hunter that leaps across the table and onto its prey.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "8-6", "CC": "22", "BS": "11", "PH": "14", "WIP": "13", "ARM": "2", "BTS": "0", "VITA": "1", "S": "4", "Orders": "Regular + Impetuous"}
+      },
+      "skills": ["Super-Jump", "Climbing Plus", "Martial Arts L1", "Sixth Sense", "Impetuous", "Limited Cover"],
+      "equipment": [],
+      "weapons": ["DA CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Ghostwire",
+      "category": "Elite Guns",
+      "also": ["Deployed", "Specialist"],
+      "tags": ["Infiltrator", "Specialist"],
+      "cost": {"Requisition": 25},
+      "note": "Infiltrating hacker who hunts enemy hackers from inside their lines.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "14", "BS": "12", "PH": "11", "WIP": "14", "ARM": "1", "BTS": "3", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Hacker", "Infiltration", "Mimetism (-3)"],
+      "equipment": ["Killer Hacking Device"],
+      "weapons": ["Submachine Gun", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Phantom",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Infiltrator", "Juggernaut"],
+      "cost": {"Requisition": 42},
+      "note": "Heavy armour under thermo-optic camouflage: tough and invisible.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "4-4", "CC": "16", "BS": "13", "PH": "12", "WIP": "13", "ARM": "4", "BTS": "3", "VITA": "2", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Camouflage", "Mimetism (-6)", "Surprise Attack (-3)"],
+      "equipment": [],
+      "weapons": ["Combi Rifle", "Heavy Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Pathfinder",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Infiltrator", "Skirmisher"],
+      "cost": {"Requisition": 28},
+      "note": "Drops in from an unexpected edge and opens a route.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "LI", "MOV": "4-4", "CC": "15", "BS": "12", "PH": "12", "WIP": "13", "ARM": "1", "BTS": "0", "VITA": "1", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Parachutist", "Climbing Plus", "Mimetism (-3)", "Decoy"],
+      "equipment": [],
+      "weapons": ["Light Shotgun", "Smoke Grenades", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Marshal",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Specialist", "Juggernaut"],
+      "cost": {"Requisition": 43},
+      "note": "Armoured officer who can take the Lieutenant role and keeps the company fighting.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "4-4", "CC": "17", "BS": "13", "PH": "12", "WIP": "14", "ARM": "4", "BTS": "6", "VITA": "2", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Courage", "Chain of Command"],
+      "equipment": ["Repeater"],
+      "weapons": ["Combi Rifle", "Heavy Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve", "Lieutenant", "NCO"]
+    },
+    {
+      "name": "Dispatch Rider",
+      "category": "Elite Guns",
+      "also": ["Deployed", "Specialist"],
+      "tags": ["Specialist", "Skirmisher"],
+      "cost": {"Requisition": 26},
+      "note": "Bike-mounted medic and courier who reaches objectives first.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "MI", "MOV": "6-4", "CC": "15", "BS": "13", "PH": "12", "WIP": "14", "ARM": "3", "BTS": "3", "VITA": "1", "S": "4", "Orders": "Regular"}
+      },
+      "skills": ["Doctor", "Specialist Operative"],
+      "equipment": ["Motorcycle", "MediKit"],
+      "weapons": ["Submachine Gun", "Pistol", "CC Weapon"],
+      "upgrades": ["Start in Reserve"]
+    },
+    {
+      "name": "Vaulter",
+      "category": "Elite Guns",
+      "also": ["Deployed"],
+      "tags": ["Juggernaut", "Skirmisher"],
+      "cost": {"Requisition": 33},
+      "note": "Jump-pack heavy trooper who lands where the fight is thickest.",
+      "profile": {
+        "type": "Trooper",
+        "stats": {"Type": "HI", "MOV": "6-2", "CC": "16", "BS": "12", "PH": "13", "WIP": "13", "ARM": "3", "BTS": "3", "VITA": "2", "S": "2", "Orders": "Regular"}
+      },
+      "skills": ["Super-Jump", "Combat Jump", "Courage"],
+      "equipment": [],
+      "weapons": ["Boarding Shotgun", "Heavy Pistol", "CC Weapon"],
       "upgrades": ["Start in Reserve"]
     },
     {"name": "Hired Gun — Rifleman", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Combi Rifle", "Pistol", "CC Weapon"]},
@@ -197,6 +534,19 @@
       "skills": ["Forward Observer"],
       "weapons": ["Pistol", "CC Weapon"],
       "note": "Specialist templates carry only a pistol and a CC weapon (decision 38)."
+    },
+    {"name": "Hired Gun — Shotgunner", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Light Shotgun", "Pistol", "CC Weapon"]},
+    {"name": "Hired Gun — Flamer", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["Light Flamethrower", "Pistol", "CC Weapon"]},
+    {"name": "Hired Gun — Breacher", "category": "Hired Guns", "also": ["Deployed"], "sharedProfile": "Hired Gun", "weapons": ["D-Charges", "Pistol", "CC Weapon"]},
+    {
+      "name": "Hired Gun — Signaller",
+      "category": "Hired Guns",
+      "also": ["Deployed", "Specialist"],
+      "sharedProfile": "Hired Gun",
+      "skills": ["Hacker"],
+      "equipment": ["Hacking Device"],
+      "weapons": ["Pistol", "CC Weapon"],
+      "note": "Specialist templates carry only a pistol and a CC weapon (decision 38)."
     }
   ],
   "trainingPackages": {
@@ -211,5 +561,77 @@
     "Freerunner": {"stats": {"PH": 3, "CC": 5}, "skills": ["Climbing Plus", "Super-Jump", "Mimetism (-3)"], "value": 6.2},
     "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-3)", "Stealth", "CC Attack (-1 SR)"], "value": 4.5},
     "Hard to Kill": {"stats": {}, "skills": ["No Wound Incapacitation"], "value": 4.9}
+  },
+  "archetypes": {
+    "Marksman": {
+      "about": "Precision shooting at range.",
+      "upgrades": {
+        "Steady Aim": {"stats": {"BS": 1}, "cost": {"Requisition": 2}},
+        "Marksmanship": {"skills": ["Marksmanship"], "cost": {"Requisition": 4}},
+        "Triangulated Fire": {"skills": ["Triangulated Fire"], "cost": {"Requisition": 3}},
+        "X-Visor": {"equipment": ["X-Visor"], "cost": {"Requisition": 2}},
+        "Multispectral Visor": {"equipment": ["Multispectral Visor"], "cost": {"Requisition": 3}}
+      }
+    },
+    "Gunner": {
+      "about": "Volume of fire: support weapons, suppression, AROs.",
+      "upgrades": {
+        "Total Reaction": {"skills": ["Total Reaction"], "cost": {"Requisition": 5}},
+        "Smoke Grenades": {"weapons": ["Smoke Grenades"], "cost": {"Requisition": 3}},
+        "Heavy Pistol": {"weapons": ["Heavy Pistol"], "cost": {"Requisition": 2}},
+        "Steady Hands": {"stats": {"BS": 1}, "cost": {"Requisition": 2}},
+        "Grenades": {"weapons": ["Grenades"], "cost": {"Requisition": 2}}
+      }
+    },
+    "Brawler": {
+      "about": "Close combat.",
+      "upgrades": {
+        "Close-Quarters Drills": {"stats": {"CC": 3}, "cost": {"Requisition": 2}},
+        "Berserk": {"skills": ["Berserk"], "cost": {"Requisition": 2}},
+        "Natural Born Warrior": {"skills": ["Natural Born Warrior"], "cost": {"Requisition": 2}},
+        "DA CC Weapon": {"weapons": ["DA CC Weapon"], "cost": {"Requisition": 2}},
+        "Guard": {"skills": ["Guard"], "cost": {"Requisition": 2}}
+      }
+    },
+    "Infiltrator": {
+      "about": "Stealth, camouflage and surprise.",
+      "upgrades": {
+        "Surprise Attack": {"skills": ["Surprise Attack (-3)"], "cost": {"Requisition": 2}},
+        "Stealth": {"skills": ["Stealth"], "cost": {"Requisition": 2}},
+        "Decoy": {"skills": ["Decoy"], "cost": {"Requisition": 3}},
+        "Infiltration": {"skills": ["Infiltration"], "cost": {"Requisition": 3}},
+        "Silenced Pistol": {"weapons": ["Silenced Pistol"], "cost": {"Requisition": 2}}
+      }
+    },
+    "Specialist": {
+      "about": "Medics, engineers, hackers and observers: mission tools.",
+      "upgrades": {
+        "Specialist Training": {"stats": {"WIP": 1}, "cost": {"Requisition": 2}},
+        "Forward Observer": {"skills": ["Forward Observer"], "cost": {"Requisition": 2}},
+        "Repeater": {"equipment": ["Repeater"], "cost": {"Requisition": 2}},
+        "Deployable Repeater": {"equipment": ["Deployable Repeater"], "cost": {"Requisition": 2}},
+        "Specialist Operative": {"skills": ["Specialist Operative"], "cost": {"Requisition": 2}}
+      }
+    },
+    "Juggernaut": {
+      "about": "Toughness: armour, wounds, staying power.",
+      "upgrades": {
+        "Reinforced Armour": {"stats": {"ARM": 1}, "cost": {"Requisition": 3}},
+        "No Wound Incapacitation": {"skills": ["No Wound Incapacitation"], "cost": {"Requisition": 5}},
+        "Nanoscreen": {"equipment": ["Nanoscreen"], "cost": {"Requisition": 4}},
+        "Immunity (Shock)": {"skills": ["Immunity (Shock)"], "cost": {"Requisition": 2}},
+        "Courage": {"skills": ["Courage"], "cost": {"Requisition": 2}}
+      }
+    },
+    "Skirmisher": {
+      "about": "Speed and movement: jumping, climbing, flanking.",
+      "upgrades": {
+        "Super-Jump": {"skills": ["Super-Jump"], "cost": {"Requisition": 2}},
+        "Climbing Plus": {"skills": ["Climbing Plus"], "cost": {"Requisition": 2}},
+        "Sixth Sense": {"skills": ["Sixth Sense"], "cost": {"Requisition": 2}},
+        "Bangbomb": {"equipment": ["Bangbomb (+3)"], "cost": {"Requisition": 2}},
+        "Combat Jump": {"skills": ["Combat Jump"], "cost": {"Requisition": 2}}
+      }
+    }
   }
 }
