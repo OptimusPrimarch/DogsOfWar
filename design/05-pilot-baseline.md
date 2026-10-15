@@ -56,7 +56,7 @@ Each package adds the stats and skills listed. A pilot can take each package onc
 | **Duelist** | CC +6, PH +2 | Martial Arts L3, Dogged | ~5.4 |
 | **Field Medic** | WIP +1, CC +3 | Doctor, Martial Arts L2, MediKit | ~5.9 |
 | **Netrunner** | BTS +3 | Hacker, Hacking Device | ~5.6 |
-| **Bruiser** | CC +3, BS +1, PH +1 | — | ~2.1 |
+| **Bruiser** | CC +3, PH +2 | CC Attack (-2 SR), Immunity (Total) | ~4.0 * |
 | **Armoured** | ARM +2 | — | ~5.0 |
 | **Combat Engineer** | WIP +1 | Engineer, GizmoKit | ~4.8 |
 | **Spotter** | BS +1 | Forward Observer, Sixth Sense | ~4.0 |
@@ -66,7 +66,8 @@ Each package adds the stats and skills listed. A pilot can take each package onc
 
 Rebalanced 2026-10-14.
 
-- **Armour is its own package.** ARM +2 is worth about 5 by itself, so it moved out of the Bruiser. That leaves the Bruiser light, at about 2.
+- **Armour is its own package.** ARM +2 is worth about 5 by itself, so it moved out of the Bruiser. The Bruiser now gets its value from CC Attack (-2 SR) and Immunity (Total).
+- \* **Immunity (Total)** is very strong for what the formula charges, because N5 gives it to few profiles and prices them in other ways. Watch it in playtest.
 - **Pilots take several packages, so they can stack.** Ghost and Freerunner both give Mimetism (-3), which doesn't stack: a pilot with both still has Mimetism (-3), not (-6). That's the reason Ghost uses (-3).
 
 Medic and Hacker packages replace the separate specialist swap in #36: a pilot keeps Specialist Operative and gains the specialist skill from the package.
