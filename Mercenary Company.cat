@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="26" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="21" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="27" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="21" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
       <modifiers>
@@ -50,7 +50,7 @@
         </modifier>
         <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="9c58-2ece-160a-b470" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
         <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
@@ -202,6 +202,11 @@
                 <constraint id="f5c5-f90d-7e0f-da7f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
               </constraints>
             </selectionEntry>
+            <selectionEntry id="9c58-2ece-160a-b470" name="Armoured" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="32f5-57d6-1823-e0b8" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+            </selectionEntry>
             <selectionEntry id="6169-19fb-2d33-c719" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint id="5b15-62df-c518-0b7f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
@@ -241,10 +246,15 @@
               <infoLinks>
                 <infoLink id="63b8-bbe2-77ad-1e9c" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
                   <modifiers>
-                    <modifier type="append" field="name" value="(-6)" />
+                    <modifier type="append" field="name" value="(-3)" />
                   </modifiers>
                 </infoLink>
                 <infoLink id="bfb6-c807-15d2-b781" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+                <infoLink id="fc7b-be05-b25f-42e6" name="CC Attack" hidden="false" targetId="7923-a6c9-2fd3-7746" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-1 SR)" />
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry id="0d75-44ba-7c22-a526" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">
@@ -315,7 +325,7 @@
         </modifier>
         <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="5ea9-22f6-c77b-7a19" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
         <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
@@ -467,6 +477,11 @@
                 <constraint id="cf9a-9490-bd97-1ab9" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
               </constraints>
             </selectionEntry>
+            <selectionEntry id="5ea9-22f6-c77b-7a19" name="Armoured" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="9c5c-bb5d-3236-5167" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+            </selectionEntry>
             <selectionEntry id="0001-14c9-1262-6c2f" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint id="7886-3396-10ed-bd6d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
@@ -506,10 +521,15 @@
               <infoLinks>
                 <infoLink id="c2b1-5af8-22a0-aa94" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
                   <modifiers>
-                    <modifier type="append" field="name" value="(-6)" />
+                    <modifier type="append" field="name" value="(-3)" />
                   </modifiers>
                 </infoLink>
                 <infoLink id="48b1-d6f0-4b7a-2513" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+                <infoLink id="7071-e446-f74d-b586" name="CC Attack" hidden="false" targetId="7923-a6c9-2fd3-7746" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-1 SR)" />
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry id="4dc9-5d72-e34e-1ea6" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">
@@ -580,7 +600,7 @@
         </modifier>
         <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="0d33-1dae-e2ba-1727" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
         <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
@@ -732,6 +752,11 @@
                 <constraint id="17c8-e7f6-5f63-07e2" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
               </constraints>
             </selectionEntry>
+            <selectionEntry id="0d33-1dae-e2ba-1727" name="Armoured" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="90e7-7d4e-55f8-8651" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+            </selectionEntry>
             <selectionEntry id="ad25-6c2d-c8bb-99d0" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint id="d0a1-ebe0-3cfb-6963" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
@@ -771,10 +796,15 @@
               <infoLinks>
                 <infoLink id="85cc-608e-455b-60b5" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
                   <modifiers>
-                    <modifier type="append" field="name" value="(-6)" />
+                    <modifier type="append" field="name" value="(-3)" />
                   </modifiers>
                 </infoLink>
                 <infoLink id="6724-2795-416a-2e80" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+                <infoLink id="28a2-88e1-e0e9-2d68" name="CC Attack" hidden="false" targetId="7923-a6c9-2fd3-7746" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-1 SR)" />
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry id="fe93-b808-8e9b-774a" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">

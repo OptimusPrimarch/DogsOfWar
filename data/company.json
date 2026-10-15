@@ -204,11 +204,12 @@
     "Duelist": {"stats": {"CC": 6, "PH": 2}, "skills": ["Martial Arts L3", "Dogged"], "value": 5.4},
     "Field Medic": {"stats": {"WIP": 1, "CC": 3}, "skills": ["Doctor", "Martial Arts L2"], "equipment": ["MediKit"], "value": 5.9},
     "Netrunner": {"stats": {"BTS": 3}, "skills": ["Hacker"], "equipment": ["Hacking Device"], "value": 5.6},
-    "Bruiser": {"stats": {"CC": 3, "BS": 1, "PH": 1, "ARM": 2}, "skills": [], "value": 7.1},
+    "Bruiser": {"stats": {"CC": 3, "BS": 1, "PH": 1}, "skills": [], "value": 2.1},
+    "Armoured": {"stats": {"ARM": 2}, "skills": [], "value": 5.0},
     "Combat Engineer": {"stats": {"WIP": 1}, "skills": ["Engineer"], "equipment": ["GizmoKit"], "value": 4.8},
     "Spotter": {"stats": {"BS": 1}, "skills": ["Forward Observer", "Sixth Sense"], "value": 4.0},
     "Freerunner": {"stats": {"PH": 3, "CC": 5}, "skills": ["Climbing Plus", "Super-Jump", "Mimetism (-3)"], "value": 6.2},
-    "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-6)", "Stealth"], "value": 4.5},
+    "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-3)", "Stealth", "CC Attack (-1 SR)"], "value": 4.5},
     "Hard to Kill": {"stats": {}, "skills": ["No Wound Incapacitation"], "value": 4.9}
   }
 }
