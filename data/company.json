@@ -6,7 +6,8 @@
     "weapons": "Weapons the unit always carries, by name from the armory.",
     "lists": "Names of shared option lists below, offered to this unit.",
     "groups": "Option lists only this unit has. Each option is a weapon from the armory with a price, and optional stat changes (\"mods\": {\"PS\": \"-1\"} lowers PS by 1, {\"PS\": \"=6\"} sets it to 6).",
-    "upgrades": "Names from \"upgrades\" below."
+    "upgrades": "Names from \"upgrades\" below.",
+    "packages": "Pilots: \"packages\" is how many training packages the tier includes; \"extraPackage\" is the price of one more. Each package raises stats (\"stats\": {\"BS\": 1}) and adds skills, written the way a profile prints them."
   },
   "lists": {
     "Pilot Sidearms": {
@@ -74,7 +75,9 @@
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
-      "note": "Trained-pilot line (decision 48). Training packages (decision 44) are still to be built; the price assumes about 4 per package."
+      "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
+      "packages": 1,
+      "extraPackage": {"Requisition": 4}
     },
     {
       "name": "Seasoned Pilot",
@@ -88,7 +91,9 @@
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
-      "note": "Trained-pilot line (decision 48). Training packages (decision 44) are still to be built; the price assumes about 4 per package."
+      "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
+      "packages": 2,
+      "extraPackage": {"Requisition": 4}
     },
     {
       "name": "Veteran Pilot",
@@ -102,7 +107,9 @@
       "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
-      "note": "Trained-pilot line (decision 48). Training packages (decision 44) are still to be built; the price assumes about 4 per package."
+      "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
+      "packages": 3,
+      "extraPackage": {"Requisition": 4}
     },
     {
       "name": "Light TAG",
@@ -191,5 +198,17 @@
       "weapons": ["Pistol", "CC Weapon"],
       "note": "Specialist templates carry only a pistol and a CC weapon (decision 38)."
     }
-  ]
+  ],
+  "trainingPackages": {
+    "Marksman": {"stats": {"BS": 1}, "skills": ["Marksmanship"], "value": 4.4},
+    "Duelist": {"stats": {"CC": 6}, "skills": ["Martial Arts L3"], "value": 2.5},
+    "Field Medic": {"stats": {"WIP": 1}, "skills": ["Doctor"], "value": 2.0},
+    "Netrunner": {"stats": {"BTS": 3}, "skills": ["Hacker"], "value": 4.5},
+    "Bruiser": {"stats": {"CC": 3, "BS": 1, "PH": 2, "ARM": 2}, "skills": ["Natural Born Warrior"], "value": 8.6},
+    "Combat Engineer": {"stats": {"WIP": 1}, "skills": ["Engineer"], "value": 4.8},
+    "Spotter": {"stats": {"BS": 1}, "skills": ["Forward Observer", "Sixth Sense"], "value": 4.0},
+    "Freerunner": {"stats": {"PH": 2}, "skills": ["Climbing Plus", "Super-Jump"], "value": 2.4},
+    "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-3)", "Stealth"], "value": 3.5},
+    "Hard to Kill": {"stats": {}, "skills": ["No Wound Incapacitation"], "value": 4.9}
+  }
 }

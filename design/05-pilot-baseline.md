@@ -43,3 +43,29 @@ By `03-points-formula.md` the line is worth about **20–21 Requisition**. At ab
 | Any pilot with the extra package | +1 | +~4 |
 
 A Veteran with the extra package and gear lands near the "fully kitted pilot" target of about 35–38 (`points-cheatsheet.md`).
+
+## Training packages (v0.1)
+
+Each package adds the stats and skills listed. A pilot can take each package once. Rookies take 1, Seasoned 2, Veterans 3, and any pilot can buy an **Extra Training Package** for 4 Requisition (#44). In the catalogue, picking a package raises the pilot's stat line directly.
+
+**Value** is by `03-points-formula.md`. CC is counted at 0.25 a point, because the formula prices it at almost nothing and that would make melee packages look free. The target is about 4–5 per package.
+
+| Package | Stats | Skills | Value | N5 inspiration |
+|---|---|---|---|---|
+| **Marksman** | BS +1 | Marksmanship | ~4.4 | |
+| **Duelist** | CC +6 | Martial Arts L3 | ~2.5 | Martial artists run CC +6, PH +2 over the median |
+| **Field Medic** | WIP +1 | Doctor | ~2.0 | Doctors run WIP +1 |
+| **Netrunner** | BTS +3 | Hacker | ~4.5 | |
+| **Bruiser** | CC +3, BS +1, PH +2, ARM +2 | Natural Born Warrior | ~8.6 | Natural Born Warriors run CC +5, PH +2 |
+| **Combat Engineer** | WIP +1 | Engineer | ~4.8 | |
+| **Spotter** | BS +1 | Forward Observer, Sixth Sense | ~4.0 | |
+| **Freerunner** | PH +2 | Climbing Plus, Super-Jump | ~2.4 | Mobility skills run PH +1 |
+| **Ghost** | PH +1 | Mimetism (-3), Stealth | ~3.5 | Stealth troops run PH +1 |
+| **Hard to Kill** | — | No Wound Incapacitation | ~4.9 | No Wound Incapacitation troops run about +1 on several stats |
+
+**To balance:**
+- **Bruiser** is worth about twice a typical package, mostly because of ARM +2.
+- **Field Medic, Freerunner and Duelist** are worth about half.
+- Options for evening them out: drop the Bruiser's ARM to +1, add PH +2 to the Duelist (as N5 melee troops have), and give the Field Medic WIP +2 or a free MediKit.
+
+Medic and Hacker packages replace the separate specialist swap in #36: a pilot keeps Specialist Operative and gains the specialist skill from the package.

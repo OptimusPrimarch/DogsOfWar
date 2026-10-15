@@ -601,6 +601,38 @@ class Company:
                      conditions=[cond])
         return e, mod
 
+    def training(self, uid: str, name: str, spec: dict):
+        """A pilot's training packages: a list capped at the tier's count, an
+        upgrade that buys one more, and the stat bumps each package gives."""
+        gid = bsid("training", uid)
+        extra_id = bsid("upgrade", uid, "Extra Training Package")
+        cols = self.armory.types[spec["profile"]["type"]][1]
+        entries, stat_mods = [], []
+        for pname, pk in self.data["trainingPackages"].items():
+            pid = bsid("package", uid, pname)
+            entries.append(el("selectionEntry", {"id": pid, "name": pname, "hidden": False, "collective": False,
+                                                 "import": True, "type": "upgrade"},
+                              constraints=[constraint(bsid("constraint", pid, "max"), "max", 1, children=False)],
+                              infoLinks=self.named_rules(f"{name}: {pname}", pk.get("skills", []))))
+            for stat, bump in pk.get("stats", {}).items():
+                cond = el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "self",
+                                        "childId": pid, "shared": True, "includeChildSelections": True})
+                stat_mods.append(el("modifier", {"type": "increment", "field": cols[stat], "value": bump},
+                                    conditions=[cond]))
+        max_id = bsid("constraint", gid, "max")
+        more = el("modifier", {"type": "increment", "field": max_id, "value": 1},
+                  conditions=[el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "parent",
+                                               "childId": extra_id, "shared": True, "includeChildSelections": False})])
+        group = el("selectionEntryGroup", {"id": gid, "name": "Training Packages", "hidden": False,
+                                           "collective": False, "import": True},
+                   modifiers=[more], constraints=[constraint(max_id, "max", spec["packages"], children=False)],
+                   selectionEntries=entries)
+        extra = el("selectionEntry", {"id": extra_id, "name": "Extra Training Package", "hidden": False,
+                                      "collective": False, "import": True, "type": "upgrade"},
+                   constraints=[constraint(bsid("constraint", extra_id, "max"), "max", 1, children=False)],
+                   costs=self.costs(spec.get("extraPackage")))
+        return group, extra, stat_mods
+
     def unit(self, spec: dict) -> ET.Element:
         name = spec["name"]
         uid = bsid("unit", name)
@@ -629,6 +661,11 @@ class Company:
                 mods.append(mod)
         groups = [self.option_group(bsid("group", uid, g["name"]), g["name"], g)
                   for g in spec.get("groups", []) if g.get("options")]
+        if spec.get("packages"):
+            group, extra, stat_mods = self.training(uid, name, spec)
+            groups.append(group)
+            upgrades.append(extra)
+            mods += stat_mods
         list_links = [el("entryLink", {"id": bsid("listLink", uid, l), "name": l, "hidden": False,
                                        "collective": False, "import": True, "targetId": self.list_ids[l],
                                        "type": "selectionEntryGroup"})

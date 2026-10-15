@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="24" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="21" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="25" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="21" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="3c33-9719-de62-af39" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1a94-c017-42fb-d811" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e4ca-10ca-8ce4-b3c2" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="68dc-6f24-6040-5295" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="6169-19fb-2d33-c719" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="8339-fa42-4311-8e3f" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="5687-00eb-3ec0-b591" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="f1fa-32b8-ce6d-02cc" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="aeb1-6bed-41f4-c80d" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
           <characteristics>
@@ -54,7 +116,122 @@
             <infoLink id="9386-40af-5b3b-bf7b" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
         </selectionEntry>
+        <selectionEntry id="6775-6ea1-28cc-3837" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="118f-1bce-670d-96b9" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="b34d-cad9-97c3-a5c1" name="Training Packages" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="9a31-e615-1b63-8bd4" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="6775-6ea1-28cc-3837" shared="true" includeChildSelections="false" />
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint id="9a31-e615-1b63-8bd4" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="3c33-9719-de62-af39" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="e87e-ad5b-83d8-f52f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="bb62-1d55-01bc-2275" name="Marksmanship" hidden="false" targetId="bc0f-db4c-495e-8761" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="1a94-c017-42fb-d811" name="Duelist" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="a428-6bef-23c2-efeb" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c90c-cbdf-9548-2d08" name="Martial Arts" hidden="false" targetId="49a5-4d8e-6a3a-a91d" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="L3" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="e4ca-10ca-8ce4-b3c2" name="Field Medic" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2266-31b1-be30-bef2" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="3bc9-db8d-d400-fbb0" name="Doctor" hidden="false" targetId="c410-f367-2544-e324" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="68dc-6f24-6040-5295" name="Netrunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="38ca-ecbe-64d5-e616" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="fa60-4178-cfbe-b642" name="Hacker" hidden="false" targetId="80c0-d4ce-49d4-0fb2" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="63f9-fbe1-f8fe-7278" name="Bruiser" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f5c5-f90d-7e0f-da7f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="1e43-25f7-9f0c-9c66" name="Natural Born Warrior" hidden="false" targetId="7e64-ed23-499c-3563" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="6169-19fb-2d33-c719" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="5b15-62df-c518-0b7f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="65d6-c1cc-7faa-60be" name="Engineer" hidden="false" targetId="3632-0eb5-13ce-4301" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="8339-fa42-4311-8e3f" name="Spotter" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2b63-de45-9ceb-8582" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="643b-aa8f-8d64-824a" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
+                <infoLink id="60c5-2bb0-fc81-ff50" name="Sixth Sense" hidden="false" targetId="3cf6-7205-1a36-37d4" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="5687-00eb-3ec0-b591" name="Freerunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="7bda-3c2b-8a89-4f5f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="74c8-3db0-9d5f-e244" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
+                <infoLink id="4156-a01b-7133-1b97" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="f1fa-32b8-ce6d-02cc" name="Ghost" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="dd12-fc92-780e-a0b2" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="63b8-bbe2-77ad-1e9c" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="bfb6-c807-15d2-b781" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="0d75-44ba-7c22-a526" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c086-5c13-edaa-455e" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="044d-72ed-c6b5-096c" name="No Wound Incapacitation" hidden="false" targetId="69b5-bde7-1e79-acda" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a477-4bcd-1125-5483" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
         <entryLink id="0de2-5271-6b8d-8e7b" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
@@ -64,6 +241,68 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="fa45-11e3-805b-9d60" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="5bc7-2e8f-5ec8-af3a" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="d81d-1042-54d2-a606" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="cce8-2ef7-d885-86da" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="99c0-7874-f0f6-9fcd" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="0001-14c9-1262-6c2f" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="17af-3a46-9882-1b3d" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="76de-197f-7dc9-5657" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e92a-27c4-dfca-0b21" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="1635-c253-8239-a695" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
           <characteristics>
@@ -116,7 +355,122 @@
             <infoLink id="0ac2-0a4e-3659-2f08" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
         </selectionEntry>
+        <selectionEntry id="96f1-3b7e-b750-3630" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="e486-351f-b1fc-4768" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9157-2308-3dd9-3f6a" name="Training Packages" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="8b40-f96f-a571-fa98" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="96f1-3b7e-b750-3630" shared="true" includeChildSelections="false" />
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint id="8b40-f96f-a571-fa98" type="max" value="2" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="5bc7-2e8f-5ec8-af3a" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="0382-3add-3d22-0a54" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="0024-f4c8-0902-21a0" name="Marksmanship" hidden="false" targetId="bc0f-db4c-495e-8761" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="d81d-1042-54d2-a606" name="Duelist" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="1540-6c2e-1d0b-c966" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="cd96-dd3c-2ad2-08a9" name="Martial Arts" hidden="false" targetId="49a5-4d8e-6a3a-a91d" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="L3" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="cce8-2ef7-d885-86da" name="Field Medic" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="9476-633b-b70e-5f65" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="158a-e165-977f-cb28" name="Doctor" hidden="false" targetId="c410-f367-2544-e324" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="99c0-7874-f0f6-9fcd" name="Netrunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6ff7-abcd-c522-54da" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="722b-5cc3-049d-a583" name="Hacker" hidden="false" targetId="80c0-d4ce-49d4-0fb2" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="de2d-7085-3d5c-3132" name="Bruiser" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="cf9a-9490-bd97-1ab9" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="f11c-e5f2-615a-39e8" name="Natural Born Warrior" hidden="false" targetId="7e64-ed23-499c-3563" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="0001-14c9-1262-6c2f" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="7886-3396-10ed-bd6d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="e199-b123-6fad-947a" name="Engineer" hidden="false" targetId="3632-0eb5-13ce-4301" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="17af-3a46-9882-1b3d" name="Spotter" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="bba6-28e7-4e60-7b73" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="f320-65d4-50ef-b3ff" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
+                <infoLink id="83a7-eb56-9d88-a9fb" name="Sixth Sense" hidden="false" targetId="3cf6-7205-1a36-37d4" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="76de-197f-7dc9-5657" name="Freerunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="1666-cce1-e311-aed1" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="40ac-69a5-bc2e-0fbc" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
+                <infoLink id="9d44-7126-bb1e-33fd" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="e92a-27c4-dfca-0b21" name="Ghost" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f9cf-103e-5b9d-c5eb" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c2b1-5af8-22a0-aa94" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="48b1-d6f0-4b7a-2513" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="4dc9-5d72-e34e-1ea6" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="221f-1b94-21c3-e4de" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="e93b-57bd-bf74-1f64" name="No Wound Incapacitation" hidden="false" targetId="69b5-bde7-1e79-acda" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="17e4-7391-e0a9-d9fa" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
         <entryLink id="b37b-40bb-1163-e71d" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
@@ -126,6 +480,68 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="4a14-5c8d-0afa-5c30" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="2286-e297-0f63-7b8c" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="40b5-75ca-f36a-fe9c" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="9f0b-3636-489c-52cd" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="c705-0839-f0d9-bd23" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="ad25-6c2d-c8bb-99d0" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="4198-353a-3471-24b5" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="3a7f-9768-51f3-10a4" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="539c-dac2-b183-0e45" shared="true" includeChildSelections="true" />
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
         <profile id="0d74-525e-1916-e22d" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
           <characteristics>
@@ -178,7 +594,122 @@
             <infoLink id="aff7-8e4d-d786-c16d" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
         </selectionEntry>
+        <selectionEntry id="4337-8ac6-cc47-0b6d" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="59d1-aeaf-a65a-31b7" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
+        </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="aa2b-bde3-7419-d195" name="Training Packages" hidden="false" collective="false" import="true">
+          <modifiers>
+            <modifier type="increment" field="ef1d-0bd7-8199-42bd" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4337-8ac6-cc47-0b6d" shared="true" includeChildSelections="false" />
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint id="ef1d-0bd7-8199-42bd" type="max" value="3" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="2286-e297-0f63-7b8c" name="Marksman" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="40b8-4808-438d-5d34" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="ef91-2497-4372-a4fb" name="Marksmanship" hidden="false" targetId="bc0f-db4c-495e-8761" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="40b5-75ca-f36a-fe9c" name="Duelist" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d963-3fea-41f6-a879" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c002-ff87-617c-6afe" name="Martial Arts" hidden="false" targetId="49a5-4d8e-6a3a-a91d" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="L3" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="9f0b-3636-489c-52cd" name="Field Medic" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c197-a0cb-adb5-d6fa" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="2ba8-76fd-d484-db23" name="Doctor" hidden="false" targetId="c410-f367-2544-e324" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="c705-0839-f0d9-bd23" name="Netrunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="90f3-ffee-aad8-eb37" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="48cf-da10-b33d-6074" name="Hacker" hidden="false" targetId="80c0-d4ce-49d4-0fb2" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="e580-26a2-69c8-d7a5" name="Bruiser" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="17c8-e7f6-5f63-07e2" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="fcc9-6782-a5ed-1f08" name="Natural Born Warrior" hidden="false" targetId="7e64-ed23-499c-3563" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="ad25-6c2d-c8bb-99d0" name="Combat Engineer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d0a1-ebe0-3cfb-6963" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="2c94-755c-d8e7-3d13" name="Engineer" hidden="false" targetId="3632-0eb5-13ce-4301" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="4198-353a-3471-24b5" name="Spotter" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6dfe-2de2-ae51-9669" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="ea5a-3761-f62e-3170" name="Forward Observer" hidden="false" targetId="b426-170c-1b9a-1b14" type="rule" />
+                <infoLink id="1bba-79bf-4b52-2deb" name="Sixth Sense" hidden="false" targetId="3cf6-7205-1a36-37d4" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="3a7f-9768-51f3-10a4" name="Freerunner" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4a7f-bf30-dee6-04bc" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="9dbd-d308-213e-2a2a" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
+                <infoLink id="9b55-f2a9-7e4b-03ab" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="539c-dac2-b183-0e45" name="Ghost" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="1ace-8133-5065-f42d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="85cc-608e-455b-60b5" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+                <infoLink id="6724-2795-416a-2e80" name="Stealth" hidden="false" targetId="84da-ce41-fb04-cc69" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry id="fe93-b808-8e9b-774a" name="Hard to Kill" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="d97d-8dfe-1f63-dd14" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="d440-40f7-5e42-a1a1" name="No Wound Incapacitation" hidden="false" targetId="69b5-bde7-1e79-acda" type="rule" />
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2030-49f0-d338-cab7" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
         <entryLink id="2230-096f-7b43-d8cb" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
