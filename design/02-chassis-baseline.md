@@ -40,8 +40,8 @@ These are a starting point for the hardpoint lists.
 - **S6:** Heavy Flamethrower, Heavy Rocket Launcher, Heavy Machine Gun, AP Heavy Machine Gun, MULTI Marksman Rifle, Panzerfaust, AP Spitfire, Spitfire, CC Weapon, AP CC Weapon.
 - **S7:** Heavy Flamethrower, AP Spitfire, MULTI Heavy Machine Gun, AP CC Weapon, Panzerfaust, Heavy Rocket Launcher, DA CC Weapon, Thunderbolt, Heavy Shotgun, Hyper-Rapid Magnetic Cannon.
 
-## Next steps
+## Built (decision 52)
 
-1. Three chassis, S6, S7 and S8 (decision 43), each on its baseline. Variety comes from components (sensor suites, extra armour, jump jets and so on), so every core-game TAG can be built without being the default.
-2. Set each chassis's Capacity, its mounts and their sizes, and its Systems and Signature options.
-3. Price them with `03-points-formula.md`.
+The catalogue now has the three chassis, each on its row above with Courage, GizmoKit, ECM: Guided, Transmutation (Escape System) and Peripheral (Synchronized). Prices come from the points formula with no weapons: Light 52, Medium 56, Heavy 59. Weapons are picked from mount lists, and the twelve Systems spend Capacity (Light 5, Medium 7, Heavy 9). Systems that change a stat (Additional Armour, Hardened Electronics, Targeting Computer) update the TAG's profile in New Recruit.
+
+Still to do: Signature options, playtesting the Capacity numbers, and the reserve TAG lineup.

@@ -21,21 +21,59 @@
         {"weapon": "Spitfire", "cost": {"Requisition": 4}}
       ]
     },
-    "Pilot CC Weapons": {
+    "TAG Primary Weapons": {
+      "min": 1,
       "max": 1,
-      "status": "prototype",
       "options": [
-        {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}},
-        {"weapon": "Shock CC Weapon", "cost": {"Requisition": 1}},
-        {"weapon": "DA CC Weapon", "cost": {"Requisition": 2}},
-        {"weapon": "T2 CC Weapon", "cost": {"Requisition": 2}},
-        {"weapon": "EXP CC Weapon", "cost": {"Requisition": 3}}
+        {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 8, "Capacity": 2}},
+        {"weapon": "MULTI Heavy Machine Gun", "cost": {"Requisition": 9, "Capacity": 3}},
+        {"weapon": "Spitfire", "cost": {"Requisition": 6, "Capacity": 2}},
+        {"weapon": "AP Spitfire", "cost": {"Requisition": 8, "Capacity": 2}},
+        {"weapon": "Heavy Flamethrower", "cost": {"Requisition": 2, "Capacity": 1}},
+        {"weapon": "Heavy Rocket Launcher", "cost": {"Requisition": 4, "Capacity": 2}},
+        {"weapon": "Thunderbolt", "cost": {"Requisition": 3, "Capacity": 2}}
+      ]
+    },
+    "TAG Heavy Primary Weapons": {
+      "min": 1,
+      "max": 2,
+      "options": [
+        {"weapon": "Heavy Machine Gun", "cost": {"Requisition": 8, "Capacity": 2}},
+        {"weapon": "MULTI Heavy Machine Gun", "cost": {"Requisition": 9, "Capacity": 3}},
+        {"weapon": "Spitfire", "cost": {"Requisition": 6, "Capacity": 2}},
+        {"weapon": "AP Spitfire", "cost": {"Requisition": 8, "Capacity": 2}},
+        {"weapon": "Heavy Flamethrower", "cost": {"Requisition": 2, "Capacity": 1}},
+        {"weapon": "Heavy Rocket Launcher", "cost": {"Requisition": 4, "Capacity": 2}},
+        {"weapon": "Thunderbolt", "cost": {"Requisition": 3, "Capacity": 2}},
+        {"weapon": "Missile Launcher", "cost": {"Requisition": 6, "Capacity": 3}},
+        {"weapon": "Hyper-Rapid Magnetic Cannon", "cost": {"Requisition": 9, "Capacity": 3}}
+      ]
+    },
+    "TAG Secondary Weapons": {
+      "max": 1,
+      "options": [
+        {"weapon": "Heavy Pistol", "cost": {"Requisition": 1, "Capacity": 0}},
+        {"weapon": "Chain-Colt", "cost": {"Requisition": 1, "Capacity": 1}},
+        {"weapon": "Heavy Shotgun", "cost": {"Requisition": 2, "Capacity": 1}},
+        {"weapon": "Panzerfaust", "cost": {"Requisition": 2, "Capacity": 1}},
+        {"weapon": "Smoke Grenades", "cost": {"Requisition": 3, "Capacity": 1}}
+      ]
+    },
+    "TAG CC Weapons": {
+      "min": 1,
+      "max": 1,
+      "default": "CC Weapon",
+      "options": [
+        {"weapon": "CC Weapon"},
+        {"weapon": "AP CC Weapon", "cost": {"Requisition": 1, "Capacity": 0}},
+        {"weapon": "DA CC Weapon", "cost": {"Requisition": 1, "Capacity": 0}},
+        {"weapon": "EXP CC Weapon", "cost": {"Requisition": 2, "Capacity": 1}}
       ]
     }
   },
   "upgrades": {
-    "Lieutenant": {"category": "Lieutenant", "rules": ["Lieutenant"], "cost": {"Requisition": null}},
-    "NCO": {"rules": ["NCO"], "cost": {"Requisition": null}},
+    "Lieutenant": {"category": "Lieutenant", "rules": ["Lieutenant"], "append": {"Orders": "+ Lieutenant"}, "cost": {"Requisition": 3}},
+    "NCO": {"rules": ["NCO"], "cost": {"Requisition": 4}},
     "Start in Reserve": {"removesCategory": "Deployed", "rules": ["Reinforcements"]}
   },
   "profiles": {
@@ -79,7 +117,7 @@
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
-      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "lists": ["Pilot Sidearms"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
       "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
@@ -98,7 +136,7 @@
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
-      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "lists": ["Pilot Sidearms"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
       "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
@@ -117,7 +155,7 @@
       "skills": ["Courage", "Tactical Awareness", "Specialist Operative"],
       "equipment": [],
       "weapons": ["Pistol", "CC Weapon"],
-      "lists": ["Pilot Sidearms", "Pilot CC Weapons"],
+      "lists": ["Pilot Sidearms"],
       "upgrades": ["Lieutenant", "NCO"],
       "rules": ["Call In TAG", "Explode", "Mount and Dismount", "Jockey", "Unmanned TAGs"],
       "note": "Trained-pilot line (decision 48) plus training packages (decision 44).",
@@ -125,51 +163,43 @@
       "extraPackage": {"Requisition": 4}
     },
     {
-      "name": "Light TAG",
+      "name": "Light Chassis (S6)",
       "category": "TAG",
-      "status": "prototype",
-      "cost": {"Requisition": 20},
-      "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "14", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
-      "equipment": ["ECM: Guided (-6)"],
+      "cost": {"Requisition": 52},
+      "capacity": 5,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "14", "WIP": "13", "ARM": "6", "BTS": "6", "STR": "3", "S": "6", "Capacity": "5"}},
+      "skills": ["Courage", "Transmutation (Escape System)", "Peripheral (Synchronized)"],
+      "equipment": ["GizmoKit", "ECM: Guided (-6)"],
       "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
-      "groups": [],
-      "note": "Stats are the S6 baseline from design/02-chassis-baseline.md, until this chassis is designed."
+      "lists": ["TAG Primary Weapons", "TAG Secondary Weapons", "TAG CC Weapons"],
+      "systems": true,
+      "note": "S6 baseline (design/02-chassis-baseline.md), priced by the points formula. Capacity numbers are a first pass."
     },
     {
-      "name": "Medium TAG",
+      "name": "Medium Chassis (S7)",
       "category": "TAG",
-      "status": "prototype",
-      "cost": {"Requisition": 30},
-      "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "16", "WIP": "13", "ARM": "7", "BTS": "6", "STR": "3", "S": "7", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
-      "equipment": ["ECM: Guided (-6)"],
+      "cost": {"Requisition": 56},
+      "capacity": 7,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "19", "BS": "14", "PH": "16", "WIP": "13", "ARM": "7", "BTS": "6", "STR": "3", "S": "7", "Capacity": "7"}},
+      "skills": ["Courage", "Transmutation (Escape System)", "Peripheral (Synchronized)"],
+      "equipment": ["GizmoKit", "ECM: Guided (-6)"],
       "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
-      "groups": [
-        {"name": "Ranged Hardpoint", "max": 1, "options": [{"weapon": "Heavy Machine Gun", "cost": {"Requisition": 5}, "mods": {"PS": "-1"}}]},
-        {
-          "name": "CQC Hardpoints",
-          "max": 2,
-          "default": "CC Weapon",
-          "options": [{"weapon": "CC Weapon", "mods": {"PS": "=6"}}, {"weapon": "AP CC Weapon", "cost": {"Requisition": 1}, "mods": {"PS": "=6"}}]
-        }
-      ],
-      "note": "Stats are the S7 baseline from design/02-chassis-baseline.md, until this chassis is designed."
+      "lists": ["TAG Primary Weapons", "TAG Secondary Weapons", "TAG CC Weapons"],
+      "systems": true,
+      "note": "S7 baseline (design/02-chassis-baseline.md), priced by the points formula. Capacity numbers are a first pass."
     },
     {
-      "name": "Heavy TAG",
+      "name": "Heavy Chassis (S8)",
       "category": "TAG",
-      "status": "prototype",
-      "cost": {"Requisition": 40},
-      "capacity": null,
-      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "16", "BS": "14", "PH": "17", "WIP": "14", "ARM": "8", "BTS": "6", "STR": "3", "S": "8", "Capacity": "?"}},
-      "skills": ["Courage", "Dodge (PH=11)", "Transmutation (Escape System)", "GizmoKit (PH=13)", "Tactical Awareness", "Terrain (Total)", "Peripheral (Synchronized)"],
-      "equipment": ["ECM: Guided (-6)"],
+      "cost": {"Requisition": 59},
+      "capacity": 9,
+      "profile": {"type": "TAG", "stats": {"MOV": "6-4", "CC": "16", "BS": "14", "PH": "17", "WIP": "14", "ARM": "8", "BTS": "6", "STR": "3", "S": "8", "Capacity": "9"}},
+      "skills": ["Courage", "Transmutation (Escape System)", "Peripheral (Synchronized)"],
+      "equipment": ["GizmoKit", "ECM: Guided (-6)"],
       "rules": ["Call In TAG", "Mount and Dismount", "Eject", "Pilotless State"],
-      "groups": [],
-      "note": "Stats are the S8 baseline from design/02-chassis-baseline.md, until this chassis is designed."
+      "lists": ["TAG Heavy Primary Weapons", "TAG Secondary Weapons", "TAG CC Weapons"],
+      "systems": true,
+      "note": "S8 baseline (design/02-chassis-baseline.md), priced by the points formula. Capacity numbers are a first pass."
     },
     {
       "name": "Overwatch",
@@ -185,7 +215,7 @@
       "skills": ["Total Reaction"],
       "equipment": [],
       "weapons": ["MULTI Marksman Rifle", "Pistol", "CC Weapon"],
-      "upgrades": ["Start in Reserve"]
+      "upgrades": ["Start in Reserve", "Lieutenant", "NCO"]
     },
     {
       "name": "Gunslinger",
@@ -201,7 +231,7 @@
       "skills": ["Martial Arts L1", "Combat Instinct"],
       "equipment": [],
       "weapons": ["Heavy Pistol", "DA CC Weapon"],
-      "upgrades": ["Start in Reserve"]
+      "upgrades": ["Start in Reserve", "Lieutenant", "NCO"]
     },
     {
       "name": "Stalker",
@@ -233,7 +263,7 @@
       "skills": ["Forward Observer", "Specialist Operative", "Marksmanship"],
       "equipment": ["X-Visor"],
       "weapons": ["Marksman Rifle", "Pistol", "CC Weapon"],
-      "upgrades": ["Start in Reserve"]
+      "upgrades": ["Start in Reserve", "Lieutenant", "NCO"]
     },
     {
       "name": "Siege Rifleman",
@@ -633,5 +663,19 @@
         "Combat Jump": {"skills": ["Combat Jump"], "cost": {"Requisition": 2}}
       }
     }
+  },
+  "systems": {
+    "Additional Armour": {"stats": {"ARM": 1}, "cost": {"Requisition": 3, "Capacity": 2}},
+    "Hardened Electronics": {"stats": {"BTS": 3}, "cost": {"Requisition": 1, "Capacity": 1}},
+    "Jump Jets": {"skills": ["Super-Jump"], "cost": {"Requisition": 2, "Capacity": 1}},
+    "Climbing Rig": {"skills": ["Climbing Plus"], "cost": {"Requisition": 1, "Capacity": 1}},
+    "Sensor Suite": {"skills": ["Sensor"], "equipment": ["360° Visor"], "cost": {"Requisition": 3, "Capacity": 1}},
+    "Multispectral Optics": {"equipment": ["Multispectral Visor"], "cost": {"Requisition": 4, "Capacity": 1}},
+    "Targeting Computer": {"stats": {"BS": 1}, "cost": {"Requisition": 2, "Capacity": 1}},
+    "Auto-Targeting": {"skills": ["Total Reaction"], "cost": {"Requisition": 5, "Capacity": 2}},
+    "Optical Camo": {"skills": ["Mimetism (-3)"], "cost": {"Requisition": 2, "Capacity": 1}},
+    "Nanoscreen Projector": {"equipment": ["Nanoscreen"], "cost": {"Requisition": 4, "Capacity": 2}},
+    "ECM Suite": {"equipment": ["ECM: Hacker (-3)"], "cost": {"Requisition": 2, "Capacity": 1}},
+    "Field Repeater": {"equipment": ["Repeater"], "cost": {"Requisition": 1, "Capacity": 1}}
   }
 }

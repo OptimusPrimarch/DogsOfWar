@@ -1,81 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="29" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="22" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="6379-83e9-e4ae-53ec" name="Mercenary Company" revision="30" battleScribeVersion="2.03" library="false" gameSystemId="sys-0ba1-943f-1bdf-3200" gameSystemRevision="22" authorName="OptimusPrimarch" authorUrl="https://github.com/OptimusPrimarch/DogsOfWar" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="e8e3-7a30-1646-295b" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="3c33-9719-de62-af39" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1a94-c017-42fb-d811" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1a94-c017-42fb-d811" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e4ca-10ca-8ce4-b3c2" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e4ca-10ca-8ce4-b3c2" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="68dc-6f24-6040-5295" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9c58-2ece-160a-b470" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="6169-19fb-2d33-c719" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="8339-fa42-4311-8e3f" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="5687-00eb-3ec0-b591" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="5687-00eb-3ec0-b591" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="f1fa-32b8-ce6d-02cc" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="aeb1-6bed-41f4-c80d" name="Rookie Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="4f2e-201f-d053-d135" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="3c33-9719-de62-af39" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="1a94-c017-42fb-d811" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="1a94-c017-42fb-d811" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="e4ca-10ca-8ce4-b3c2" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="e4ca-10ca-8ce4-b3c2" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="68dc-6f24-6040-5295" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="63f9-fbe1-f8fe-7278" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="9c58-2ece-160a-b470" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="6169-19fb-2d33-c719" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="8339-fa42-4311-8e3f" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="5687-00eb-3ec0-b591" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="5687-00eb-3ec0-b591" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e8e3-7a30-1646-295b" childId="f1fa-32b8-ce6d-02cc" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -118,6 +123,9 @@
           <categoryLinks>
             <categoryLink id="fda8-ab0f-017f-de75" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
           </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="daa1-10fc-bc2e-01b0" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -126,6 +134,9 @@
           <infoLinks>
             <infoLink id="9386-40af-5b3b-bf7b" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="6775-6ea1-28cc-3837" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -278,87 +289,91 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="a477-4bcd-1125-5483" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
-        <entryLink id="0de2-5271-6b8d-8e7b" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
       </entryLinks>
       <costs>
         <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="24" />
       </costs>
     </selectionEntry>
     <selectionEntry id="fa45-11e3-805b-9d60" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="5bc7-2e8f-5ec8-af3a" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="d81d-1042-54d2-a606" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="d81d-1042-54d2-a606" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="cce8-2ef7-d885-86da" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="cce8-2ef7-d885-86da" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="99c0-7874-f0f6-9fcd" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="5ea9-22f6-c77b-7a19" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="0001-14c9-1262-6c2f" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="17af-3a46-9882-1b3d" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="76de-197f-7dc9-5657" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="76de-197f-7dc9-5657" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e92a-27c4-dfca-0b21" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="1635-c253-8239-a695" name="Seasoned Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="ba7c-ffdf-ff02-4f59" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="5bc7-2e8f-5ec8-af3a" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="d81d-1042-54d2-a606" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="d81d-1042-54d2-a606" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="cce8-2ef7-d885-86da" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="cce8-2ef7-d885-86da" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="99c0-7874-f0f6-9fcd" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="de2d-7085-3d5c-3132" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="5ea9-22f6-c77b-7a19" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="0001-14c9-1262-6c2f" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="17af-3a46-9882-1b3d" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="76de-197f-7dc9-5657" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="76de-197f-7dc9-5657" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fa45-11e3-805b-9d60" childId="e92a-27c4-dfca-0b21" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -401,6 +416,9 @@
           <categoryLinks>
             <categoryLink id="7e35-bd17-87f6-35dc" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
           </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="b7a6-0a17-7340-8900" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -409,6 +427,9 @@
           <infoLinks>
             <infoLink id="0ac2-0a4e-3659-2f08" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="96f1-3b7e-b750-3630" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -561,87 +582,91 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="17e4-7391-e0a9-d9fa" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
-        <entryLink id="b37b-40bb-1163-e71d" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
       </entryLinks>
       <costs>
         <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="28" />
       </costs>
     </selectionEntry>
     <selectionEntry id="4a14-5c8d-0afa-5c30" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
-      <modifiers>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="2286-e297-0f63-7b8c" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="40b5-75ca-f36a-fe9c" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="40b5-75ca-f36a-fe9c" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9f0b-3636-489c-52cd" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9f0b-3636-489c-52cd" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="c705-0839-f0d9-bd23" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="0d33-1dae-e2ba-1727" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="ad25-6c2d-c8bb-99d0" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="4198-353a-3471-24b5" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="3a7f-9768-51f3-10a4" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="3a7f-9768-51f3-10a4" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="0622-6e35-2324-c118" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="539c-dac2-b183-0e45" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-      </modifiers>
       <profiles>
         <profile id="0d74-525e-1916-e22d" name="Veteran Pilot" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="a702-6674-ccba-ea07" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="2286-e297-0f63-7b8c" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="6">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="40b5-75ca-f36a-fe9c" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="40b5-75ca-f36a-fe9c" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="9f0b-3636-489c-52cd" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="9f0b-3636-489c-52cd" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="1242-78b3-a9ac-5ad5" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="c705-0839-f0d9-bd23" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="e580-26a2-69c8-d7a5" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="0d33-1dae-e2ba-1727" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="ad25-6c2d-c8bb-99d0" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="4198-353a-3471-24b5" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="3a7f-9768-51f3-10a4" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="3a7f-9768-51f3-10a4" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="0622-6e35-2324-c118" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4a14-5c8d-0afa-5c30" childId="539c-dac2-b183-0e45" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -684,6 +709,9 @@
           <categoryLinks>
             <categoryLink id="db93-7274-64ae-eb26" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
           </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="b9de-b215-c2ab-7b27" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -692,6 +720,9 @@
           <infoLinks>
             <infoLink id="aff7-8e4d-d786-c16d" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="4337-8ac6-cc47-0b6d" name="Extra Training Package" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -844,15 +875,34 @@
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="2030-49f0-d338-cab7" name="Pilot Sidearms" hidden="false" collective="false" import="true" targetId="f599-5992-2180-0033" type="selectionEntryGroup" />
-        <entryLink id="2230-096f-7b43-d8cb" name="Pilot CC Weapons" hidden="false" collective="false" import="true" targetId="9b12-caa4-cae6-9505" type="selectionEntryGroup" />
       </entryLinks>
       <costs>
         <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="32" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="5c28-73d9-cc86-81f8" name="Light TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="fcef-5ea7-186c-5c4a" name="Light Chassis (S6)" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint id="d654-9446-ed7d-d91b" type="max" value="5" field="9760-1ef0-60a7-4540" scope="self" shared="true" includeChildSelections="true" />
+      </constraints>
       <profiles>
-        <profile id="9d9a-d9f3-d30f-e888" name="Light TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+        <profile id="7e03-5abe-d6f8-efd4" name="Light Chassis (S6)" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <modifiers>
+            <modifier type="increment" field="ff16-0c92-ce9e-e1c6" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fcef-5ea7-186c-5c4a" childId="5599-6c14-93fd-4872" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c24-00f6-b91a-9687" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fcef-5ea7-186c-5c4a" childId="eb88-bf2f-b202-798e" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="a4b2-ea3b-d314-a9d0" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="fcef-5ea7-186c-5c4a" childId="43db-0416-ecb3-3876" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
             <characteristic name="CC" typeId="7f81-6698-29b8-57fa">19</characteristic>
@@ -863,58 +913,218 @@
             <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
             <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
             <characteristic name="S" typeId="e584-99d0-09c9-3ec5">6</characteristic>
-            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">5</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="b97b-cf13-86a7-69da" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
-        <infoLink id="50d7-c838-7085-2909" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=11)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="ef7b-6f29-c1eb-fd78" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+        <infoLink id="e580-ebb9-cf59-55a5" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="aba9-a3ed-483c-1ccf" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Escape System)" />
           </modifiers>
         </infoLink>
-        <infoLink id="5387-3e08-28ad-7ae3" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=13)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="a13e-36be-37b8-6a33" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
-        <infoLink id="be2b-3c8a-5cf4-c993" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(Total)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="f30b-c281-87be-df12" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
+        <infoLink id="ab45-67e7-7c31-1687" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Synchronized)" />
           </modifiers>
         </infoLink>
-        <infoLink id="1ec5-a54b-e0f6-3e19" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+        <infoLink id="d6f9-c2d5-4fc7-a853" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule" />
+        <infoLink id="0db0-9f72-fa04-a413" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="Guided (-6)" />
           </modifiers>
         </infoLink>
-        <infoLink id="2dd6-829a-222d-f072" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
-        <infoLink id="1535-d8c4-6e53-7c5a" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
-        <infoLink id="11b0-1d55-b9f2-cfde" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
-        <infoLink id="7194-8f4a-81e6-0607" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
+        <infoLink id="f767-32db-6e59-8352" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
+        <infoLink id="ac05-f6f4-0a53-5a0e" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="df17-f997-64b8-10d9" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="4dab-2708-2b79-f9b9" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4066-b778-eacd-482c" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+        <categoryLink id="064b-8d36-d99b-a6c3" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9fcf-5744-c625-199b" name="Systems" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="5599-6c14-93fd-4872" name="Additional Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c606-6a2a-7177-866c" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eb88-bf2f-b202-798e" name="Hardened Electronics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="0273-ed01-e05b-0df7" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="056a-0669-b051-d5fd" name="Jump Jets" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="a532-620d-e8ad-eac0" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="fbca-3019-8f09-6c27" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="78d3-6f13-20a1-cf58" name="Climbing Rig" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="ff9a-7eaf-0e55-4367" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="2c31-2063-7e3a-06e7" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5b1e-1074-dd7b-199b" name="Sensor Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="5908-6a82-c0a2-38ad" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="3fbb-ffc2-fc89-4451" name="Sensor" hidden="false" targetId="1a74-4676-263a-ddc4" type="rule" />
+                <infoLink id="1d18-7798-9a29-773f" name="360° Visor" hidden="false" targetId="9910-bb40-f0a8-a5a9" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="44d8-b089-86e4-58fd" name="Multispectral Optics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="5dfb-2d9f-756f-7204" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c209-12dd-bc40-6f84" name="Multispectral Visor" hidden="false" targetId="06a4-9e4a-a963-55d8" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="43db-0416-ecb3-3876" name="Targeting Computer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4573-5c6f-9f51-ee5f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6e76-cf1f-5e32-aca4" name="Auto-Targeting" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="1a9c-703d-4375-114f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="5261-59d4-2ef3-35f0" name="Total Reaction" hidden="false" targetId="4875-3ee6-96cd-d4de" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="571b-7f8c-d5d5-7ec2" name="Optical Camo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="e1b9-5db0-1b3c-3e24" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c2dd-969e-7cd3-5c71" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="bf2b-f25f-c20c-7680" name="Nanoscreen Projector" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="7e58-8bc8-009a-f68b" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="4e5e-94f6-61fc-e42e" name="Nanoscreen" hidden="false" targetId="6244-7f4b-7965-5069" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0480-4d3e-99ac-7b0e" name="ECM Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2e54-273c-5117-92ea" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="47c7-a573-f485-3115" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="Hacker (-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d847-a4d4-869c-da59" name="Field Repeater" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="cb08-fc09-92d0-d994" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="e853-cf76-ddfc-ab9c" name="Repeater" hidden="false" targetId="f01e-d699-2b1a-dc98" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="01d8-0690-c260-3616" name="TAG Primary Weapons" hidden="false" collective="false" import="true" targetId="b8f7-7096-1504-59d6" type="selectionEntryGroup" />
+        <entryLink id="8780-8cf0-74c1-d372" name="TAG Secondary Weapons" hidden="false" collective="false" import="true" targetId="5d0e-8f15-19fc-90d9" type="selectionEntryGroup" />
+        <entryLink id="fd66-e661-d9f8-3bda" name="TAG CC Weapons" hidden="false" collective="false" import="true" targetId="aa24-6e84-ab20-051a" type="selectionEntryGroup" />
+      </entryLinks>
       <costs>
-        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="20" />
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="52" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="3927-745a-2368-5ab6" name="Medium TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="408d-286a-6220-0e96" name="Medium Chassis (S7)" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint id="ebb6-d760-d85c-0391" type="max" value="7" field="9760-1ef0-60a7-4540" scope="self" shared="true" includeChildSelections="true" />
+      </constraints>
       <profiles>
-        <profile id="6aea-e4c1-34a1-365b" name="Medium TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+        <profile id="17af-f62e-753b-739d" name="Medium Chassis (S7)" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <modifiers>
+            <modifier type="increment" field="ff16-0c92-ce9e-e1c6" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="408d-286a-6220-0e96" childId="dc04-8b45-5713-cdf7" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c24-00f6-b91a-9687" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="408d-286a-6220-0e96" childId="1776-49f6-1f96-9623" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="a4b2-ea3b-d314-a9d0" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="408d-286a-6220-0e96" childId="f52d-d4b1-445b-b80f" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
             <characteristic name="CC" typeId="7f81-6698-29b8-57fa">19</characteristic>
@@ -925,110 +1135,218 @@
             <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
             <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
             <characteristic name="S" typeId="e584-99d0-09c9-3ec5">7</characteristic>
-            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">7</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="d65d-04e6-493f-76a9" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
-        <infoLink id="b382-e992-a959-0ce4" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=11)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="13a9-d713-e802-1ef1" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+        <infoLink id="065b-4a6d-6b31-d235" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="17df-fd5f-73fe-d488" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Escape System)" />
           </modifiers>
         </infoLink>
-        <infoLink id="22b0-bb07-70aa-6815" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=13)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="7329-f2dc-67a3-b2c8" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
-        <infoLink id="9079-cdd9-750a-80c8" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(Total)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="3082-e844-7a45-abf8" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
+        <infoLink id="6fa6-3440-86f0-3fe0" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Synchronized)" />
           </modifiers>
         </infoLink>
-        <infoLink id="04e9-1789-41ac-f928" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+        <infoLink id="cb3f-77ee-1ca0-69b7" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule" />
+        <infoLink id="5d5a-c5ae-4c8b-07b5" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="Guided (-6)" />
           </modifiers>
         </infoLink>
-        <infoLink id="ea15-d915-d529-6ca1" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
-        <infoLink id="86b8-c511-2174-e2c9" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
-        <infoLink id="bb32-4454-7105-603e" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
-        <infoLink id="c039-c233-bf72-46cb" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
+        <infoLink id="9ed8-966c-64b2-6d80" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
+        <infoLink id="431b-3852-f624-963d" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="592c-4aa2-3403-ee6d" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="dc42-4643-6066-3d01" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="14b8-0ffe-636d-ce28" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+        <categoryLink id="238e-25a5-913b-7607" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="5be7-4876-9f68-89c9" name="Ranged Hardpoint" hidden="false" collective="false" import="true">
-          <constraints>
-            <constraint id="38f6-1461-a049-296e" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
-          </constraints>
+        <selectionEntryGroup id="9663-13c1-b6d7-24c6" name="Systems" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="83d2-fc1b-bf41-ec4a" name="Heavy Machine Gun" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="350e-1de0-1ece-9439" name="Heavy Machine Gun" hidden="false" targetId="8412-d672-8525-7d7c" type="profile">
-                  <modifiers>
-                    <modifier type="decrement" field="76b7-f614-c586-ebbc" value="1" />
-                  </modifiers>
-                </infoLink>
-                <infoLink id="8723-6b5c-685c-8404" name="Suppressive Fire (Trait)" hidden="false" targetId="5f14-9dd9-f80b-6451" type="rule" />
-              </infoLinks>
+            <selectionEntry id="dc04-8b45-5713-cdf7" name="Additional Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="26d8-81b7-d4c0-c476" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
               <costs>
-                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
               </costs>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="67b6-f5e8-f626-1046" name="CQC Hardpoints" hidden="false" collective="false" import="true" defaultSelectionEntryId="f15d-41ed-a60f-5ae3">
-          <constraints>
-            <constraint id="8bb3-1f5f-119a-75e5" type="max" value="2" field="selections" scope="parent" shared="true" includeChildSelections="false" />
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="f15d-41ed-a60f-5ae3" name="CC Weapon" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="6500-a99b-52e0-df19" name="CC Weapon" hidden="false" targetId="5a72-f250-090b-8603" type="profile">
-                  <modifiers>
-                    <modifier type="set" field="8a39-81db-8fb4-7a5d" value="6" />
-                  </modifiers>
-                </infoLink>
-                <infoLink id="6061-a498-ebbe-bd14" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
-              </infoLinks>
+            <selectionEntry id="1776-49f6-1f96-9623" name="Hardened Electronics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="b0b8-b2fc-2b6c-8eb0" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
             </selectionEntry>
-            <selectionEntry id="a18b-7f22-31a3-d2c1" name="AP CC Weapon" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="3fe3-a765-29fd-20ee" name="Jump Jets" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="2211-d722-bdf1-a664" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
               <infoLinks>
-                <infoLink id="97aa-9bd9-83ff-265e" name="AP CC Weapon" hidden="false" targetId="90ae-0bbf-2d91-d8e2" type="profile">
-                  <modifiers>
-                    <modifier type="set" field="8a39-81db-8fb4-7a5d" value="6" />
-                  </modifiers>
-                </infoLink>
-                <infoLink id="7cbc-6990-ce01-fbc7" name="CC" hidden="false" targetId="9297-b5bd-8bc3-59b1" type="rule" />
+                <infoLink id="0bfb-c9a0-2069-b51c" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c46e-fe1c-aa01-ce58" name="Climbing Rig" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6dc0-3cf6-e4ca-104a" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="b5d3-2ae6-8859-3c0c" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
               </infoLinks>
               <costs>
                 <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f140-9aac-c2e2-523e" name="Sensor Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="97cf-1066-0dc0-dcaf" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="8c83-0cd6-0f2d-fea4" name="Sensor" hidden="false" targetId="1a74-4676-263a-ddc4" type="rule" />
+                <infoLink id="039e-cbf8-21ba-b5ed" name="360° Visor" hidden="false" targetId="9910-bb40-f0a8-a5a9" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="81a9-0e3a-f36e-ea99" name="Multispectral Optics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6a37-8f64-b1d5-8e11" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="832b-79f9-9c9b-373b" name="Multispectral Visor" hidden="false" targetId="06a4-9e4a-a963-55d8" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f52d-d4b1-445b-b80f" name="Targeting Computer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="518f-9466-1dc2-aafb" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7cb2-b0be-21d3-00ad" name="Auto-Targeting" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="3fd3-8a08-7907-b44f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="f8e8-c0cf-ba1b-a2e0" name="Total Reaction" hidden="false" targetId="4875-3ee6-96cd-d4de" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6415-d485-30e8-736d" name="Optical Camo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="a9ad-c29b-fb72-1b40" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="6eea-f51f-b953-aff5" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="73bd-a297-02c1-28d9" name="Nanoscreen Projector" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="e3fe-b8ba-1642-01c3" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="5961-2c77-4c51-5d41" name="Nanoscreen" hidden="false" targetId="6244-7f4b-7965-5069" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="13aa-c3a8-310f-cfe3" name="ECM Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="bfb0-011c-1a02-8216" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="63e5-3fbc-ab64-9a71" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="Hacker (-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ee17-146e-b12b-377d" name="Field Repeater" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="a12a-8abb-8f15-d996" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="bf20-91c8-b93e-cd09" name="Repeater" hidden="false" targetId="f01e-d699-2b1a-dc98" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
               </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="3618-74ae-500d-9fdf" name="TAG Primary Weapons" hidden="false" collective="false" import="true" targetId="b8f7-7096-1504-59d6" type="selectionEntryGroup" />
+        <entryLink id="48ae-4f2a-6fdc-b95e" name="TAG Secondary Weapons" hidden="false" collective="false" import="true" targetId="5d0e-8f15-19fc-90d9" type="selectionEntryGroup" />
+        <entryLink id="6833-3755-89a8-3a0a" name="TAG CC Weapons" hidden="false" collective="false" import="true" targetId="aa24-6e84-ab20-051a" type="selectionEntryGroup" />
+      </entryLinks>
       <costs>
-        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="30" />
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="56" />
       </costs>
     </selectionEntry>
-    <selectionEntry id="0e0a-61f0-c260-1548" name="Heavy TAG" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="bc82-3320-63a8-7e1c" name="Heavy Chassis (S8)" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
+      <constraints>
+        <constraint id="ca9a-ec5a-ce36-602a" type="max" value="9" field="9760-1ef0-60a7-4540" scope="self" shared="true" includeChildSelections="true" />
+      </constraints>
       <profiles>
-        <profile id="42e0-8973-3a25-70ea" name="Heavy TAG" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+        <profile id="e1ba-8258-8945-9433" name="Heavy Chassis (S8)" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="da19-1546-508f-1dc4" typeName="TAG">
+          <modifiers>
+            <modifier type="increment" field="ff16-0c92-ce9e-e1c6" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="bc82-3320-63a8-7e1c" childId="9826-5cff-a677-db22" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3c24-00f6-b91a-9687" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="bc82-3320-63a8-7e1c" childId="2c13-edf9-d740-7b99" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="a4b2-ea3b-d314-a9d0" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="bc82-3320-63a8-7e1c" childId="004a-cf40-52b3-840b" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="MOV" typeId="80be-e2cb-5927-98c3">6-4</characteristic>
             <characteristic name="CC" typeId="7f81-6698-29b8-57fa">16</characteristic>
@@ -1039,53 +1357,193 @@
             <characteristic name="BTS" typeId="3c24-00f6-b91a-9687">6</characteristic>
             <characteristic name="STR" typeId="8825-15dd-62d9-aec6">3</characteristic>
             <characteristic name="S" typeId="e584-99d0-09c9-3ec5">8</characteristic>
-            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">?</characteristic>
+            <characteristic name="Capacity" typeId="e810-2f9c-ade7-d846">9</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="92cf-c48b-c744-710b" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
-        <infoLink id="6c74-e5a7-0dce-9129" name="Dodge" hidden="false" targetId="7304-3420-e690-7b7d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=11)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="6fae-1093-07b1-f1cf" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
+        <infoLink id="eb31-9bee-fe73-765f" name="Courage" hidden="false" targetId="a4f3-2bbc-8877-c2f3" type="rule" />
+        <infoLink id="ba27-08ca-8d3f-97a0" name="Transmutation" hidden="false" targetId="0032-2249-623a-c113" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Escape System)" />
           </modifiers>
         </infoLink>
-        <infoLink id="4b29-ac44-d2f2-31b2" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(PH=13)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="b3e8-6a5a-5445-f4f6" name="Tactical Awareness" hidden="false" targetId="d4e9-8b47-8f37-84cc" type="rule" />
-        <infoLink id="6c85-ff99-578a-0306" name="Terrain" hidden="false" targetId="1711-c9cd-43b7-6d20" type="rule">
-          <modifiers>
-            <modifier type="append" field="name" value="(Total)" />
-          </modifiers>
-        </infoLink>
-        <infoLink id="62a8-e131-178a-15e2" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
+        <infoLink id="f9c2-2e42-7c38-224f" name="Peripheral" hidden="false" targetId="b11b-3bb2-9ac7-ff7b" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="(Synchronized)" />
           </modifiers>
         </infoLink>
-        <infoLink id="9a77-973e-2964-8105" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+        <infoLink id="b29a-eb47-0c26-552a" name="GizmoKit" hidden="false" targetId="81a3-173c-745e-b37d" type="rule" />
+        <infoLink id="d15b-63d6-5dc5-bb40" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
           <modifiers>
             <modifier type="append" field="name" value="Guided (-6)" />
           </modifiers>
         </infoLink>
-        <infoLink id="17ef-de08-6b37-faee" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
-        <infoLink id="b7f7-9f70-6411-a2a1" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
-        <infoLink id="e0ea-8467-b44d-d613" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
-        <infoLink id="d214-db8f-0255-b16c" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
+        <infoLink id="462e-eed7-0be7-4052" name="Call In TAG" hidden="false" targetId="6924-acd7-89c8-8015" type="rule" />
+        <infoLink id="7b50-90fd-a64f-902e" name="Mount and Dismount (N4)" hidden="false" targetId="9be1-1acb-7ccf-06d3" type="rule" />
+        <infoLink id="bc2f-33fe-894e-48f9" name="Eject" hidden="false" targetId="a13e-0cf9-2fdb-667c" type="rule" />
+        <infoLink id="40e9-20ef-29d1-8426" name="Pilotless State" hidden="false" targetId="3813-63d4-4b21-2ad8" type="rule" />
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="96c3-5baa-e995-6424" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
+        <categoryLink id="de78-d671-4c37-0ac0" name="TAG" hidden="false" targetId="ffaf-2784-a2f4-b6f0" primary="true" />
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="15db-0d3f-6fa5-06ad" name="Systems" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="9826-5cff-a677-db22" name="Additional Armour" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="7d06-49a0-51e3-590e" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2c13-edf9-d740-7b99" name="Hardened Electronics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="686c-8018-9600-1b99" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="012e-b341-57c0-34f3" name="Jump Jets" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="6228-7b1a-5b0f-236b" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="5c41-2f9d-444a-a836" name="Super-Jump" hidden="false" targetId="1c3b-0a2a-1d08-f947" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b316-687e-1532-c5a5" name="Climbing Rig" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="18d1-1a0b-b270-b96a" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="fa02-a188-a50c-3826" name="Climbing Plus" hidden="false" targetId="6c6c-f365-d24e-ce98" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="d468-946b-76cf-2cd7" name="Sensor Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="be49-676c-3f92-e493" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="42f8-acd4-70c6-e2e1" name="Sensor" hidden="false" targetId="1a74-4676-263a-ddc4" type="rule" />
+                <infoLink id="f8d5-4f9e-b559-f75a" name="360° Visor" hidden="false" targetId="9910-bb40-f0a8-a5a9" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3967-1f26-e353-460a" name="Multispectral Optics" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4b9c-5072-416f-357d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="48ca-a240-33fa-501d" name="Multispectral Visor" hidden="false" targetId="06a4-9e4a-a963-55d8" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="004a-cf40-52b3-840b" name="Targeting Computer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f8f2-4edb-6148-e9b3" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="27f6-4d28-7b47-6216" name="Auto-Targeting" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="eac3-0dd2-98fc-c32f" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="0db0-c517-a04d-305a" name="Total Reaction" hidden="false" targetId="4875-3ee6-96cd-d4de" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="5" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="8c65-164f-cf9a-7642" name="Optical Camo" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="37d0-023e-cf5f-2d1d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="866a-0442-582a-600b" name="Mimetism" hidden="false" targetId="4c40-b00d-f36a-80f1" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="(-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="508d-244f-4808-1257" name="Nanoscreen Projector" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="c55f-aa2f-c1b0-0446" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="1de4-c090-4c4c-7bda" name="Nanoscreen" hidden="false" targetId="6244-7f4b-7965-5069" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2fb0-675c-07ca-9e5d" name="ECM Suite" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="08dc-23f4-cdb9-49b0" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="a0e1-f8ee-fe47-2254" name="ECM" hidden="false" targetId="ef04-02c6-e2f1-ae4e" type="rule">
+                  <modifiers>
+                    <modifier type="append" field="name" value="Hacker (-3)" />
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="eefc-9bb3-ef7a-4d49" name="Field Repeater" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="4689-af6e-0876-2ad3" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+              </constraints>
+              <infoLinks>
+                <infoLink id="c2ea-7d23-5796-e457" name="Repeater" hidden="false" targetId="f01e-d699-2b1a-dc98" type="rule" />
+              </infoLinks>
+              <costs>
+                <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+                <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="165e-3920-71f5-b77e" name="TAG Heavy Primary Weapons" hidden="false" collective="false" import="true" targetId="c294-be8c-3b16-20ea" type="selectionEntryGroup" />
+        <entryLink id="3cca-9b99-da88-13d1" name="TAG Secondary Weapons" hidden="false" collective="false" import="true" targetId="5d0e-8f15-19fc-90d9" type="selectionEntryGroup" />
+        <entryLink id="0d6b-d81d-655b-870f" name="TAG CC Weapons" hidden="false" collective="false" import="true" targetId="aa24-6e84-ab20-051a" type="selectionEntryGroup" />
+      </entryLinks>
       <costs>
-        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="40" />
+        <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="59" />
       </costs>
     </selectionEntry>
     <selectionEntry id="2d2e-1079-6094-93ac" name="Overwatch" publicationId="991d-8065-dcd4-a396" hidden="false" collective="false" import="true" type="model">
@@ -1095,19 +1553,26 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="8314-f5f3-3d5c-3698" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="daad-0874-d7bb-7e2d" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="b8f7-5a19-bd9b-0892" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="d22e-e596-d531-daa5" name="Overwatch" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="2d2e-1079-6094-93ac" childId="1d65-a765-8c7a-f2a2" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="2d2e-1079-6094-93ac" childId="daad-0874-d7bb-7e2d" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="2d2e-1079-6094-93ac" childId="b8f7-5a19-bd9b-0892" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -1144,6 +1609,31 @@
           <infoLinks>
             <infoLink id="8899-cd51-4025-47c6" name="Reinforcements" hidden="false" targetId="b3ea-8b45-a666-1699" type="rule" />
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="1d65-a765-8c7a-f2a2" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="924f-aa94-ae31-6a8b" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="7de4-2215-85c4-fb45" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="0e72-2fef-dd09-23ba" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1c2a-4175-e883-72dd" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="b4e3-b6dc-2411-3b50" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="8f1d-e08f-5333-020f" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1267,19 +1757,26 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="e0a3-731c-3df0-11d0" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="833c-c688-15ee-5780" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="3d9b-7cc8-5da9-fa81" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="ccf0-8699-7187-6fc7" name="Gunslinger" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="d310-44c8-2394-1076" childId="b3df-c305-8db6-f761" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="d310-44c8-2394-1076" childId="833c-c688-15ee-5780" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="d310-44c8-2394-1076" childId="3d9b-7cc8-5da9-fa81" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -1319,6 +1816,31 @@
           <infoLinks>
             <infoLink id="bb49-1a7f-94ae-743a" name="Reinforcements" hidden="false" targetId="b3ea-8b45-a666-1699" type="rule" />
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="b3df-c305-8db6-f761" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="e7e2-0937-e5d2-9630" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="1208-29a3-90b3-08ac" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="80d5-a72d-9228-5c2e" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="a294-648b-9f26-ff5e" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="4cb0-9b63-3b74-f822" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="661d-dde8-abac-d611" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1447,14 +1969,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="824c-dfc0-148e-e29c" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="4391-b974-3a0e-9a9d" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="c6e5-827a-f3ea-eaa2" name="Stalker" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4bd7-d8da-ace2-d0f0" childId="4391-b974-3a0e-9a9d" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -1618,19 +2142,26 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="6446-0c53-e911-5d4f" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e45f-e965-e366-0c7e" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="263f-6113-8717-f710" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="b290-ce64-9f16-0aa1" name="Designator" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="3986-cdc0-f34a-0e7a" childId="338e-4a35-9c9c-e0a8" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="3986-cdc0-f34a-0e7a" childId="e45f-e965-e366-0c7e" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="3986-cdc0-f34a-0e7a" childId="263f-6113-8717-f710" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -1670,6 +2201,31 @@
           <infoLinks>
             <infoLink id="0be3-0588-cb8d-28f0" name="Reinforcements" hidden="false" targetId="b3ea-8b45-a666-1699" type="rule" />
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry id="338e-4a35-9c9c-e0a8" name="Lieutenant" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="051b-e5e4-6118-7681" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="ef14-2a79-7668-ed50" name="Lieutenant" hidden="false" targetId="4712-ebc4-302f-f676" type="rule" />
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink id="caab-ec49-a7f4-faee" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
+          </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="2558-4d99-7d54-802c" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9c52-1b9c-958f-22c9" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+          </constraints>
+          <infoLinks>
+            <infoLink id="5c7f-cdd5-d8ef-6c8e" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
+          </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1752,19 +2308,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="8741-7df8-43e1-6c78" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="526c-88b5-e1ce-51d6" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="d6bd-e14e-51ae-99b9" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="fbee-1d2e-7763-6e2d" name="Siege Rifleman" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="7d00-f967-b015-f5b6" childId="526c-88b5-e1ce-51d6" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="7d00-f967-b015-f5b6" childId="d6bd-e14e-51ae-99b9" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -1919,14 +2477,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="2d43-c9b3-0d5a-1528" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="8ad7-163d-03f1-a37a" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="20b9-fce4-4658-d2d8" name="Rooftopper" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="1c45-a9de-2a53-e961" childId="8ad7-163d-03f1-a37a" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -2069,19 +2629,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="c392-a566-38dc-a26e" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="de9d-6852-246b-be02" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="151e-9439-c8b3-1989" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="3f74-cdf9-12dc-c683" name="Breacher" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="b898-a4b8-d6f7-b328" childId="de9d-6852-246b-be02" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="b898-a4b8-d6f7-b328" childId="151e-9439-c8b3-1989" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -2243,14 +2805,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="d165-e4c0-df4e-6921" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="a84f-4e78-31bb-b297" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="8a76-66fe-367b-85f0" name="Ambusher" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="713a-1e22-4021-b3d1" childId="a84f-4e78-31bb-b297" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -2433,19 +2997,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="5514-190d-31fa-57b7" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="56fb-0cf2-f8dd-ded3" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="0835-1e06-40f8-21c3" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="ba94-c5ce-83bb-3170" name="Sapper" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="cad0-87dc-600e-bd16" childId="56fb-0cf2-f8dd-ded3" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="cad0-87dc-600e-bd16" childId="0835-1e06-40f8-21c3" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -2629,19 +3195,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="e9d7-2050-347b-54f6" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="eed4-e559-c916-b8d0" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9d48-3a11-2c88-25b8" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="7032-acdf-4555-fafd" name="Colossus" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4e54-55b5-426e-1d86" childId="eed4-e559-c916-b8d0" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4e54-55b5-426e-1d86" childId="9d48-3a11-2c88-25b8" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -2794,14 +3362,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="3491-288e-de95-0ebc" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="3445-4320-a63e-238b" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="16b5-7a2b-0ac1-5045" name="Outrider" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="c5a3-d039-8cfb-d6e3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4480-ff68-8439-c8a8" childId="3445-4320-a63e-238b" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-4</characteristic>
@@ -2979,14 +3549,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="fd80-0415-2da0-1b44" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="61d5-93ac-c8b5-527e" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="1a7d-11a7-c9d0-436e" name="Shiv" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e971-90ad-75bf-aeef" childId="61d5-93ac-c8b5-527e" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -3153,19 +3725,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="5a0d-3c4f-607b-9336" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9104-a3a9-c41c-4c11" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="5944-c36c-e159-4bb6" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="ee4c-4f35-6230-97c7" name="Sawbones" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5fc8-b23e-27c0-0b67" childId="9104-a3a9-c41c-4c11" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5fc8-b23e-27c0-0b67" childId="5944-c36c-e159-4bb6" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -3334,19 +3908,21 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="94bb-ca2b-e842-167d" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e747-22cd-370a-835d" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="376c-6618-e9be-d829" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="db1c-d393-56e3-91d6" name="Ravager" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="359c-7331-4b7e-d187" childId="e747-22cd-370a-835d" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="359c-7331-4b7e-d187" childId="376c-6618-e9be-d829" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-4</characteristic>
@@ -3501,14 +4077,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="2068-14d9-f28f-58db" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="064d-0260-ab77-c453" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="f932-f74c-7f22-4b77" name="Pouncer" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f61b-bf6c-b56b-3540" value="3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="1aff-e4cc-c6db-a25a" childId="064d-0260-ab77-c453" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">8-6</characteristic>
@@ -3653,14 +4231,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="9494-40ad-0a4b-6540" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="eec7-2e75-224e-14d6" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="c7b5-d0c5-7592-bce3" name="Ghostwire" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="e59d-77d7-c4a4-6fc3" childId="eec7-2e75-224e-14d6" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">LI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -3827,14 +4407,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="b04d-136e-67fe-f8f2" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="86dd-0a1b-eb26-cfab" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="64e0-b34c-a91d-06a4" name="Phantom" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4e47-980e-435e-0b71" childId="86dd-0a1b-eb26-cfab" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -4172,19 +4754,26 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1385-7990-9586-6aff" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="e62d-d26b-333a-b2c1" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="ea17-da0b-206f-7c32" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="8c30-10ea-5c73-76fc" name="Marshal" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="append" field="fe97-34df-d5d8-4f77" value="+ Lieutenant">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="f9ac-5ac1-a517-6d36" childId="f6be-f8b9-0031-83fc" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="f9ac-5ac1-a517-6d36" childId="e62d-d26b-333a-b2c1" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="f9ac-5ac1-a517-6d36" childId="ea17-da0b-206f-7c32" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">4-4</characteristic>
@@ -4233,6 +4822,9 @@
           <categoryLinks>
             <categoryLink id="f513-d2a2-7598-fd4e" name="Lieutenant" hidden="false" targetId="2430-c218-c4e8-3966" primary="false" />
           </categoryLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+          </costs>
         </selectionEntry>
         <selectionEntry id="61e7-aa23-8d78-178f" name="NCO" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -4241,6 +4833,9 @@
           <infoLinks>
             <infoLink id="e208-6428-e0de-0e46" name="NCO" hidden="false" targetId="0ac3-5945-f078-e120" type="rule" />
           </infoLinks>
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4349,14 +4944,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="71dd-a14a-d584-13ab" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9291-ad9f-34b3-c151" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="4083-fbaf-d7b3-862a" name="Dispatch Rider" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="f1f5-0fb1-2440-a5fb" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="4f2f-bc5e-5ac7-06e0" childId="9291-ad9f-34b3-c151" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">MI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-4</characteristic>
@@ -4518,14 +5115,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="0263-0091-6066-d39b" shared="true" includeChildSelections="true" />
           </conditions>
         </modifier>
-        <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="9fff-a4ac-3fb1-9531" shared="true" includeChildSelections="true" />
-          </conditions>
-        </modifier>
       </modifiers>
       <profiles>
         <profile id="e6e2-9cd1-f4ac-aee4" name="Vaulter" publicationId="991d-8065-dcd4-a396" hidden="false" typeId="9015-c633-f9c6-d937" typeName="Trooper">
+          <modifiers>
+            <modifier type="increment" field="30fe-164f-947f-0ba3" value="1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="060c-4bc3-b0f8-0125" childId="9fff-a4ac-3fb1-9531" shared="true" includeChildSelections="true" />
+              </conditions>
+            </modifier>
+          </modifiers>
           <characteristics>
             <characteristic name="Type" typeId="85b5-9236-158c-65f7">HI</characteristic>
             <characteristic name="MOV" typeId="0f14-8b05-a04e-0c7b">6-2</characteristic>
@@ -4836,34 +5435,178 @@
         </entryLink>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="9b12-caa4-cae6-9505" name="Pilot CC Weapons" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="b8f7-7096-1504-59d6" name="TAG Primary Weapons" hidden="false" collective="false" import="true">
       <constraints>
-        <constraint id="0525-9e08-26b6-bf43" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+        <constraint id="ad8f-f467-648a-e709" type="min" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+        <constraint id="8427-eee8-241f-eb5d" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
       </constraints>
       <entryLinks>
-        <entryLink id="8a9d-e0c0-dd15-3abc" name="AP CC Weapon" hidden="false" collective="false" import="true" targetId="6770-94b2-3be4-4ce1" type="selectionEntry">
+        <entryLink id="5f67-63be-e145-293c" name="Heavy Machine Gun" hidden="false" collective="false" import="true" targetId="7664-8f67-e819-8e35" type="selectionEntry">
           <costs>
-            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="8" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
           </costs>
         </entryLink>
-        <entryLink id="3f30-6b97-a220-c263" name="Shock CC Weapon" hidden="false" collective="false" import="true" targetId="859e-9cd1-b333-2b4e" type="selectionEntry">
+        <entryLink id="be92-fa87-8e4f-7145" name="MULTI Heavy Machine Gun" hidden="false" collective="false" import="true" targetId="e44b-8368-1ced-e2b4" type="selectionEntry">
           <costs>
-            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="9" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="3" />
           </costs>
         </entryLink>
-        <entryLink id="9e2e-bd72-5ae9-fea1" name="DA CC Weapon" hidden="false" collective="false" import="true" targetId="5299-664a-2608-6e49" type="selectionEntry">
+        <entryLink id="71e5-897f-9ad3-1e6d" name="Spitfire" hidden="false" collective="false" import="true" targetId="0c7f-50a6-e7cf-af99" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="6" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="daac-1d8d-ac5f-e78d" name="AP Spitfire" hidden="false" collective="false" import="true" targetId="44b5-3745-814b-5897" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="8" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="3fff-82aa-548a-773c" name="Heavy Flamethrower" hidden="false" collective="false" import="true" targetId="0be8-1bfa-88a5-cea2" type="selectionEntry">
           <costs>
             <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
           </costs>
         </entryLink>
-        <entryLink id="d433-4a50-f3cf-f836" name="T2 CC Weapon" hidden="false" collective="false" import="true" targetId="487f-e905-7e84-e295" type="selectionEntry">
+        <entryLink id="c202-a21e-eb52-80ea" name="Heavy Rocket Launcher" hidden="false" collective="false" import="true" targetId="e30f-b172-7d73-c3b8" type="selectionEntry">
           <costs>
-            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
           </costs>
         </entryLink>
-        <entryLink id="b8b0-8bbb-3d59-2c9d" name="EXP CC Weapon" hidden="false" collective="false" import="true" targetId="4ec1-e361-456b-773e" type="selectionEntry">
+        <entryLink id="2a9a-223a-fb36-e1e0" name="Thunderbolt" hidden="false" collective="false" import="true" targetId="db3b-185a-1ddd-2eba" type="selectionEntry">
           <costs>
             <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="c294-be8c-3b16-20ea" name="TAG Heavy Primary Weapons" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint id="47c9-3e6c-2c60-9c69" type="min" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+        <constraint id="a973-8916-5533-e0ef" type="max" value="2" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+      </constraints>
+      <entryLinks>
+        <entryLink id="6726-5a2b-0ec0-5da6" name="Heavy Machine Gun" hidden="false" collective="false" import="true" targetId="7664-8f67-e819-8e35" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="8" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="b702-8ff3-c783-d220" name="MULTI Heavy Machine Gun" hidden="false" collective="false" import="true" targetId="e44b-8368-1ced-e2b4" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="9" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="3" />
+          </costs>
+        </entryLink>
+        <entryLink id="7f8d-6d6e-113c-1a48" name="Spitfire" hidden="false" collective="false" import="true" targetId="0c7f-50a6-e7cf-af99" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="6" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="7449-2b23-f2ef-7fed" name="AP Spitfire" hidden="false" collective="false" import="true" targetId="44b5-3745-814b-5897" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="8" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="4065-4e11-c1b4-b5ea" name="Heavy Flamethrower" hidden="false" collective="false" import="true" targetId="0be8-1bfa-88a5-cea2" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="f4ec-d79d-608f-432b" name="Heavy Rocket Launcher" hidden="false" collective="false" import="true" targetId="e30f-b172-7d73-c3b8" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="4" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="4f69-aca3-f978-3947" name="Thunderbolt" hidden="false" collective="false" import="true" targetId="db3b-185a-1ddd-2eba" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="2" />
+          </costs>
+        </entryLink>
+        <entryLink id="f7e5-311d-d16d-0fff" name="Missile Launcher" hidden="false" collective="false" import="true" targetId="f6e1-f37e-094a-d4d1" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="6" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="3" />
+          </costs>
+        </entryLink>
+        <entryLink id="7dfc-d9c8-bb6f-ac83" name="Hyper-Rapid Magnetic Cannon" hidden="false" collective="false" import="true" targetId="e923-fb3c-6aa2-6948" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="9" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="3" />
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="5d0e-8f15-19fc-90d9" name="TAG Secondary Weapons" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint id="82e2-66ab-11dc-b4c6" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+      </constraints>
+      <entryLinks>
+        <entryLink id="a349-cf76-369d-162d" name="Heavy Pistol" hidden="false" collective="false" import="true" targetId="fbd5-fbc7-a86f-c55c" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="0" />
+          </costs>
+        </entryLink>
+        <entryLink id="bdf5-a1b7-c87d-bede" name="Chain-Colt" hidden="false" collective="false" import="true" targetId="5997-c912-30b3-c995" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="2710-8be8-9850-1016" name="Heavy Shotgun" hidden="false" collective="false" import="true" targetId="a616-3ee3-782f-fdc0" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="c010-8529-2ad3-3377" name="Panzerfaust" hidden="false" collective="false" import="true" targetId="9cdb-f473-3781-63a4" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+          </costs>
+        </entryLink>
+        <entryLink id="f2ce-b98e-e680-5d3c" name="Smoke Grenades" hidden="false" collective="false" import="true" targetId="fd5b-c8e7-4bb0-436c" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="3" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="aa24-6e84-ab20-051a" name="TAG CC Weapons" hidden="false" collective="false" import="true" defaultSelectionEntryId="1f53-0aee-cdd2-da14">
+      <constraints>
+        <constraint id="a400-c0b2-0eb6-2904" type="min" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+        <constraint id="71ef-2844-ef8a-df94" type="max" value="1" field="selections" scope="parent" shared="true" includeChildSelections="false" />
+      </constraints>
+      <entryLinks>
+        <entryLink id="1f53-0aee-cdd2-da14" name="CC Weapon" hidden="false" collective="false" import="true" targetId="39ab-422e-8144-9c33" type="selectionEntry" />
+        <entryLink id="222d-6f4b-e90d-0ad6" name="AP CC Weapon" hidden="false" collective="false" import="true" targetId="6770-94b2-3be4-4ce1" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="0" />
+          </costs>
+        </entryLink>
+        <entryLink id="5f88-817a-c061-1bcf" name="DA CC Weapon" hidden="false" collective="false" import="true" targetId="5299-664a-2608-6e49" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="1" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="0" />
+          </costs>
+        </entryLink>
+        <entryLink id="433f-6ec2-66d5-b36d" name="EXP CC Weapon" hidden="false" collective="false" import="true" targetId="4ec1-e361-456b-773e" type="selectionEntry">
+          <costs>
+            <cost name="Requisition" typeId="11c4-ce0d-6227-e31d" value="2" />
+            <cost name="Capacity" typeId="9760-1ef0-60a7-4540" value="1" />
           </costs>
         </entryLink>
       </entryLinks>

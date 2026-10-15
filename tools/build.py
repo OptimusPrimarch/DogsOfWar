@@ -500,7 +500,7 @@ class Company:
             out.append(el("cost", {"name": name, "typeId": self.ids["cost"][name], "value": value}))
         return out
 
-    def profile(self, pid: str, name: str, spec: dict) -> ET.Element:
+    def profile(self, pid: str, name: str, spec: dict, mods=None) -> ET.Element:
         tid, cols = self.armory.types[spec["type"]]
         unknown = set(spec["stats"]) - set(cols)
         if unknown:
@@ -511,7 +511,7 @@ class Company:
             ch.text = str(spec["stats"].get(c, "-"))
             chars.append(ch)
         return el("profile", {"id": pid, "name": name, "publicationId": self.ids["pub"], "hidden": False,
-                              "typeId": tid, "typeName": spec["type"]}, characteristics=chars)
+                              "typeId": tid, "typeName": spec["type"]}, modifiers=mods, characteristics=chars)
 
     def weapon(self, name: str) -> dict:
         w = self.armory.weapons.get(name)
@@ -577,8 +577,32 @@ class Company:
             links.append(rule_link(owner, rule, self.armory.rule(rule), extra, k))
         return links
 
-    def upgrade(self, owner_id: str, name: str) -> tuple[ET.Element, ET.Element | None]:
-        """A local upgrade, and the modifier it puts on its unit (if any)."""
+    @staticmethod
+    def picked(owner_id: str, child_id: str) -> ET.Element:
+        """True while the unit owner_id has child_id selected. Stat changes go on
+        the unit's profile with this condition: that is where New Recruit looks."""
+        return el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": owner_id,
+                                "childId": child_id, "shared": True, "includeChildSelections": True})
+
+    def stat_mods(self, owner_id: str, child_id: str, spec: dict, ptype: str | None) -> list[ET.Element]:
+        """Profile modifiers for an option's "stats" (+n) and "append" (text)."""
+        if not (spec.get("stats") or spec.get("append")):
+            return []
+        if ptype is None:
+            raise SystemExit(f"{spec}: changes stats, but its unit has no profile of its own.")
+        cols = self.armory.types[ptype][1]
+        out = []
+        for stat, bump in spec.get("stats", {}).items():
+            out.append(el("modifier", {"type": "increment", "field": cols[stat], "value": bump},
+                          conditions=[self.picked(owner_id, child_id)]))
+        for stat, text in spec.get("append", {}).items():
+            out.append(el("modifier", {"type": "append", "field": cols[stat], "value": text},
+                          conditions=[self.picked(owner_id, child_id)]))
+        return out
+
+    def upgrade(self, owner_id: str, name: str, ptype: str | None = None):
+        """A local upgrade, the modifier it puts on its unit (if any), and the
+        modifiers it puts on its unit's profile."""
         spec = self.data["upgrades"][name]
         uid = bsid("upgrade", owner_id, name)
         cats = []
@@ -599,13 +623,13 @@ class Company:
             mod = el("modifier", {"type": "remove", "field": "category",
                                   "value": self.ids["category"][spec["removesCategory"]]},
                      conditions=[cond])
-        return e, mod
+        return e, mod, self.stat_mods(owner_id, uid, spec, ptype)
 
     def packs(self, uid: str, name: str, spec: dict, packs: dict, kind: str):
         """Selectable bundles of stat bumps, skills, equipment and weapons (training
         packages, Elite Gun upgrades), and the modifiers that apply their stats to
         the unit's profile when picked."""
-        cols = self.armory.types[spec["profile"]["type"]][1]
+        ptype = spec["profile"]["type"]
         entries, stat_mods = [], []
         for pname, pk in packs.items():
             pid = bsid(kind, uid, pname)
@@ -616,11 +640,7 @@ class Company:
                                                  "import": True, "type": "upgrade"},
                               constraints=[constraint(bsid("constraint", pid, "max"), "max", 1, children=False)],
                               infoLinks=dedupe(links), costs=self.costs(pk.get("cost"))))
-            for stat, bump in pk.get("stats", {}).items():
-                cond = el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "self",
-                                        "childId": pid, "shared": True, "includeChildSelections": True})
-                stat_mods.append(el("modifier", {"type": "increment", "field": cols[stat], "value": bump},
-                                    conditions=[cond]))
+            stat_mods += self.stat_mods(uid, pid, pk, ptype)
         return entries, stat_mods
 
     def archetype_upgrades(self, uid: str, name: str, spec: dict):
@@ -662,12 +682,20 @@ class Company:
                    costs=self.costs(spec.get("extraPackage")))
         return group, extra, stat_mods
 
+    def systems(self, uid: str, name: str, spec: dict):
+        """A chassis's optional systems: any mix, each once, paid for in
+        Requisition and Capacity."""
+        entries, stat_mods = self.packs(uid, name, spec, self.data["systems"], "system")
+        group = el("selectionEntryGroup", {"id": bsid("systems", uid), "name": "Systems", "hidden": False,
+                                           "collective": False, "import": True}, selectionEntries=entries)
+        return group, stat_mods
+
     def unit(self, spec: dict) -> ET.Element:
         name = spec["name"]
         uid = bsid("unit", name)
         if spec.get("status") == "prototype":
             self.placeholders.append(name)
-        profiles = [self.profile(bsid("profile", "dow", name), name, spec["profile"])] if "profile" in spec else []
+        ptype = spec["profile"]["type"] if "profile" in spec else None
         links = []
         if "sharedProfile" in spec:
             pname = spec["sharedProfile"]
@@ -682,10 +710,11 @@ class Company:
         cats += [el("categoryLink", {"id": bsid("categoryLink", uid, c), "name": c, "hidden": False,
                                      "targetId": self.ids["category"][c], "primary": False})
                  for c in spec.get("also", [])]
-        upgrades, mods = [], []
+        upgrades, mods, profile_mods = [], [], []
         for u in spec.get("upgrades", []):
-            e, mod = self.upgrade(uid, u)
+            e, mod, pmods = self.upgrade(uid, u, ptype)
             upgrades.append(e)
+            profile_mods += pmods
             if mod is not None:
                 mods.append(mod)
         groups = [self.option_group(bsid("group", uid, g["name"]), g["name"], g)
@@ -694,11 +723,16 @@ class Company:
             group, extra, stat_mods = self.training(uid, name, spec)
             groups.append(group)
             upgrades.append(extra)
-            mods += stat_mods
+            profile_mods += stat_mods
         if spec.get("tags"):
             group, stat_mods = self.archetype_upgrades(uid, name, spec)
             groups.append(group)
-            mods += stat_mods
+            profile_mods += stat_mods
+        if spec.get("systems"):
+            group, stat_mods = self.systems(uid, name, spec)
+            groups.append(group)
+            profile_mods += stat_mods
+        profiles = [self.profile(bsid("profile", "dow", name), name, spec["profile"], profile_mods)]             if ptype else []
         list_links = [el("entryLink", {"id": bsid("listLink", uid, l), "name": l, "hidden": False,
                                        "collective": False, "import": True, "targetId": self.list_ids[l],
                                        "type": "selectionEntryGroup"})
