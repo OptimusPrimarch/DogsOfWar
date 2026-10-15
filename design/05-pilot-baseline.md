@@ -50,22 +50,19 @@ Each package adds the stats and skills listed. A pilot can take each package onc
 
 **Value** is by `03-points-formula.md`. CC is counted at 0.25 a point, because the formula prices it at almost nothing and that would make melee packages look free. The target is about 4–5 per package.
 
-| Package | Stats | Skills | Value | N5 inspiration |
-|---|---|---|---|---|
-| **Marksman** | BS +1 | Marksmanship | ~4.4 | |
-| **Duelist** | CC +6 | Martial Arts L3 | ~2.5 | Martial artists run CC +6, PH +2 over the median |
-| **Field Medic** | WIP +1 | Doctor | ~2.0 | Doctors run WIP +1 |
-| **Netrunner** | BTS +3 | Hacker | ~4.5 | |
-| **Bruiser** | CC +3, BS +1, PH +2, ARM +2 | Natural Born Warrior | ~8.6 | Natural Born Warriors run CC +5, PH +2 |
-| **Combat Engineer** | WIP +1 | Engineer | ~4.8 | |
-| **Spotter** | BS +1 | Forward Observer, Sixth Sense | ~4.0 | |
-| **Freerunner** | PH +2 | Climbing Plus, Super-Jump | ~2.4 | Mobility skills run PH +1 |
-| **Ghost** | PH +1 | Mimetism (-3), Stealth | ~3.5 | Stealth troops run PH +1 |
-| **Hard to Kill** | — | No Wound Incapacitation | ~4.9 | No Wound Incapacitation troops run about +1 on several stats |
+| Package | Stats | Skills and equipment | Value |
+|---|---|---|---|
+| **Marksman** | BS +1 | Marksmanship | ~4.4 |
+| **Duelist** | CC +6, PH +2 | Martial Arts L3, Dogged | ~5.4 |
+| **Field Medic** | WIP +1, CC +3 | Doctor, Martial Arts L2, MediKit | ~5.9 |
+| **Netrunner** | BTS +3 | Hacker, Hacking Device | ~5.6 |
+| **Bruiser** | CC +3, BS +1, PH +1, ARM +2 | — | ~7.1 |
+| **Combat Engineer** | WIP +1 | Engineer, GizmoKit | ~4.8 |
+| **Spotter** | BS +1 | Forward Observer, Sixth Sense | ~4.0 |
+| **Freerunner** | PH +3, CC +5 | Climbing Plus, Super-Jump, Mimetism (-3) | ~6.2 |
+| **Ghost** | PH +1 | Mimetism (-6), Stealth | ~4.5 |
+| **Hard to Kill** | — | No Wound Incapacitation | ~4.9 |
 
-**To balance:**
-- **Bruiser** is worth about twice a typical package, mostly because of ARM +2.
-- **Field Medic, Freerunner and Duelist** are worth about half.
-- Options for evening them out: drop the Bruiser's ARM to +1, add PH +2 to the Duelist (as N5 melee troops have), and give the Field Medic WIP +2 or a free MediKit.
+Rebalanced 2026-10-14. Packages now range from about 4 to 7. The Bruiser is still the priciest, because ARM +2 alone is about 5; watch it in playtest.
 
 Medic and Hacker packages replace the separate specialist swap in #36: a pilot keeps Specialist Operative and gains the specialist skill from the package.

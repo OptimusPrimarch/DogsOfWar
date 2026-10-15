@@ -613,7 +613,8 @@ class Company:
             entries.append(el("selectionEntry", {"id": pid, "name": pname, "hidden": False, "collective": False,
                                                  "import": True, "type": "upgrade"},
                               constraints=[constraint(bsid("constraint", pid, "max"), "max", 1, children=False)],
-                              infoLinks=self.named_rules(f"{name}: {pname}", pk.get("skills", []))))
+                              infoLinks=self.named_rules(f"{name}: {pname}",
+                                                         pk.get("skills", []) + pk.get("equipment", []))))
             for stat, bump in pk.get("stats", {}).items():
                 cond = el("condition", {"type": "atLeast", "value": 1, "field": "selections", "scope": "self",
                                         "childId": pid, "shared": True, "includeChildSelections": True})

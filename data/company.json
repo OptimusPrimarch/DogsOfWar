@@ -201,14 +201,14 @@
   ],
   "trainingPackages": {
     "Marksman": {"stats": {"BS": 1}, "skills": ["Marksmanship"], "value": 4.4},
-    "Duelist": {"stats": {"CC": 6}, "skills": ["Martial Arts L3"], "value": 2.5},
-    "Field Medic": {"stats": {"WIP": 1}, "skills": ["Doctor"], "value": 2.0},
-    "Netrunner": {"stats": {"BTS": 3}, "skills": ["Hacker"], "value": 4.5},
-    "Bruiser": {"stats": {"CC": 3, "BS": 1, "PH": 2, "ARM": 2}, "skills": ["Natural Born Warrior"], "value": 8.6},
-    "Combat Engineer": {"stats": {"WIP": 1}, "skills": ["Engineer"], "value": 4.8},
+    "Duelist": {"stats": {"CC": 6, "PH": 2}, "skills": ["Martial Arts L3", "Dogged"], "value": 5.4},
+    "Field Medic": {"stats": {"WIP": 1, "CC": 3}, "skills": ["Doctor", "Martial Arts L2"], "equipment": ["MediKit"], "value": 5.9},
+    "Netrunner": {"stats": {"BTS": 3}, "skills": ["Hacker"], "equipment": ["Hacking Device"], "value": 5.6},
+    "Bruiser": {"stats": {"CC": 3, "BS": 1, "PH": 1, "ARM": 2}, "skills": [], "value": 7.1},
+    "Combat Engineer": {"stats": {"WIP": 1}, "skills": ["Engineer"], "equipment": ["GizmoKit"], "value": 4.8},
     "Spotter": {"stats": {"BS": 1}, "skills": ["Forward Observer", "Sixth Sense"], "value": 4.0},
-    "Freerunner": {"stats": {"PH": 2}, "skills": ["Climbing Plus", "Super-Jump"], "value": 2.4},
-    "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-3)", "Stealth"], "value": 3.5},
+    "Freerunner": {"stats": {"PH": 3, "CC": 5}, "skills": ["Climbing Plus", "Super-Jump", "Mimetism (-3)"], "value": 6.2},
+    "Ghost": {"stats": {"PH": 1}, "skills": ["Mimetism (-6)", "Stealth"], "value": 4.5},
     "Hard to Kill": {"stats": {}, "skills": ["No Wound Incapacitation"], "value": 4.9}
   }
 }
